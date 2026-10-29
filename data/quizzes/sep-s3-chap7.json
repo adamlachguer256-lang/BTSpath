@@ -1,0 +1,20 @@
+{
+  "title": "Résolution de noms NetBIOS à l'aide du service WINS",
+  "description": "SEP · Module S43 · Chapitre 7. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce que WINS ?", "choices": ["Un service qui mappe de façon dynamique les adresses IP aux noms NetBIOS", "Un service qui attribue des adresses IP", "Un service de résolution DNS", "Un protocole de routage"], "answer": 0, "explanation": "Il réduit le trafic de diffusion et résout les noms NetBIOS d'ordinateurs situés sur d'autres sous-réseaux." },
+    { "question": "Quel composant WINS contrôle la diffusion des requêtes de noms et répond quand les noms ne sont pas sur le sous-réseau local ?", "choices": ["Le proxy WINS", "Le client WINS", "La base de données WINS", "Le serveur DNS"], "answer": 0 },
+    { "question": "Quel type de nœud NetBIOS utilise uniquement les diffusions ?", "choices": ["Nœud B", "Nœud P", "Nœud M", "Nœud H"], "answer": 0 },
+    { "question": "Quel type de nœud combine P et B mais fonctionne par défaut comme un nœud P ?", "choices": ["Nœud H", "Nœud M", "Nœud B", "Nœud P"], "answer": 0, "explanation": "Le nœud M combine B et P mais fonctionne par défaut comme un nœud B." },
+    { "question": "Que renvoie le serveur WINS après une requête d'inscription ?", "choices": ["Un message avec une durée de vie indiquant la date d'expiration de l'inscription", "Une adresse IP", "Un DHCPACK", "Un certificat"], "answer": 0 },
+    { "question": "Qu'est-ce que la prise en charge du traitement en rafale ?", "choices": ["La réponse du serveur WINS face à un grand nombre de clients qui s'inscrivent simultanément", "La réplication en masse vers les partenaires", "Le compactage de la base", "La suppression de plusieurs enregistrements"], "answer": 0 },
+    { "question": "Combien de fois le client tente-t-il de contacter son serveur WINS avant d'essayer les autres ?", "choices": ["3 fois", "1 fois", "5 fois", "10 fois"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un mappage statique WINS ?", "choices": ["Une entrée manuelle dans la base WINS qui mappe un nom NetBIOS à une adresse IP", "Une entrée inscrite automatiquement par un client", "Une zone DNS", "Un enregistrement répliqué"], "answer": 0, "explanation": "Il sert pour les clients non-WINS." },
+    { "question": "Comment fonctionne la réplication par émission ?", "choices": ["Le partenaire émetteur avertit ses partenaires quand la base atteint un seuil de modifications défini", "Le partenaire demande les modifications à intervalles réguliers", "La base est copiée chaque nuit", "Les clients envoient leurs enregistrements à tous les serveurs"], "answer": 0 },
+    { "question": "Pour quel type de liaison la réplication par réception est-elle adaptée ?", "choices": ["Les liaisons lentes, car elle limite la fréquence du trafic de réplication", "Les liaisons rapides uniquement", "Les connexions sans fil uniquement", "Aucune liaison réseau"], "answer": 0 },
+    { "question": "Quelle propriété des partenaires de réplication permet à un serveur d'envoyer instantanément des enregistrements ?", "choices": ["Activer les connexions permanentes", "Activer la configuration automatique des partenaires", "Remplacer les mappages statiques uniques", "Activer le traitement en rafale"], "answer": 0 },
+    { "question": "Quelle est la différence entre suppression simple et désactivation d'enregistrements ?", "choices": ["La désactivation marque pour suppression, réplique, puis supprime au nettoyage suivant", "La suppression simple réplique sur les autres serveurs", "La désactivation supprime immédiatement l'enregistrement", "Il n'y a aucune différence"], "answer": 0 },
+    { "question": "Quelle commande utilise l'administrateur pour le compactage hors connexion de la base WINS ?", "choices": ["jetpack", "compact", "dnscmd", "nbtstat -R"], "answer": 0, "explanation": "Le serveur WINS doit être arrêté ; le compactage dynamique, lui, se fait automatiquement." },
+    { "question": "Si vous supprimez le service WINS du réseau, que pouvez-vous implémenter comme service de nom principal ?", "choices": ["DNS", "DHCP", "Lmhosts", "IPSec"], "answer": 0 }
+  ]
+}

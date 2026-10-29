@@ -1,0 +1,21 @@
+{
+  "title": "Gestion des disques",
+  "description": "SEP · Module S42 · Chapitre 12. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce que l'outil Gestion des disques ?", "choices": ["Un composant logiciel enfichable qui affiche les informations de disque et gère les ordinateurs locaux et distants", "Un outil en ligne de commande uniquement", "Un service de sauvegarde", "Un antivirus"], "answer": 0 },
+    { "question": "Avec DiskPart, que faut-il faire avant d'appliquer une commande à un objet ?", "choices": ["Répertorier les objets, puis sélectionner celui sur lequel porter le focus", "Redémarrer l'ordinateur", "Formater le disque", "Ouvrir Gestion des disques"], "answer": 0 },
+    { "question": "Combien de lettres de lecteur le partitionnement permet-il de créer ?", "choices": ["Jusqu'à 24", "Jusqu'à 4", "Jusqu'à 26", "Illimité"], "answer": 0 },
+    { "question": "Combien de partitions un disque de base peut-il comporter ?", "choices": ["Quatre partitions principales, ou trois principales et une étendue", "Deux principales et deux étendues", "Une principale et trois étendues", "Un nombre illimité"], "answer": 0 },
+    { "question": "Quelles partitions peuvent être subdivisées en lecteurs logiques ?", "choices": ["Les partitions étendues", "Les partitions principales", "Les deux", "Aucune"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un lecteur monté ?", "choices": ["Un lecteur auquel on attribue un chemin d'accès au lieu d'une lettre de lecteur", "Un lecteur réseau", "Un lecteur de CD", "Un lecteur compressé"], "answer": 0, "explanation": "Il augmente le nombre de lecteurs, pas l'espace de stockage." },
+    { "question": "Quel est un avantage du disque dynamique ?", "choices": ["Il permet de créer des volumes qui s'étendent sur plusieurs disques", "Il est limité à 4 partitions", "Il ne supporte que FAT32", "Il ne peut pas être converti"], "answer": 0 },
+    { "question": "Que se passe-t-il quand on reconvertit un disque dynamique en disque de base ?", "choices": ["Les données et la structure des disques sont perdues", "Les données sont conservées", "Les volumes deviennent des partitions sans perte", "Rien ne change"], "answer": 0, "explanation": "La conversion de base vers dynamique se fait sans perte ; dans l'autre sens, il faut sauvegarder." },
+    { "question": "Quelle commande DiskPart convertit le disque sélectionné en disque dynamique ?", "choices": ["convert dynamic", "select dynamic", "list dynamic", "create dynamic"], "answer": 0, "explanation": "Séquence du cours : diskpart, list disk, select disk x, convert dynamic." },
+    { "question": "Quelle affirmation sur le volume simple est vraie ?", "choices": ["Il ne peut être créé que sur des disques dynamiques", "Il utilise plusieurs disques", "Il ne supporte que NTFS", "Il ne peut jamais être étendu"], "answer": 0 },
+    { "question": "Dans un volume fractionné, que se passe-t-il si l'un des disques est défaillant ?", "choices": ["L'intégralité des données est perdue", "Seules les données de ce disque sont perdues", "Les données sont reconstruites par parité", "Rien, le miroir prend le relais"], "answer": 0 },
+    { "question": "Dans un volume agrégé par bandes, en quelles unités les données sont-elles écrites sur tous les disques ?", "choices": ["64 Ko", "4 Ko", "512 octets", "1 Mo"], "answer": 0 },
+    { "question": "Avec 2 disques de 20 Go et 1 disque de 30 Go, quelle est la taille du volume agrégé par bandes sur les trois disques ?", "choices": ["60 Go", "70 Go", "50 Go", "30 Go"], "answer": 0, "explanation": "Il utilise un espace de taille égale sur tous les disques : 3 × 20 Go." },
+    { "question": "Dans un volume en miroir, comment sont écrites les données ?", "choices": ["Simultanément sur deux volumes figurant sur deux disques physiques", "Sur un seul disque puis sur le suivant", "En bandes avec parité", "Uniquement sur le disque système"], "answer": 0 },
+    { "question": "Avec quel système de fichiers un volume étendu doit-il être formaté ?", "choices": ["NTFS", "FAT", "FAT32", "N'importe lequel"], "answer": 0 }
+  ]
+}

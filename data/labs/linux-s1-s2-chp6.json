@@ -1,0 +1,64 @@
+{
+  "chapterId": "linux-s1-s2-chp6-lancez-des-commandes-sous-bash",
+  "title": "Premiers pas dans Bash",
+  "intro": "Découvre ton prompt, les types de commandes et la documentation.",
+  "prompt": "etudiant@btspath:~$",
+  "steps": [
+    {
+      "task": "Affiche le contenu de la variable qui définit ton prompt.",
+      "accept": [
+        "echo $PS1"
+      ],
+      "hint": "echo, puis le nom de la variable précédé de $.",
+      "section": "Utilisez le prompt et consultez ses variables"
+    },
+    {
+      "task": "Affiche le shell que tu utilises.",
+      "accept": [
+        "echo $SHELL"
+      ],
+      "hint": "Une autre variable, en majuscules.",
+      "section": "Utilisez le prompt et consultez ses variables"
+    },
+    {
+      "task": "Liste le contenu du répertoire courant.",
+      "accept": [
+        "ls"
+      ],
+      "hint": "Deux lettres.",
+      "section": "Listez le contenu d'un répertoire"
+    },
+    {
+      "task": "Découvre si cd est une commande interne ou externe.",
+      "accept": [
+        "type cd"
+      ],
+      "hint": "La commande qui donne le « type » d'une commande.",
+      "section": "Comprenez les différents types de commandes Linux"
+    },
+    {
+      "task": "Affiche ton identité (utilisateur et groupes).",
+      "accept": [
+        "id"
+      ],
+      "hint": "Deux lettres, comme « identité ».",
+      "section": "Comprenez les différents types de commandes Linux"
+    },
+    {
+      "task": "Ouvre le manuel de la commande ls.",
+      "accept": [
+        "man ls"
+      ],
+      "hint": "Le manuel officiel Unix/Linux.",
+      "section": "Consultez la documentation des commandes"
+    },
+    {
+      "task": "Affiche l'historique des commandes que tu viens de taper.",
+      "accept": [
+        "history"
+      ],
+      "hint": "Le mot anglais pour « historique ».",
+      "section": "Profitez des fonctionnalités avancées de Bash"
+    }
+  ]
+}

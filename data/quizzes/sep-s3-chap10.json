@@ -1,0 +1,16 @@
+{
+  "title": "Gestion et analyse de l'accès réseau",
+  "description": "SEP · Module S43 · Chapitre 10. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Avant d'arrêter un serveur d'accès distant, que faut-il faire en premier ?", "choices": ["Configurer un autre serveur pour prendre en charge les clients d'accès distant", "Déconnecter tous les clients sans prévenir", "Supprimer les comptes des utilisateurs", "Redémarrer le contrôleur de domaine"], "answer": 0 },
+    { "question": "Quand faut-il planifier l'interruption du serveur d'accès distant ?", "choices": ["Aux heures creuses", "Aux heures de pointe", "Au démarrage de la journée", "Jamais"], "answer": 0 },
+    { "question": "Laquelle de ces actions est possible pour gérer les clients d'accès distant ?", "choices": ["Envoyer un message à tous les clients d'accès distant", "Changer leur mot de passe à distance", "Formater leur disque", "Modifier leur nom NetBIOS"], "answer": 0 },
+    { "question": "Où est stocké l'enregistrement des événements (erreurs, avertissements) du service Routage et accès distant ?", "choices": ["Dans le journal d'événements système", "Dans le journal PPP", "Dans le journal Oakley", "Dans la base DHCP"], "answer": 0 },
+    { "question": "À quoi servent les informations d'authentification et de gestion des comptes ?", "choices": ["Suivre l'usage et les tentatives d'authentification, la facturation, et isoler des problèmes de stratégie", "Attribuer des adresses IP", "Créer des certificats", "Compresser les journaux"], "answer": 0 },
+    { "question": "Quel fichier journal enregistre les fonctions de programmation et les messages de contrôle PPP ?", "choices": ["Journal PPP", "Journal Oakley", "Journal d'audit", "Journal système"], "answer": 0 },
+    { "question": "Quel journal enregistre les négociations de mode principal ou de mode rapide IKE pour L2TP/IPSec ?", "choices": ["Journal Oakley", "Journal PPP", "Journal d'audit", "Journal DNS"], "answer": 0 },
+    { "question": "Laquelle de ces raisons justifie la collecte de données de performance ?", "choices": ["Observer les changements et les tendances de la charge de travail", "Créer des comptes", "Installer des pilotes", "Renouveler les baux DHCP"], "answer": 0 },
+    { "question": "Quel outil fournit des détails sur les points d'accès et les clients réseau sans fil ?", "choices": ["Moniteur sans fil", "Moniteur système", "Journaux et alertes de performance", "Moniteur de sécurité IP"], "answer": 0 },
+    { "question": "Quel outil affiche des données de performance en temps réel pour des composants et services spécifiques ?", "choices": ["Moniteur système", "Moniteur sans fil", "Journal PPP", "Observateur d'événements"], "answer": 0 }
+  ]
+}

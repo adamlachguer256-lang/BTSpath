@@ -1,0 +1,20 @@
+{
+  "title": "Administration de l'impression",
+  "description": "SEP · Module S42 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Dans la terminologie de l'impression, qu'est-ce que l'« imprimante » ?", "choices": ["L'interface logicielle entre un périphérique d'impression et les ordinateurs (imprimante logique)", "Le périphérique physique qui produit les pages imprimées", "Tout document envoyé à l'impression", "L'ordinateur qui gère les files d'attente"], "answer": 0 },
+    { "question": "Comment appelle-t-on le périphérique physique qui produit les pages imprimées ?", "choices": ["Périphérique d'impression", "Imprimante", "Port d'imprimante", "Spouleur d'impression"], "answer": 0 },
+    { "question": "Quel logiciel reçoit, traite, planifie et distribue les documents à imprimer ?", "choices": ["Le spouleur d'impression", "Le pilote d'imprimante", "Le port d'imprimante", "La tâche d'impression"], "answer": 0 },
+    { "question": "Qu'est-ce que la file d'attente d'impression ?", "choices": ["L'ensemble des tâches en attente sur une imprimante particulière", "Le dossier où sont stockés les pilotes", "La liste des imprimantes du domaine", "Le port de communication de l'imprimante"], "answer": 0 },
+    { "question": "Avec un serveur d'impression, où sont exécutés les processus des documents envoyés à l'impression ?", "choices": ["Sur le serveur d'impression", "Sur chaque ordinateur client", "Sur le contrôleur de domaine", "Sur le périphérique d'impression"], "answer": 0, "explanation": "Avec un serveur d'impression, il y a une seule file d'attente et le serveur gère les paramètres du pilote." },
+    { "question": "Quelle autorisation d'imprimante permet seulement de se connecter à une imprimante et d'y envoyer des documents ?", "choices": ["Impression", "Gestion d'imprimantes", "Gestion des documents", "Contrôle total"], "answer": 0 },
+    { "question": "Quelle autorisation permet de partager l'imprimante, ajuster les autorisations et modifier les paramètres du spouleur ?", "choices": ["Gestion d'imprimantes", "Impression", "Gestion des documents", "Lecture"], "answer": 0 },
+    { "question": "De quelle autorisation un utilisateur a-t-il besoin pour modifier la priorité du document d'un autre utilisateur ?", "choices": ["Gestion des documents", "Impression", "Lecture", "Aucune"], "answer": 0 },
+    { "question": "Quel rôle joue un pilote d'imprimante ?", "choices": ["Il convertit les informations de l'ordinateur en commandes compréhensibles par l'imprimante", "Il stocke les documents en attente", "Il partage l'imprimante sur le réseau", "Il gère les autorisations"], "answer": 0 },
+    { "question": "Quelle extension peut avoir le fichier de données d'un pilote d'imprimante ?", "choices": [".dll, .pcd, .gpd ou .ppd", ".exe uniquement", ".sys uniquement", ".txt ou .ini"], "answer": 0 },
+    { "question": "Quel est l'emplacement par défaut du spouleur d'impression ?", "choices": ["%SystemRoot%\\Spool\\Printers", "%SystemRoot%\\Printers\\Spool", "C:\\Program Files\\Spool", "%UserProfile%\\Printers"], "answer": 0 },
+    { "question": "Quelle est la priorité la plus haute que l'on puisse attribuer à une imprimante ?", "choices": ["99", "1", "10", "100"], "answer": 0 },
+    { "question": "Pourquoi créer un pool d'imprimantes ?", "choices": ["Pour accélérer l'impression : une seule imprimante logique avec plusieurs périphériques d'impression", "Pour avoir plusieurs pilotes sur un seul périphérique", "Pour bloquer l'impression hors des heures de bureau", "Pour chiffrer les documents"], "answer": 0, "explanation": "Les documents ne traînent pas dans la file d'attente et il est plus facile de gérer une seule imprimante." },
+    { "question": "Dans quel cas planifier la disponibilité d'une imprimante ?", "choices": ["Pour différer l'impression de documents longs vers une imprimante qui fonctionne en dehors des heures de bureau", "Pour augmenter la mémoire du serveur", "Pour installer un nouveau pilote", "Pour partager l'imprimante"], "answer": 0 }
+  ]
+}

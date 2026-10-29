@@ -1,0 +1,84 @@
+{
+  "title": "Adressage TCP/IP et résolution de noms",
+  "description": "SEP · Module S41 · Chapitre 8. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Quand l'adressage IP privé automatique (APIPA) est-il utilisé ?",
+      "choices": ["Quand un serveur DHCP ne peut pas être contacté", "Quand une adresse statique est configurée", "Quand le client est membre d'Active Directory", "Quand un serveur WINS est disponible"],
+      "answer": 0
+    },
+    {
+      "question": "Sur quel réseau APIPA attribue-t-il les adresses ?",
+      "choices": ["169.254.0.0/16", "192.168.0.0/16", "127.0.0.0/8", "10.0.0.0/8"],
+      "answer": 0
+    },
+    {
+      "question": "Avec quoi APIPA ne peut-il PAS être utilisé ?",
+      "choices": ["Active Directory, Internet, plusieurs sous-réseaux, serveurs DNS ou WINS", "Un petit réseau isolé d'un seul sous-réseau", "Des ordinateurs Windows 7", "Une configuration d'obtention automatique d'adresse"],
+      "answer": 0
+    },
+    {
+      "question": "Votre portable est client DHCP au bureau, mais à la maison votre FAI exige une IP statique. Que faire ?",
+      "choices": ["Utiliser l'onglet Configuration alternative et choisir Utilisateur configuré", "Désactiver DHCP au bureau", "Utiliser APIPA à la maison", "Modifier le fichier HOSTS"],
+      "answer": 0
+    },
+    {
+      "question": "Quel utilitaire affiche le nom d'hôte de votre ordinateur ?",
+      "choices": ["hostname", "arp", "tracert", "pathping"],
+      "answer": 0
+    },
+    {
+      "question": "Quel utilitaire affiche et modifie le cache ARP ?",
+      "choices": ["arp", "ipconfig", "ping", "hostname"],
+      "answer": 0,
+      "explanation": "ARP est chargé d'identifier l'adresse MAC de la carte réseau de l'ordinateur de destination."
+    },
+    {
+      "question": "Quel utilitaire affiche la liste des routeurs utilisés pour acheminer des paquets vers une destination ?",
+      "choices": ["tracert", "hostname", "arp", "ipconfig"],
+      "answer": 0
+    },
+    {
+      "question": "Comment vérifier rapidement l'adresse IP de l'ordinateur d'un utilisateur ?",
+      "choices": ["Avec la commande ipconfig", "Avec la commande hostname", "Avec la commande arp", "Avec le fichier LMHOSTS"],
+      "answer": 0
+    },
+    {
+      "question": "Pour tester la configuration IP avec ping, quelle est la première adresse à tester ?",
+      "choices": ["127.0.0.1 (adresse de bouclage)", "L'adresse de l'hôte distant", "L'adresse de la passerelle par défaut", "169.254.0.1"],
+      "answer": 0,
+      "explanation": "Ordre du cours : 127.0.0.1, puis l'IP de l'ordinateur, puis la passerelle par défaut, puis l'hôte distant."
+    },
+    {
+      "question": "Combien de caractères un nom d'hôte peut-il contenir ?",
+      "choices": ["Jusqu'à 255", "Jusqu'à 15", "Exactement 16", "Jusqu'à 32"],
+      "answer": 0
+    },
+    {
+      "question": "Un nom NetBIOS fait 16 octets. À quoi sert le 16e octet ?",
+      "choices": ["Aux services offerts par l'ordinateur au réseau", "Au nom de domaine", "À l'adresse MAC", "Au numéro de sous-réseau"],
+      "answer": 0,
+      "explanation": "15 octets peuvent être utilisés pour le nom. Un nom de 16 caractères ne fonctionne donc pas avec WINS."
+    },
+    {
+      "question": "Quel fichier fournit une table statique de résolution nom NetBIOS → adresse IP ?",
+      "choices": ["LMHOSTS", "HOSTS", "Boot.ini", "ntbtlog.txt"],
+      "answer": 0
+    },
+    {
+      "question": "Quel serveur mappe les noms NetBIOS sur les adresses IP de façon dynamique ?",
+      "choices": ["Serveur WINS", "Serveur DNS", "Serveur DHCP", "Serveur ISP"],
+      "answer": 0
+    },
+    {
+      "question": "Quand DNS est-il requis ?",
+      "choices": ["Quand le client est membre d'un domaine Active Directory ou doit communiquer par Internet", "Uniquement quand une application requiert NetBIOS", "Uniquement sur un réseau sans routeur", "Jamais sous Windows 7"],
+      "answer": 0
+    },
+    {
+      "question": "20 ordinateurs Windows 7 et 2 serveurs, sans Internet ni réseau externe. Le moyen le plus facile de configurer les IP ?",
+      "choices": ["Obtention automatique des adresses : APIPA est utilisé par défaut, aucun serveur DHCP n'est nécessaire", "Installer un serveur DHCP obligatoirement", "Configurer chaque IP statique à la main", "Utiliser un serveur WINS"],
+      "answer": 0
+    }
+  ]
+}

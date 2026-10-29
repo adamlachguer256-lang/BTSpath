@@ -1,0 +1,117 @@
+{
+  "chapterId": "linux-s3-chap-7-raid",
+  "title": "RAID avec mdadm — les exemples du cours",
+  "intro": "Refais les exemples du chapitre 7, dans l'ordre du cours. Les disques et les noms sont ceux du support : garde-le ouvert à côté si tu veux.",
+  "prompt": "root@serveur#",
+  "steps": [
+    {
+      "section": "3.a Création d'un volume RAID",
+      "task": "Exemple du cours : crée un volume RAID1 /dev/md0 avec les deux disques /dev/sdb et /dev/sdc.",
+      "accept": [
+        "mdadm -C /dev/md0 -l 1 -n 2 /dev/sdb /dev/sdc",
+        "mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc",
+        "mdadm --create /dev/md0 --level=raid1 --raid-devices=2 /dev/sdb /dev/sdc"
+      ],
+      "hint": "Syntaxe : mdadm action volume -l niveau -n nombre_disques stockages",
+      "output": "mdadm: array /dev/md0 started"
+    },
+    {
+      "section": "3.a Création d'un volume RAID",
+      "task": "Crée un système de fichiers ext3 sur /dev/md0, comme dans le cours.",
+      "accept": ["mkfs -t ext3 /dev/md0"],
+      "hint": "mkfs avec l'option -t pour le type."
+    },
+    {
+      "section": "3.a Remarque — disques de secours",
+      "task": "Exemple du cours : crée /dev/md0 en raid0 avec 2 disques /dev/sdb1 et /dev/sdc1, et 1 disque de secours /dev/sdd1 (options longues).",
+      "accept": ["mdadm --create /dev/md0 --level=raid0 --raid-devices=2 /dev/sdb1 /dev/sdc1 --spare-devices=1 /dev/sdd1"],
+      "hint": "Les disques de secours s'écrivent après l'option --spare-devices, suivie de leur nombre."
+    },
+    {
+      "section": "3.b Sauvegarde de la configuration RAID",
+      "task": "Crée le fichier /etc/mdadm.conf en y écrivant la ligne \"partitions des volumes RAID\" avec echo.",
+      "accept": ["echo \"partitions des volumes RAID\" > /etc/mdadm.conf", "echo 'partitions des volumes RAID' > /etc/mdadm.conf"],
+      "hint": "echo \"texte\" puis la redirection qui crée (ou écrase) le fichier."
+    },
+    {
+      "section": "3.b Sauvegarde de la configuration RAID",
+      "task": "Ajoute à la fin de /etc/mdadm.conf la configuration générée par mdadm.",
+      "accept": ["mdadm --detail --scan >> /etc/mdadm.conf"],
+      "hint": "mdadm --detail --scan, avec la redirection qui ajoute à la fin."
+    },
+    {
+      "section": "4. État du volume RAID",
+      "task": "Vérifie l'état du RAID en continu en surveillant le fichier virtuel /proc/mdstat.",
+      "accept": ["watch cat /proc/mdstat"],
+      "hint": "La commande watch, suivie de la commande à répéter."
+    },
+    {
+      "section": "4. État du volume RAID",
+      "task": "Affiche le détail du volume /dev/md0 avec mdadm.",
+      "accept": ["mdadm --detail /dev/md0"],
+      "hint": "Le paramètre --detail.",
+      "output": "/dev/md0:\nVersion : 00.90.01\nCreation Time : Mon Jan 23 22:10:20 2006\nRaid Level : raid1\nArray Size : 104320 (101.88 MiB 106.82 MB)\nDevice Size : 104320 (101.88 MiB 106.82 MB)\nRaid Devices : 2\nTotal Devices : 3\nPreferred Minor : 1\nPersistence : Superblock is persistent\nUpdate Time : Mon Jan 23 22:13:06 2006\nState : clean\nActive Devices : 2\nWorking Devices : 3\nFailed Devices : 0\nSpare Devices : 1\nNumber Major Minor RaidDevice State\n0 3 8 0 active sync /dev/hda8\n1 3 9 1 active sync /dev/hda9\n2 3 10 -1 spare /dev/hda10\nUUID : 90e838b5:936f18c7:39f665d3:d9dad1a9\nEvents : 0.4",
+      "note": "Dans la suite du cours, la matrice utilise /dev/hda8, /dev/hda9 et /dev/hda10 (spare)."
+    },
+    {
+      "section": "5. Simulation d'une panne",
+      "task": "Simule une panne sur /dev/hda8.",
+      "accept": ["mdadm /dev/md0 -f /dev/hda8"],
+      "hint": "mdadm, le volume, puis l'option -f et le disque.",
+      "output": "mdadm: set /dev/hda8 faulty in /dev/md0"
+    },
+    {
+      "section": "5. Simulation d'une panne",
+      "task": "Visualise l'état du RAID pendant la reconstruction.",
+      "accept": ["cat /proc/mdstat"],
+      "hint": "Le fichier virtuel qui contient l'état du RAID.",
+      "output": "md0 : active raid1 hda10[2] hda9[1] hda8[0](F)\n104320 blocks [2/1] [U_]\n[=> ] recovery = 8.8% (9216/104320) finish=0.1min\nspeed=9216K/sec",
+      "note": "Le (F) près de hda8 indique un disque Faulty : le RAID se reconstruit avec le spare."
+    },
+    {
+      "section": "6. Remplacement d'un disque RAID",
+      "task": "Avant de le remplacer, retire /dev/hda8 de la matrice.",
+      "accept": ["mdadm /dev/md0 -r /dev/hda8", "mdadm /dev/md0 --remove /dev/hda8"],
+      "hint": "Option -r (ou --remove).",
+      "output": "mdadm: hot removed /dev/hda8"
+    },
+    {
+      "section": "6. Remplacement d'un disque RAID",
+      "task": "Vérifie que /dev/hda8 ne figure plus dans la liste.",
+      "accept": ["cat /proc/mdstat"],
+      "hint": "Même fichier qu'à l'étape précédente.",
+      "output": "Personalities : [raid1]\nmd0 : active raid1 hda10[1] hda9[0]\n104320 blocks [2/2] [UU]"
+    },
+    {
+      "section": "6. Remplacement d'un disque RAID",
+      "task": "Le disque est réparé et repartitionné : rajoute /dev/hda8 dans la matrice.",
+      "accept": ["mdadm /dev/md0 -a /dev/hda8", "mdadm /dev/md0 --add /dev/hda8"],
+      "hint": "Option -a (ou --add).",
+      "output": "mdadm: hot added /dev/hda8",
+      "note": "/dev/hda8 devient le nouveau disque de secours."
+    },
+    {
+      "section": "7. Arrêt et redémarrage manuels",
+      "task": "Le périphérique est démonté : arrête la matrice /dev/md0.",
+      "accept": ["mdadm --stop /dev/md0", "mdadm -S /dev/md0"],
+      "hint": "Option -S (--stop)."
+    },
+    {
+      "section": "7. Arrêt et redémarrage manuels",
+      "task": "Redémarre la matrice /dev/md0 grâce aux informations de /etc/mdadm.conf.",
+      "accept": ["mdadm --assemble --scan /dev/md0", "mdadm -As /dev/md0"],
+      "hint": "Option -As (--assemble --scan)."
+    },
+    {
+      "section": "7. Arrêt et redémarrage manuels",
+      "task": "Le RAID ne redémarre pas (un disque manque peut-être) : force son démarrage.",
+      "accept": ["mdadm --run /dev/md0", "mdadm -R /dev/md0"],
+      "hint": "Option -R (--run)."
+    }
+  ],
+  "challenge": {
+    "section": "8. Suppression définitive",
+    "task": "Supprime définitivement le volume RAID composé de /dev/sdb2 et /dev/sdb3 en effaçant leurs superblocs.",
+    "accept": ["mdadm --zero-superblock /dev/sdb2 /dev/sdb3"]
+  }
+}

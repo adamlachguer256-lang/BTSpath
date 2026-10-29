@@ -1,0 +1,128 @@
+{
+  "chapterId": "linux-s3-chap-8-lvm",
+  "title": "LVM — les exemples du cours",
+  "intro": "Refais les exemples du chapitre 8, dans l'ordre du cours : créer les éléments LVM, les diagnostiquer, les étendre, puis exploiter un snapshot pour une sauvegarde.",
+  "prompt": "A:~#",
+  "steps": [
+    {
+      "section": "2.a Création des volumes physiques",
+      "task": "Crée un volume physique sur le disque /dev/sdb.",
+      "accept": ["pvcreate /dev/sdb"],
+      "hint": "Syntaxe : pvcreate device"
+    },
+    {
+      "section": "2.b Diagnostics — volume physique",
+      "task": "Affiche les informations détaillées des volumes physiques.",
+      "accept": ["pvdisplay"],
+      "hint": "Préfixe pv + display.",
+      "output": "  \"/dev/sdb\" is a new physical volume of \"2,00 GB\"\n  --- NEW Physical volume ---\n  PV Name               /dev/sdb\n  VG Name\n  PV Size               2,00 GB\n  Allocatable           NO\n  PE Size (KByte)       0\n  Total PE              0\n  Free PE               0\n  Allocated PE          0\n  PV UUID               UHSnwO-EKMh-QbDn-1qj0-f7Az-KKkx-3XcyZz"
+    },
+    {
+      "section": "2.b Diagnostics — volume physique",
+      "task": "Même chose, en version concise : « l'essentiel en deux lignes ».",
+      "accept": ["pvs"],
+      "hint": "La version courte de pvdisplay.",
+      "output": "  PV         VG   Fmt  Attr PSize PFree\n  /dev/sdb        lvm2 --   2,00G 2,00G"
+    },
+    {
+      "section": "2.a Création du groupe de volumes",
+      "task": "Crée le groupe de volumes vg1 alimenté par /dev/sdb.",
+      "accept": ["vgcreate vg1 /dev/sdb"],
+      "hint": "Syntaxe : vgcreate nom_vg pv_device"
+    },
+    {
+      "section": "2.b Diagnostics — groupe de volumes",
+      "task": "Affiche les détails des groupes de volumes pour connaître la taille disponible.",
+      "accept": ["vgdisplay"],
+      "hint": "Préfixe vg + display.",
+      "output": "  --- Volume group ---\n  VG Name               vg1\n  System ID\n  Format                lvm2\n  Metadata Areas        1\n  Metadata Sequence No  1\n  VG Access             read/write\n  VG Status             resizable\n  MAX LV                0\n  Cur LV                0\n  Open LV               0\n  Max PV                0\n  Cur PV                1\n  Act PV                1\n  VG Size               2,00 GB\n  PE Size               4,00 MB\n  Total PE              511\n  Alloc PE / Size       0 / 0\n  Free  PE / Size       511 / 2,00 GB\n  VG UUID               D6QwUK-Lltf-uGg5-vH8r-ZmaK-dU0L-Lyyu3T"
+    },
+    {
+      "section": "2.b Diagnostics — groupe de volumes",
+      "task": "Version concise.",
+      "accept": ["vgs"],
+      "hint": "La version courte de vgdisplay.",
+      "output": "  VG   #PV #LV #SN Attr   VSize VFree\n  vg1    1   0   0 wz--n- 2,00G 2,00G"
+    },
+    {
+      "section": "2.a Création du volume logique",
+      "task": "Crée le volume logique data1 de 400 Mo dans vg1.",
+      "accept": ["lvcreate -L 400M -n data1 vg1", "lvcreate -n data1 -L 400M vg1"],
+      "hint": "Syntaxe : lvcreate -L taille -n nom_lv nom_vg"
+    },
+    {
+      "section": "2.b Diagnostics — volume logique",
+      "task": "Affiche les informations détaillées des volumes logiques.",
+      "accept": ["lvdisplay"],
+      "hint": "Préfixe lv + display.",
+      "output": "  --- Logical volume ---\n  LV Name                /dev/vg1/data1\n  VG Name                vg1\n  LV UUID                Ll7105-aLpz-axKC-Hcuq-pPSq-QZaK-8h5PLC\n  LV Write Access        read/write\n  LV Status              available\n  # open                 0\n  LV Size                400,00 MB\n  Current LE             100\n  Segments               1\n  Allocation             inherit\n  Read ahead sectors     auto\n  - currently set to     256\n  Block device           253:0"
+    },
+    {
+      "section": "2.b Diagnostics — volume logique",
+      "task": "Version concise.",
+      "accept": ["lvs"],
+      "hint": "La version courte de lvdisplay.",
+      "output": "  LV    VG   Attr   LSize   Origin Snap%  Move Log Copy%  Convert\n  data1 vg1  -wi-a- 400,00M"
+    },
+    {
+      "section": "2.c Extension d'un Logical Volume",
+      "task": "Il reste de l'espace dans vg1 : ajoute 1 Go à /dev/vg1/data1 (taille précédée d'un +).",
+      "accept": ["lvextend -L +1G /dev/vg1/data1"],
+      "hint": "Syntaxe : lvextend -L taille lv — avec +, la taille s'ajoute à l'existant."
+    },
+    {
+      "section": "3.a Données sur les volumes logiques",
+      "task": "Exemple du cours : crée un système de fichiers ext3 (journalisé) sur /dev/vg1/lv99.",
+      "accept": ["mke2fs -j /dev/vg1/lv99"],
+      "hint": "mke2fs avec l'option du journal, sur le fichier spécial du LV.",
+      "output": "mke2fs 1.41.3 (12-Oct-2008)\nÉtiquette de système de fichiers=\nType de système d'exploitation : Linux\nTaille de bloc=1024 (log=0)\nTaille de fragment=1024 (log=0)\n25688 i-noeuds, 102400 blocs\n5120 blocs (5.00%) réservés pour le super utilisateur\nPremier bloc de données=1\nNombre maximum de blocs du système de fichiers=67371008\n13 groupes de blocs\n8192 blocs par groupe, 8192 fragments par groupe\n1976 i-noeuds par groupe\nSuperblocs de secours stockés sur les blocs :\n  8193, 24577, 40961, 57345, 73729\n\nÉcriture des tables d'i-noeuds : complété\nCréation du journal (4096 blocs) : complété\nÉcriture des superblocs et de l'information de comptabilité du système de\nfichiers : complété"
+    },
+    {
+      "section": "3.a Données sur les volumes logiques",
+      "prompt": "A:/mnt#",
+      "task": "Tu es dans /mnt : monte /dev/vg1/lv99 dans /mnt/data99.",
+      "accept": ["mount /dev/vg1/lv99 /mnt/data99"],
+      "hint": "mount fichier_bloc point_de_montage"
+    },
+    {
+      "section": "3.b Réalisation du snapshot",
+      "task": "Crée un snapshot de 1 Go nommé clicclac du volume /dev/vg1/data1.",
+      "accept": ["lvcreate -L 1G -s -n clicclac /dev/vg1/data1", "lvcreate -s -L 1G -n clicclac /dev/vg1/data1"],
+      "hint": "Syntaxe : lvcreate -L taille -s -n nom_snapshot lv_origine",
+      "output": "  Logical volume \"clicclac\" created"
+    },
+    {
+      "section": "3.b Réalisation du snapshot",
+      "task": "Visualise l'espace réellement occupé par le snapshot /dev/vg1/clicclac.",
+      "accept": ["lvdisplay /dev/vg1/clicclac"],
+      "hint": "lvdisplay suivi du volume.",
+      "output": "  --- Logical volume ---\n  LV Name                /dev/vg1/clicclac\n  VG Name                vg1\n  LV UUID                xyakf0-2zMf-B3qG-S9gT-KTqw-ZJI3-W06GWi\n  LV Write Access        read/write\n  LV snapshot status     active destination for /dev/vg1/data1\n  LV Status              available\n  # open                 0\n  LV Size                1,49 GB\n  Current LE             381\n  COW-table size         1,00 GB\n  COW-table LE           256\n  Allocated to snapshot  0,00%\n  Snapshot chunk size    4,00 KB\n  Segments               1\n  Allocation             inherit\n  Read ahead sectors     auto\n  - currently set to     256\n  Block device           253:1",
+      "note": "« Allocated to snapshot » est à 0 % : aucune donnée n'a été modifiée sur le volume d'origine."
+    },
+    {
+      "section": "Sauvegarde des données snapshotées",
+      "task": "Crée le répertoire clicclac (tu es toujours dans /mnt).",
+      "accept": ["mkdir clicclac", "mkdir /mnt/clicclac"],
+      "hint": "make directory."
+    },
+    {
+      "section": "Sauvegarde des données snapshotées",
+      "task": "Monte le snapshot /dev/vg1/clicclac dans ce répertoire.",
+      "accept": ["mount /dev/vg1/clicclac clicclac", "mount /dev/vg1/clicclac /mnt/clicclac"],
+      "hint": "mount fichier_bloc répertoire"
+    },
+    {
+      "section": "Sauvegarde des données snapshotées",
+      "task": "Liste le contenu du snapshot monté.",
+      "accept": ["ls clicclac", "ls /mnt/clicclac"],
+      "hint": "ls suivi du répertoire.",
+      "output": "bigfile.tar  etc  growingfile  lost+found  midfile.tar usr"
+    }
+  ],
+  "challenge": {
+    "section": "Sauvegarde des données snapshotées",
+    "task": "Réalise une archive tar compressée de /mnt/clicclac, stockée sur la clé USB : /media/usb/svg_snap.tgz.",
+    "accept": ["tar czf /media/usb/svg_snap.tgz /mnt/clicclac", "tar -czf /media/usb/svg_snap.tgz /mnt/clicclac", "tar zcf /media/usb/svg_snap.tgz /mnt/clicclac"],
+    "output": "tar: Suppression de « / » au début des noms des membres"
+  }
+}

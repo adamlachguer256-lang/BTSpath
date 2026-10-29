@@ -1,0 +1,77 @@
+{
+  "title": "Prise en charge des utilisateurs distants",
+  "description": "SEP · Module S41 · Chapitre 10. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Quelle méthode de connexion n'est PAS citée parmi les options matérielles ?",
+      "choices": ["Bluetooth", "RTPC", "RNIS", "X.25"],
+      "answer": 0,
+      "explanation": "Le cours cite RTPC, RNIS, modem câble, X.25 et connexion directe."
+    },
+    {
+      "question": "Quels sont les protocoles d'accès distant cités dans le cours ?",
+      "choices": ["PPP, SLIP (client uniquement), RAS (Microsoft)", "TCP/IP et NWLink", "PAP et CHAP", "DNS et WINS"],
+      "answer": 0
+    },
+    {
+      "question": "Quels sont les protocoles de réseau local cités ?",
+      "choices": ["TCP/IP et NWLink", "PPP et SLIP", "PPTP et L2TP", "EAP et MS-CHAP"],
+      "answer": 0
+    },
+    {
+      "question": "Quel protocole VPN exige un réseau d'interconnexion IP ?",
+      "choices": ["PPTP", "L2TP", "Les deux", "Aucun"],
+      "answer": 0,
+      "explanation": "L2TP peut utiliser IP, relais de trames, X.25 ou ATM."
+    },
+    {
+      "question": "Quel protocole VPN utilise le cryptage IPSec ?",
+      "choices": ["L2TP", "PPTP", "SLIP", "PAP"],
+      "answer": 0,
+      "explanation": "PPTP utilise le cryptage PPP intégré ; L2TP n'a pas de cryptage automatique et requiert IPSec."
+    },
+    {
+      "question": "Quel protocole VPN prend en charge l'authentification de tunnel et la compression d'en-tête ?",
+      "choices": ["L2TP", "PPTP", "PPP", "RAS"],
+      "answer": 0
+    },
+    {
+      "question": "Quel protocole d'authentification a une sécurité minimale ?",
+      "choices": ["PAP", "SPAP", "CHAP", "MS-CHAP"],
+      "answer": 0,
+      "explanation": "On l'utilise quand le client et le serveur ne peuvent pas négocier une validation plus sûre."
+    },
+    {
+      "question": "Quand utiliser SPAP ?",
+      "choices": ["Quand un client Shiva appelle un serveur Windows Server, ou un client Windows XP appelle un serveur Shiva", "Quand les clients n'exécutent pas de systèmes Microsoft", "Quand les clients exécutent Windows 2000 ou ultérieur", "Jamais"],
+      "answer": 0
+    },
+    {
+      "question": "Quel protocole d'authentification utiliser quand les clients n'exécutent pas de systèmes d'exploitation Microsoft ?",
+      "choices": ["CHAP", "MS-CHAP", "SPAP", "SLIP"],
+      "answer": 0
+    },
+    {
+      "question": "Quel est l'avantage principal d'EAP ?",
+      "choices": ["Le client et le serveur négocient la méthode d'authentification", "Il n'utilise aucune authentification", "Il remplace TCP/IP", "Il crée un tunnel VPN"],
+      "answer": 0,
+      "explanation": "EAP prend en charge MD5-CHAP, Transport Layer Security et des méthodes d'autres fournisseurs."
+    },
+    {
+      "question": "Erreur : « l'ordinateur distant a refusé d'être authentifié à l'aide du protocole d'identification configuré ». Cause ?",
+      "choices": ["Les protocoles d'identification du client ne correspondent pas à ceux du serveur", "Le modem est débranché", "Le Bureau à distance est désactivé", "Le serveur DNS est indisponible"],
+      "answer": 0
+    },
+    {
+      "question": "Si le FAI crée le tunnel VPN pour le compte du client, où va le tunnel ?",
+      "choices": ["Du FAI au serveur d'accès distant", "Du client au serveur d'accès distant", "Du client au FAI", "Du client à Internet"],
+      "answer": 0,
+      "explanation": "La connexion du client au FAI ne fait pas partie du tunnel VPN."
+    },
+    {
+      "question": "Pour utiliser le Bureau à distance, comment doit être configuré l'ordinateur distant ?",
+      "choices": ["Il doit accepter les connexions entrantes", "Il doit être en mode sans échec", "Il doit utiliser SLIP", "Il doit être en groupe de travail"],
+      "answer": 0
+    }
+  ]
+}

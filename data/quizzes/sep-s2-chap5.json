@@ -1,0 +1,19 @@
+{
+  "title": "Administration des accès aux objets dans les unités d'organisation",
+  "description": "SEP · Module S42 · Chapitre 5. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'une unité d'organisation ?", "choices": ["Un objet conteneur utilisé pour organiser les objets au sein du domaine", "Un groupe de sécurité global", "Un ensemble de domaines", "Un compte d'ordinateur"], "answer": 0 },
+    { "question": "Combien de niveaux d'imbrication d'OU est-il fortement déconseillé de dépasser ?", "choices": ["5", "3", "10", "2"], "answer": 0 },
+    { "question": "Quand on applique une stratégie de groupe à une OU, que se passe-t-il pour les OU imbriquées ?", "choices": ["Les comptes en héritent dans toutes les OU imbriquées", "Les OU imbriquées ne sont pas concernées", "Seule la première OU enfant hérite", "La stratégie est supprimée"], "answer": 0 },
+    { "question": "Quelle autorisation sur un objet AD permet de prendre possession et de modifier les autorisations ?", "choices": ["Contrôle total", "Écriture", "Lecture", "Création de tous les objets enfants"], "answer": 0 },
+    { "question": "Quelle autorisation permet d'ajouter n'importe quel type d'objet à une OU ?", "choices": ["Création de tous les objets enfants", "Écriture", "Lecture", "Suppression de tous les objets enfants"], "answer": 0 },
+    { "question": "Quelle autorisation sur un objet AD permet de modifier les attributs des objets ?", "choices": ["Écriture", "Lecture", "Création de tous les objets enfants", "Suppression de tous les objets enfants"], "answer": 0 },
+    { "question": "Quand les autorisations héritables se propagent-elles d'un objet parent à un objet enfant ?", "choices": ["Quand un objet enfant est créé ou quand les autorisations du parent sont modifiées", "Uniquement au redémarrage du serveur", "Uniquement avec gpupdate", "Jamais automatiquement"], "answer": 0 },
+    { "question": "Quand on déplace un objet vers une autre OU, quelles autorisations hérite-t-il ?", "choices": ["Celles de la nouvelle OU parente", "Celles de l'ancienne OU parente", "Celles des deux OU", "Aucune"], "answer": 0 },
+    { "question": "Quelle affirmation sur les autorisations effectives des objets AD est vraie ?", "choices": ["Les refus d'autorisations remplacent toutes les autres autorisations", "Les autorisations ne se cumulent pas", "Le propriétaire ne peut jamais modifier les autorisations", "L'autorisation la plus large l'emporte toujours"], "answer": 0, "explanation": "Les autorisations sont cumulables, les refus remplacent tout, et les propriétaires peuvent toujours modifier les autorisations." },
+    { "question": "Quel est un avantage de l'administration déléguée ?", "choices": ["Elle réduit la nécessité de comptes d'administration ayant une autorité large sur tout le domaine", "Elle supprime le besoin de contrôleur de domaine", "Elle donne à tous le contrôle total", "Elle remplace les stratégies de groupe"], "answer": 0 },
+    { "question": "Quel outil utilise-t-on pour déléguer le contrôle d'une OU à un groupe ?", "choices": ["L'Assistant Délégation de contrôle", "Dcpromo", "Gpresult", "Net share"], "answer": 0 },
+    { "question": "Dans quels deux cas les OU sont-elles utilisées ?", "choices": ["Liaison avec des GPO et délégation des tâches administratives", "Partage de fichiers et impression", "Attribution d'adresses IP et DNS", "Sauvegarde et restauration"], "answer": 0 },
+    { "question": "Comment restreindre l'accès aux propriétés d'une OU ?", "choices": ["Supprimer l'autorisation Lecture pour le groupe Utilisateurs authentifiés", "Ajouter l'autorisation Écriture pour Tout le monde", "Déplacer l'OU dans un autre domaine", "Désactiver l'OU"], "answer": 0, "explanation": "L'autorisation Lecture, appliquée par défaut au groupe Utilisateurs authentifiés, donne le droit d'afficher les propriétés." }
+  ]
+}

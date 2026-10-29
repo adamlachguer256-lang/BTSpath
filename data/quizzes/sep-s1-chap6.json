@@ -1,0 +1,86 @@
+{
+  "title": "Résolution des problèmes d'amorçage et du système",
+  "description": "SEP · Module S41 · Chapitre 6. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Quand commence et quand se termine la séquence d'amorçage ?",
+      "choices": ["De l'appui sur l'interrupteur de l'ordinateur jusqu'à l'ouverture de session", "Du chargement du noyau jusqu'à l'affichage du logo", "De l'ouverture de session jusqu'à l'arrêt", "Du choix du système d'exploitation jusqu'au chargement des pilotes"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle phase de l'amorçage détermine la quantité de mémoire physique et identifie les composants matériels installés ?",
+      "choices": ["Le pré-amorçage", "Le chargement du noyau", "Le démarrage du noyau", "L'ouverture de session"],
+      "answer": 0
+    },
+    {
+      "question": "Pendant le chargement du noyau, quelle clé du Registre est chargée ?",
+      "choices": ["HKEY_LOCAL_MACHINE\\SYSTEM\\SELECT", "HKEY_CURRENT_USER\\SOFTWARE", "HKEY_LOCAL_MACHINE\\SAM", "HKEY_CLASSES_ROOT"],
+      "answer": 0
+    },
+    {
+      "question": "Pendant quelle phase le logo s'affiche et les pilotes de périphériques sont chargés ?",
+      "choices": ["Le démarrage du noyau", "Le pré-amorçage", "L'amorçage", "L'ouverture de session"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle commande démarre l'Éditeur du Registre ?",
+      "choices": ["regedit", "msconfig", "sigverif", "ntbtlog"],
+      "answer": 0
+    },
+    {
+      "question": "Qu'est-ce qu'un jeu de contrôles ?",
+      "choices": ["Une sous-clé qui contient des informations système (pilotes et services à charger et démarrer…)", "Un fichier qui liste les systèmes d'exploitation installés", "Un point de restauration créé chaque semaine", "Une option du menu F8"],
+      "answer": 0
+    },
+    {
+      "question": "Dans quel cas la Dernière configuration valide connue est-elle utile ?",
+      "choices": ["Windows 7 ne répond pas après l'installation d'un nouveau pilote", "Après une ouverture de session réussie", "Une panne matérielle", "Des fichiers manquants ou endommagés"],
+      "answer": 0,
+      "explanation": "Elle sert aussi après la désactivation accidentelle d'un pilote essentiel. Elle ne sert pas après une ouverture de session, ni pour une panne matérielle ou des fichiers manquants."
+    },
+    {
+      "question": "Que contient la section [boot loader] du fichier Boot.ini ?",
+      "choices": ["Le timeout et l'emplacement de l'OS à lancer par défaut", "L'emplacement de tous les OS installés", "La liste des pilotes chargés au démarrage", "Les jeux de contrôles"],
+      "answer": 0
+    },
+    {
+      "question": "Comment s'appelle un chemin comme multi(0)disk(0)rdisk(1)partition(2)\\WINDOWS dans Boot.ini ?",
+      "choices": ["Un chemin ARC", "Un chemin UNC", "Une clé du Registre", "Un point de montage"],
+      "answer": 0
+    },
+    {
+      "question": "Double amorçage : vous ne pouvez pas choisir votre système au démarrage. Quelle est une cause possible ?",
+      "choices": ["Le délai (timeout) de Boot.ini est défini sur 0", "Le mode sans échec est activé", "Le fichier ntbtlog.txt est absent", "La restauration du système est désactivée"],
+      "answer": 0,
+      "explanation": "Autre cause : Boot.ini n'est pas configuré pour présenter les deux systèmes. Solution : modifier Boot.ini."
+    },
+    {
+      "question": "Comment accéder au mode sans échec ?",
+      "choices": ["Touche F8 au démarrage de l'ordinateur", "Touche F2 après l'ouverture de session", "Commande regedit", "Menu Accessoires / Outils système"],
+      "answer": 0,
+      "explanation": "Le mode sans échec lance Windows avec un nombre minimum de pilotes nécessaires."
+    },
+    {
+      "question": "Lequel de ces problèmes n'est PAS cité comme raison d'utiliser la Console de récupération ?",
+      "choices": ["Un écran trop lumineux", "Un problème lié à un service", "Un secteur d'amorçage endommagé", "Un enregistrement d'amorçage principal endommagé"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle affirmation sur la Restauration du système est vraie ?",
+      "choices": ["Elle restaure les fichiers système et préserve les fichiers de données", "Elle récupère les fichiers personnels supprimés", "Les points de restauration sont créés uniquement à la main", "Elle remplace la sauvegarde de tous les documents"],
+      "answer": 0,
+      "explanation": "Les points de restauration sont créés automatiquement chaque semaine, et on peut aussi en créer manuellement."
+    },
+    {
+      "question": "Quelle option d'amorçage avancée crée le fichier ntbtlog.txt ?",
+      "choices": ["Inscrire les événements de démarrage dans le journal", "Activer la vidéo basse résolution (640x480)", "Dernière configuration valide connue", "Invite de commandes en mode sans échec"],
+      "answer": 0,
+      "explanation": "Ce fichier liste tous les pilotes chargés au démarrage, pour trouver le pilote qui a causé la défaillance."
+    },
+    {
+      "question": "Après l'installation d'un programme, le système est devenu très lent. Faut-il réinstaller Windows ?",
+      "choices": ["Non, utiliser la Restauration du système pour revenir à l'état d'avant l'installation en gardant les données", "Oui, c'est la seule solution", "Non, il suffit de modifier Boot.ini", "Non, il suffit de lancer regedit"],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Lancez des commandes sous Bash",
+  "description": "Linux · Semestres 1–2 · Chapitre 6. Quiz court : une grande partie de ce chapitre est en captures d'écran.",
+  "questions": [
+    {
+      "question": "Quelle variable définit l'apparence du prompt Bash ?",
+      "choices": ["$SHELL", "$PS1", "$HOME", "$PATH"],
+      "answer": 1,
+      "explanation": "On l'affiche avec « echo $PS1 ». $SHELL indique le shell utilisé."
+    },
+    {
+      "question": "Où ajouter une ligne pour garder la modification du prompt après redémarrage ?",
+      "choices": ["Dans /etc/passwd", "Dans ~/.bashrc", "Dans /bin/bash", "Dans ~/.history"],
+      "answer": 1,
+      "explanation": "On ajoute la ligne à la fin de /home/user/.bashrc puis on enregistre."
+    },
+    {
+      "question": "Une commande interne est :",
+      "choices": ["Un fichier binaire dans /usr/bin", "Une commande livrée directement avec l'interpréteur (primitive du shell)", "Un script Perl", "Une commande réservée à root"],
+      "answer": 1
+    },
+    {
+      "question": "Une commande externe est généralement :",
+      "choices": ["Intégrée au shell", "Un fichier binaire compilé ou un fichier avec droits d'exécution", "Une variable d'environnement", "Un alias"],
+      "answer": 1
+    },
+    {
+      "question": "Quelle commande ouvre le manuel officiel d'une commande dans le terminal ?",
+      "choices": ["help", "info", "man", "doc"],
+      "answer": 2,
+      "explanation": "L'avantage : la documentation est accessible directement depuis le terminal, sans accès web."
+    },
+    {
+      "question": "Quelle commande affiche la liste des commandes déjà exécutées ?",
+      "choices": ["last", "history", "jobs", "ps"],
+      "answer": 1
+    }
+  ]
+}

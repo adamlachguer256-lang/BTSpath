@@ -1,0 +1,17 @@
+{
+  "title": "Maintenance des pilotes de périphériques",
+  "description": "SEP · Module S42 · Chapitre 11. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'un périphérique ?", "choices": ["Un équipement qui peut être connecté à un ordinateur", "Un programme qui gère les disques", "Un type de partition", "Un service Windows"], "answer": 0, "explanation": "Exemples : carte vidéo, imprimante, manette de jeu, carte réseau, carte modem." },
+    { "question": "Que signifie Plug-and-Play ?", "choices": ["Le système identifie les modifications de la configuration matérielle et s'y adapte", "Le périphérique fonctionne sans pilote", "Le périphérique ne peut pas être débranché", "Le périphérique n'est pas pris en charge"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un pilote de périphérique ?", "choices": ["Un programme permettant à un périphérique de communiquer avec le système d'exploitation", "Un câble de connexion", "Un compte de service", "Un fichier journal"], "answer": 0 },
+    { "question": "Quel outil utilise-t-on pour identifier, installer, mettre à jour et désactiver des pilotes ?", "choices": ["Le Gestionnaire de périphériques", "L'Observateur d'événements", "Le Gestionnaire des tâches", "DiskPart"], "answer": 0 },
+    { "question": "Quelle propriété d'un pilote indique le nom de l'entité qui a testé et contrôlé son bon fonctionnement ?", "choices": ["Signataire numérique", "Fournisseur du pilote", "Nom du pilote", "Version du pilote"], "answer": 0 },
+    { "question": "Qu'indique la signature numérique d'un pilote ?", "choices": ["Que le pilote a atteint un certain niveau de test et n'a pas été endommagé par l'installation d'un autre programme", "Que le pilote est gratuit", "Que le pilote est le plus récent", "Que le pilote est compressé"], "answer": 0 },
+    { "question": "Avec quelle option de stratégie les utilisateurs installent des pilotes non signés sans aucun message ?", "choices": ["Réussite silencieuse", "Avertir, mais autoriser l'installation", "Ne pas autoriser l'installation", "Bloquer l'héritage"], "answer": 0 },
+    { "question": "Que permet la fonction « Revenir à la version précédente » ?", "choices": ["Revenir au pilote précédent après un problème causé par une mise à jour", "Revenir à n'importe quelle ancienne version du pilote", "Restaurer Windows à une date antérieure", "Désinstaller le périphérique"], "answer": 0 },
+    { "question": "Que ne peut-on PAS faire avec « Revenir à la version précédente » ?", "choices": ["Restaurer la version précédente d'un pilote d'impression", "Revenir au pilote précédent d'une carte réseau", "Revenir au pilote précédent d'une carte vidéo", "Utiliser le Gestionnaire de périphériques"], "answer": 0, "explanation": "On ne peut pas non plus revenir avant la version précédente ni restaurer en même temps toutes les fonctions d'un périphérique multifonction." },
+    { "question": "Quand on désinstalle un pilote avec le Gestionnaire de périphériques, que se passe-t-il ?", "choices": ["Le pilote est supprimé de la mémoire mais pas du disque dur", "Le pilote est supprimé du disque dur", "Le périphérique est détruit", "Le pilote est envoyé à Microsoft"], "answer": 0 },
+    { "question": "Que faire d'un périphérique Plug-and-Play qu'on ne veut pas utiliser mais qui reste connecté (ex. un modem) ?", "choices": ["Le désactiver plutôt que le désinstaller", "Le désinstaller", "Supprimer son pilote du disque", "Le mettre à jour"], "answer": 0 }
+  ]
+}

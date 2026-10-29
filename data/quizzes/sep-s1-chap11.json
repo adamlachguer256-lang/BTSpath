@@ -1,0 +1,72 @@
+{
+  "title": "Configuration pour l'informatique mobile",
+  "description": "SEP · Module S41 · Chapitre 11. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Qu'est-ce qu'un mode de gestion de l'alimentation ?",
+      "choices": ["Un ensemble de paramètres qui régissent l'utilisation de l'alimentation de l'ordinateur", "Un profil matériel de station d'accueil", "Un fichier hors connexion", "Un pilote de batterie"],
+      "answer": 0
+    },
+    {
+      "question": "Quel mode désactive tous les paramètres après 5 à 30 minutes d'inactivité ?",
+      "choices": ["Ordinateur portable", "PC de bureau ou familial", "Toujours actif", "Présentation"],
+      "answer": 0
+    },
+    {
+      "question": "Quel mode maintient une alimentation constante du moniteur, sur secteur ou sur batterie ?",
+      "choices": ["Présentation", "Ordinateur portable", "Niveau de batterie maximal", "Gestion d'alimentation minimale"],
+      "answer": 0
+    },
+    {
+      "question": "Quel mode maintient une alimentation constante du système, sur secteur ou sur batterie ?",
+      "choices": ["Toujours actif", "Ordinateur portable", "Niveau de batterie maximal", "Présentation"],
+      "answer": 0
+    },
+    {
+      "question": "En veille prolongée, que se passe-t-il ?",
+      "choices": ["Le bureau est enregistré sur le disque dur et le système s'arrête", "Le système continue de fonctionner en consommation réduite", "Seul le moniteur s'éteint", "Les fichiers hors connexion sont synchronisés"],
+      "answer": 0,
+      "explanation": "La veille prolongée est pour les longues périodes de non-utilisation."
+    },
+    {
+      "question": "En veille (courte période de non-utilisation), que fait le système d'exploitation ?",
+      "choices": ["Il continue de fonctionner en mode de consommation réduite", "Il s'arrête complètement", "Il enregistre le bureau et s'éteint", "Il redémarre"],
+      "answer": 0
+    },
+    {
+      "question": "Avec la mise en cache manuelle, quels fichiers sont mis en cache ?",
+      "choices": ["Seuls les fichiers marqués par l'utilisateur", "Tous les fichiers à la première ouverture", "Uniquement les fichiers en lecture seule", "Aucun fichier"],
+      "answer": 0
+    },
+    {
+      "question": "Avec la mise en cache automatique, quand les fichiers sont-ils mis en cache ?",
+      "choices": ["À la première ouverture", "Seulement s'ils sont marqués", "À chaque fermeture de session", "Jamais"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle option de mise en cache convient aux fichiers en lecture seule, mis en cache une fois puis utilisés en local ?",
+      "choices": ["Mise en cache des programmes", "Mise en cache manuelle", "Mise en cache automatique", "Veille prolongée"],
+      "answer": 0
+    },
+    {
+      "question": "Quand les fichiers hors connexion sont-ils synchronisés avec le serveur ?",
+      "choices": ["À l'ouverture et à la fermeture de session", "Uniquement au démarrage du BIOS", "Uniquement une fois par semaine", "Jamais automatiquement"],
+      "answer": 0
+    },
+    {
+      "question": "Depuis son domicile, la résolution empêche d'utiliser certaines applications d'un portable. Solution ?",
+      "choices": ["Créer un profil matériel connecté et un non connecté à la station d'accueil", "Utiliser le mode Présentation", "Activer la mise en cache automatique", "Mettre l'ordinateur en veille"],
+      "answer": 0
+    },
+    {
+      "question": "L'option « Rendre disponible hors connexion » n'apparaît pas. Pourquoi ?",
+      "choices": ["L'ordinateur n'est pas configuré pour utiliser les fichiers hors connexion (ou le fichier n'est pas en ligne)", "La batterie est faible", "Le mode Toujours actif est sélectionné", "Le fichier est en lecture seule"],
+      "answer": 0
+    },
+    {
+      "question": "Les fichiers ne sont pas mis à jour après reconnexion au réseau. Que vérifier ?",
+      "choices": ["Dans le Gestionnaire de synchronisation, les cases « Lorsque je connecte / déconnecte mon ordinateur »", "Le mode de gestion de l'alimentation", "Le profil matériel de la station d'accueil", "La résolution d'écran"],
+      "answer": 0
+    }
+  ]
+}

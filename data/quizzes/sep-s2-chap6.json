@@ -1,0 +1,19 @@
+{
+  "title": "Implémentation d'une stratégie de groupe",
+  "description": "SEP · Module S42 · Chapitre 6. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'une stratégie de groupe ?", "choices": ["Un objet Active Directory qui contient un ensemble de paramètres", "Un groupe de sécurité global", "Un dossier partagé", "Un type d'unité d'organisation"], "answer": 0 },
+    { "question": "Quelles sont les deux parties d'une stratégie de groupe ?", "choices": ["Ordinateurs et Utilisateurs", "Sécurité et Distribution", "Local et Domaine", "Lecture et Écriture"], "answer": 0 },
+    { "question": "Quel outil permet de créer des GPO de site ?", "choices": ["Sites et services Active Directory", "Utilisateurs et ordinateurs Active Directory", "Stratégie de sécurité locale", "Gestion de l'ordinateur"], "answer": 0 },
+    { "question": "Quel outil complémentaire gère les GPO d'un domaine, d'une OU et d'un site ?", "choices": ["Gestion de stratégie de groupe", "Stratégie de sécurité locale", "Observateur d'événements", "Gestionnaire de serveur"], "answer": 0 },
+    { "question": "À quels conteneurs peut-on lier un GPO ?", "choices": ["Un site, un domaine ou une OU", "Uniquement un domaine", "Un groupe ou un utilisateur", "Un dossier partagé"], "answer": 0 },
+    { "question": "Quel est l'ordre d'application par défaut des GPO ?", "choices": ["Site, domaine puis OU", "OU, domaine puis site", "Domaine, site puis OU", "Domaine, OU puis site"], "answer": 0 },
+    { "question": "Si plusieurs GPO ont un paramètre avec des valeurs différentes, lequel prime par défaut ?", "choices": ["Le dernier GPO appliqué", "Le premier GPO appliqué", "Celui du site", "Aucun, le paramètre est ignoré"], "answer": 0, "explanation": "Les GPO sont cumulatifs ; en conflit, le paramètre de l'objet du conteneur enfant prévaut." },
+    { "question": "Quelle option empêche les conteneurs enfants de remplacer un paramètre d'un GPO ?", "choices": ["Ne pas passer outre (Appliqué)", "Bloquer l'héritage de stratégies", "Filtrage WMI", "Supprimer les utilisateurs authentifiés"], "answer": 0 },
+    { "question": "En cas de conflit entre « Ne pas passer outre » et « Bloquer l'héritage de stratégies », laquelle est prioritaire ?", "choices": ["Ne pas passer outre", "Bloquer l'héritage de stratégies", "Celle définie en dernier", "Aucune des deux"], "answer": 0 },
+    { "question": "Quelle autorisation minimale un compte doit-il avoir sur un GPO pour que ses paramètres s'appliquent ?", "choices": ["Lecture", "Contrôle total", "Écriture", "Aucune"], "answer": 0, "explanation": "Le compte a besoin des autorisations Lecture et Appliquer la stratégie de groupe." },
+    { "question": "Quelle méthode N'EST PAS une méthode de filtrage du déploiement d'un GPO citée dans le cours ?", "choices": ["Déplacer le GPO dans le conteneur Computers", "Refuser explicitement", "Supprimer les utilisateurs authentifiés", "Filtrage WMI"], "answer": 0 },
+    { "question": "Dans l'application Contoso, comment empêcher l'installation de la suite Office (liée au domaine) sur l'OU Payroll ?", "choices": ["Activer l'option Bloquer l'héritage de stratégies sur l'OU Payroll", "Supprimer l'OU Payroll", "Appliquer l'option Appliqué sur le GPO Office", "Lier le GPO Office à l'OU Payroll"], "answer": 0, "explanation": "Le GPO antivirus a l'option Appliqué, donc il s'applique quand même à Payroll." },
+    { "question": "Dans la même application, comment éviter que l'application de comptabilité s'installe sur les ordinateurs des administrateurs Payroll ?", "choices": ["Modifier la DACL du GPO pour que leurs comptes d'ordinateurs ne puissent pas appliquer la stratégie", "Bloquer l'héritage sur le domaine", "Lier le GPO au site", "Utiliser gpupdate /force"], "answer": 0 }
+  ]
+}

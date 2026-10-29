@@ -1,0 +1,19 @@
+{
+  "title": "Protection du trafic réseau à l'aide de la sécurité IPSec et de certificats",
+  "description": "SEP · Module S43 · Chapitre 8. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce que la sécurité IPSec ?", "choices": ["Un ensemble de normes qui vérifient, authentifient et cryptent les données au niveau des paquets IP", "Un antivirus réseau", "Un service de résolution de noms", "Un protocole d'attribution d'adresses"], "answer": 0 },
+    { "question": "Lequel de ces avantages est apporté par IPSec ?", "choices": ["Protection contre les attaques de relecture", "Attribution automatique d'adresses IP", "Compression des fichiers", "Résolution des noms NetBIOS"], "answer": 0, "explanation": "Aussi : authentification mutuelle, confidentialité par cryptage et intégrité du trafic IP." },
+    { "question": "Quel module négocie l'association de sécurité IPSec ?", "choices": ["IKE", "WINS", "DHCP", "Kerberos"], "answer": 0 },
+    { "question": "Quels protocoles IKE combine-t-il ?", "choices": ["ISAKMP et OAKLEY Key Determination Protocol", "RIP et OSPF", "TCP et UDP", "DNS et WINS"], "answer": 0 },
+    { "question": "Que fait le pilote IPSec ?", "choices": ["Il analyse le trafic IP, le compare aux filtres et le crypte et/ou le signe", "Il attribue les certificats", "Il crée les stratégies de groupe", "Il résout les noms"], "answer": 0 },
+    { "question": "Quels éléments comprend une règle IPSec ?", "choices": ["Un filtre, une action de filtrage et une méthode d'authentification", "Une étendue, un bail et une réservation", "Une zone, un enregistrement et un TTL", "Un utilisateur, un groupe et une OU"], "answer": 0 },
+    { "question": "Laquelle de ces méthodes d'authentification IPSec est citée dans le cours ?", "choices": ["Clé pré-partagée", "Mot de passe Wi-Fi", "Adresse MAC", "Nom NetBIOS"], "answer": 0, "explanation": "Méthodes citées : certificats, Kerberos, clé pré-partagée." },
+    { "question": "Quelle stratégie IPSec par défaut nécessite toujours la sécurité ?", "choices": ["Sécuriser le serveur (nécessite la sécurité)", "Serveur (demandez la sécurité)", "Client (en réponse seule)", "Aucune stratégie attribuée"], "answer": 0 },
+    { "question": "Un ordinateur sans stratégie IPSec communique avec un serveur « Sécuriser le serveur (nécessite la sécurité) ». Quel est le résultat ?", "choices": ["Communication inexistante", "Sécurité IPSec", "Sécurité IPSec inexistante", "Communication en clair"], "answer": 0 },
+    { "question": "Un « Client (en réponse seule) » communique avec un « Serveur (demandez la sécurité) ». Quel est le résultat ?", "choices": ["Sécurité IPSec", "Communication inexistante", "Sécurité IPSec inexistante", "Erreur d'authentification"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un certificat ?", "choices": ["Une information d'identification électronique signée par une Autorité de certification qui lie une clé publique à son détenteur", "Un mot de passe crypté", "Une stratégie de groupe", "Un enregistrement DNS"], "answer": 0 },
+    { "question": "Dans quel cas utiliser des certificats avec IPSec ?", "choices": ["Pour des clients qui ne font pas partie d'Active Directory ou qui ne prennent pas en charge Kerberos", "Uniquement sur un réseau local sans domaine", "Pour remplacer DHCP", "Pour accélérer le trafic"], "answer": 0 },
+    { "question": "Quel outil affiche les détails des stratégies IPSec actives et les statistiques du mode principal et du mode rapide ?", "choices": ["Le Moniteur de sécurité IP", "L'Observateur d'événements", "Nslookup", "Le Gestionnaire des tâches"], "answer": 0 }
+  ]
+}

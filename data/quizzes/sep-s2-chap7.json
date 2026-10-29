@@ -1,0 +1,19 @@
+{
+  "title": "Administration de l'environnement utilisateur au moyen de la stratégie de groupe",
+  "description": "SEP · Module S42 · Chapitre 7. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Lequel de ces usages d'une stratégie de groupe est cité dans le cours ?", "choices": ["Déploiement de logiciels", "Attribution d'adresses IP", "Partitionnement des disques", "Création de domaines"], "answer": 0, "explanation": "Aussi : administration des utilisateurs et ordinateurs, paramètres de sécurité, environnement de Bureau cohérent." },
+    { "question": "Lequel de ces exemples est un paramètre de stratégie de groupe cité dans le cours ?", "choices": ["Empêcher l'accès au Panneau de configuration", "Changer l'adresse IP du serveur", "Formater un disque", "Créer une OU"], "answer": 0 },
+    { "question": "Quand une GPO peut-elle exécuter des scripts ?", "choices": ["Au démarrage et à l'arrêt de l'ordinateur, à l'ouverture et à la fermeture de session", "Uniquement au démarrage", "Uniquement à l'ouverture de session", "Uniquement quand l'administrateur se connecte"], "answer": 0 },
+    { "question": "Dans l'exemple de script du cours, quelle méthode connecte le lecteur G: au dossier partagé ?", "choices": ["MapNetworkDrive", "CreateObject", "msgbox", "net use"], "answer": 0 },
+    { "question": "Que permet la redirection de dossiers ?", "choices": ["Rediriger des dossiers vers un nouvel emplacement, local ou partagé sur le réseau", "Copier les dossiers sur une clé USB", "Compresser les dossiers", "Chiffrer les dossiers avec EFS"], "answer": 0 },
+    { "question": "Lequel de ces dossiers peut être redirigé ?", "choices": ["Mes documents", "Windows", "Program Files", "System32"], "answer": 0, "explanation": "Dossiers redirigeables : Mes documents, Application Data, Bureau, Menu Démarrer." },
+    { "question": "Avec la redirection de dossiers avancée, de quoi dépend le serveur qui héberge le dossier ?", "choices": ["De l'appartenance à un groupe", "De l'adresse IP du client", "De la taille du dossier", "De l'heure de connexion"], "answer": 0 },
+    { "question": "Que fait la commande gpupdate ?", "choices": ["Elle actualise les paramètres de la stratégie de groupe locale et ceux stockés dans AD", "Elle affiche le jeu de stratégies résultant (RSoP)", "Elle installe Active Directory", "Elle crée un GPO"], "answer": 0 },
+    { "question": "Quelle commande du cours actualise uniquement la stratégie de l'ordinateur ?", "choices": ["gpupdate /target:computer", "gpupdate /boot", "gpresult /scope computer", "gpupdate /logoff"], "answer": 0 },
+    { "question": "Quelle commande affiche les paramètres de stratégie de groupe et le RSoP d'un utilisateur ou d'un ordinateur ?", "choices": ["gpresult", "gpupdate", "dcpromo", "runas"], "answer": 0 },
+    { "question": "Quelle est la différence entre la modélisation et les résultats de stratégie de groupe ?", "choices": ["La modélisation simule le déploiement ; les résultats sont obtenus auprès du client", "Les résultats sont simulés sur le contrôleur de domaine", "La modélisation ne s'applique qu'aux ordinateurs", "Il n'y a aucune différence"], "answer": 0 },
+    { "question": "Que se passe-t-il quand plusieurs GPO s'appliquent sur le même conteneur sans conflit ?", "choices": ["Les paramètres se cumulent", "Seul le premier s'applique", "Seul le dernier s'applique", "Aucun ne s'applique"], "answer": 0 },
+    { "question": "Comment empêcher les GPO des OU de niveaux supérieurs de s'appliquer sur une OU particulière ?", "choices": ["Valider l'option « Bloquer l'héritage » sur l'OU", "Supprimer l'OU parente", "Utiliser gpupdate /force", "Désactiver le compte Invité"], "answer": 0 }
+  ]
+}

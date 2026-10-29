@@ -1,0 +1,316 @@
+{
+  "quizzes": [
+    {
+      "id": "linux-s1-s2-chp6",
+      "file": "linux-s1-s2-chp6.json",
+      "title": "Lancez des commandes sous Bash",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp6-lancez-des-commandes-sous-bash",
+      "demo": false
+    },
+    {
+      "id": "linux-s3-raid",
+      "file": "linux-s3-raid.json",
+      "title": "RAID — Partitionnement avancé",
+      "subject": "LINUX",
+      "chapterId": "linux-s3-chap-7-raid",
+      "demo": false
+    },
+    {
+      "id": "linux-s3-lvm",
+      "file": "linux-s3-lvm.json",
+      "title": "LVM — Logical Volume Manager",
+      "subject": "LINUX",
+      "chapterId": "linux-s3-chap-8-lvm",
+      "demo": false
+    },
+    {
+      "id": "network-s3-vlan",
+      "file": "network-s3-vlan.json",
+      "title": "Réseaux locaux virtuels (VLAN)",
+      "subject": "NETWORK",
+      "chapterId": "network-s3-s33-ch3-reseaux-locaux-virtuels-vlan",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap1",
+      "file": "sep-s1-chap1.json",
+      "title": "Installation de Microsoft Windows 7",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap1",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap3",
+      "file": "sep-s1-chap3.json",
+      "title": "Configuration du matériel sous Windows 7",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap3",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap4",
+      "file": "sep-s1-chap4.json",
+      "title": "Gestion des disques",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap4",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap5",
+      "file": "sep-s1-chap5.json",
+      "title": "Configuration et gestion des systèmes de fichiers",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap5",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap6",
+      "file": "sep-s1-chap6.json",
+      "title": "Résolution des problèmes d'amorçage et du système",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap6",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap7",
+      "file": "sep-s1-chap6.json",
+      "title": "Résolution des problèmes d'amorçage et du système",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap7",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap8",
+      "file": "sep-s1-chap8.json",
+      "title": "Adressage TCP/IP et résolution de noms",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap8",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap9",
+      "file": "sep-s1-chap9.json",
+      "title": "Fonctionnement sur des réseaux Microsoft",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap9",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap10",
+      "file": "sep-s1-chap10.json",
+      "title": "Prise en charge des utilisateurs distants",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap10",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap11",
+      "file": "sep-s1-chap11.json",
+      "title": "Configuration pour l'informatique mobile",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap11",
+      "demo": false
+    },
+    {
+      "id": "sep-s1-chap12",
+      "file": "sep-s1-chap12.json",
+      "title": "Surveillance des ressources et des performances",
+      "subject": "SEP",
+      "chapterId": "sep-s1-s41-chap12",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap1",
+      "file": "sep-s2-chap1.json",
+      "title": "Présentation de l'administration des comptes et des ressources",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap1",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap2",
+      "file": "sep-s2-chap2.json",
+      "title": "Gestion des comptes d'utilisateurs, d'ordinateurs et des groupes",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap2",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap3",
+      "file": "sep-s2-chap3.json",
+      "title": "Administration des accès aux ressources",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap3",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap4",
+      "file": "sep-s2-chap4.json",
+      "title": "Administration de l'impression",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap4",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap5",
+      "file": "sep-s2-chap5.json",
+      "title": "Administration des accès aux objets dans les unités d'organisation",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap5",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap6",
+      "file": "sep-s2-chap6.json",
+      "title": "Implémentation d'une stratégie de groupe",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap6",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap7",
+      "file": "sep-s2-chap7.json",
+      "title": "Administration de l'environnement utilisateur au moyen de la stratégie de groupe",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap7",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap8",
+      "file": "sep-s2-chap8.json",
+      "title": "Implémentation de modèles d'administration et d'une stratégie d'audit",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap8",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap9",
+      "file": "sep-s2-chap9.json",
+      "title": "Préparation de l'administration d'un serveur",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap9",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap10",
+      "file": "sep-s2-chap10.json",
+      "title": "Préparation de l'analyse des performances du serveur",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap10",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap11",
+      "file": "sep-s2-chap11.json",
+      "title": "Maintenance des pilotes de périphériques",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap11",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap12",
+      "file": "sep-s2-chap12.json",
+      "title": "Gestion des disques",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap12",
+      "demo": false
+    },
+    {
+      "id": "sep-s2-chap13",
+      "file": "sep-s2-chap13.json",
+      "title": "Gestion du stockage des données",
+      "subject": "SEP",
+      "chapterId": "sep-s2-s42-chap13",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap1",
+      "file": "sep-s3-chap1.json",
+      "title": "Configuration du routage à l'aide du service Routage et accès distant",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap1",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap2",
+      "file": "sep-s3-chap2.json",
+      "title": "Attribution automatique d'adressages IP à l'aide du protocole DHCP",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap2",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap3",
+      "file": "sep-s3-chap3.json",
+      "title": "Gestion et analyse du service DHCP",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap3",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap4",
+      "file": "sep-s3-chap4.json",
+      "title": "Résolution de noms",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap4",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap5",
+      "file": "sep-s3-chap5.json",
+      "title": "Résolution de noms d'hôtes à l'aide du système DNS",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap5",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap6",
+      "file": "sep-s3-chap6.json",
+      "title": "Gestion et analyse du système DNS",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap6",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap7",
+      "file": "sep-s3-chap7.json",
+      "title": "Résolution de noms NetBIOS à l'aide du service WINS",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap7",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap8",
+      "file": "sep-s3-chap8.json",
+      "title": "Protection du trafic réseau à l'aide de la sécurité IPSec et de certificats",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap8",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap9",
+      "file": "sep-s3-chap9.json",
+      "title": "Configuration de l'accès réseau",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap9",
+      "demo": false
+    },
+    {
+      "id": "sep-s3-chap10",
+      "file": "sep-s3-chap10.json",
+      "title": "Gestion et analyse de l'accès réseau",
+      "subject": "SEP",
+      "chapterId": "sep-s3-s43-chap10",
+      "demo": false
+    },
+    {
+      "id": "demo-btspath",
+      "file": "demo-btspath.json",
+      "title": "Démo : découvrir BTSPath",
+      "subject": null,
+      "chapterId": null,
+      "demo": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Gestion du stockage des données",
+  "description": "SEP · Module S42 · Chapitre 13. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Comment l'espace disque est-il alloué pour un fichier compressé ?", "choices": ["En fonction de la taille du fichier non compressé", "En fonction de la taille compressée", "Il n'occupe aucun espace", "La moitié de sa taille"], "answer": 0 },
+    { "question": "Avec quels fichiers ne faut-il pas utiliser la compression ?", "choices": ["Les fichiers ou dossiers du système", "Les documents Word", "Les données statiques", "Les fichiers texte"], "answer": 0 },
+    { "question": "Que fait la commande compact utilisée sans paramètre ?", "choices": ["Elle affiche l'état de la compression du répertoire actif et de ses fichiers", "Elle compresse tout le disque", "Elle décompresse tous les fichiers", "Elle affiche l'aide"], "answer": 0 },
+    { "question": "Quelle commande du cours compresse tous les fichiers de c:\\dossier ?", "choices": ["compact /c c:\\dossier\\*.*", "compact /u c:\\dossier\\*.*", "cipher /e c:\\dossier", "compress c:\\dossier"], "answer": 0 },
+    { "question": "Quelle méthode est conseillée pour la compression ?", "choices": ["Compresser des données statiques plutôt que des données souvent modifiées", "Compresser les fichiers déjà compressés", "Compresser les fichiers système", "Compresser tout le disque C:"], "answer": 0 },
+    { "question": "Qu'est-ce que le cryptage EFS ?", "choices": ["Convertir les données pour les rendre incompréhensibles sans la clé de décryptage", "Compresser les données", "Limiter l'espace disque des utilisateurs", "Partager les fichiers sur le réseau"], "answer": 0 },
+    { "question": "Que se passe-t-il pour un fichier créé dans un dossier crypté ?", "choices": ["Il est automatiquement crypté", "Il reste en clair", "Il est compressé", "Il est refusé"], "answer": 0 },
+    { "question": "Quelle commande affiche ou modifie le cryptage des dossiers et fichiers sur les volumes NTFS ?", "choices": ["cipher", "compact", "diskpart", "gpresult"], "answer": 0, "explanation": "Exemple du cours : cipher /e /a /s: Secret" },
+    { "question": "Que se passe-t-il quand l'utilisateur ferme un fichier crypté qu'il a ouvert ?", "choices": ["EFS le crypte à nouveau", "Il reste décrypté pour toujours", "Il est supprimé", "Il est compressé"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un quota de disque ?", "choices": ["Des limites appliquées à l'espace disque alloué à chaque utilisateur", "Un type de volume dynamique", "Une méthode de cryptage", "Un outil de défragmentation"], "answer": 0 },
+    { "question": "Quelles deux valeurs faut-il définir quand on active le quota de disque ?", "choices": ["La limite et le niveau d'alerte", "La taille et la lettre de lecteur", "Le nom et le mot de passe", "Le minimum et le maximum de fichiers"], "answer": 0 },
+    { "question": "Sur quel format les quotas de disque peuvent-ils être activés ?", "choices": ["NTFS", "FAT", "FAT32", "Tous les formats"], "answer": 0 },
+    { "question": "Peut-on utiliser la compression pour éviter que les utilisateurs dépassent leur quota ?", "choices": ["Non", "Oui, toujours", "Oui, sur les volumes réseau uniquement", "Oui, avec la commande compact"], "answer": 0 }
+  ]
+}

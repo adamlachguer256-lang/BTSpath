@@ -1,0 +1,79 @@
+{
+  "title": "Réseaux locaux virtuels (VLAN)",
+  "description": "Network · Semestre 3 · Chapitre 3. Questions tirées du support de cours (parties texte).",
+  "questions": [
+    {
+      "question": "Un VLAN est :",
+      "choices": ["Un câble réseau virtuel", "Un groupe logique de périphériques qui se comportent comme sur un réseau indépendant", "Un routeur logiciel", "Un réseau sans fil"],
+      "answer": 1,
+      "explanation": "Un VLAN est aussi un sous-réseau IP logique distinct, même s'il partage l'infrastructure avec d'autres VLAN."
+    },
+    {
+      "question": "Quel est le VLAN par défaut des commutateurs Cisco ?",
+      "choices": ["VLAN 0", "VLAN 1", "VLAN 99", "VLAN 1002"],
+      "answer": 1,
+      "explanation": "Tous les ports appartiennent au VLAN 1 au démarrage. On ne peut ni le renommer, ni le supprimer."
+    },
+    {
+      "question": "À quel VLAN le trafic de contrôle CDP et STP est-il toujours associé ?",
+      "choices": ["Au VLAN natif", "Au VLAN de gestion", "Au VLAN 1", "Au VLAN voix"],
+      "answer": 2,
+      "explanation": "Ce paramètre ne peut pas être modifié."
+    },
+    {
+      "question": "Sur un port d'agrégation 802.1Q, où est placé le trafic non étiqueté (untagged) ?",
+      "choices": ["Il est supprimé", "Sur le VLAN natif", "Sur le VLAN de gestion", "Sur le VLAN voix"],
+      "answer": 1
+    },
+    {
+      "question": "Que faut-il attribuer au VLAN de gestion ?",
+      "choices": ["Une adresse MAC", "Une adresse IP et un masque de sous-réseau", "Un numéro de port", "Un mot de passe enable"],
+      "answer": 1,
+      "explanation": "Il permet d'accéder au commutateur via HTTP, Telnet, SSH ou SNMP. Par défaut, c'est le VLAN 1."
+    },
+    {
+      "question": "Comment un VLAN dynamique affecte-t-il un port à un VLAN ?",
+      "choices": ["Selon le numéro du port", "Selon l'adresse MAC source, grâce à un serveur VMPS", "Selon l'adresse IP de destination", "Au hasard"],
+      "answer": 1
+    },
+    {
+      "question": "À combien de VLAN un port d'accès statique peut-il appartenir en même temps ?",
+      "choices": ["Un seul", "Deux", "Tous", "Autant que nécessaire"],
+      "answer": 0
+    },
+    {
+      "question": "Qu'est-ce qu'une agrégation (trunk) de VLAN ?",
+      "choices": ["Un VLAN qui regroupe tous les ports", "Une liaison point à point qui transporte plusieurs VLAN", "Un groupe de commutateurs", "Un VLAN réservé à la voix"],
+      "answer": 1,
+      "explanation": "Elle n'appartient à aucun VLAN : c'est un conduit pour les VLAN entre commutateurs et routeurs."
+    },
+    {
+      "question": "Quelle norme Cisco utilise-t-il pour les agrégations sur Fast/Gigabit Ethernet ?",
+      "choices": ["IEEE 802.3", "IEEE 802.11", "IEEE 802.1Q", "IEEE 802.1D"],
+      "answer": 2,
+      "explanation": "Le commutateur insère une étiquette indiquant le VLAN de la trame et recalcule la séquence de contrôle (FCS)."
+    },
+    {
+      "question": "Quelle commande remet un port dans le VLAN 1 (mode configuration d'interface) ?",
+      "choices": ["vlan 1", "no switchport access vlan", "switchport mode access", "no vlan 1"],
+      "answer": 1
+    },
+    {
+      "question": "Comment supprimer entièrement le fichier des VLAN d'un commutateur ?",
+      "choices": ["no vlan all", "erase startup-config", "delete flash:vlan.dat (mode privilégié)", "clear vlan"],
+      "answer": 2,
+      "explanation": "Pour un seul VLAN, on utilise « no vlan id_vlan » en configuration globale."
+    },
+    {
+      "question": "Quelle commande vérifie la configuration d'une agrégation ?",
+      "choices": ["show vlan brief", "show interfaces id_interface switchport", "show ip route", "show running-config vlan"],
+      "answer": 1
+    },
+    {
+      "question": "Des hôtes de VLAN différents doivent communiquer. Que faut-il ?",
+      "choices": ["Rien, le commutateur s'en charge", "Un routeur", "Un hub", "Un VLAN natif commun"],
+      "answer": 1,
+      "explanation": "Un routeur est requis dès que des périphériques de réseaux de couche 3 différents communiquent."
+    }
+  ]
+}

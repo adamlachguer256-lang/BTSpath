@@ -1,0 +1,81 @@
+{
+  "title": "RAID — Partitionnement avancé",
+  "description": "Linux · Semestre 3 · Chapitre 7. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Quel niveau de RAID est appelé « stripe mode » et n'offre aucune redondance ?",
+      "choices": ["RAID-0", "RAID-1", "RAID-5", "RAID-10"],
+      "answer": 0,
+      "explanation": "RAID-0 fractionne les lectures/écritures sur les disques : plus rapide, mais une panne peut faire perdre toutes les données."
+    },
+    {
+      "question": "Le RAID-1 est aussi appelé :",
+      "choices": ["Striping", "Mirroring", "Parité distribuée", "Spare mode"],
+      "answer": 1,
+      "explanation": "Chaque information écrite sur un disque est dupliquée sur les autres."
+    },
+    {
+      "question": "Combien de disques faut-il au minimum pour un RAID-5, et quelle est sa taille utile ?",
+      "choices": ["2 disques, taille de N disques", "3 disques, taille de (N-1) disques", "4 disques, taille de N/2 disques", "3 disques, taille d'un seul disque"],
+      "answer": 1,
+      "explanation": "RAID-5 : au moins trois disques, parité répartie, taille finale (N-1) disques, tolère une panne."
+    },
+    {
+      "question": "Qu'est-ce qu'un disque de secours (Spare Disk) ?",
+      "choices": ["Un disque qui stocke la parité", "Un disque qui ne fait pas partie de la matrice tant qu'aucun disque ne tombe en panne", "Un disque de sauvegarde externe", "Le disque qui contient /boot"],
+      "answer": 1,
+      "explanation": "En cas de panne, le premier disque Spare remplace le disque défectueux et la matrice est reconstruite."
+    },
+    {
+      "question": "Pourquoi la partition de boot ne doit-elle pas être placée dans une matrice RAID ?",
+      "choices": ["Elle est trop petite", "Le chargeur de démarrage ne sait pas monter des partitions RAID", "RAID ne supporte pas ext4", "Elle serait effacée à chaque démarrage"],
+      "answer": 1,
+      "explanation": "Le bootloader (GRUB) est incapable de monter des partitions RAID."
+    },
+    {
+      "question": "Quel type doivent avoir les partitions utilisées pour créer une matrice RAID ?",
+      "choices": ["0x83 (Linux)", "0x82 (swap)", "0xFD (Linux RAID autodetect)", "0x07 (NTFS)"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle commande crée un volume RAID-1 /dev/md0 avec /dev/sdb et /dev/sdc ?",
+      "choices": ["mdadm -C /dev/md0 -l 1 -n 2 /dev/sdb /dev/sdc", "mdadm -S /dev/md0 -l 1 -n 2 /dev/sdb /dev/sdc", "mkfs -t raid1 /dev/sdb /dev/sdc", "mdadm -a /dev/md0 /dev/sdb /dev/sdc"],
+      "answer": 0,
+      "explanation": "-C (--create) crée le volume, -l le niveau, -n le nombre de disques, puis la liste des disques."
+    },
+    {
+      "question": "Quel fichier virtuel contient l'état des volumes RAID ?",
+      "choices": ["/etc/mdadm.conf", "/proc/mdstat", "/dev/md0", "/etc/fstab"],
+      "answer": 1,
+      "explanation": "On peut le suivre en continu avec : watch cat /proc/mdstat"
+    },
+    {
+      "question": "Que signifie le « (F) » à côté d'un disque dans /proc/mdstat ?",
+      "choices": ["Le disque est formaté", "Le disque est un spare", "Le disque est défectueux (Faulty)", "Le disque est plein"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle option de mdadm permet de simuler la panne d'un disque ?",
+      "choices": ["-r", "-a", "-f", "-S"],
+      "answer": 2,
+      "explanation": "Exemple : mdadm /dev/md0 -f /dev/hda8"
+    },
+    {
+      "question": "Pour remplacer un disque en panne, dans quel ordre utilise-t-on mdadm ?",
+      "choices": ["-a puis -r", "-r (retirer), changer le disque, puis -a (ajouter)", "-S puis -C", "-f puis --zero-superblock"],
+      "answer": 1,
+      "explanation": "On retire le disque avec -r (--remove), on le remplace, puis on le rajoute avec -a (--add) : il devient le nouveau spare."
+    },
+    {
+      "question": "Quelle commande génère automatiquement la configuration dans /etc/mdadm.conf ?",
+      "choices": ["mdadm --detail --scan >> /etc/mdadm.conf", "cat /proc/mdstat > /etc/mdadm.conf", "mdadm --run >> /etc/mdadm.conf", "mdadm --assemble > /etc/mdadm.conf"],
+      "answer": 0
+    },
+    {
+      "question": "Comment supprimer définitivement un volume RAID ?",
+      "choices": ["mdadm --stop", "rm /dev/md0", "mdadm --zero-superblock sur les disques qui le composent", "mdadm -r /dev/md0"],
+      "answer": 2,
+      "explanation": "Les informations du volume RAID sont écrites dans les superblocs des disques : on les efface avec --zero-superblock."
+    }
+  ]
+}

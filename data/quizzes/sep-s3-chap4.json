@@ -1,0 +1,19 @@
+{
+  "title": "Résolution de noms",
+  "description": "SEP · Module S43 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'un nom d'hôte ?", "choices": ["Le composant de gauche d'un nom DNS, qui identifie un hôte sur le réseau", "Un nom de 15 caractères plus un 16e indiquant le service", "L'adresse IP d'un serveur", "Le nom du domaine racine"], "answer": 0 },
+    { "question": "De combien de caractères est composé un nom NetBIOS ?", "choices": ["15 caractères plus un 16e (octet) indiquant le service", "16 caractères plus un 17e", "63 caractères", "8 caractères"], "answer": 0 },
+    { "question": "Où peut-on utiliser un nom NetBIOS ?", "choices": ["Sur Intranet et pas sur Internet", "Sur Internet uniquement", "Sur Internet et Intranet", "Nulle part sans DNS"], "answer": 0 },
+    { "question": "Quelle commande affiche les noms d'hôtes et les suffixes DNS sur un client ?", "choices": ["ipconfig /all", "nbtstat -n", "nbtstat -c", "ipconfig /flushdns"], "answer": 0 },
+    { "question": "Quelle commande affiche les noms NetBIOS d'un serveur distant à partir de son adresse IP ?", "choices": ["nbtstat -A AdresseIP", "nbtstat -n", "ipconfig /displaydns", "nbtstat -R"], "answer": 0 },
+    { "question": "Que stocke le cache de résolution client ?", "choices": ["Les noms d'hôtes récemment résolus et les mappages chargés depuis le fichier Hosts", "Les noms NetBIOS résolus par WINS uniquement", "Les baux DHCP", "Les comptes d'utilisateurs"], "answer": 0 },
+    { "question": "Quelle commande vide le cache de résolution client ?", "choices": ["ipconfig /flushdns", "ipconfig /displaydns", "nbtstat -R", "nbtstat -c"], "answer": 0 },
+    { "question": "Quelle commande ouvre le fichier Hosts pour le modifier ?", "choices": ["notepad %systemroot%\\system32\\drivers\\etc\\hosts", "notepad %systemroot%\\hosts.txt", "notepad %systemroot%\\system32\\dns\\hosts", "edit c:\\hosts"], "answer": 0, "explanation": "On ajoute par exemple « 192.168.1.100 Glasgow » puis on enregistre le fichier sans extension." },
+    { "question": "Qu'est-ce que la résolution de noms NetBIOS ?", "choices": ["Le processus qui consiste à mapper un nom NetBIOS à une adresse IP", "La résolution d'une adresse IP en nom DNS", "L'attribution d'adresses IP", "Le transfert de zone"], "answer": 0 },
+    { "question": "Quelle commande libère le cache de noms NetBIOS et recharge les entrées #PRE du fichier Lmhosts ?", "choices": ["nbtstat -R", "nbtstat -c", "nbtstat -n", "ipconfig /flushdns"], "answer": 0 },
+    { "question": "Pourquoi une diffusion NetBIOS échoue-t-elle pour une ressource sur un réseau distant ?", "choices": ["La diffusion ne peut pas passer par le routeur", "Le serveur WINS est arrêté", "Le fichier Hosts est vide", "Le nom est trop long"], "answer": 0 },
+    { "question": "Qu'est-ce que le fichier Lmhosts ?", "choices": ["Un fichier texte local qui mappe les noms NetBIOS à des adresses IP pour les hôtes hors du sous-réseau local", "Le fichier des noms DNS", "Le journal du serveur WINS", "Le fichier de configuration DHCP"], "answer": 0 },
+    { "question": "Quelle balise ajoute-t-on dans Lmhosts pour précharger une entrée dans le cache NetBIOS ?", "choices": ["#PRE", "#DOM", "#INCLUDE", "#BEGIN_ALTERNATE"], "answer": 0, "explanation": "Exemple du cours : 192.168.1.100 Glasgow #PRE" }
+  ]
+}

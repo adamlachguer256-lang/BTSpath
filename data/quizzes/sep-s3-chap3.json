@@ -1,0 +1,20 @@
+{
+  "title": "Gestion et analyse du service DHCP",
+  "description": "SEP · Module S43 · Chapitre 3. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Pourquoi le service DHCP doit-il être géré ?", "choices": ["Pour refléter les changements dans le réseau et le serveur DHCP", "Parce qu'il ne fonctionne pas seul", "Pour créer des comptes d'utilisateurs", "Pour résoudre les noms"], "answer": 0 },
+    { "question": "Où se trouve la base de données DHCP ?", "choices": ["%Systemroot%\\System32\\Dhcp", "%Systemroot%\\Spool\\Printers", "C:\\Program Files\\Dhcp", "%Systemroot%\\NTDS"], "answer": 0 },
+    { "question": "Quel fichier fait partie de la base de données DHCP ?", "choices": ["DHCP.mdb", "NTDS.dit", "Setup security.inf", "DHCPSrvLog.ini"], "answer": 0, "explanation": "Contenu : DHCP.mdb, Tmp.edb, J50.log et J50*.log, Res*.log, J50.chk." },
+    { "question": "Pourquoi dit-on que la base de données DHCP est dynamique ?", "choices": ["Elle est mise à jour quand les clients obtiennent ou libèrent leurs baux", "Elle change de dossier chaque jour", "Elle est recréée à chaque démarrage", "Elle est stockée en mémoire"], "answer": 0 },
+    { "question": "Dans quel répertoire le service DHCP sauvegarde-t-il automatiquement sa base ?", "choices": ["%Systemroot%\\System32\\Dhcp\\Backup\\New", "%Systemroot%\\Backup", "C:\\Dhcp\\Old", "%Systemroot%\\System32\\Config"], "answer": 0 },
+    { "question": "En cas de panne du matériel du serveur, d'où l'administrateur peut-il restaurer la base DHCP ?", "choices": ["Uniquement depuis l'emplacement de stockage hors connexion", "Depuis le répertoire de sauvegarde local", "Depuis le contrôleur de domaine", "Depuis un client DHCP"], "answer": 0 },
+    { "question": "Que fait la réconciliation d'une base de données DHCP ?", "choices": ["Elle compare les informations résumées (registre) et détaillées (base) pour supprimer les incohérences", "Elle supprime tous les baux", "Elle sauvegarde la base", "Elle autorise le serveur dans AD"], "answer": 0 },
+    { "question": "Que représentent les statistiques DHCP ?", "choices": ["Les statistiques collectées au niveau du serveur ou de l'étendue depuis le dernier démarrage du service DHCP", "Les statistiques depuis l'installation", "Le nombre de comptes du domaine", "Le trafic Internet"], "answer": 0 },
+    { "question": "Lequel de ces événements est consigné dans le journal d'audit DHCP ?", "choices": ["Des adresses IP sont louées, renouvelées, libérées ou refusées", "Un utilisateur imprime un document", "Un fichier est compressé", "Une GPO est appliquée"], "answer": 0 },
+    { "question": "Que fait le serveur DHCP à 00:00 avec le journal d'audit ?", "choices": ["Il ferme le journal existant et passe au fichier du jour suivant (ex. DHCPSrvLog-Mar.Log)", "Il supprime le journal", "Il envoie le journal à l'administrateur", "Il compresse le journal"], "answer": 0 },
+    { "question": "Quel compteur de performance DHCP peut indiquer que plusieurs demandes sont transmises au serveur au nom des clients ?", "choices": ["Doublons ignorés/s", "Paquets reçus/s", "Nombre de requêtes/s", "Longueur de la file d'attente active"], "answer": 0 },
+    { "question": "Pourquoi un serveur DHCP non-Microsoft non autorisé est-il un risque ?", "choices": ["Il ne contient pas la fonctionnalité d'autorisation dans Active Directory", "Il est plus lent", "Il ne supporte pas les étendues", "Il ne peut pas louer d'adresses"], "answer": 0 },
+    { "question": "Quel groupe a un accès en lecture seule au serveur à travers la console DHCP ?", "choices": ["Utilisateurs DHCP", "Administrateurs DHCP", "Utilisateurs avec pouvoir", "Utilisateurs authentifiés"], "answer": 0 },
+    { "question": "Pour sécuriser la base DHCP, à quels groupes faut-il retirer les autorisations sur le dossier DHCP ?", "choices": ["Utilisateurs authentifiés et Utilisateurs avec pouvoir", "Administrateurs DHCP", "Administrateurs", "Système"], "answer": 0 }
+  ]
+}

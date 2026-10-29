@@ -1,0 +1,22 @@
+{
+  "title": "Configuration de l'accès réseau",
+  "description": "SEP · Module S43 · Chapitre 9. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'un serveur d'accès réseau ?", "choices": ["Un serveur qui fait office de passerelle vers un réseau pour un client", "Un serveur DNS", "Un point d'accès sans fil", "Un contrôleur de domaine"], "answer": 0 },
+    { "question": "Quel client d'accès réseau se connecte via un réseau public ou partagé en émulant une liaison point à point ?", "choices": ["Client VPN", "Client d'accès à distance", "Client sans fil", "Client DHCP"], "answer": 0 },
+    { "question": "Quelle est la différence entre authentification et autorisation de l'accès réseau ?", "choices": ["L'authentification vérifie l'identité ; l'autorisation vérifie que la connexion est permise, après une ouverture de session réussie", "L'autorisation a lieu avant l'authentification", "Ce sont deux noms pour la même étape", "L'authentification attribue l'adresse IP"], "answer": 0 },
+    { "question": "Quelle méthode d'authentification utilise des mots de passe en clair (la moins sécurisée) ?", "choices": ["PAP", "CHAP", "MS-CHAP v2", "EAP-TLS"], "answer": 0 },
+    { "question": "Quelle méthode d'authentification offre le niveau de sécurité le plus élevé et exige une infrastructure de certificats à cartes à puce ?", "choices": ["EAP-TLS", "PAP", "CHAP", "MS-CHAP v2"], "answer": 0 },
+    { "question": "Quel est le protocole d'authentification par défaut pour Windows 2000 et versions ultérieures ?", "choices": ["MS-CHAP v2", "PAP", "CHAP", "PEAP"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un VPN ?", "choices": ["L'extension d'un réseau privé à travers des réseaux partagés ou publics, en émulant une liaison point à point", "Un réseau sans fil", "Un serveur de noms", "Une ligne téléphonique dédiée"], "answer": 0 },
+    { "question": "Quel protocole VPN fournit la confidentialité mais pas l'intégrité des données ?", "choices": ["PPTP", "L2TP/IPSec", "SSTP", "HTTPS"], "answer": 0 },
+    { "question": "Quelle méthode d'authentification est recommandée pour l'accès à un réseau VPN ?", "choices": ["L2TP/IPSec avec des certificats", "PPTP avec PAP", "SSTP sans authentification", "CHAP"], "answer": 0 },
+    { "question": "Pourquoi utiliser SSTP ?", "choices": ["Il utilise HTTPS pour passer à travers les pare-feux et proxy Web qui bloquent PPTP et L2TP/IPSec", "Il est compatible avec tous les anciens systèmes", "Il n'utilise aucun cryptage", "Il remplace DHCP"], "answer": 0 },
+    { "question": "Quelle norme sans fil offre 11 Mbit/s avec une bonne couverture mais une sensibilité aux interférences ?", "choices": ["802.11b", "802.11a", "802.11g", "802.1x"], "answer": 0 },
+    { "question": "Quelle norme est incompatible avec 802.11, 802.11b et 802.11g ?", "choices": ["802.11a", "802.1x", "802.11b", "802.11g"], "answer": 0 },
+    { "question": "Que fait la norme 802.1x ?", "choices": ["Elle authentifie les clients avant de leur donner accès au réseau (câblé ou sans fil)", "Elle fixe le débit à 54 Mbit/s", "Elle attribue les adresses IP", "Elle crypte les fichiers sur disque"], "answer": 0 },
+    { "question": "Pour un accès sans fil privilégiant la facilité de déploiement, que faut-il choisir ?", "choices": ["PEAP avec des mots de passe (EAP-MS-CHAP v2)", "PEAP avec des certificats (EAP-TLS)", "PAP", "Aucune authentification"], "answer": 0 },
+    { "question": "Quels éléments composent une stratégie d'accès distant ?", "choices": ["Conditions, autorisation d'accès distant et profil", "Filtre, action et méthode", "Étendue, bail et options", "Zone, enregistrement et TTL"], "answer": 0 },
+    { "question": "Qu'est-ce que RADIUS ?", "choices": ["Un protocole standard qui permet l'authentification, l'autorisation et la comptabilité des connexions d'accès distant", "Un protocole de routage", "Un service de noms", "Une norme sans fil"], "answer": 0, "explanation": "NPS (IAS) est le serveur RADIUS de Microsoft." }
+  ]
+}

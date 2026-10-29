@@ -1,0 +1,78 @@
+{
+  "title": "Surveillance des ressources et des performances",
+  "description": "SEP · Module S41 · Chapitre 12. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Le Résumé système des informations système permet notamment de savoir…",
+      "choices": ["Si l'ordinateur a la dernière version du BIOS et sa quantité de mémoire", "Quels fichiers sont hors connexion", "Quel tunnel VPN est utilisé", "Quels comptes sont dans le SAM"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle partie des informations système sert à résoudre les conflits de ressources (ports, interruptions…) ?",
+      "choices": ["Ressources matérielles", "Résumé système", "Environnement logiciel", "Journal de sécurité"],
+      "answer": 0
+    },
+    {
+      "question": "Où trouver la liste des périphériques dont le pilote est actuellement endommagé ?",
+      "choices": ["Composants > Périphériques à problème", "Ressources matérielles", "Résumé système", "Gestionnaire des tâches > Mise en réseau"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle partie des informations système donne les variables d'environnement et les DLL associées à une application ?",
+      "choices": ["Environnement logiciel", "Composants", "Ressources matérielles", "Résumé système"],
+      "answer": 0
+    },
+    {
+      "question": "Qu'est-ce que le Gestionnaire des tâches ?",
+      "choices": ["Un outil qui fournit des informations en temps réel sur les applications exécutées", "Un journal des événements de sécurité", "Un outil de défragmentation", "Une console de stratégie de groupe"],
+      "answer": 0
+    },
+    {
+      "question": "Comment fermer une application qui ne répond pas ?",
+      "choices": ["Gestionnaire des tâches > Applications > Fin de tâche", "Observateur d'événements > Effacer le journal", "Informations système > Composants", "Options de performances > Effets visuels"],
+      "answer": 0
+    },
+    {
+      "question": "Vous voulez qu'une application ait toujours le temps processeur nécessaire. Que faire ?",
+      "choices": ["Dans l'onglet Processus, définir la priorité de ses processus sur Haute ou En temps réel", "Désactiver les effets visuels", "Limiter la taille des journaux", "Fermer le Gestionnaire des tâches"],
+      "answer": 0
+    },
+    {
+      "question": "Où voir les octets envoyés et reçus par seconde d'une connexion réseau ?",
+      "choices": ["Onglet Mise en réseau du Gestionnaire des tâches", "Onglet Processus", "Journal système", "Résumé système"],
+      "answer": 0,
+      "explanation": "Les valeurs sont affichées en pourcentage de bande passante."
+    },
+    {
+      "question": "Qu'influence la configuration de l'utilisation de la mémoire ?",
+      "choices": ["L'utilisation de la mémoire vive et du fichier d'échange", "Les priorités des processus", "La taille des journaux", "Les effets visuels"],
+      "answer": 0,
+      "explanation": "C'est la configuration de la performance du processeur qui influence les priorités des processus."
+    },
+    {
+      "question": "Pour qu'un antivirus en arrière-plan s'exécute le plus vite possible, que modifier ?",
+      "choices": ["Options de performances > Avancé : optimiser pour les opérations d'arrière-plan", "Activer tous les effets visuels", "Définir la priorité sur Basse", "Limiter la taille du journal d'applications"],
+      "answer": 0
+    },
+    {
+      "question": "Quel journal consigne une tentative d'ouverture de session valide ou non valide ?",
+      "choices": ["Le journal de sécurité", "Le journal système", "Le journal d'applications", "Le fichier ntbtlog.txt"],
+      "answer": 0
+    },
+    {
+      "question": "Quel journal contient les événements journalisés par les composants système ?",
+      "choices": ["Le journal système", "Le journal d'applications", "Le journal de sécurité", "Le Résumé système"],
+      "answer": 0
+    },
+    {
+      "question": "Quels sont les types d'événements système et liés aux applications ?",
+      "choices": ["Informations, Avertissement, Erreur", "Succès, Échec, Audit", "Haute, Normale, Basse", "Critique, Mineur, Majeur"],
+      "answer": 0
+    },
+    {
+      "question": "Que peut-on configurer pour limiter la taille des fichiers journaux ?",
+      "choices": ["La taille limite et l'action à effectuer quand la limite est atteinte", "Le nombre d'utilisateurs autorisés", "La priorité du journal", "La résolution d'affichage"],
+      "answer": 0
+    }
+  ]
+}

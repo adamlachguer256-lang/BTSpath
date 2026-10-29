@@ -1,0 +1,57 @@
+{
+  "title": "Démo : découvrir BTSPath",
+  "description": "Quiz de démonstration pour tester l'interface. Il porte sur le fonctionnement de BTSPath, pas sur le programme du BTS.",
+  "demo": true,
+  "questions": [
+    {
+      "question": "Où BTSPath enregistre-t-il ta progression de révision ?",
+      "choices": [
+        "Sur un serveur BTSPath",
+        "Dans le navigateur de cet appareil (localStorage)",
+        "Dans ton compte Google",
+        "Dans les fichiers PDF"
+      ],
+      "answer": 1,
+      "explanation": "La progression reste dans ce navigateur, sur cet appareil. Elle n'est pas synchronisée entre appareils."
+    },
+    {
+      "question": "Quels sont les trois statuts possibles d'un chapitre ?",
+      "choices": [
+        "Facile, Moyen, Difficile",
+        "À lire, Lu, Archivé",
+        "Pas commencé, En cours, Révisé",
+        "Nouveau, Favori, Terminé"
+      ],
+      "answer": 2,
+      "explanation": "Chaque chapitre peut être marqué « Pas commencé », « En cours » ou « Révisé »."
+    },
+    {
+      "question": "Que se passe-t-il quand tu cliques sur un fichier .pptx ?",
+      "choices": [
+        "Il s'ouvre dans un lecteur intégré",
+        "Il est converti en PDF",
+        "Il est téléchargé sur ton appareil",
+        "Rien, il n'est pas disponible"
+      ],
+      "answer": 2,
+      "explanation": "Les navigateurs ne savent pas afficher les présentations PowerPoint : elles sont donc proposées au téléchargement."
+    },
+    {
+      "question": "Quel raccourci clavier ouvre la recherche rapide ?",
+      "choices": ["Ctrl + K", "Ctrl + P", "Alt + F4", "Ctrl + Z"],
+      "answer": 0,
+      "explanation": "Ctrl + K (ou la touche /) ouvre la recherche dans toutes les ressources."
+    },
+    {
+      "question": "BTSPath est-il une plateforme officielle d'un établissement ou du ministère ?",
+      "choices": [
+        "Oui, c'est la plateforme officielle du BTS",
+        "Non, c'est une plateforme indépendante",
+        "Oui, mais seulement pour la filière SRI",
+        "Cela dépend du semestre"
+      ],
+      "answer": 1,
+      "explanation": "BTSPath est un projet indépendant, sans affiliation officielle."
+    }
+  ]
+}

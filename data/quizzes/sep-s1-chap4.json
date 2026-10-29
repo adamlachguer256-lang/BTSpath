@@ -1,0 +1,94 @@
+{
+  "title": "Gestion des disques",
+  "description": "SEP · Module S41 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Combien de partitions un disque MBR supporte-t-il ?",
+      "choices": ["4 partitions principales au plus (ou 3 principales et une étendue avec volumes logiques)", "128 partitions", "32 partitions", "Un nombre illimité"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle est la taille de partition maximale supportée par un disque MBR ?",
+      "choices": ["2 To", "256 To", "32 Go", "32 Exaoctets"],
+      "answer": 0
+    },
+    {
+      "question": "Où se trouve le MBR (Master Boot Record) ?",
+      "choices": ["Sur le premier secteur du disque dur", "Sur le dernier secteur du disque dur", "Dans le magasin de pilotes", "Dans un fichier sur la partition système"],
+      "answer": 0
+    },
+    {
+      "question": "Que se passe-t-il si le MBR est endommagé ?",
+      "choices": ["Le système d'exploitation peut ne plus être amorçable, car il n'y a aucune redondance", "Rien, une copie de secours est utilisée automatiquement", "Le disque est converti en GPT", "Le disque devient dynamique"],
+      "answer": 0
+    },
+    {
+      "question": "Combien de partitions un disque GPT supporte-t-il, et quelle taille de volume ?",
+      "choices": ["128 partitions, volumes de 256 To", "4 partitions, volumes de 2 To", "32 partitions, volumes de 2 To", "128 partitions, volumes de 32 Go"],
+      "answer": 0
+    },
+    {
+      "question": "Pourquoi la table GPT est-elle plus fiable que le MBR ?",
+      "choices": ["Elle est dupliquée et protégée par des contrôles de redondance cycliques", "Elle est stockée sur un deuxième disque", "Elle est cryptée avec EFS", "Elle est sauvegardée par Windows Update"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle différence entre l'outil Gestion des disques et Diskpart.exe est donnée dans le cours ?",
+      "choices": ["Gestion des disques peut gérer des ordinateurs distants ; Diskpart s'exécute toujours localement et est scriptable", "Diskpart est graphique ; Gestion des disques est en ligne de commande", "Seul Diskpart gère les disques dynamiques", "Gestion des disques permet de créer des scripts"],
+      "answer": 0
+    },
+    {
+      "question": "Dans Diskpart, quelle commande convertit un disque de base MBR en disque de base GPT ?",
+      "choices": ["convert gpt", "convert mbr", "convert dynamic", "select disk gpt"],
+      "answer": 0
+    },
+    {
+      "question": "Dans Diskpart, quelle commande affiche la liste des disques (taille, espace libre…) ?",
+      "choices": ["list disk", "select disk", "show disk", "list volume gpt"],
+      "answer": 0
+    },
+    {
+      "question": "Dans quel volume les données sont-elles écrites alternativement et équitablement sur deux disques ou plus ?",
+      "choices": ["Volume agrégé par bandes", "Volume fractionné", "Volume simple", "Partition étendue"],
+      "answer": 0
+    },
+    {
+      "question": "Quel volume remplit le premier disque, puis le deuxième, etc. ?",
+      "choices": ["Volume fractionné", "Volume agrégé par bandes", "Volume simple", "Volume GPT"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle affirmation sur le volume agrégé par bandes est vraie ?",
+      "choices": ["L'espace alloué sur chaque disque doit être identique et il n'y a pas de tolérance de panne", "Il tolère la panne d'un disque", "Il utilise l'espace d'un seul disque", "Il peut combiner au plus 2 disques"],
+      "answer": 0,
+      "explanation": "Il combine jusqu'à 32 disques et prévoit un débit de lecture/écriture plus rapide, mais sans tolérance de panne."
+    },
+    {
+      "question": "Peut-on étendre une partition qui contient le volume système ou d'amorçage ?",
+      "choices": ["Non", "Oui, si elle est en NTFS", "Oui, si le disque est GPT", "Oui, après une défragmentation"],
+      "answer": 0,
+      "explanation": "On peut étendre des volumes simples et des partitions NTFS, mais pas un volume système ou d'amorçage."
+    },
+    {
+      "question": "Que faut-il faire avant de réduire un volume ?",
+      "choices": ["Défragmenter le disque", "Convertir le disque en GPT", "Crypter le volume", "Changer la lettre de lecteur"],
+      "answer": 0
+    },
+    {
+      "question": "Qu'est-ce que la fragmentation du disque ?",
+      "choices": ["Le stockage non contigu de données sur un volume", "La division d'un disque en 4 partitions", "La compression des fichiers NTFS", "La conversion d'un disque de base en dynamique"],
+      "answer": 0,
+      "explanation": "Elle entraîne des performances médiocres du disque. La défragmentation est planifiée automatiquement par défaut et peut être lancée en ligne de commande (Defrag.exe)."
+    },
+    {
+      "question": "Un utilisateur manque d'espace sur sa partition de données (disque de base, 2 partitions). Quelle solution propose le cours ?",
+      "choices": ["Convertir en disque dynamique, ajouter un disque dynamique et étendre le volume de données (volume fractionné)", "Créer un volume agrégé par bandes sur un seul disque", "Convertir le disque en GPT", "Défragmenter le disque"],
+      "answer": 0
+    },
+    {
+      "question": "Un utilisateur n'a plus d'espace sur C et ne doit pas changer ses méthodes de travail. Que faire ?",
+      "choices": ["Ajouter un disque et créer un point de montage dans un dossier du lecteur C", "Lui attribuer une nouvelle lettre de lecteur E:", "Réduire le volume C", "Convertir C en FAT32"],
+      "answer": 0
+    }
+  ]
+}

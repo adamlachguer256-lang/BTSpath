@@ -1,0 +1,74 @@
+{
+  "title": "Fonctionnement sur des réseaux Microsoft",
+  "description": "SEP · Module S41 · Chapitre 9. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Quelles sont les caractéristiques d'un groupe de travail ?",
+      "choices": ["Réseau d'égal à égal, administration non centralisée", "Administration centralisée dans Active Directory", "Un contrôleur de domaine obligatoire", "Comptes stockés sur un serveur DNS"],
+      "answer": 0
+    },
+    {
+      "question": "Où résident les comptes d'utilisateur locaux ?",
+      "choices": ["Dans le Gestionnaire de comptes de sécurité (SAM) de chaque ordinateur", "Dans Active Directory", "Dans le fichier Boot.ini", "Sur le serveur WINS"],
+      "answer": 0
+    },
+    {
+      "question": "Où résident les comptes d'utilisateur de domaine ?",
+      "choices": ["Dans Active Directory", "Dans le SAM de chaque ordinateur", "Dans le fichier LMHOSTS", "Dans la console MMC"],
+      "answer": 0
+    },
+    {
+      "question": "Quels sont les comptes d'utilisateur prédéfinis cités dans le cours ?",
+      "choices": ["Administrateur et Invité", "Utilisateur1 et Utilisateur2", "Root et Guest", "Système et Réseau"],
+      "answer": 0
+    },
+    {
+      "question": "Dans un groupe de travail, une employée accède à ses fichiers locaux mais pas aux ressources partagées. Pourquoi ?",
+      "choices": ["Elle n'a pas de compte local sur les ordinateurs où se trouvent les ressources", "Son compte est dans Active Directory", "Le pare-feu bloque ses fichiers locaux", "La console MMC n'est pas installée"],
+      "answer": 0,
+      "explanation": "Il faut un compte local valide avec les mêmes nom d'utilisateur et mot de passe sur chaque ordinateur auquel elle doit accéder."
+    },
+    {
+      "question": "Lors de l'authentification locale, que crée Windows si les informations correspondent à celles du SAM ?",
+      "choices": ["Un jeton d'accès", "Un point de restauration", "Un compte de domaine", "Un fichier .msc"],
+      "answer": 0
+    },
+    {
+      "question": "Pourquoi désactiver un compte d'utilisateur à sa création ?",
+      "choices": ["S'il n'est pas prévu de l'utiliser immédiatement, pour éviter une utilisation inappropriée", "Pour qu'il n'ait pas besoin de mot de passe", "Pour le transformer en compte Invité", "Pour le déplacer dans Active Directory"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle est l'extension des fichiers de console MMC ?",
+      "choices": [".msc", ".mmc", ".ini", ".exe"],
+      "answer": 0,
+      "explanation": "La MMC ne fournit aucune fonction de gestion elle-même : elle héberge des composants logiciels enfichables."
+    },
+    {
+      "question": "Que contient le composant Stratégies de compte ?",
+      "choices": ["La stratégie de mot de passe et la stratégie de verrouillage de compte", "L'attribution des droits utilisateur et les options de sécurité", "Les jeux de contrôles", "Le partage de connexion Internet"],
+      "answer": 0
+    },
+    {
+      "question": "Que contient le composant Stratégies locales ?",
+      "choices": ["L'attribution des droits utilisateur et les options de sécurité", "La stratégie de mot de passe et de verrouillage", "Les comptes de domaine", "Les connexions VPN"],
+      "answer": 0
+    },
+    {
+      "question": "Lequel n'est PAS un élément requis pour rejoindre un domaine ?",
+      "choices": ["Un serveur DHCP", "Un nom de domaine", "Un compte d'ordinateur existant ou l'autorisation d'en créer un", "Un contrôleur de domaine disponible et un serveur DNS"],
+      "answer": 0
+    },
+    {
+      "question": "Un utilisateur de domaine doit retaper son mot de passe à chaque accès à un serveur. Cause probable ?",
+      "choices": ["Il a ouvert une session sur l'ordinateur local et non sur le domaine", "Son compte est désactivé", "Le serveur DNS est arrêté", "La Bascule rapide utilisateur est activée"],
+      "answer": 0,
+      "explanation": "Même avec le même nom et mot de passe, les comptes local et de domaine ont des identificateurs de sécurité différents."
+    },
+    {
+      "question": "Vous exigez CTRL+ALT+SUPPR pour ne plus afficher les comptes sur l'écran de bienvenue. Quelle conséquence ?",
+      "choices": ["L'option Bascule rapide utilisateur est aussi désactivée", "Les comptes locaux sont supprimés", "L'ordinateur quitte le groupe de travail", "Aucune conséquence"],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "title": "LVM — Logical Volume Manager",
+  "description": "Linux · Semestre 3 · Chapitre 8. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "De quels éléments se compose une architecture LVM ?",
+      "choices": ["PV, VG et LV", "MBR, GPT et LV", "Inode, bloc et superbloc", "RAID, VG et fstab"],
+      "answer": 0,
+      "explanation": "Physical Volumes (PV) alimentent un Volume Group (VG), dans lequel on crée des Logical Volumes (LV)."
+    },
+    {
+      "question": "Quelle commande crée un volume physique sur /dev/sdb ?",
+      "choices": ["vgcreate /dev/sdb", "pvcreate /dev/sdb", "lvcreate /dev/sdb", "mkfs /dev/sdb"],
+      "answer": 1,
+      "explanation": "Les commandes LVM = préfixe de l'objet (pv, vg, lv) + action (create, extend, reduce, display)."
+    },
+    {
+      "question": "Quelle est la bonne syntaxe pour créer le groupe de volumes vg1 à partir de /dev/sdb ?",
+      "choices": ["vgcreate /dev/sdb vg1", "vgcreate -n vg1 /dev/sdb", "vgcreate vg1 /dev/sdb", "pvcreate vg1 /dev/sdb"],
+      "answer": 2,
+      "explanation": "Syntaxe : vgcreate nom_vg pv_device."
+    },
+    {
+      "question": "Dans « lvcreate -L 400M -n data1 vg1 », que représente -L ?",
+      "choices": ["Le nom du volume logique", "La taille du volume logique", "Le groupe de volumes", "Le type de système de fichiers"],
+      "answer": 1,
+      "explanation": "-L = taille, -n = nom du LV, puis le nom du VG d'où il est créé."
+    },
+    {
+      "question": "Sous quel chemin apparaît le volume logique data1 créé dans vg1 ?",
+      "choices": ["/dev/data1", "/mnt/vg1/data1", "/dev/vg1/data1", "/etc/lvm/data1"],
+      "answer": 2,
+      "explanation": "Le LV apparaît comme fichier spécial bloc dans le répertoire du VG sous /dev."
+    },
+    {
+      "question": "Quelle commande affiche les volumes physiques de façon concise (« l'essentiel en deux lignes ») ?",
+      "choices": ["pvdisplay", "pvs", "lvs", "fdisk -l"],
+      "answer": 1,
+      "explanation": "pvdisplay donne le détail, pvs la version courte. Idem vgdisplay/vgs et lvdisplay/lvs."
+    },
+    {
+      "question": "Il ne reste plus d'espace libre dans le VG. Que faut-il faire avant d'étendre le LV ?",
+      "choices": ["Réduire un autre LV avec lvreduce", "Étendre le VG avec vgextend après un pvcreate", "Recréer le VG", "Formater le LV"],
+      "answer": 1,
+      "explanation": "On crée un nouveau PV (pvcreate) puis on l'ajoute au VG avec vgextend nom_vg pv_device."
+    },
+    {
+      "question": "Que fait « lvextend -L +1G /dev/vg1/data1 » ?",
+      "choices": ["Fixe la taille du LV à exactement 1 Go", "Ajoute 1 Go à la taille actuelle du LV", "Crée un snapshot de 1 Go", "Ajoute 1 Go au VG"],
+      "answer": 1,
+      "explanation": "Avec le signe +, la taille indiquée s'ajoute à celle du volume existant."
+    },
+    {
+      "question": "Après avoir étendu un volume logique, que faut-il encore prévoir ?",
+      "choices": ["Rien, l'espace est utilisable immédiatement", "Étendre aussi le système de fichiers", "Supprimer le snapshot", "Redémarrer la machine"],
+      "answer": 1,
+      "explanation": "Un LV n'est qu'un espace de stockage : il faut étendre le filesystem pour exploiter l'espace ajouté."
+    },
+    {
+      "question": "Que se passe-t-il pour les données lors d'un lvreduce ?",
+      "choices": ["Elles sont déplacées automatiquement", "Les données des extents retirés sont perdues", "Elles sont copiées dans un snapshot", "Rien, lvreduce ne touche pas aux données"],
+      "answer": 1,
+      "explanation": "Les Logical Extents sont retirés dès l'exécution : toutes les précautions doivent être prises."
+    },
+    {
+      "question": "Quelle option de lvcreate indique qu'on crée un snapshot ?",
+      "choices": ["-n", "-L", "-s", "-S"],
+      "answer": 2,
+      "explanation": "Syntaxe : lvcreate -L taille -s -n nom_snapshot lv_origine."
+    },
+    {
+      "question": "Que stocke physiquement un snapshot LVM ?",
+      "choices": ["Une copie complète du volume d'origine", "Uniquement les différences avec le volume en production", "Seulement les métadonnées du VG", "Les fichiers supprimés"],
+      "answer": 1,
+      "explanation": "Sans écriture sur le volume d'origine, le snapshot ne consomme presque rien (« Allocated to snapshot » à 0 %)."
+    },
+    {
+      "question": "Pourquoi conseille-t-on de créer les PV sur des volumes RAID ?",
+      "choices": ["Pour aller plus vite", "Parce que la panne d'un seul PV rend inopérants tous les LV qui en dépendent", "Parce que LVM ne fonctionne pas sans RAID", "Pour économiser de l'espace"],
+      "answer": 1,
+      "explanation": "Dans une architecture à plusieurs PV, la défaillance du moindre d'entre eux rend les LV dépendants inopérants."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "title": "Installation de Microsoft Windows 7",
+  "description": "SEP · Module S41 · Chapitre 1. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Votre entreprise a peu d'utilisateurs, pas de serveur de fichiers centralisé et pas de domaine. Quelle édition choisir ?",
+      "choices": ["Windows 7 Starter", "Windows 7 Familiale Premium", "Windows 7 Professionnel", "Windows 7 Familiale Basic"],
+      "answer": 2,
+      "explanation": "Les éditions Familiales et Starter visent le grand public ; Professionnel est le meilleur choix pour peu d'utilisateurs."
+    },
+    {
+      "question": "Quelle quantité minimale de mémoire faut-il pour Windows 7 64 bits ?",
+      "choices": ["512 Mo", "1 Go", "2 Go", "4 Go"],
+      "answer": 2,
+      "explanation": "1 Go pour 32 bits, 2 Go pour 64 bits. Processeur 1 GHz minimum, 16 Go (32 bits) ou 20 Go (64 bits) de disque."
+    },
+    {
+      "question": "Quelle est une limitation des éditions 64 bits de Windows 7 ?",
+      "choices": ["Elles gèrent moins de mémoire", "Elles ne prennent pas en charge l'environnement WOW 16 bits", "Elles ne supportent pas NTFS", "Elles ne peuvent pas rejoindre un domaine"],
+      "answer": 1
+    },
+    {
+      "question": "Quel système de fichiers offre la sécurité des fichiers, la compression, les quotas et le cryptage ?",
+      "choices": ["FAT", "FAT32", "NTFS", "Aucun des trois"],
+      "answer": 2,
+      "explanation": "FAT/FAT32 n'ont pas de sécurité au niveau des fichiers et dossiers."
+    },
+    {
+      "question": "Dans un groupe de travail, où sont stockés les comptes d'utilisateurs ?",
+      "choices": ["Dans Active Directory", "Dans la base SAM locale de chaque ordinateur", "Sur un serveur DHCP", "Dans le BIOS"],
+      "answer": 1,
+      "explanation": "En domaine, un seul compte d'utilisateur est géré par Active Directory."
+    },
+    {
+      "question": "Quel type d'installation remplace Windows par Windows 7 en conservant applications, fichiers et paramètres ?",
+      "choices": ["Nouvelle installation", "Mise à niveau", "Migration", "Installation à partir d'une image"],
+      "answer": 1
+    },
+    {
+      "question": "Vos ordinateurs ont au moins trois ans et vous déployez Windows 7 sur de nombreux ordinateurs neufs. Que faire ?",
+      "choices": ["Une mise à niveau sur place", "Une nouvelle installation sur le nouveau matériel, puis migrer les paramètres et données", "Garder les anciens ordinateurs", "Installer Windows 7 Starter"],
+      "answer": 1
+    },
+    {
+      "question": "Peut-on faire une mise à niveau sur place d'un Windows 32 bits vers Windows 7 64 bits ?",
+      "choices": ["Oui, toujours", "Oui, si la langue est la même", "Non : il faut une nouvelle installation et une migration", "Seulement depuis Windows XP"],
+      "answer": 2,
+      "explanation": "La mise à niveau sur place ne prend en charge ni un changement d'architecture, ni un changement de langue."
+    },
+    {
+      "question": "Quelle méthode d'installation est adaptée à une grande entreprise qui veut standardiser ses postes ?",
+      "choices": ["Depuis le DVD", "Depuis un partage réseau", "À partir d'une image (WIM)", "Mise à niveau manuelle"],
+      "answer": 2,
+      "explanation": "Outils cités : ImageX, Windows Deployment Services (WDS), Microsoft Deployment Toolkit (MDT)."
+    },
+    {
+      "question": "Dans quel cas installer Windows depuis un partage réseau ?",
+      "choices": ["Pour des ordinateurs sans lecteur de DVD", "Pour un seul ordinateur à la maison", "Pour changer de langue", "Pour garder les applications installées"],
+      "answer": 0,
+      "explanation": "Cela évite aussi d'avoir à conserver le support d'installation."
+    },
+    {
+      "question": "Qu'est-ce que USMT ?",
+      "choices": ["Un outil graphique de partitionnement", "Un outil en ligne de commande pour migrer les profils utilisateur", "Un service de mise à jour", "Un antivirus intégré"],
+      "answer": 1,
+      "explanation": "Commandes : ScanState (collecte) et LoadState (restauration)."
+    },
+    {
+      "question": "Que ne peut PAS transférer USMT ?",
+      "choices": ["Les comptes et paramètres utilisateur", "Les favoris Internet", "Les fichiers programme et les applications", "Les paramètres de messagerie"],
+      "answer": 2,
+      "explanation": "Il transfère uniquement des données et des paramètres d'application."
+    },
+    {
+      "question": "Un parc sous Vista : processeur 233 MHz, 512 Mo de RAM, disque 20 Go. La mise à niveau vers Windows 7 Pro est-elle possible ?",
+      "choices": ["Oui", "Non : le processeur et la RAM sont insuffisants", "Non : seulement le disque est insuffisant", "Oui, en 64 bits uniquement"],
+      "answer": 1,
+      "explanation": "Il faut au moins 1 GHz et 1 Go de RAM (32 bits)."
+    }
+  ]
+}

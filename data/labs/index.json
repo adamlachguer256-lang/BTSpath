@@ -1,0 +1,22 @@
+{
+  "labs": [
+    {
+      "id": "linux-s1-s2-chp6",
+      "file": "linux-s1-s2-chp6.json",
+      "title": "Premiers pas dans Bash",
+      "chapterId": "linux-s1-s2-chp6-lancez-des-commandes-sous-bash"
+    },
+    {
+      "id": "linux-s3-raid",
+      "file": "linux-s3-raid.json",
+      "title": "RAID avec mdadm — les exemples du cours",
+      "chapterId": "linux-s3-chap-7-raid"
+    },
+    {
+      "id": "linux-s3-lvm",
+      "file": "linux-s3-lvm.json",
+      "title": "LVM — les exemples du cours",
+      "chapterId": "linux-s3-chap-8-lvm"
+    }
+  ]
+}

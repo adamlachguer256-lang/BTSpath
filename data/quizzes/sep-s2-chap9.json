@@ -1,0 +1,19 @@
+{
+  "title": "Préparation de l'administration d'un serveur",
+  "description": "SEP · Module S42 · Chapitre 9. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quelle recommandation est donnée sur la connexion en tant qu'administrateur ?", "choices": ["Se connecter en tant qu'administrateur uniquement lorsque c'est nécessaire", "Toujours travailler en tant qu'administrateur", "Partager le compte administrateur", "Désactiver le compte administrateur"], "answer": 0 },
+    { "question": "Quel groupe crée, supprime et modifie les comptes d'utilisateurs et les groupes, sans pouvoir modifier le groupe Administrateurs ?", "choices": ["Opérateurs de compte", "Opérateurs de serveur", "Opérateurs de sauvegarde", "Opérateurs d'impression"], "answer": 0 },
+    { "question": "Quel groupe partage les ressources disque et assure la sauvegarde et la restauration des fichiers ?", "choices": ["Opérateurs de serveur", "Opérateurs de compte", "Opérateurs d'impression", "Utilisateurs"], "answer": 0 },
+    { "question": "Que permet la commande Exécuter en tant que ?", "choices": ["Ouvrir une session avec un compte non administratif et effectuer quand même des tâches administratives", "Redémarrer le serveur à distance", "Créer un compte administrateur", "Exécuter un script au démarrage"], "answer": 0 },
+    { "question": "Quelle est la syntaxe de Exécuter en tant que en invite de commandes ?", "choices": ["runas /user:nom_domaine\\nom_utilisateur nom_programme", "runas nom_programme /admin", "exec /user nom_utilisateur", "mstsc /user:nom_utilisateur"], "answer": 0 },
+    { "question": "Dans Gestion de l'ordinateur, quels outils permettent de démarrer et arrêter les services système ?", "choices": ["Outils Services et applications", "Outils système", "Outils de stockage", "Outils réseau"], "answer": 0 },
+    { "question": "Pourquoi utiliser la console MMC dans l'administration à distance ?", "choices": ["Pour effectuer des tâches fréquentes et gérer des tâches similaires sur plusieurs ordinateurs distants", "Pour remplacer Active Directory", "Pour chiffrer les connexions", "Pour installer Windows"], "answer": 0 },
+    { "question": "Quel protocole utilise le Bureau à distance ?", "choices": ["RDP", "FTP", "SMTP", "DHCP"], "answer": 0 },
+    { "question": "Par défaut, qui dispose de privilèges de connexion distante sur le serveur distant ?", "choices": ["L'administrateur", "Tous les utilisateurs", "Le groupe Invités", "Personne"], "answer": 0 },
+    { "question": "Quelle est la différence entre Connexion Bureau à distance et Bureaux à distance ?", "choices": ["Bureaux à distance permet de se connecter à plusieurs serveurs simultanément dans une console MMC", "Connexion Bureau à distance ouvre la session de la console par défaut", "Bureaux à distance ne fonctionne qu'en plein écran", "Il n'y a aucune différence"], "answer": 0 },
+    { "question": "Quelle commande permet de se connecter à la session de la console d'un serveur distant ?", "choices": ["mstsc /v:serveur /console", "runas /console serveur", "rdp /connect serveur", "net use \\\\serveur /console"], "answer": 0 },
+    { "question": "Quel paramètre de délai force l'utilisateur à fermer la session après déconnexion ?", "choices": ["Fin d'une session déconnectée", "Limite de session active", "Limite de session inactive", "Délai de verrouillage"], "answer": 0 },
+    { "question": "Que permet le Gestionnaire des services Terminal Server ?", "choices": ["Surveiller tous les utilisateurs et sessions d'un serveur et forcer la fermeture ou la déconnexion", "Installer les services Terminal Server", "Créer des comptes d'utilisateurs", "Configurer le pare-feu"], "answer": 0 }
+  ]
+}

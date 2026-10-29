@@ -1,0 +1,79 @@
+{
+  "title": "Configuration du matériel sous Windows 7",
+  "description": "SEP · Module S41 · Chapitre 3. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Qu'est-ce qu'un pilote ?",
+      "choices": ["Un petit logiciel qui permet à un périphérique matériel de communiquer avec un ordinateur", "Un périphérique externe connecté via un port USB", "Un outil de sauvegarde du Registre", "Le référentiel où Windows stocke les mises à jour"],
+      "answer": 0
+    },
+    {
+      "question": "Un pilote développé pour une version 32 bits fonctionne-t-il sur une version 64 bits de Windows 7 ?",
+      "choices": ["Non, et un pilote 64 bits ne fonctionne pas non plus en 32 bits", "Oui, toujours", "Oui, s'il est signé par Microsoft", "Oui, via le Gestionnaire de périphériques"],
+      "answer": 0,
+      "explanation": "Les pilotes développés pour les versions 32 bits ne fonctionnent pas avec les versions 64 bits et vice versa."
+    },
+    {
+      "question": "Comment s'appelle le référentiel de pilotes de Windows 7 ?",
+      "choices": ["Le magasin de pilotes", "Le Gestionnaire de périphériques", "Device Stage", "Windows Update"],
+      "answer": 0
+    },
+    {
+      "question": "Quel est l'ordre d'installation d'un périphérique non Plug-and-Play ?",
+      "choices": ["Charger les pilotes, connecter le périphérique, configurer ses propriétés si nécessaire", "Connecter le périphérique, Windows l'installe automatiquement, l'utiliser", "Connecter le périphérique, redémarrer, lancer Sigverif.exe", "Configurer ses propriétés, connecter le périphérique, charger les pilotes"],
+      "answer": 0
+    },
+    {
+      "question": "Quel outil en ligne de commande est cité dans les nouveautés de Windows 7 pour gérer les packages de pilotes ?",
+      "choices": ["Pnputil.exe", "Diskpart.exe", "Defrag.exe", "Sigverif.exe"],
+      "answer": 0
+    },
+    {
+      "question": "Un utilisateur standard peut-il installer n'importe quel package de pilotes ?",
+      "choices": ["Non, uniquement les packages de pilotes que vous autorisez", "Oui, sans restriction", "Non, jamais aucun pilote", "Oui, s'il redémarre l'ordinateur"],
+      "answer": 0
+    },
+    {
+      "question": "Lors de la détection, si le package de pilotes n'est pas trouvé dans le magasin, où Windows le recherche-t-il ?",
+      "choices": ["Dans les dossiers spécifiés par le Registre, sur le site Windows Update et sur le média", "Uniquement sur le site du fabricant", "Uniquement dans Périphériques et imprimantes", "Nulle part : l'installation échoue"],
+      "answer": 0
+    },
+    {
+      "question": "Laquelle de ces actions n'est PAS citée parmi les fonctions du Gestionnaire de périphériques ?",
+      "choices": ["Défragmenter un disque", "Désinstaller un périphérique", "Restaurer des pilotes", "Activer ou désactiver des périphériques"],
+      "answer": 0
+    },
+    {
+      "question": "Quels périphériques s'affichent en général dans « Périphériques et imprimantes » ?",
+      "choices": ["Des périphériques externes connectés ou déconnectés via un port ou une connexion réseau", "Uniquement les disques durs internes", "Uniquement les pilotes non signés", "Uniquement les cartes graphiques"],
+      "answer": 0
+    },
+    {
+      "question": "Quel outil permet de rechercher les pilotes de périphériques non signés ?",
+      "choices": ["Sigverif.exe", "Pnputil.exe", "Defrag.exe", "Diskpart.exe"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle commande donne une liste de base des pilotes signés et non signés ?",
+      "choices": ["driverquery /si", "sigverif /list", "pnputil /si", "driverquery /all"],
+      "answer": 0
+    },
+    {
+      "question": "Un utilisateur a mis à jour le pilote de son lecteur de DVD-ROM qui ne fonctionne plus. Quelle est la solution la plus simple ?",
+      "choices": ["Utiliser la restauration de pilote pour rétablir le pilote initial", "Réinstaller Windows 7", "Utiliser l'option Dernière bonne configuration connue", "Lancer Sigverif.exe"],
+      "answer": 0,
+      "explanation": "D'après le cours, la meilleure méthode est la restauration de pilote. Si elle ne suffit pas, on peut utiliser la Restauration du système."
+    },
+    {
+      "question": "Vous avez installé la version 2.2 d'un pilote et vous voulez utiliser la version 2.1 (jamais installée). Que faire ?",
+      "choices": ["Désinstaller la 2.2, la supprimer du magasin de pilotes, puis installer la 2.1", "Utiliser la restauration de la version précédente du pilote", "Utiliser l'option Dernière bonne configuration connue", "Redémarrer : Windows choisit la 2.1 automatiquement"],
+      "answer": 0,
+      "explanation": "On ne peut pas revenir à la version 2.1 car elle n'a jamais été installée sur l'ordinateur."
+    },
+    {
+      "question": "Un utilisateur déplace chaque jour une caméra USB entre deux ordinateurs. Doit-il redémarrer à chaque fois ?",
+      "choices": ["Non, la plupart des périphériques USB sont Plug-and-Play", "Oui, toujours", "Oui, sauf si le pilote est signé", "Non, mais il doit réinstaller le pilote à chaque fois"],
+      "answer": 0
+    }
+  ]
+}

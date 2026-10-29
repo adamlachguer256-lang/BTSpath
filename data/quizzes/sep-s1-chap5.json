@@ -1,0 +1,89 @@
+{
+  "title": "Configuration et gestion des systèmes de fichiers",
+  "description": "SEP · Module S41 · Chapitre 5. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Quelle taille de volume maximale le système FAT prend-il en charge ?",
+      "choices": ["2 Go", "32 Go", "2 To", "32 Exaoctets"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle taille de volume maximale le système FAT32 prend-il en charge (selon le cours) ?",
+      "choices": ["32 Go", "2 Go", "256 To", "32 Exaoctets"],
+      "answer": 0
+    },
+    {
+      "question": "Pourquoi utiliser FAT ou FAT32 ?",
+      "choices": ["Ils sont adaptés aux petits disques et prennent en charge le double amorçage (Windows XP, Windows 98)", "Ils offrent EFS et les quotas de disque", "Ils supportent des volumes de 32 Exaoctets", "Ils identifient les secteurs défectueux"],
+      "answer": 0
+    },
+    {
+      "question": "Jusqu'à quelle taille NTFS permet-il de formater un volume ?",
+      "choices": ["32 Exaoctets", "32 Go", "2 To", "256 To"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle fonctionnalité NTFS permet une gestion améliorée de la croissance du stockage ?",
+      "choices": ["Les quotas de disque", "Le double amorçage", "Les clusters de 64 Ko", "La table de partition GUID"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle commande convertit le lecteur D: de FAT en NTFS ?",
+      "choices": ["convert d: /fs:ntfs", "format d: /fs:ntfs", "convert ntfs d:", "diskpart convert d:"],
+      "answer": 0
+    },
+    {
+      "question": "Peut-on convertir un volume NTFS en FAT avec la commande convert ?",
+      "choices": ["Non, aucune conversion de NTFS vers FAT", "Oui, avec convert /fs:fat", "Oui, avec Diskpart", "Oui, après défragmentation"],
+      "answer": 0
+    },
+    {
+      "question": "Que se passe-t-il quand un utilisateur accède à un fichier compressé NTFS ?",
+      "choices": ["Il est automatiquement décompressé", "Il doit le décompresser manuellement", "Il est crypté", "Il est déplacé vers une partition FAT"],
+      "answer": 0
+    },
+    {
+      "question": "Quel conseil est donné pour la compression des données ?",
+      "choices": ["Éviter de compresser les fichiers système ou exécutables", "Compresser surtout les données qui changent fréquemment", "Compresser le dossier Windows en priorité", "Ne jamais utiliser de couleurs différentes pour les fichiers compressés"],
+      "answer": 0,
+      "explanation": "Le cours conseille aussi de compresser les données statiques plutôt que celles qui changent souvent."
+    },
+    {
+      "question": "Des fichiers sont déplacés du lecteur C vers un dossier compressé du lecteur D. Que deviennent-ils ?",
+      "choices": ["Ils héritent de l'attribut de compression du nouveau dossier", "Ils conservent leur attribut d'origine", "Ils sont cryptés", "Ils restent sur C"],
+      "answer": 0
+    },
+    {
+      "question": "Des fichiers sont déplacés d'un emplacement du lecteur D vers un autre emplacement du même lecteur D. Que devient leur compression ?",
+      "choices": ["Ils conservent l'attribut de compression d'origine", "Ils héritent de l'attribut du dossier de destination", "Ils sont toujours décompressés", "Ils sont toujours compressés"],
+      "answer": 0
+    },
+    {
+      "question": "Lors du cryptage EFS, où est stockée la clé de cryptage de fichier de l'utilisateur ?",
+      "choices": ["Dans le champ de décryptage de données (DDF)", "Dans le champ de récupération de données (DRF)", "Dans le MBR", "Dans le magasin de pilotes"],
+      "answer": 0,
+      "explanation": "Le DRF (champ de récupération de données) contient la clé pour l'agent de récupération, s'il est désigné."
+    },
+    {
+      "question": "Si la clé du propriétaire d'un fichier crypté n'est pas disponible, qui peut récupérer le fichier ?",
+      "choices": ["L'agent de récupération, avec sa clé privée", "N'importe quel administrateur, sans clé", "Personne", "L'utilisateur, avec la commande convert"],
+      "answer": 0
+    },
+    {
+      "question": "Quel conseil est donné pour l'implémentation d'EFS ?",
+      "choices": ["Crypter des dossiers plutôt que des fichiers individuels", "Crypter les fichiers un par un", "Ne jamais archiver les clés et certificats", "Ne pas désigner d'agent de récupération"],
+      "answer": 0
+    },
+    {
+      "question": "Un utilisateur a le contrôle total NTFS sur un fichier mais reçoit « accès refusé ». Pourquoi ?",
+      "choices": ["Le fichier est crypté avec EFS", "Le fichier est compressé", "Le disque est en FAT32", "Le disque est fragmenté"],
+      "answer": 0,
+      "explanation": "La personne qui a crypté le fichier doit le décrypter, ou ajouter l'utilisateur comme utilisateur autorisé."
+    },
+    {
+      "question": "Le lecteur C est plein et contient beaucoup de fichiers graphiques, sans espace non alloué. Que propose le cours ?",
+      "choices": ["Compresser les dossiers des fichiers graphiques avec la compression NTFS", "Crypter les fichiers avec EFS", "Convertir C en FAT32", "Créer un volume agrégé par bandes"],
+      "answer": 0
+    }
+  ]
+}

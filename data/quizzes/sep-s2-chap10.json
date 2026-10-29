@@ -1,0 +1,19 @@
+{
+  "title": "Préparation de l'analyse des performances du serveur",
+  "description": "SEP · Module S42 · Chapitre 10. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Lequel de ces objectifs est une raison d'analyser les performances ?", "choices": ["Détecter les goulots d'étranglement", "Créer des comptes d'utilisateurs", "Partager des dossiers", "Installer Active Directory"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une ligne de base ?", "choices": ["Le niveau de performances système que vous définissez comme acceptable", "La première ligne d'un fichier journal", "Le seuil d'une alerte", "Le nombre maximum d'utilisateurs"], "answer": 0 },
+    { "question": "Quelles ressources faut-il identifier pour créer une ligne de base ?", "choices": ["Mémoire, processeur, disque physique et réseau", "Utilisateurs, groupes et OU", "Imprimantes et dossiers partagés", "DNS, DHCP et WINS"], "answer": 0 },
+    { "question": "Quand faut-il établir les performances de base ?", "choices": ["Au début du déploiement", "Après une panne", "À la fin du déploiement uniquement", "Jamais, elles sont fournies par Microsoft"], "answer": 0, "explanation": "Les établir au plus tôt permet d'identifier rapidement les goulots d'étranglement." },
+    { "question": "Quel outil est utilisé pour l'analyse en temps réel ?", "choices": ["Moniteur système", "Journaux et alertes de performance", "Observateur d'événements", "Gpresult"], "answer": 0 },
+    { "question": "En quoi consiste l'analyse programmée ?", "choices": ["Récupérer et conserver des données sur une période pour les analyser ultérieurement", "Mettre à jour les compteurs dès la réception des données", "Redémarrer le serveur à une heure fixe", "Envoyer un message aux utilisateurs"], "answer": 0 },
+    { "question": "Quels sont les quatre sous-systèmes dont l'analyse en temps réel détermine l'état ?", "choices": ["Mémoire, processeur, disque et réseau", "Clavier, souris, écran et imprimante", "BIOS, noyau, pilotes et services", "DNS, DHCP, AD et IIS"], "answer": 0 },
+    { "question": "Quelle information le Gestionnaire des tâches affiche-t-il ?", "choices": ["Les programmes et processus en cours et les performances de l'ordinateur", "Les GPO appliquées", "Les autorisations NTFS", "Les comptes du domaine"], "answer": 0 },
+    { "question": "Quels outils contient la console Performances ?", "choices": ["Moniteur système et Journaux et alertes de performance", "Gestionnaire des tâches et Observateur d'événements", "Gestion des disques et Défragmenteur", "Gpupdate et Gpresult"], "answer": 0 },
+    { "question": "Pourquoi analyser les serveurs à distance ?", "choices": ["Pour que les outils d'analyse ne créent pas une charge supplémentaire qui fausse les données", "Parce que les outils ne fonctionnent pas localement", "Pour chiffrer les données", "Pour économiser des licences"], "answer": 0 },
+    { "question": "Que définissent les journaux de compteur ?", "choices": ["Les données stockées dans le fichier journal", "Les utilisateurs autorisés", "Les seuils d'alerte", "Les services à démarrer"], "answer": 0 },
+    { "question": "Comment appelle-t-on le paramètre spécifié qui déclenche une alerte ?", "choices": ["Le seuil d'alerte", "La ligne de base", "Le compteur", "Le journal de traçage"], "answer": 0 },
+    { "question": "Laquelle de ces actions une alerte peut-elle effectuer ?", "choices": ["Exécuter un programme", "Supprimer un compte", "Redémarrer le contrôleur de domaine", "Formater un disque"], "answer": 0, "explanation": "Une alerte peut aussi créer une entrée dans le journal des événements de l'application et envoyer un message." }
+  ]
+}

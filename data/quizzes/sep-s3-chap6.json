@@ -1,0 +1,19 @@
+{
+  "title": "Gestion et analyse du système DNS",
+  "description": "SEP · Module S43 · Chapitre 6. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce que la valeur de durée de vie (TTL) ?", "choices": ["Un délai en secondes dans les enregistrements DNS retournés par une requête", "La durée d'un bail DHCP", "Le temps de démarrage du serveur DNS", "Le nombre de routeurs traversés"], "answer": 0 },
+    { "question": "Que se passe-t-il à l'expiration de la durée de vie d'un enregistrement en cache ?", "choices": ["L'enregistrement est supprimé du cache", "Il est renouvelé automatiquement", "Il est copié dans la zone", "Il devient permanent"], "answer": 0 },
+    { "question": "Qu'est-ce que le nettoyage dans DNS ?", "choices": ["Supprimer les noms obsolètes ou caducs de la base de données DNS", "Vider le cache client", "Défragmenter le disque du serveur", "Supprimer les zones secondaires"], "answer": 0 },
+    { "question": "Qu'est-ce que le vieillissement dans DNS ?", "choices": ["Le processus qui détermine si un enregistrement obsolète doit être supprimé", "La durée de vie du serveur", "Le transfert de zone", "La mise à jour du numéro de série SOA"], "answer": 0 },
+    { "question": "Que représente l'intervalle de non-actualisation ?", "choices": ["La période durant laquelle le serveur DNS n'accepte pas les tentatives d'actualisation", "La période durant laquelle il accepte les actualisations", "Le TTL des enregistrements", "Le délai de transfert de zone"], "answer": 0 },
+    { "question": "Quelle est la valeur par défaut des intervalles de non-actualisation et d'actualisation ?", "choices": ["7 jours chacun", "1 jour chacun", "1 heure chacun", "30 jours chacun"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une requête simple pour tester un serveur DNS ?", "choices": ["Un test local utilisant le client DNS pour interroger le serveur DNS", "Une requête transmise à un autre serveur DNS", "Un transfert de zone", "Une commande ping"], "answer": 0 },
+    { "question": "Lequel de ces outils est un utilitaire de ligne de commande pour diagnostiquer l'infrastructure DNS ?", "choices": ["Nslookup", "Gpresult", "Compact", "Cipher"], "answer": 0 },
+    { "question": "Quel outil permet d'effectuer de nombreuses tâches d'administration DNS sur le serveur à partir d'une invite de commandes ?", "choices": ["DNSCmd", "DNSLint", "Nbtstat", "Ipconfig"], "answer": 0 },
+    { "question": "Quelle option de DNSLint vérifie les enregistrements DNS utilisés pour la réplication Active Directory ?", "choices": ["/ad", "/d", "/ql", "/r"], "answer": 0, "explanation": "/d diagnostique les délégations inappropriées ; /ql vérifie un ensemble d'enregistrements sur plusieurs serveurs." },
+    { "question": "Si le compteur « Demandes AXFR envoyées » dépasse largement la ligne de base, que faut-il revoir ?", "choices": ["Le nombre de modifications de la zone et la configuration des transferts de zone", "Le nombre d'utilisateurs", "La taille du disque", "Les baux DHCP"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un journal des événements DNS ?", "choices": ["Un journal système configuré pour n'enregistrer que les événements DNS", "Le fichier Hosts", "Le journal d'audit DHCP", "Une zone DNS"], "answer": 0 },
+    { "question": "Qu'est-ce que l'enregistrement de débogage DNS ?", "choices": ["Un outil journal facultatif qui stocke les informations DNS que vous sélectionnez", "Un enregistrement de type A", "Un journal obligatoire", "Une commande de nettoyage"], "answer": 0 }
+  ]
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BTSPath</title>
+  <meta name="description" content="BTSPath — Ton parcours vers la réussite en BTS. Ressources, suivi de révision et quiz pour les étudiants BTS au Maroc.">
+  <meta name="theme-color" content="#0B1F3A">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // apply saved theme before first paint (avoids a white flash in dark mode)
+    try { var t = JSON.parse(localStorage.getItem("btspath:v1") || "{}").theme; if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#app">Aller au contenu</a>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#/" aria-label="BTSPath — accueil">
+        <span id="brand-logo"></span><span class="brand-name">BTS<span>Path</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale" id="nav"></nav>
+      <div class="topbar-tools">
+        <button class="btn btn-ghost btn-sm install-btn" id="install" hidden></button>
+        <button class="search-trigger" id="open-search" aria-label="Rechercher une ressource">
+          <span id="search-icon"></span><span class="search-label">Rechercher…</span><kbd>Ctrl K</kbd>
+        </button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Changer de thème"></button>
+      </div>
+    </div>
+  </header>
+  <div class="offline-bar" id="offline" role="status" hidden></div>
+
+  <main id="app" tabindex="-1">
+    <div class="container loading">Chargement…</div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand"><strong>BTSPath</strong> — Your path to BTS success.</p>
+        <p>An independent learning platform for BTS students in Morocco.</p>
+        <p class="muted">© 2026 BTSPath.</p>
+      </div>
+      <nav class="footer-links" aria-label="Liens secondaires">
+        <a href="#/quizzes">Quiz</a>
+        <a href="#/request">Demander une ressource</a>
+        <a href="#/about">À propos</a>
+      </nav>
+    </div>
+  </footer>
+
+  <nav class="tabbar" aria-label="Navigation mobile" id="tabbar"></nav>
+
+  <dialog class="palette" id="palette" aria-label="Recherche rapide">
+    <div class="palette-box">
+      <div class="palette-input">
+        <span id="palette-icon"></span>
+        <input id="palette-q" type="search" placeholder="Rechercher un chapitre ou un fichier…" autocomplete="off" aria-controls="palette-results">
+        <kbd>Échap</kbd>
+      </div>
+      <ul id="palette-results" class="palette-results" role="listbox"></ul>
+    </div>
+  </dialog>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

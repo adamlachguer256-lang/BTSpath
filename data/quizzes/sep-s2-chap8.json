@@ -1,0 +1,20 @@
+{
+  "title": "Implémentation de modèles d'administration et d'une stratégie d'audit",
+  "description": "SEP · Module S42 · Chapitre 8. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Pour un utilisateur, quelle est la différence entre un droit et une autorisation ?", "choices": ["Un droit agit sur la configuration du système ; une autorisation est le type d'accès sur une ressource (objet)", "Un droit agit sur un fichier ; une autorisation sur le système", "Ce sont deux noms pour la même chose", "Un droit est réservé aux ordinateurs"], "answer": 0 },
+    { "question": "Lequel de ces exemples est un droit utilisateur ?", "choices": ["Modifier l'heure système", "Lire un fichier", "Imprimer un document", "Modifier un dossier partagé"], "answer": 0 },
+    { "question": "Quel groupe local prédéfini a les droits « Sauvegarder des fichiers et des répertoires » et « Restaurer des fichiers et des répertoires » ?", "choices": ["Opérateurs de sauvegarde", "Utilisateurs", "Utilisateurs du Bureau à distance", "Opérateurs d'impression"], "answer": 0 },
+    { "question": "Quel droit est attribué au groupe Utilisateurs du Bureau à distance ?", "choices": ["Autoriser l'ouverture de session par les services Terminal Server", "Charger et décharger des pilotes de périphériques", "Modifier l'heure système", "Forcer l'arrêt à partir d'un système distant"], "answer": 0 },
+    { "question": "Dans quel conteneur se trouvent les groupes Admins du domaine et Administrateurs de l'entreprise ?", "choices": ["Utilisateurs", "Builtin", "Computers", "Domain Controllers"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une stratégie de sécurité ?", "choices": ["Une combinaison de paramètres de sécurité affectant la sécurité d'un ordinateur", "Un groupe de sécurité", "Un fichier journal", "Un antivirus"], "answer": 0 },
+    { "question": "Quel modèle de sécurité augmente les restrictions sur les paramètres de sécurité ?", "choices": ["Hautement sécurisé (Hisecdc.inf, Hisecws.inf)", "Compatible (Compatws.inf)", "Sécurité par défaut (Setup security.inf)", "Sécurité racine système (Rootsec.inf)"], "answer": 0 },
+    { "question": "Quel fichier de modèle spécifie les autorisations pour la racine du disque système ?", "choices": ["Rootsec.inf", "Setup security.inf", "DC security.inf", "Securews.inf"], "answer": 0 },
+    { "question": "Quelle section d'un modèle de sécurité configure l'adhésion aux groupes prédéfinis comme Administrateurs ?", "choices": ["Groupes restreints", "Stratégies de comptes", "Services système", "Registre"], "answer": 0 },
+    { "question": "Quel outil permet de tester et d'appliquer à la machine en cours les modèles de sécurité créés ?", "choices": ["Configuration et analyse de la sécurité", "Modèles de sécurité", "Observateur d'événements", "Gestionnaire des tâches"], "answer": 0 },
+    { "question": "Qu'est-ce que l'audit ?", "choices": ["Il suit les activités des utilisateurs et du système et consigne les événements sélectionnés dans les journaux de sécurité", "Il bloque les attaques réseau", "Il sauvegarde les fichiers", "Il chiffre les journaux"], "answer": 0 },
+    { "question": "Quel type d'événement à auditer est enregistré à chaque accès à un fichier, dossier NTFS ou imprimante ?", "choices": ["Accès aux objets", "Accès au service d'annuaire", "Gestion des comptes", "Utilisation des privilèges"], "answer": 0 },
+    { "question": "Quel type d'événement est enregistré à chaque création, modification ou suppression d'un compte ?", "choices": ["Gestion des comptes", "Connexion aux comptes", "Ouverture de session", "Suivi des processus"], "answer": 0 },
+    { "question": "Quel ID d'événement correspond à une tentative d'ouverture de session infructueuse ?", "choices": ["529", "528", "539", "517"], "answer": 0, "explanation": "528 = ouverture réussie, 539 = compte verrouillé, 517 = journal de sécurité effacé." }
+  ]
+}

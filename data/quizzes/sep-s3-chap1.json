@@ -1,0 +1,17 @@
+{
+  "title": "Configuration du routage à l'aide du service Routage et accès distant",
+  "description": "SEP · Module S43 · Chapitre 1. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'un routeur ?", "choices": ["Un système intermédiaire de la couche réseau qui connecte des réseaux grâce à un protocole de couche réseau commun", "Un serveur qui attribue des adresses IP", "Un câble reliant deux ordinateurs", "Un serveur de noms DNS"], "answer": 0 },
+    { "question": "Quelle est la différence entre un routeur matériel et un routeur logiciel ?", "choices": ["Le matériel est dédié au routage ; le logiciel route parmi d'autres processus de l'ordinateur", "Le logiciel est plus rapide", "Le matériel ne supporte pas IP", "Il n'y a aucune différence"], "answer": 0 },
+    { "question": "Quels sont les principaux composants du routage ?", "choices": ["Interface de routage, protocole de routage et table de routage", "DNS, DHCP et WINS", "Client, serveur et étendue", "Filtre d'entrée, filtre de sortie et pare-feu"], "answer": 0 },
+    { "question": "Quelle interface de routage est utilisée pour la numérotation à la demande ?", "choices": ["Une liaison point à point (modem)", "Une carte réseau LAN", "Un port USB", "Une carte vidéo"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un protocole de routage ?", "choices": ["Un ensemble de messages utilisés par les routeurs pour déterminer le chemin approprié", "Une liste d'adresses IP louées", "Un filtre de paquets", "Une interface réseau"], "answer": 0 },
+    { "question": "Quel protocole est conçu pour les réseaux de petite à moyenne taille et est facile à configurer, mais peu évolutif ?", "choices": ["RIP", "OSPF", "DHCP", "DNS"], "answer": 0 },
+    { "question": "Quel protocole utilise une base de données d'état des liaisons et est efficace sur les grands réseaux ?", "choices": ["OSPF", "RIP", "BOOTP", "WINS"], "answer": 0 },
+    { "question": "Que contient une table de routage ?", "choices": ["Une série d'entrées (itinéraires) sur l'emplacement des ID réseau", "Les comptes des utilisateurs", "Les baux DHCP", "Les noms DNS"], "answer": 0 },
+    { "question": "Lequel de ces usages du service Routage et accès distant est cité dans le cours ?", "choices": ["Permettre aux ordinateurs distants d'accéder au réseau d'entreprise par un tunnel VPN", "Attribuer des adresses IP", "Résoudre les noms DNS", "Gérer les imprimantes"], "answer": 0, "explanation": "Aussi : connecter des segments LAN et connecter des succursales à l'intranet d'entreprise." },
+    { "question": "Qu'est-ce que le filtrage des paquets ?", "choices": ["Un paramètre TCP/IP qui autorise ou refuse des paquets entrants ou sortants", "La compression des paquets", "Le cryptage des paquets", "L'attribution d'adresses IP"], "answer": 0 },
+    { "question": "Lequel de ces objectifs est une raison d'utiliser le filtrage des paquets ?", "choices": ["Améliorer les performances en empêchant la transmission de paquets inutiles via une connexion lente", "Augmenter le nombre d'adresses IP", "Remplacer le protocole de routage", "Accélérer le DNS"], "answer": 0, "explanation": "Aussi : interdire l'accès aux utilisateurs non autorisés et aux ressources." }
+  ]
+}

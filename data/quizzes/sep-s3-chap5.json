@@ -1,0 +1,23 @@
+{
+  "title": "Résolution de noms d'hôtes à l'aide du système DNS",
+  "description": "SEP · Module S43 · Chapitre 5. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce que DNS ?", "choices": ["Une base de données distribuée hiérarchisée de mappages de noms de domaine vers des données (adresses IP)", "Un protocole d'attribution d'adresses IP", "Un fichier texte local", "Un protocole de routage"], "answer": 0 },
+    { "question": "Dans le FQDN server1.sales.SRI.BTS.net, quel est le domaine de niveau supérieur ?", "choices": ["net", "BTS", "sales", "server1"], "answer": 0 },
+    { "question": "Quel caractère est réservé (non valide) dans les noms DNS standard ?", "choices": ["Le trait de soulignement (_)", "Le trait d'union (-)", "Les chiffres 0-9", "Les lettres a-z"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une requête récursive ?", "choices": ["Le client demande au serveur DNS de fournir une réponse complète", "Le serveur renvoie la meilleure réponse sans contacter d'autres serveurs", "Une requête de transfert de zone", "Une mise à jour dynamique"], "answer": 0 },
+    { "question": "Quel est souvent le résultat d'une requête itérative ?", "choices": ["Une référence à un autre serveur DNS plus bas dans l'arborescence", "Une réponse complète", "Un transfert de zone", "Une erreur"], "answer": 0 },
+    { "question": "Que sont les indications de racine ?", "choices": ["Des enregistrements qui répertorient les adresses IP des serveurs racines du DNS", "Les adresses des clients DNS", "Les zones secondaires", "Les redirecteurs"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un redirecteur ?", "choices": ["Un serveur DNS désigné pour transférer les requêtes de résolution de noms externes ou hors site", "Un serveur racine", "Un client DNS", "Une zone stub"], "answer": 0 },
+    { "question": "Quel type de serveur DNS est idéal à utiliser comme redirecteur ?", "choices": ["Un serveur de mise en cache (il n'héberge aucune zone)", "Un serveur de zone principale", "Un serveur de zone secondaire", "Un contrôleur de domaine"], "answer": 0 },
+    { "question": "Quel enregistrement résout une adresse IP en nom d'hôte ?", "choices": ["PTR", "A", "CNAME", "MX"], "answer": 0 },
+    { "question": "Quel enregistrement identifie le serveur de messagerie ?", "choices": ["MX", "NS", "SRV", "SOA"], "answer": 0 },
+    { "question": "Quel enregistrement résout un nom d'hôte en un autre nom d'hôte (alias) ?", "choices": ["CNAME", "A", "AAAA", "PTR"], "answer": 0 },
+    { "question": "Quel type de zone est une copie en lecture seule de la base de données DNS ?", "choices": ["Secondaire", "Principale", "Stub", "Intégrée à AD"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une zone stub ?", "choices": ["Une copie d'une zone contenant certains enregistrements seulement", "Une copie complète en lecture/écriture", "Une zone inversée", "Une zone sans enregistrement"], "answer": 0 },
+    { "question": "Quel est un avantage d'une zone DNS intégrée à Active Directory ?", "choices": ["Elle utilise la réplication AD à la place des transferts de zone", "Elle ne nécessite pas Active Directory", "Elle n'accepte aucune mise à jour", "Elle est en lecture seule"], "answer": 0, "explanation": "Elle est aussi plus sûre, autorise les mises à jour dynamiques sécurisées et utilise une structure multimaître." },
+    { "question": "Quel est le nom de la zone inversée pour le réseau 192.168.2.x ?", "choices": ["2.168.192.in-addr.arpa", "192.168.2.in-addr.arpa", "192.168.2.0.rev", "in-addr.arpa.192.168.2"], "answer": 0 },
+    { "question": "Que permet DNS Notify ?", "choices": ["Informer les serveurs secondaires des modifications de zones", "Envoyer un e-mail à l'administrateur", "Supprimer les enregistrements obsolètes", "Bloquer les mises à jour non sécurisées"], "answer": 0 },
+    { "question": "Si le serveur DNS préféré échoue, que fait le client ?", "choices": ["Il essaie le serveur DNS auxiliaire", "Il utilise le fichier Lmhosts", "Il s'arrête", "Il attend 7 jours"], "answer": 0 }
+  ]
+}
