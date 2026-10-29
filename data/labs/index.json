@@ -17,6 +17,30 @@
       "file": "linux-s3-lvm.json",
       "title": "LVM — les exemples du cours",
       "chapterId": "linux-s3-chap-8-lvm"
+    },
+    {
+      "id": "linux-s3-noyau",
+      "file": "linux-s3-noyau.json",
+      "title": "Le noyau Linux — les exemples du cours",
+      "chapterId": "linux-s3-chap1-noyau-1"
+    },
+    {
+      "id": "linux-s3-demarrage",
+      "file": "linux-s3-demarrage.json",
+      "title": "Démarrage du système — les exemples du cours",
+      "chapterId": "linux-s3-chap-2-demarrage-du-systeme-controle"
+    },
+    {
+      "id": "linux-s3-fs",
+      "file": "linux-s3-fs.json",
+      "title": "Systèmes de fichiers — les exemples du cours",
+      "chapterId": "linux-s3-chap-4-systemes-de-fichier-linux-controle-1"
+    },
+    {
+      "id": "linux-s3-quotas",
+      "file": "linux-s3-quotas.json",
+      "title": "Quotas, Samba et NFS — les exemples du cours",
+      "chapterId": "linux-s3-chap-9-quotas"
     }
   ]
 }

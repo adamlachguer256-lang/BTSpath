@@ -1,0 +1,20 @@
+{
+  "title": "Déploiement et gestion des logiciels à l'aide d'une stratégie de groupe",
+  "description": "SEP · Module S44 · Chapitre 6. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quelles sont les méthodes de déploiement d'une application à l'aide d'un GPO ?", "choices": ["Publication et affectation", "Copie et importation", "Sauvegarde et restauration", "Installation manuelle et script"], "answer": 0 },
+    { "question": "Quelle est la condition pour déployer une application par stratégie de groupe ?", "choices": ["L'application doit être au format MSI", "L'application doit être au format EXE", "L'application doit être sur un CD", "L'utilisateur doit être administrateur"], "answer": 0 },
+    { "question": "Quel est le rôle de Windows Installer ?", "choices": ["Un service permettant de déployer et maintenir à niveau des applications, et de réparer les fichiers manquants", "Un outil de création de comptes", "Un service de réplication d'annuaire", "Un outil de sauvegarde des GPO"], "answer": 0 },
+    { "question": "Que contient un package Windows Installer ?", "choices": ["Un fichier .msi et d'éventuels fichiers source externes", "Uniquement un fichier .exe", "Un fichier .vbs", "Un fichier .csv"], "answer": 0 },
+    { "question": "Lequel est un avantage de Windows Installer cité dans le cours ?", "choices": ["Suppression propre", "Aucun besoin de point de distribution", "Fonctionne sans Active Directory", "Installation sans fichier"], "answer": 0, "explanation": "Avantages : installations personnalisées, applications tolérantes aux pannes, suppression propre." },
+    { "question": "Comment les utilisateurs consultent-ils les applications publiées ?", "choices": ["Par Panneau de configuration / Ajout et suppression de programmes", "Par le menu Démarrer uniquement", "Par la console Utilisateurs et ordinateurs AD", "Par gpupdate"], "answer": 0 },
+    { "question": "Comment les utilisateurs consultent-ils les applications affectées ?", "choices": ["Par le menu Démarrer ou les raccourcis sur le bureau", "Uniquement par Ajout et suppression de programmes", "Par l'invite de commande", "Par le catalogue global"], "answer": 0 },
+    { "question": "Pourquoi utiliser des catégories de logiciels ?", "choices": ["Pour organiser les logiciels affectés et publiés en groupes logiques", "Pour supprimer les logiciels", "Pour chiffrer les packages", "Pour limiter un logiciel à un seul domaine"], "answer": 0 },
+    { "question": "Quel type de mise à niveau ne laisse aux utilisateurs que la version mise à niveau ?", "choices": ["Mise à niveau obligatoire", "Mise à niveau facultative", "Mise à niveau sélective", "Redéploiement"], "answer": 0 },
+    { "question": "Dans une mise à niveau sélective :", "choices": ["Vous choisissez les utilisateurs qui devront effectuer la mise à niveau", "Les utilisateurs décident de mettre à niveau ou non", "Tous les utilisateurs sont mis à niveau", "Le logiciel est supprimé"], "answer": 0 },
+    { "question": "Que se passe-t-il lors d'une suppression forcée d'un logiciel déployé ?", "choices": ["Le logiciel est automatiquement supprimé de l'ordinateur sans avertissement", "Le logiciel reste mais ne peut plus être mis à niveau", "L'utilisateur choisit de le supprimer", "Le logiciel est déplacé vers un autre ordinateur"], "answer": 0 },
+    { "question": "Que se passe-t-il lors d'une suppression facultative ?", "choices": ["Le logiciel n'est pas supprimé et aucune mise à niveau ne peut être installée", "Le logiciel est supprimé sans avertissement", "Le logiciel est réinstallé", "Le GPO est supprimé"], "answer": 0 },
+    { "question": "Les applications n'apparaissent pas dans Ajouter ou supprimer des programmes. Cause possible ?", "choices": ["L'application a été affectée, et non publiée", "L'application a été publiée, et non affectée", "Le fichier .msi est trop gros", "Le catalogue global est absent"], "answer": 0 },
+    { "question": "Quel outil permet de déterminer quel objet Stratégie de groupe est appliqué ?", "choices": ["RSoP", "Csvde", "Dsadd", "Wscript"], "answer": 0 }
+  ]
+}

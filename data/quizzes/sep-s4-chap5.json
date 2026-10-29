@@ -1,0 +1,21 @@
+{
+  "title": "Implémentation d'une stratégie de groupe",
+  "description": "SEP · Module S44 · Chapitre 5. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "À quels conteneurs peut-on lier un GPO ?", "choices": ["Un site, un domaine ou une OU", "Uniquement un domaine", "Uniquement une OU", "Un utilisateur ou un groupe"], "answer": 0 },
+    { "question": "Quel est l'ordre de priorité par défaut d'application des GPO ?", "choices": ["Site, domaine puis OU", "OU, domaine puis site", "Domaine, site puis OU", "Domaine, OU puis site"], "answer": 0 },
+    { "question": "Où est enregistré le modèle de stratégie de groupe (GPT) ?", "choices": ["Dans le dossier partagé SYSVOL", "Dans Active Directory", "Dans le registre du client", "Dans le catalogue global"], "answer": 0, "explanation": "Le GPT fournit les paramètres ; le GPC est enregistré dans Active Directory et fournit les informations de version." },
+    { "question": "Quel composant d'un GPO est enregistré dans Active Directory et fournit des informations de version ?", "choices": ["Le conteneur Stratégie de groupe (GPC)", "Le modèle de stratégie de groupe (GPT)", "Le filtre WMI", "Le dossier SYSVOL"], "answer": 0 },
+    { "question": "Pourquoi spécifier un contrôleur de domaine pour la gestion des GPO ?", "choices": ["Pour éviter des conflits de réplication", "Pour accélérer l'ouverture de session", "Pour créer des filtres WMI", "Pour activer le catalogue global"], "answer": 0 },
+    { "question": "Combien de filtres WMI un objet Stratégie de groupe peut-il comporter ?", "choices": ["Un seul", "Deux", "Autant que nécessaire", "Aucun"], "answer": 0, "explanation": "Mais un même filtre WMI peut être lié à plusieurs GPO." },
+    { "question": "Si la valeur totale des requêtes d'un filtre WMI est fausse, que se passe-t-il ?", "choices": ["Active Directory n'applique pas l'objet Stratégie de groupe", "Le GPO est appliqué quand même", "Le GPO est supprimé", "Le filtre est désactivé"], "answer": 0 },
+    { "question": "Toutes les combien de minutes les stratégies sont-elles rafraîchies sur les contrôleurs de domaine ?", "choices": ["5 minutes", "90 minutes", "30 minutes", "8 heures"], "answer": 0 },
+    { "question": "Quel est l'intervalle de rafraîchissement pour les ordinateurs membres du domaine ?", "choices": ["90 minutes plus une valeur aléatoire entre 0 et 30 minutes", "5 minutes", "60 minutes exactement", "Une fois par jour"], "answer": 0 },
+    { "question": "Quelle commande force le rafraîchissement des stratégies de groupe ?", "choices": ["gpupdate /force", "gpresult /force", "dsmod gpo /refresh", "secedit /refresh"], "answer": 0 },
+    { "question": "À quel moment la partie utilisateur d'un GPO est-elle appliquée ?", "choices": ["Lors de l'ouverture de session de l'utilisateur", "Au démarrage de l'ordinateur", "À l'arrêt de l'ordinateur", "Uniquement avec gpupdate"], "answer": 0 },
+    { "question": "Que transfère la copie d'un objet Stratégie de groupe ?", "choices": ["Uniquement les paramètres du GPO ; le nouveau GPO n'a aucun lien", "Les paramètres et tous les liens", "Uniquement les liens", "Le GPO et ses filtres WMI"], "answer": 0 },
+    { "question": "Quelle opération copie tous les paramètres d'un GPO source vers un GPO cible ?", "choices": ["L'importation", "La restauration", "La sauvegarde", "La délégation"], "answer": 0 },
+    { "question": "Quel contrôleur de domaine est sollicité par défaut pour créer et modifier un GPO ?", "choices": ["Celui qui joue le rôle de maître d'opérations PDC Emulator", "Le maître RID", "Le contrôleur de schéma", "Le serveur de catalogue global"], "answer": 0 },
+    { "question": "Pour permettre à un utilisateur de créer des GPO, à quel groupe peut-on l'ajouter ?", "choices": ["Propriétaires créateurs de la stratégie de groupe", "Admins du domaine uniquement", "Utilisateurs du domaine", "Opérateurs de compte"], "answer": 0 }
+  ]
+}

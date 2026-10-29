@@ -1,0 +1,21 @@
+{
+  "title": "Implémentation d'une structure de forêt et de domaine Active Directory",
+  "description": "SEP · Module S44 · Chapitre 2. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quel espace disque minimum est requis pour installer Active Directory ?", "choices": ["250 Mo sur une partition NTFS", "100 Mo sur une partition FAT32", "1 Go sur une partition NTFS", "500 Mo sur n'importe quelle partition"], "answer": 0 },
+    { "question": "Comment s'appelle le répertoire système partagé créé à l'installation d'AD ?", "choices": ["SYSVOL", "NETLOGON", "NTDS", "System32"], "answer": 0 },
+    { "question": "Comment s'appelle le fichier de base d'annuaire Active Directory et où est-il stocké par défaut ?", "choices": ["NTDS.dit, sous %systemroot%\\ntds", "SAM, sous %systemroot%\\system32", "SYSVOL.dit, sous %systemroot%\\sysvol", "AD.mdb, sous C:\\"], "answer": 0 },
+    { "question": "Symptôme « Les noms de domaine DNS ou NetBIOS ne sont pas uniques » : quelle est la cause ?", "choices": ["Un autre domaine possède le même nom DNS ou NetBIOS", "Erreur réseau", "Espace disque insuffisant", "Le compte n'est pas administrateur local"], "answer": 0 },
+    { "question": "Quels types de zones peuvent être intégrées à AD ?", "choices": ["Les zones principales et les zones de stub", "Les zones secondaires uniquement", "Les zones de recherche inversée uniquement", "Tous les types de zones"], "answer": 0 },
+    { "question": "Quelle condition est requise pour stocker les données d'une zone DNS dans AD ?", "choices": ["Le serveur DNS doit être un contrôleur de domaine", "Le serveur DNS doit être un serveur autonome", "La zone doit être secondaire", "Le domaine doit être en mode mixte"], "answer": 0 },
+    { "question": "Lequel de ces avantages est cité pour les zones intégrées à AD ?", "choices": ["Mises à jour dynamiques sécurisées", "Aucune réplication nécessaire", "Fonctionnement sans contrôleur de domaine", "Suppression des enregistrements SRV"], "answer": 0, "explanation": "Avantages : réplication multimaître, mises à jour dynamiques sécurisées, transferts de zones standard." },
+    { "question": "À quoi servent les enregistrements de ressource SRV ?", "choices": ["À déterminer l'emplacement des serveurs offrant un service dont a besoin le client", "À associer un nom à une adresse IPv6", "À définir le serveur de messagerie", "À stocker le schéma"], "answer": 0 },
+    { "question": "Dans « _ldap._tcp.contoso.msft 600 IN SRV 0 100 389 london.contoso.msft », que représente 389 ?", "choices": ["Le port", "La priorité", "Le poids", "Le TTL"], "answer": 0, "explanation": "Format : _Service._Protocole.Nom Ttl Classe SRV Priorité Poids Port Cible." },
+    { "question": "Sur quels types de partition d'AD peut-on enregistrer une zone DNS intégrée ?", "choices": ["Partition de domaine et partition d'application", "Partition de schéma uniquement", "Partition de configuration uniquement", "Partition de schéma et de configuration"], "answer": 0 },
+    { "question": "Est-il possible d'annuler le passage d'un niveau fonctionnel à l'autre ?", "choices": ["Non", "Oui, avec Domaines et approbations AD", "Oui, en redémarrant le contrôleur de domaine", "Oui, seulement pour la forêt"], "answer": 0 },
+    { "question": "Quel outil utilise-t-on pour rehausser le niveau fonctionnel des forêts ?", "choices": ["La console Domaines et approbations Active Directory", "La console Sites et services Active Directory", "La console Utilisateurs et ordinateurs AD", "Dsmod"], "answer": 0 },
+    { "question": "Qui doit augmenter le niveau fonctionnel de la forêt ?", "choices": ["L'administrateur de l'entreprise", "L'administrateur de domaine", "Un utilisateur du domaine", "L'administrateur local"], "answer": 0 },
+    { "question": "Quel type d'approbation existe entre domaines Windows 2003 d'une même forêt ?", "choices": ["Bidirectionnelle et transitive", "Unidirectionnelle et non transitive", "Bidirectionnelle et non transitive", "Unidirectionnelle et transitive"], "answer": 0 },
+    { "question": "Où sont stockés les objets de domaine approuvés (TDO) ?", "choices": ["Dans le conteneur System du domaine", "Dans le dossier SYSVOL", "Dans le catalogue global uniquement", "Dans la zone DNS"], "answer": 0 }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Maintenance d'Active Directory",
+  "description": "SEP · Module S44 · Chapitre 10. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce que la défragmentation de la base de données AD ?", "choices": ["Le processus de réécriture des enregistrements de la BD AD dans des secteurs contigus", "La suppression de la base de données originale", "La réplication de la base vers un autre DC", "La compression des fichiers journaux"], "answer": 0 },
+    { "question": "Toutes les combien d'heures s'exécute la défragmentation en ligne ?", "choices": ["12 heures", "8 heures", "24 heures", "90 minutes"], "answer": 0 },
+    { "question": "Quand effectuer une défragmentation hors connexion ?", "choices": ["Uniquement si vous voulez créer une nouvelle version compactée de la BD d'origine", "Toutes les 12 heures", "À chaque ouverture de session", "Jamais, elle est automatique"], "answer": 0 },
+    { "question": "Quel outil utilise-t-on pour défragmenter ou déplacer la base AD ?", "choices": ["ntdsutil", "defrag.exe", "gpupdate", "csvde"], "answer": 0 },
+    { "question": "Quelle touche permet d'afficher le menu d'options avancées pour choisir le Mode restauration Active Directory ?", "choices": ["F8", "F2", "F12", "Échap"], "answer": 0 },
+    { "question": "Avec quel compte ouvre-t-on la session en Mode restauration AD ?", "choices": ["Le compte Administrateur local", "Le compte Administrateur du domaine", "Un compte utilisateur standard", "Le compte Invité"], "answer": 0 },
+    { "question": "Déplacer la base de données AD supprime-t-il la base originale ?", "choices": ["Non", "Oui, toujours", "Oui, après redémarrage", "Seulement si le disque est plein"], "answer": 0 },
+    { "question": "Quel fichier garde une trace des données non inscrites dans la base de données AD ?", "choices": ["Edb.chk", "Ntds.dit", "Edb.log", "Res1.log"], "answer": 0 },
+    { "question": "Les fichiers Res1.log et Res2.log sont-ils des fichiers de transactions AD ?", "choices": ["Non, ce sont des fichiers de réservation d'espace disque pour le fichier journal", "Oui, ce sont les journaux principaux", "Oui, ils contiennent la base AD", "Non, ce sont des fichiers de schéma"], "answer": 0 },
+    { "question": "Où sont stockés par défaut NTDS.DIT et les fichiers journaux ?", "choices": ["%systemroot%\\NTDS", "%systemroot%\\Sysvol", "C:\\Program Files", "%systemroot%\\System32\\Config"], "answer": 0 },
+    { "question": "Lequel de ces éléments fait partie des données d'état système ?", "choices": ["Le dossier partagé SYSVOL", "Les documents des utilisateurs", "Les fichiers .msi", "Le dossier Program Files"], "answer": 0, "explanation": "Données d'état système : SYSVOL, registre, fichiers de démarrage, base COM+, services de certificats, Active Directory." },
+    { "question": "Quand exécuter une restauration principale ?", "choices": ["Uniquement lorsque tous les DC sont perdus", "Pour restaurer un objet supprimé accidentellement", "Pour restaurer un seul DC", "Chaque nuit"], "answer": 0 },
+    { "question": "Quelle restauration utiliser pour récupérer un objet supprimé accidentellement ?", "choices": ["La restauration forcée (faisant autorité)", "La restauration normale", "La restauration principale", "La défragmentation hors connexion"], "answer": 0, "explanation": "Elle se fait avec l'outil ntdsutil ; les objets restaurés sont répliqués partout dans AD." },
+    { "question": "Dans une restauration normale, que se passe-t-il après la restauration ?", "choices": ["La réplication met à jour les données avec les modifications faites depuis la sauvegarde", "Les données restaurées remplacent celles de tous les autres DC", "Le domaine est recréé", "Les objets sont déplacés vers LostAndFound"], "answer": 0 }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "chapterId": "linux-s3-chap-4-systemes-de-fichier-linux-controle-1",
+  "title": "Systèmes de fichiers — les exemples du cours",
+  "intro": "Refais les exemples du chapitre 4, dans l'ordre du cours : pseudo-filesystems /proc et /sys, tune2fs, udev, dmesg, /dev/disk et swap.",
+  "prompt": "Sri2@serveur:~$",
+  "steps": [
+    {
+      "section": "1.2 proc",
+      "task": "Affiche les informations du processeur.",
+      "accept": ["cat /proc/cpuinfo"],
+      "hint": "cat /proc/…",
+      "output": "processor : 0\nvendor_id : AuthenticAMD\ncpu family           : 15\nmodel                : 75\nmodel name           : AMD Athlon(tm) 64 X2 Dual Core Processor 4200+\nstepping : 2\ncpu MHz              : 1000.000\ncache size           : 512 KB\nphysical id          : 0\nsiblings : 2\ncore id              : 0\ncpu cores : 2"
+    },
+    {
+      "section": "1.2 sys",
+      "task": "Affiche si le disque sda est enfichable à chaud (fichier removable).",
+      "accept": ["cat /sys/block/sda/removable"],
+      "hint": "cat /sys/block/sda/…",
+      "output": "0",
+      "note": "0 : le disque sda n'est pas enfichable à chaud."
+    },
+    {
+      "section": "1.7 Affichage des filesystems ext",
+      "task": "Affiche les paramètres du filesystem de /dev/hda1.",
+      "accept": ["tune2fs -l /dev/hda1"],
+      "hint": "tune2fs -l device",
+      "output": "tune2fs 1.41.3 (12-Oct-2008)\nFilesystem volume name:   <none>\nLast mounted on:          <not available>\nFilesystem UUID:          ff700a3b-b430-49a7-ae73-bd23f363a3fc\nFilesystem magic number:  0xEF53\nFilesystem revision #:    1 (dynamic)\nFilesystem features:      has_journal ext_attr resize_inode\ndir_index filetype needs_recovery sparse_super large_file\nFilesystem flags:         signed_directory_hash\nDefault mount options:    (none)\nFilesystem state:         clean\nErrors behavior:          Continue\nFilesystem OS type:       Linux\nInode count:              501952\nBlock count:              2004100\nReserved block count:     100205\nFree blocks:              1656481\nFree inodes:              477768",
+      "note": "has_journal dans Filesystem features : c'est un filesystem ext3.",
+      "prompt": "alpha:/dev#"
+    },
+    {
+      "section": "2.1 Exemple de règle udev",
+      "task": "Affiche la règle udev 70-persistent-cd-rules.",
+      "accept": ["cat /etc/udev/rules.d/70-persistent-cd-rules"],
+      "hint": "cat /etc/udev/rules.d/…",
+      "output": "ENV{ID_CDROM}==\"?*\", ENV{ID_PATH}==\"pci-0000:00:14.1-scsi-\n0:0:0:0\", SYMLINK+=\"cdrom\", ENV{GENERATED}=\"1\"\nENV{ID_CDROM}==\"?*\", ENV{ID_PATH}==\"pci-0000:00:14.1-scsi-\n0:0:0:0\", SYMLINK+=\"cdrw\", ENV{GENERATED}=\"1\"\nENV{ID_CDROM}==\"?*\", ENV{ID_PATH}==\"pci-0000:00:14.1-scsi-\n0:0:0:0\", SYMLINK+=\"dvd\", ENV{GENERATED}=\"1\"\nENV{ID_CDROM}==\"?*\", ENV{ID_PATH}==\"pci-0000:00:14.1-scsi-\n0:0:0:0\", SYMLINK+=\"dvdrw\", ENV{GENERATED}=\"1\"",
+      "prompt": "root@serveur #"
+    },
+    {
+      "section": "2.2.a dmesg",
+      "task": "Identifie les disques durs : filtre la sortie de dmesg avec grep [sh]d.",
+      "accept": ["dmesg | grep [sh]d", "dmesg|grep [sh]d", "dmesg | grep '[sh]d'", "dmesg | grep \"[sh]d\""],
+      "hint": "dmesg | grep …",
+      "output": "[    0.000000] Kernel command line: root=/dev/hda1 ro quiet\n[    3.136965] hda: VBOX HARDDISK, ATA DISK drive\n[    3.822425] hda: host max PIO4 wanted PIO255(auto-tune)\nselected PIO4\n[    3.822677] hda: UDMA/33 mode selected\n[    4.575784] hdc: VBOX CD-ROM, ATAPI CD/DVD-ROM drive\n[    5.275977] hdc: host max PIO4 wanted PIO255(auto-tune)\nselected PIO4\n[    5.275977] hdc: UDMA/33 mode selected\n[    7.203721] hda: max request size: 128KiB\n[    7.203728] hda: 16777216 sectors (8589 MB) w/256KiB Cache,\nCHS=16644/16/63\n[    7.204020] hda: cache flushes supported\n[    7.204020]  hda: hda1 hda2 < hda5 >\n[    7.234912] hdc: ATAPI 32X DVD-ROM drive, 128kB Cache\n[    7.257272] Driver ’sd’ needs updating - please use bus_type methods\n[    7.257525] sd 0:0:0:0: [sda] 4194304 512-byte hardware sectors\n(2147 MB)\n[    7.257620] sd 0:0:0:0: [sda] Write Protect is off\n[    7.257627] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00\n[    7.257769] sd 0:0:0:0: [sda] Write cache: enabled, read cache:\nenabled, doesn’t support DPO or FUA",
+      "prompt": "alpha:~#"
+    },
+    {
+      "section": "2.2.b udevadm",
+      "task": "Récupère toutes les informations udev sur le périphérique /dev/hda.",
+      "accept": ["udevadm info --query=all --name=/dev/hda", "udevadm info --name=/dev/hda --query=all"],
+      "hint": "udevadm info --query=all --name=…",
+      "output": "P: /block/hda\nN: hda\nS: block/3:0\nS: disk/by-id/ata-VBOX_HARDDISK_VBf92d3e4d-7faf607b\nS: disk/by-path/pci-0000:00:01.1-ide-0:0\nE: ID_TYPE=disk\nE: ID_MODEL=VBOX_HARDDISK\nE: ID_SERIAL=VBf92d3e4d-7faf607b\nE: ID_REVISION=1.0\nE: ID_BUS=ata\nE: ID_PATH=pci-0000:00:01.1-ide-0:0",
+      "prompt": "serveur:~#"
+    },
+    {
+      "section": "2.2.c Le répertoire /dev/disk",
+      "task": "Liste le contenu de /dev/disk.",
+      "accept": ["ls"],
+      "hint": "Tu es déjà dans /dev/disk.",
+      "output": "by-id  by-label  by-path  by-uuid",
+      "prompt": "root@serveur:/dev/disk$"
+    },
+    {
+      "section": "2.2.c Le répertoire /dev/disk",
+      "task": "Entre dans le répertoire by-uuid.",
+      "accept": ["cd by-uuid", "cd by-uuid/"],
+      "hint": "cd …",
+      "output": ""
+    },
+    {
+      "section": "2.2.c Le répertoire /dev/disk",
+      "task": "Liste les UUID.",
+      "accept": ["ls"],
+      "hint": "Commande de listage.",
+      "output": "52200c0b-aee8-4ae0-9492-1f488051e4a3  B0F82CDCF82CA318\nb0891c0e-1812-4d23-b77d-b861f7fd2713  ee7890fb-c312-406f-b100-669c97ee8d07",
+      "prompt": "root@serveur:/dev/disk/buy-uuid$"
+    },
+    {
+      "section": "2.2.c Le répertoire /dev/disk",
+      "task": "Affiche vers quelle partition pointe chaque UUID (commande file sur tous les fichiers).",
+      "accept": ["file *"],
+      "hint": "file + joker.",
+      "output": "52200c0b-aee8-4ae0-9492-1f488051e4a3: symbolic link to `../../sda2’\nb0891c0e-1812-4d23-b77d-b861f7fd2713: symbolic link to `../../sdb1’\nB0F82CDCF82CA318:                     symbolic link to `../../sda1’\nee7890fb-c312-406f-b100-669c97ee8d07: symbolic link to `../../sda3’",
+      "prompt": "root@serveur:/dev/disk/by-uuid$"
+    },
+    {
+      "section": "4.2.5 Visualisation des espaces de swap",
+      "task": "Affiche les espaces de swap exploités.",
+      "accept": ["swapon -s"],
+      "hint": "swapon + option.",
+      "output": "Filename    Type        Size      Used  Priority\n/dev/hda5   partition   409616    608  -1",
+      "prompt": "Debian:~#"
+    }
+  ],
+  "challenge": {
+    "section": "Défi",
+    "task": "Le filesystem racine ne peut pas être démonté : programme sa vérification avant montage en redémarrant tout de suite.",
+    "accept": ["shutdown -F -r now", "shutdown -r -F now"]
+  }
+}

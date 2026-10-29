@@ -1,0 +1,20 @@
+{
+  "title": "Implémentation de comptes d'utilisateurs, de groupes et d'ordinateurs",
+  "description": "SEP · Module S44 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Que permet un compte d'ordinateur ?", "choices": ["L'authentification et l'audit de l'accès d'un ordinateur aux ressources", "Une ouverture de session unique pour un utilisateur", "La simplification de l'administration", "L'envoi de messages"], "answer": 0 },
+    { "question": "Quel est un avantage du nom d'utilisateur principal (ex. laurab@contoso.msft) ?", "choices": ["Il peut être identique à l'adresse électronique de l'utilisateur", "Il peut exister en double dans AD", "Il remplace le mot de passe", "Il fonctionne sans domaine"], "answer": 0, "explanation": "Il est unique dans Active Directory et peut être identique à l'adresse électronique." },
+    { "question": "Qu'est-ce que le routage des suffixes de noms ?", "choices": ["Un mécanisme fournissant une résolution de noms entre forêts", "Un protocole de routage IP", "Une méthode de réplication de SYSVOL", "Un type de groupe"], "answer": 0 },
+    { "question": "Le routage des suffixes pour les arborescences créées après l'approbation de forêt est :", "choices": ["Désactivé par défaut", "Activé par défaut", "Impossible", "Obligatoire"], "answer": 0 },
+    { "question": "Quels groupes sont utilisés uniquement avec les applications de messagerie, sans sécurité activée ?", "choices": ["Groupes de distribution", "Groupes de sécurité", "Groupes globaux", "Groupes locaux de domaine"], "answer": 0 },
+    { "question": "Où un groupe local de domaine est-il visible ?", "choices": ["Uniquement dans son propre domaine", "Dans tous les domaines de la forêt", "Dans son domaine et tous les domaines approuvés", "Sur l'ordinateur local uniquement"], "answer": 0 },
+    { "question": "Quels membres peut contenir un groupe global ?", "choices": ["Des utilisateurs, ordinateurs et groupes globaux de son propre domaine", "Des groupes universels de n'importe quel domaine", "Des groupes locaux de domaine", "Des utilisateurs de toutes les forêts"], "answer": 0 },
+    { "question": "Où un groupe universel est-il visible ?", "choices": ["Dans tous les domaines de la forêt", "Uniquement dans son propre domaine", "Uniquement sur le contrôleur de domaine", "Dans son domaine et les domaines approuvés"], "answer": 0 },
+    { "question": "Quelle est la stratégie d'utilisation de groupes privilégiée ?", "choices": ["C G DL A", "C G A", "C DL A", "C G L A"], "answer": 0, "explanation": "Comptes dans des groupes globaux, groupes globaux dans un groupe local de domaine, autorisations sur le groupe local de domaine (aussi appelée A G DL P)." },
+    { "question": "Dans la stratégie A G DL P, sur quel groupe affecte-t-on les autorisations ?", "choices": ["Le groupe local de domaine", "Le groupe global", "Le groupe universel", "Directement sur les comptes"], "answer": 0 },
+    { "question": "Quand faut-il utiliser la console Utilisateurs et ordinateurs Active Directory ?", "choices": ["Pour gérer un petit nombre de comptes", "Pour importer des milliers de comptes", "Uniquement pour modifier le schéma", "Uniquement en ligne de commande"], "answer": 0 },
+    { "question": "Combien d'objets AD les outils Dsadd, Dsmod, Dsrm créent-ils à la fois ?", "choices": ["Un seul objet à la fois", "Tous les objets d'un fichier CSV", "Dix objets à la fois", "Tous les objets d'une OU"], "answer": 0 },
+    { "question": "Quelle limite a l'outil Csvde ?", "choices": ["Il ne peut pas modifier des comptes", "Il ne peut créer qu'un compte à la fois", "Il ne fonctionne qu'avec des scripts .vbs", "Il ne peut pas créer de comptes"], "answer": 0, "explanation": "Ldifde, lui, peut créer et modifier plusieurs comptes." },
+    { "question": "Quelle commande exécute un script de création d'objet AD enregistré en .vbs ?", "choices": ["Wscript.exe nom_fichier", "csvde -i -f nom_fichier", "dsadd user nom_fichier", "ldifde -i -f nom_fichier"], "answer": 0 }
+  ]
+}

@@ -62,14 +62,17 @@ Accept common IOS abbreviations only if the course uses them (e.g. `conf t` for 
 Many NETWORK config commands are on image slides: if the extracted text has no commands, say so (needs OCR).
 
 ## Status (update this section when you finish work)
-- Done (quiz): LINUX CHP6, S3 RAID, S3 LVM · NETWORK S3 Ch3 VLAN · SEP S1 complete (S41 Chap1, Chap3–12; no Chap2 file exists) · SEP S2 complete (S42 Chap1–13) · SEP S3 complete (S43 Chap1–10).
+- Done (quiz): LINUX CHP6, S3 Noyau, Démarrage, Systèmes de fichiers, Quotas (+Samba/NFS in same PDF), RAID, LVM · NETWORK S3 Ch3 VLAN · SEP S1 complete (S41 Chap1, Chap3–12; no Chap2 file exists) · SEP S2 complete (S42 Chap1–13) · SEP S3 complete (S43 Chap1–10) · SEP S4 complete (S44 Chap1–2, Chap4–10; no Chap3 file exists).
+- SEP S4: skipped Chap1 exercise "nom complet Alain Post" (DN order reversed vs the course slide), Chap2 last
+  exercise and Chap6 "mettre à jour une application publiée" (no answer in the course).
 - SEP S3: Chap1 is short (tool said "probably scanned" but text was enough for 11 questions); Chap10 short (10 q).
 - SEP S2 skipped: Chap2 exercise answers for global/domaine local groups (swapped in the course), Chap13 copy/move
   table for compressed/encrypted files (diagram text unreadable), Chap6 "Application" slides (images only).
 - SEP S41 Chap7 (PDF) is a duplicate of Chap6: its index entry reuses `sep-s1-chap6.json`.
 - SEP thin parts (image slides): Chap3 "Suppression de périphériques"; Chap4 MBR/GPT comparison table,
   Diskpart task examples, Defrag.exe usage; Chap5 copy/move compression table (only the move cases from exercise 5 used).
-- Done (terminal): LINUX CHP6 (sections only: chapter is screenshots), S3 RAID, S3 LVM.
+- Done (terminal): LINUX CHP6 (sections only: chapter is screenshots), S3 Noyau, Démarrage, Systèmes de fichiers, Quotas, RAID, LVM.
+- LINUX S3 labs skip syntax-only commands (mkfs, mke2fs, badblocks, mkswap, smbclient placeholders); fstab/inittab edits are not steps. Fs lab keeps course typo prompt `/dev/disk/buy-uuid$`.
 - SEP = Microsoft Windows (S41 = Windows 7 client). NETWORK = Cisco CCNA-style.
 - Text available: all NETWORK (29; `NETWORK/S2/Ch9` EIGRP is a duplicate of S1, skip it), SEP 42/43
   (S43-Chap1 is thin), LINUX: CHP1–6, CHP16, CHP17, S3 Noyau, Démarrage, Systèmes de fichiers, RAID, LVM, Quotas.

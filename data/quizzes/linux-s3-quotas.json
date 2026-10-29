@@ -1,0 +1,80 @@
+{
+  "title": "Quotas de disque, Samba et NFS",
+  "description": "Linux · Semestre 3 · Chapitre 9 (avec Samba et NFS, chap. 10–11 du même support). Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Dans /etc/fstab, quelle option permet d'appliquer un quota au niveau utilisateur ?",
+      "choices": ["usrquota", "grpquota", "quotaon", "defaults"],
+      "answer": 0,
+      "explanation": "grpquota permet d'appliquer un quota au niveau groupe d'utilisateurs."
+    },
+    {
+      "question": "Quelle commande remonte à chaud la partition / après avoir déclaré les quotas ?",
+      "choices": ["mount -o remount /", "quotacheck -ugv /", "umount -l /", "mount -a /"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle commande fait prendre conscience au système de l'existence du fichier de définition des quotas ?",
+      "choices": ["quotacheck -ugv /dev/sda1", "quotaon -aug", "repquota /dev/sda1", "edquota -u sri2"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle commande édite le quota de l'utilisateur sri2 sur /dev/sda1 ?",
+      "choices": ["edquota -u sri2 -f /dev/sda1", "edquota -g sri2 -f /dev/sda1", "quotaon -u sri2", "repquota sri2"],
+      "answer": 0
+    },
+    {
+      "question": "Une limite maximale de 500 Mo s'écrit comment dans edquota ?",
+      "choices": ["512000 (en Ko)", "500 (en Mo)", "500000 (en Ko)", "460800 (en Ko)"],
+      "answer": 0,
+      "explanation": "Les valeurs sont en Ko : 500 Mo x 1024 = 512000 Ko."
+    },
+    {
+      "question": "Quelle commande active les quotas ?",
+      "choices": ["quotaon -aug", "quotaoff -au", "quotacheck -ugv", "repquota -a"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle commande affiche le récapitulatif des quotas en cours sur /dev/sda1 ?",
+      "choices": ["repquota /dev/sda1", "edquota /dev/sda1", "quotacheck /dev/sda1", "df /dev/sda1"],
+      "answer": 0
+    },
+    {
+      "question": "Que fait quotaoff -au sans nom de partition ?",
+      "choices": ["Désactive le quota sur toutes les partitions du disque dur", "Désactive le quota seulement sur /dev/sda1", "Active le quota pour tous les utilisateurs", "Supprime le fichier aquota.user"],
+      "answer": 0
+    },
+    {
+      "question": "Comment s'appelle le protocole de communication entre Windows et Linux utilisé par Samba ?",
+      "choices": ["SMB (Server Message Block)", "NFS (Network File System)", "SSH", "FTP"],
+      "answer": 0
+    },
+    {
+      "question": "Quel démon Samba montre les services offerts (affichage dans le voisinage réseau) ?",
+      "choices": ["nmbd", "smbd", "smbclient", "testparm"],
+      "answer": 0,
+      "explanation": "smbd fournit l'authentification et l'accès aux ressources."
+    },
+    {
+      "question": "Quel outil vérifie la syntaxe du fichier /etc/samba/smb.conf ?",
+      "choices": ["testparm", "smbtar", "smbpasswd", "nmbd"],
+      "answer": 0
+    },
+    {
+      "question": "Dans /etc/exportfs (NFS), que fait l'option root_squash ?",
+      "choices": ["Elle convertit les droits root du client en droits d'utilisateur anonyme", "Elle conserve les droits root du client sur le partage", "Elle partage en lecture seule", "Elle force les connexions sur un port inférieur à 1024"],
+      "answer": 0,
+      "explanation": "no_root_squash conserve les droits root : c'est dangereux."
+    },
+    {
+      "question": "Quelle commande active les partages NFS configurés ?",
+      "choices": ["exportfs -a", "showmount -e", "mount -a", "smbclient -L"],
+      "answer": 0
+    },
+    {
+      "question": "Depuis le client, quelle commande liste les volumes NFS disponibles sur le serveur 192.168.0.10 ?",
+      "choices": ["showmount -e 192.168.0.10", "exportfs 192.168.0.10", "smbclient -L 192.168.0.10", "mount -a 192.168.0.10"],
+      "answer": 0
+    }
+  ]
+}

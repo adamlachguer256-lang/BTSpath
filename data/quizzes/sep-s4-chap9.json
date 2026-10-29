@@ -1,0 +1,20 @@
+{
+  "title": "Gestion des maîtres d'opérations",
+  "description": "SEP · Module S44 · Chapitre 9. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Combien y a-t-il de maîtres d'opérations ?", "choices": ["5", "3", "2", "7"], "answer": 0 },
+    { "question": "Quel problème les maîtres d'opérations résolvent-ils ?", "choices": ["Les conflits de mise à jour simultanée par plusieurs contrôleurs de domaine", "Le manque d'espace disque", "La lenteur du DNS", "La perte des mots de passe"], "answer": 0 },
+    { "question": "Qui peut modifier le schéma selon le contrôleur de schéma ?", "choices": ["Uniquement les membres du groupe Administrateurs du schéma", "Tous les administrateurs de domaine", "Tous les utilisateurs authentifiés", "Le maître RID"], "answer": 0 },
+    { "question": "Si le contrôleur de schéma n'est pas disponible :", "choices": ["Vous ne pouvez pas modifier le schéma ni installer des applications qui le modifient", "Les utilisateurs ne peuvent plus ouvrir de session", "Aucun domaine ne fonctionne", "La réplication s'arrête"], "answer": 0 },
+    { "question": "Quel est le rôle du maître d'attribution de noms de domaine ?", "choices": ["Contrôler l'ajout ou la suppression de domaines dans la forêt", "Allouer des blocs de RID", "Synchroniser l'heure", "Mettre à jour les références entre domaines"], "answer": 0 },
+    { "question": "Lequel de ces rôles appartient à l'émulateur PDC ?", "choices": ["Synchroniser l'heure de tous les DC du domaine", "Contrôler les mises à jour du schéma", "Ajouter des domaines à la forêt", "Allouer des blocs d'identificateurs RID"], "answer": 0 },
+    { "question": "Quelle formule est donnée pour le SID d'un objet ?", "choices": ["SID objet = SID domaine + RID", "SID objet = GUID + RID", "SID objet = SID forêt + GUID", "SID objet = nom unique + RID"], "answer": 0 },
+    { "question": "Que fait le maître RID ?", "choices": ["Il alloue des blocs d'identificateurs RID aux DC de son domaine", "Il gère les mots de passe Windows NT", "Il réplique le schéma", "Il crée les liens de sites"], "answer": 0 },
+    { "question": "Quand un objet est déplacé vers un autre domaine, qu'est-ce qui ne change PAS ?", "choices": ["Le GUID", "Le SID", "Le nom unique", "Rien ne change"], "answer": 0, "explanation": "Le GUID est unique sur tous les domaines ; le SID change pour refléter le nouveau domaine." },
+    { "question": "Quels sont les trois rôles indispensables à tout domaine AD ?", "choices": ["PDC Emulator, maître RID et maître d'infrastructure", "Contrôleur de schéma, maître RID et PDC Emulator", "Maître d'attribution des noms, maître RID et catalogue global", "Contrôleur de schéma, maître d'infrastructure et PDC Emulator"], "answer": 0 },
+    { "question": "Quelle défaillance de maître d'opérations est la plus handicapante ?", "choices": ["Celle de l'émulateur PDC", "Celle du contrôleur de schéma", "Celle du maître d'attribution des noms", "Celle du maître RID"], "answer": 0 },
+    { "question": "Quand faut-il prendre (et non transférer) un rôle de maître d'opérations ?", "choices": ["Uniquement si le transfert est impossible", "À chaque redémarrage du serveur", "Quand le serveur défaillant sera rapidement remis en marche", "Toujours, c'est plus sûr"], "answer": 0, "explanation": "La prise de rôle peut entraîner une perte de données." },
+    { "question": "À quel DC ne faut-il pas attribuer le rôle de maître d'infrastructure ?", "choices": ["Au DC qui héberge le catalogue global", "Au premier DC du domaine", "Au DC émulateur PDC", "Au DC maître RID"], "answer": 0, "explanation": "Sauf si le domaine n'a qu'un seul DC ou si tous les DC sont des catalogues globaux." },
+    { "question": "Le contrôleur de schéma doit-il être toujours disponible ?", "choices": ["Non, seulement lorsqu'il faut modifier le schéma", "Oui, sinon personne ne peut ouvrir de session", "Oui, pour la réplication", "Oui, pour l'heure du domaine"], "answer": 0 }
+  ]
+}

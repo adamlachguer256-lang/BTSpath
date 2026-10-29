@@ -1,0 +1,90 @@
+{
+  "title": "Systèmes de fichiers Linux",
+  "description": "Linux · Semestre 3 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Qu'est-ce que ext3 ajoute par rapport à ext2 ?",
+      "choices": ["Un journal de transactions", "Le support des ACL", "Le chiffrement", "Le RAID"],
+      "answer": 0,
+      "explanation": "Le journal accélère les vérifications et la récupération en cas de crash."
+    },
+    {
+      "question": "Quelle est la taille maximum de fichier en ext4 selon le cours ?",
+      "choices": ["16 téraoctets", "2 téraoctets", "8 exaoctets", "32 téraoctets"],
+      "answer": 0,
+      "explanation": "Elle passe de 2 To en ext3 à 16 To en ext4."
+    },
+    {
+      "question": "Quel filesystem est le filesystem historique des serveurs Unix, avec 8 exaoctets maximum ?",
+      "choices": ["xfs", "reiserfs", "ext2", "proc"],
+      "answer": 0
+    },
+    {
+      "question": "Que permet de visualiser le filesystem virtuel /sys ?",
+      "choices": ["Des éléments systèmes liés aux périphériques", "Les fichiers des utilisateurs", "Les journaux de démarrage", "Les quotas de disque"],
+      "answer": 0,
+      "explanation": "/proc montre surtout les éléments liés aux processus (et des informations matériel)."
+    },
+    {
+      "question": "Quelle commande crée un filesystem ext3 ?",
+      "choices": ["mke2fs -j device", "mke2fs device", "tune2fs -l device", "fsck -t ext3 device"],
+      "answer": 0,
+      "explanation": "Sans -j, mke2fs crée un filesystem ext2."
+    },
+    {
+      "question": "Quelle option fait fonctionner e2fsck en mode non interactif ?",
+      "choices": ["-p", "-f", "-j", "-l"],
+      "answer": 0
+    },
+    {
+      "question": "Comment convertir un filesystem ext2 en ext3 ?",
+      "choices": ["tune2fs -j device", "mkfs -t ext3 device", "e2fsck -p device", "tune2fs -L device"],
+      "answer": 0,
+      "explanation": "tune2fs ajoute un journal au filesystem ext2."
+    },
+    {
+      "question": "Dans la sortie de tune2fs -l, quelle mention indique un filesystem ext3 ?",
+      "choices": ["has_journal", "large_file", "dir_index", "resize_inode"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle différence entre le label et l'UUID d'un filesystem ?",
+      "choices": ["L'UUID est affecté automatiquement à la création, le label est donné par l'administrateur", "Le label est automatique, l'UUID est donné par l'administrateur", "Le label fait 128 bits", "L'UUID ne peut jamais être modifié"],
+      "answer": 0
+    },
+    {
+      "question": "Où se trouvent par défaut les règles de udev ?",
+      "choices": ["/etc/udev/rules.d", "/etc/udev/udev.conf", "/dev/disk", "/proc/udev"],
+      "answer": 0,
+      "explanation": "L'emplacement est précisé dans /etc/udev/udev.conf ; sans information, c'est /etc/udev/rules.d."
+    },
+    {
+      "question": "Quelle commande traite la défaillance physique d'un disque (défaut de surface) ?",
+      "choices": ["badblocks", "fsck", "tune2fs", "dmesg"],
+      "answer": 0,
+      "explanation": "fsck répare les incohérences d'écriture ; badblocks référence les blocs physiquement défectueux."
+    },
+    {
+      "question": "Dans /etc/fstab, quelle valeur du 6e champ (fsck) pour le filesystem monté sur / ?",
+      "choices": ["1", "2", "0", "6"],
+      "answer": 0,
+      "explanation": "1 pour /, 2 pour les autres, 0 pour ne jamais vérifier."
+    },
+    {
+      "question": "Quels périphériques de /etc/fstab ne sont pas montés par mount -a au démarrage ?",
+      "choices": ["Ceux qui ont l'option noauto", "Ceux qui ont l'option user", "Ceux de type swap", "Ceux qui ont l'option defaults"],
+      "answer": 0
+    },
+    {
+      "question": "Si le swap est placé sur une partition, de quel type doit-elle être créée ?",
+      "choices": ["82", "83", "8e", "fd"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle commande affiche les espaces de swap utilisés ?",
+      "choices": ["swapon -s", "mkswap -s", "swapoff -a", "mount -s"],
+      "answer": 0,
+      "explanation": "On peut aussi lire le fichier /proc/swaps."
+    }
+  ]
+}

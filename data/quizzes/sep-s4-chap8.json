@@ -1,0 +1,17 @@
+{
+  "title": "Implémentation du placement des contrôleurs de domaine",
+  "description": "SEP · Module S44 · Chapitre 8. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'un serveur de catalogue global ?", "choices": ["Un DC qui conserve une copie du catalogue global", "Un serveur DNS de la forêt", "Un serveur de fichiers partagés", "Le maître RID du domaine"], "answer": 0 },
+    { "question": "Quel contrôleur de domaine est automatiquement serveur de catalogue global ?", "choices": ["Le premier DC", "Le dernier DC installé", "Tous les DC", "Aucun, il faut toujours le configurer"], "answer": 0 },
+    { "question": "Pourquoi configurer d'autres DC en serveur de catalogue global ?", "choices": ["Pour réguler le trafic", "Pour modifier le schéma", "Pour remplacer le DNS", "Pour supprimer les groupes universels"], "answer": 0 },
+    { "question": "Quel est le rôle d'un catalogue global ?", "choices": ["Trouver des informations AD sur toute la forêt et utiliser l'appartenance aux groupes universels pour ouvrir une session", "Attribuer les RID aux DC", "Stocker les fichiers SYSVOL", "Gérer les noms de domaine de la forêt"], "answer": 0 },
+    { "question": "Pendant l'authentification, qui interroge le catalogue global pour identifier les groupes universels de l'utilisateur ?", "choices": ["Le contrôleur de domaine", "Le client", "L'autorité LSA du serveur de ressources", "Le serveur DNS"], "answer": 0 },
+    { "question": "Que reçoit le client à la fin de l'authentification ?", "choices": ["Un TGT (Ticket-Granting Ticket) envoyé par le KDC", "Un ticket de session envoyé par le LSA", "Une adresse IP", "Un certificat SSL"], "answer": 0 },
+    { "question": "Dans le processus d'autorisation, que fait le TGS ?", "choices": ["Il émet un ticket de session au client pour le serveur de la ressource", "Il compare les SID avec la DACL", "Il crypte le mot de passe", "Il interroge le catalogue global"], "answer": 0 },
+    { "question": "Qui compare les SID du jeton d'accès avec la liste DACL de la ressource ?", "choices": ["L'autorité LSA (Local Security Authority)", "Le KDC", "Le catalogue global", "Le client"], "answer": 0 },
+    { "question": "Quel est l'objet de la mise en cache de l'appartenance aux groupes universels ?", "choices": ["Ne plus devoir rechercher un catalogue global lors d'une ouverture de session", "Accélérer la réplication du schéma", "Stocker les mots de passe sur le client", "Supprimer les groupes universels"], "answer": 0 },
+    { "question": "Toutes les combien le cache de l'appartenance aux groupes universels est-il rafraîchi ?", "choices": ["8 heures", "90 minutes", "5 minutes", "24 heures"], "answer": 0 },
+    { "question": "Pourquoi l'ouverture de session échoue-t-elle si le catalogue global n'est pas joignable ?", "choices": ["Le KDC ne peut pas obtenir les SID des groupes universels, donc il n'émet pas de TGT", "Le serveur DNS s'arrête", "Le mot de passe est effacé", "Le compte est désactivé"], "answer": 0 }
+  ]
+}

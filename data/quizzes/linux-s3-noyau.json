@@ -1,0 +1,77 @@
+{
+  "title": "Le noyau Linux",
+  "description": "Linux · Semestre 3 · Chapitre 1. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Sous quelle licence le noyau Linux est-il diffusé ?",
+      "choices": ["GNU General Public License (GPL) version 2.0", "Licence BSD", "Licence commerciale de Linus Torvalds", "Licence Apache 2.0"],
+      "answer": 0
+    },
+    {
+      "question": "Jusqu'à la version 2.6, que signifie un numéro de version mineure pair ?",
+      "choices": ["Un noyau stable", "Un noyau en développement", "Un correctif de sécurité", "Une version majeure"],
+      "answer": 0,
+      "explanation": "Un nombre pair indique un noyau stable, un nombre impair un noyau en développement."
+    },
+    {
+      "question": "Parmi les quatre méthodes pour configurer un noyau, laquelle est la plus facile et la plus courante ?",
+      "choices": ["La modification dynamique des paramètres", "La construction d'un noyau à partir de zéro", "Le chargement de modules à la volée", "Le passage de paramètres par LILO ou GRUB"],
+      "answer": 0,
+      "explanation": "La construction à partir des sources est au contraire la plus difficile et la moins souvent nécessaire."
+    },
+    {
+      "question": "Dans quel répertoire se trouvent les paramètres du noyau modifiables dynamiquement ?",
+      "choices": ["/proc/sys", "/boot", "/lib/modules", "/etc/init.d"],
+      "answer": 0
+    },
+    {
+      "question": "Pourquoi une modification faite dans /proc/sys est-elle perdue au redémarrage ?",
+      "choices": ["Car /proc est un système de fichiers virtuel qui n'existe qu'en mémoire centrale", "Car /proc est effacé par fsck", "Car le noyau est recompilé à chaque démarrage", "Car /proc est monté en lecture seule"],
+      "answer": 0
+    },
+    {
+      "question": "Quel fichier permet de mémoriser les paramètres du noyau à appliquer au démarrage ?",
+      "choices": ["/etc/sysctl.conf", "/etc/inittab", "/etc/modprobe.conf", "/boot/grub/grub.conf"],
+      "answer": 0
+    },
+    {
+      "question": "Quel paramètre active ou désactive le routage entre les cartes réseaux ?",
+      "choices": ["/proc/sys/net/ipv4/ip_forward", "/proc/sys/net/ipv4/icmp_echo_ignore_all", "/proc/sys/kernel/hostname", "/proc/sys/fs/file-max"],
+      "answer": 0,
+      "explanation": "icmp_echo_ignore_all bloque les réponses au ping ; ip_forward active le routage."
+    },
+    {
+      "question": "Dans quel fichier sont stockées les informations de configuration du noyau ?",
+      "choices": ["Le fichier .config à la racine du répertoire source", "Le fichier Makefile", "Le fichier System.map", "Le fichier /etc/sysctl.conf"],
+      "answer": 0,
+      "explanation": "Il est déconseillé de le modifier à la main : on utilise make config, make menuconfig, etc."
+    },
+    {
+      "question": "Avec make config, que signifie la réponse « m » ?",
+      "choices": ["Construire un module chargé de façon dynamique", "Intégrer la fonction directement dans le noyau", "Ne pas activer la fonction", "Afficher l'aide de la fonction"],
+      "answer": 0
+    },
+    {
+      "question": "Que fait make oldconfig ?",
+      "choices": ["Il construit une configuration basée sur une configuration pré-construite", "Il restaure l'ancien noyau", "Il supprime le fichier .config", "Il ouvre une interface graphique"],
+      "answer": 0
+    },
+    {
+      "question": "Quels outils de configuration du noyau utilisent une interface graphique ?",
+      "choices": ["make gconfig et make xconfig", "make menuconfig et make config", "make oldconfig et make install", "make modules_install et make"],
+      "answer": 0,
+      "explanation": "make menuconfig fonctionne en mode console avec les touches fléchées."
+    },
+    {
+      "question": "Quelle est la différence entre insmod et modprobe ?",
+      "choices": ["modprobe charge aussi les dépendances du module, insmod ne les gère pas", "insmod charge les dépendances, modprobe non", "modprobe ne fait que lister les modules", "Il n'y a aucune différence"],
+      "answer": 0,
+      "explanation": "insmod vfat.ko échoue si fat.ko n'est pas chargé ; modprobe vfat charge automatiquement fat."
+    },
+    {
+      "question": "Quelle commande met à jour le fichier modules.dep (dépendances entre modules) ?",
+      "choices": ["depmod", "lsmod", "modinfo", "rmmod"],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "chapterId": "linux-s3-chap1-noyau-1",
+  "title": "Le noyau Linux — les exemples du cours",
+  "intro": "Refais les exemples du chapitre 1, dans l'ordre du cours : paramètres dynamiques, construction et installation du noyau 2.6.35.5, mise à jour par patch, puis gestion des modules (fat / vfat).",
+  "prompt": "#",
+  "steps": [
+    {
+      "section": "3. Modification dynamique des paramètres",
+      "task": "Fixe à 32768 le nombre maximal de fichiers que le système peut ouvrir simultanément (fichier /proc/sys/fs/file-max).",
+      "accept": ["echo 32768 > /proc/sys/fs/file-max", "echo 32768 >/proc/sys/fs/file-max"],
+      "hint": "echo valeur > fichier",
+      "output": ""
+    },
+    {
+      "section": "3. Modification dynamique des paramètres",
+      "task": "Avec la commande sysctl, donne la valeur 1 au paramètre ip_forward pour activer le routage.",
+      "accept": ["sysctl -w net.ipv4.ip_forward=1"],
+      "hint": "sysctl -w nom.du.parametre=valeur",
+      "output": ""
+    },
+    {
+      "section": "4. Construction d'un noyau Linux",
+      "task": "Décompresse et extrais l'archive linux-2.6.35.5.tar.bz2.",
+      "accept": ["tar xjfv linux-2.6.35.5.tar.bz2", "tar -xjfv linux-2.6.35.5.tar.bz2", "tar xvjf linux-2.6.35.5.tar.bz2", "tar -xvjf linux-2.6.35.5.tar.bz2", "tar xjvf linux-2.6.35.5.tar.bz2", "tar -xjvf linux-2.6.35.5.tar.bz2"],
+      "hint": "tar avec les options x, j, f, v.",
+      "output": "",
+      "prompt": "$"
+    },
+    {
+      "section": "4. Construction d'un noyau Linux",
+      "task": "Entre dans le répertoire créé par l'extraction.",
+      "accept": ["cd linux-2.6.35.5/", "cd linux-2.6.35.5"],
+      "hint": "cd + nom du répertoire.",
+      "output": ""
+    },
+    {
+      "section": "4. Construction d'un noyau Linux",
+      "task": "Liste l'arborescence du code source.",
+      "accept": ["ls"],
+      "hint": "Commande de listage.",
+      "output": "arch COPYING crypto drivers fs init Kbuild lib Makefile net REPORTING-BUGS\nscripts sound usr block CREDITS Documentation firmware include ipc kernel\nMAINTAINERS mm README samples security tools virt"
+    },
+    {
+      "section": "4.1.2 Make oldconfig",
+      "task": "Construis la configuration du nouveau noyau à partir de la configuration pré-construite du noyau courant.",
+      "accept": ["make oldconfig"],
+      "hint": "make + old + config.",
+      "output": "scripts/kconfig/conf -o arch/x86/Kconfig\n# using defaults found in /boot/config-2.6.32-24-generic\n/boot/config-2.6.32-24-generic:556:warning: symbol value 'm' invalid for\nPCCARD_NONSTATIC\n/boot/config-2.6.32-24-generic:3031:warning: symbol value 'm' invalid for\nMFD_WM831X\n/boot/config-2.6.32-24-generic:3032:warning: symbol value 'm' invalid for\nMFD_WM8350\n/boot/config-2.6.32-24-generic:3033:warning: symbol value 'm' invalid for\nMFD_WM8350_I2C\n/boot/config-2.6.32-24-generic:3038:warning: symbol value 'm' invalid for\nAB3100_CORE\n/boot/config-2.6.32-24-generic:3505:warning: symbol value 'm' invalid for\nFB_VESA\n/boot/config-2.6.32-24-generic:4174:warning: symbol value 'm' invalid for\nMMC_RICOH_MMC\n* Restart config...\n* General setup\nPrompt for development and/or incomplete code/drivers (EXPERIMENTAL)\n[Y/n/?] y\nCross-compiler tool prefix (CROSS_COMPILE) [] (NEW)"
+    },
+    {
+      "section": "4.2 Compilation du noyau",
+      "task": "Compile le noyau avec la configuration définie.",
+      "accept": ["make"],
+      "hint": "Une seule commande, sans argument."
+    },
+    {
+      "section": "4.3.1 Scripts d'installation",
+      "task": "Installe les modules dynamiques compilés (ils iront dans /lib/modules/2.6.35.5).",
+      "accept": ["make modules_install"],
+      "hint": "make + modules_install",
+      "prompt": "#"
+    },
+    {
+      "section": "4.3.1 Scripts d'installation",
+      "task": "Installe l'image du nouveau noyau.",
+      "accept": ["make install"],
+      "hint": "make + install",
+      "note": "make install vérifie le noyau, l'installe dans /boot, crée les images RAM Disk et ajoute une entrée au chargeur de démarrage."
+    },
+    {
+      "section": "4.3.2 Installation manuelle",
+      "task": "Installation manuelle : copie le noyau (architecture 386) dans /boot sous le nom vmlinuz-2.6.35.5.",
+      "accept": ["cp arch/i386/boot/bzImage /boot/vmlinuz-2.6.35.5"],
+      "hint": "cp arch/i386/boot/bzImage …"
+    },
+    {
+      "section": "4.3.2 Installation manuelle",
+      "task": "Copie System.map dans /boot sous le nom System.map-2.6.35.5.",
+      "accept": ["cp System.map /boot/System.map-2.6.35.5"],
+      "hint": "cp System.map …"
+    },
+    {
+      "section": "4.3.2 Installation manuelle",
+      "task": "Construis l'image initrd /boot/initrd-2.6.35.5.img à partir de /lib/modules/2.6.35.5.",
+      "accept": ["mkinitrd -o /boot/initrd-2.6.35.5.img /lib/modules/2.6.35.5"],
+      "hint": "mkinitrd -o image répertoire_modules"
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Va dans le répertoire source du noyau pour sauvegarder la configuration.",
+      "accept": ["cd linux-2.6.35.5", "cd linux-2.6.35.5/"],
+      "hint": "cd …",
+      "output": "",
+      "prompt": "$"
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Sauvegarde le fichier .config dans ../good_config.",
+      "accept": ["cp .config ../good_config"],
+      "hint": "cp source destination"
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Décompresse le premier patch patch-2.6.35.5-6.bz2 (mode verbeux).",
+      "accept": ["bzip2 -dv patch-2.6.35.5-6.bz2", "bzip2 -vd patch-2.6.35.5-6.bz2", "bzip2 -d -v patch-2.6.35.5-6.bz2"],
+      "hint": "bzip2 -dv fichier.bz2"
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Décompresse le second patch patch-2.6.35.6-7.bz2.",
+      "accept": ["bzip2 -dv patch-2.6.35.6-7.bz2", "bzip2 -vd patch-2.6.35.6-7.bz2", "bzip2 -d -v patch-2.6.35.6-7.bz2"],
+      "hint": "Même commande, autre fichier."
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Place-toi dans le répertoire linux-2.6.35.5.",
+      "accept": ["cd linux-2.6.35.5", "cd linux-2.6.35.5/"],
+      "hint": "cd …",
+      "output": ""
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Applique le patch ../patch-2.6.35.5-6 (passage en 2.6.35.6).",
+      "accept": ["patch -p1 < ../patch-2.6.35.5-6", "patch -p1 <../patch-2.6.35.5-6"],
+      "hint": "patch -p1 < fichier_patch"
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Examine le début du Makefile pour voir le changement de version.",
+      "accept": ["head Makefile"],
+      "hint": "head fichier"
+    },
+    {
+      "section": "5. Mise à jour d'un noyau",
+      "task": "Applique le patch ../patch-2.6.35.6-7 (passage en 2.6.35.7).",
+      "accept": ["patch -p1 < ../patch-2.6.35.6-7", "patch -p1 <../patch-2.6.35.6-7"],
+      "hint": "Même commande, second patch."
+    },
+    {
+      "section": "6.1 lsmod",
+      "task": "Liste les modules actuellement chargés.",
+      "accept": ["lsmod"],
+      "hint": "ls + mod",
+      "output": "Module Size Used by\nfglrx 1482380 70\nnls_iso8859_1 8192 1\nnls_cp437 9856 1\nvfat 16128 1\nfat 52636 1 vfat",
+      "note": "Le module fat est utilisé par le module vfat.",
+      "prompt": "#"
+    },
+    {
+      "section": "6.1 lsmod",
+      "task": "Affiche le fichier virtuel que lsmod remet en forme.",
+      "accept": ["cat /proc/modules"],
+      "hint": "Le fichier est dans /proc.",
+      "output": "fglrx 1482380 60 - Live 0xf9a55000 (P)\nnls_iso8859_1 8192 0 - Live 0xf94d0000\nnls_cp437 9856 0 - Live 0xf94ed000"
+    },
+    {
+      "section": "6.2 depmod",
+      "task": "Cherche vfat dans le fichier modules.dep du noyau en cours (utilise $(uname -r)).",
+      "accept": ["grep vfat /lib/modules/$(uname -r)/modules.dep"],
+      "hint": "grep vfat /lib/modules/$(uname -r)/…",
+      "output": "/lib/modules/2.6.22.17-0.1-default/kernel/fs/vfat/vfat.ko:\n/lib/modules/2.6.22.17-0.1-default/kernel/fs/fat/fat.ko",
+      "note": "vfat.ko dépend de fat.ko : fat.ko doit être chargé en premier."
+    },
+    {
+      "section": "6.3 modinfo",
+      "task": "Affiche les informations sur le module vfat.",
+      "accept": ["modinfo vfat"],
+      "hint": "mod + info",
+      "output": "filename: /lib/modules/2.6.22.17-0.1-default/kernel/fs/fat/fat.ko\nlicense: GPL\nsrcversion: 886B1B65F96E53415B5811C\ndepends:\nsupported: yes\nvermagic: 2.6.22.17-0.1-default SMP mod_unload 586"
+    },
+    {
+      "section": "6.4 insmod",
+      "task": "Essaie de charger vfat.ko avec insmod.",
+      "accept": ["insmod vfat.ko"],
+      "hint": "insmod fichier.ko",
+      "output": "insmod: error inserting ’vfat.ko’: -1 Unknown symbol in module",
+      "note": "Erreur : vfat.ko dépend de fat.ko, et insmod ne gère pas les dépendances."
+    },
+    {
+      "section": "6.4 insmod",
+      "task": "Charge d'abord le module fat.ko.",
+      "accept": ["insmod fat.ko"],
+      "hint": "La dépendance d'abord."
+    },
+    {
+      "section": "6.4 insmod",
+      "task": "Charge maintenant vfat.ko.",
+      "accept": ["insmod vfat.ko"],
+      "hint": "Même commande qu'avant."
+    },
+    {
+      "section": "6.4 insmod",
+      "task": "Vérifie que les modules fat sont chargés (lsmod filtré par grep).",
+      "accept": ["lsmod|grep fat", "lsmod | grep fat"],
+      "hint": "lsmod | grep …",
+      "output": "vfat 16128 0\nfat 52636 1 vfat"
+    },
+    {
+      "section": "6.5 rmmod",
+      "task": "Essaie de décharger le module fat.",
+      "accept": ["rmmod fat"],
+      "hint": "rmmod nom_module",
+      "output": "ERROR: Module fat is in use by vfat"
+    },
+    {
+      "section": "6.5 rmmod",
+      "task": "Décharge d'abord le module vfat.",
+      "accept": ["rmmod vfat"],
+      "hint": "Celui qui utilise fat."
+    },
+    {
+      "section": "6.5 rmmod",
+      "task": "Décharge maintenant le module fat.",
+      "accept": ["rmmod fat"],
+      "hint": "Il n'est plus utilisé."
+    },
+    {
+      "section": "6.6 modprobe",
+      "task": "Vérifie qu'aucun module fat n'est chargé.",
+      "accept": ["lsmod|grep fat", "lsmod | grep fat"],
+      "hint": "lsmod | grep …",
+      "output": ""
+    },
+    {
+      "section": "6.6 modprobe",
+      "task": "Charge vfat avec modprobe (fat sera chargé automatiquement).",
+      "accept": ["modprobe vfat"],
+      "hint": "modprobe nom_module"
+    },
+    {
+      "section": "6.6 modprobe",
+      "task": "Vérifie les modules fat chargés.",
+      "accept": ["lsmod|grep fat", "lsmod | grep fat"],
+      "hint": "lsmod | grep …",
+      "output": "vfat 16128 0\nfat 52636 1 vfat"
+    },
+    {
+      "section": "6.6 modprobe",
+      "task": "Décharge vfat et les modules dont il dépend.",
+      "accept": ["modprobe -r vfat"],
+      "hint": "Option -r de modprobe."
+    },
+    {
+      "section": "6.6 modprobe",
+      "task": "Vérifie que plus aucun module fat n'est chargé.",
+      "accept": ["lsmod|grep fat", "lsmod | grep fat"],
+      "hint": "lsmod | grep …",
+      "output": ""
+    },
+    {
+      "section": "7. Paramètres depuis le chargeur de démarrage",
+      "task": "À l'invite LILO : charge le noyau « linux », avec la racine /dev/sda1 et deux cartes Ethernet (eth0, eth1).",
+      "accept": ["linux root=/dev/sda1 ether=0,0,eth0 ether=0,0,eth1"],
+      "hint": "linux root=… ether=0,0,eth0 ether=0,0,eth1",
+      "prompt": "LILO:"
+    },
+    {
+      "section": "7. Paramètres depuis le chargeur de démarrage",
+      "task": "Même chose avec GRUB : indique le noyau /vmlinuz et les mêmes paramètres.",
+      "accept": ["kernel /vmlinuz root=/dev/sda1 ether=0,0,eth0 ether=0,0,eth1"],
+      "hint": "kernel /vmlinuz root=… ether=…",
+      "prompt": "grub>"
+    },
+    {
+      "section": "7. Paramètres depuis le chargeur de démarrage",
+      "task": "Démarre le système.",
+      "accept": ["boot"],
+      "hint": "Un seul mot."
+    }
+  ],
+  "challenge": {
+    "section": "Défi",
+    "task": "Retour au shell root : charge le module vfat avec toutes ses dépendances, en une seule commande.",
+    "prompt": "#",
+    "accept": ["modprobe vfat"]
+  }
+}

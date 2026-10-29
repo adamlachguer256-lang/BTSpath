@@ -1,0 +1,84 @@
+{
+  "title": "Démarrage du système",
+  "description": "Linux · Semestre 3 · Chapitre 2. Questions tirées du support de cours.",
+  "questions": [
+    {
+      "question": "Dans quel ordre les programmes de démarrage sont-ils lancés ?",
+      "choices": ["BIOS, chargeur de démarrage, noyau, init", "Noyau, BIOS, init, chargeur de démarrage", "Chargeur de démarrage, BIOS, init, noyau", "init, noyau, BIOS, chargeur de démarrage"],
+      "answer": 0
+    },
+    {
+      "question": "Que charge le BIOS au démarrage ?",
+      "choices": ["Les 512 premiers octets du disque : le MBR", "Le fichier /etc/inittab", "Le processus init", "Tout le contenu de /boot"],
+      "answer": 0
+    },
+    {
+      "question": "Quel fichier permet à init de connaître le niveau d'exécution par défaut ?",
+      "choices": ["/etc/inittab", "/etc/fstab", "/etc/sysctl.conf", "/boot/grub/device.map"],
+      "answer": 0,
+      "explanation": "Il est défini sur la ligne initdefault, par exemple id:5:initdefault:"
+    },
+    {
+      "question": "À quoi correspond le niveau d'exécution 5 ?",
+      "choices": ["Multi-utilisateur, avec réseau, avec environnement graphique X Window", "Mode mono utilisateur pour la maintenance", "Redémarrage de la machine", "Multi-utilisateur sans réseau"],
+      "answer": 0
+    },
+    {
+      "question": "Quel niveau d'exécution redémarre la machine ?",
+      "choices": ["6", "0", "1", "3"],
+      "answer": 0,
+      "explanation": "0 = Halt (arrêt), 6 = Reboot."
+    },
+    {
+      "question": "Dans /etc/inittab, que fait l'action respawn ?",
+      "choices": ["Relance automatiquement le processus s'il se termine", "Exécute la commande une seule fois au démarrage", "Ignore la ligne", "Attend la fin de la commande avant de continuer"],
+      "answer": 0,
+      "explanation": "C'est le cas des terminaux (mingetty) quand un utilisateur se déconnecte."
+    },
+    {
+      "question": "Quelle action de /etc/inittab est exécutée une seule et unique fois lors du démarrage du système ?",
+      "choices": ["sysinit", "respawn", "off", "ctrlaltdel"],
+      "answer": 0
+    },
+    {
+      "question": "La commande runlevel affiche « N 5 ». Que signifie le N ?",
+      "choices": ["Il n'y a pas de précédent niveau", "Le niveau Normal", "Le système n'a pas de réseau", "Le niveau 0"],
+      "answer": 0,
+      "explanation": "La première valeur est le niveau précédent, la seconde le niveau actuel."
+    },
+    {
+      "question": "Que fait la commande telinit q ?",
+      "choices": ["init relit le fichier /etc/inittab s'il a été modifié", "init quitte et arrête la machine", "init passe au niveau 1", "init se relance sans relire inittab"],
+      "answer": 0,
+      "explanation": "Avec u, init se relance sans relire inittab."
+    },
+    {
+      "question": "Dans /etc/rc3.d, que signifie le lien S80postfix ?",
+      "choices": ["Démarrer (S = start) le service postfix avec l'ordre 80", "Arrêter le service postfix avec l'ordre 80", "Postfix démarre au niveau 80", "Postfix est un service système (S = system)"],
+      "answer": 0,
+      "explanation": "Forme [SK]nnservice : S = start, K = kill (stop), nn = ordre de 00 à 99."
+    },
+    {
+      "question": "Quel argument d'un script de /etc/init.d envoie un signal SIGHUP pour forcer le service à relire sa configuration ?",
+      "choices": ["reload", "restart", "status", "stop"],
+      "answer": 0
+    },
+    {
+      "question": "Sous Debian, quelle commande maintient les liens vers les scripts de démarrage dans /etc/rcN.d ?",
+      "choices": ["update-rc.d", "telinit", "chroot", "grub-install"],
+      "answer": 0,
+      "explanation": "La liste des niveaux d'exécution doit impérativement être suivie d'un point."
+    },
+    {
+      "question": "Sur quoi fonctionne le système Upstart ?",
+      "choices": ["Sur les événements (ex. l'ajout d'un périphérique)", "Uniquement sur les niveaux d'exécution", "Sur le fichier /etc/inittab", "Sur le BIOS"],
+      "answer": 0,
+      "explanation": "Ses scripts sont placés dans /etc/init (anciennement /etc/event.d)."
+    },
+    {
+      "question": "Comment vérifier le système de fichiers racine alors qu'on ne peut pas le démonter ?",
+      "choices": ["Le remonter en lecture seule (mount -o remount,ro /) puis lancer fsck /", "Lancer fsck / directement sans rien faire", "Utiliser grub-install /dev/sda", "Passer au niveau d'exécution 6"],
+      "answer": 0
+    }
+  ]
+}

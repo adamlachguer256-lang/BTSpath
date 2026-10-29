@@ -1,0 +1,164 @@
+{
+  "chapterId": "linux-s3-chap-9-quotas",
+  "title": "Quotas, Samba et NFS — les exemples du cours",
+  "intro": "Refais les exemples du chapitre 9 dans l'ordre du cours : mise en place des quotas, quota de l'utilisateur sri2 et du groupe Marketing, test avec dd. Puis Samba et NFS (chapitres 10 et 11 du même support).",
+  "prompt": "#",
+  "steps": [
+    {
+      "section": "1. Mise en place — étape 1",
+      "task": "Installe le paquet de gestion des quotas.",
+      "accept": ["apt-get install quota"],
+      "hint": "apt-get install …"
+    },
+    {
+      "section": "1. Mise en place — étape 3",
+      "task": "Les options usrquota,grpquota sont déclarées dans /etc/fstab pour /dev/sda1. Remonte à chaud la partition /.",
+      "accept": ["mount -o remount /"],
+      "hint": "mount -o remount …"
+    },
+    {
+      "section": "1. Mise en place — étape 4",
+      "task": "Crée le fichier de définition des quotas /aquota.user.",
+      "accept": ["touch /aquota.user"],
+      "hint": "touch fichier",
+      "output": ""
+    },
+    {
+      "section": "1. Mise en place — étape 4",
+      "task": "Donne ce fichier à root:root.",
+      "accept": ["chown root:root /aquota.user"],
+      "hint": "chown user:groupe fichier"
+    },
+    {
+      "section": "1. Mise en place — étape 4",
+      "task": "Mets les droits 600 sur ce fichier.",
+      "accept": ["chmod 600 /aquota.user"],
+      "hint": "chmod droits fichier"
+    },
+    {
+      "section": "1. Mise en place — étape 5",
+      "task": "Fais prendre conscience au système du fichier des quotas sur /dev/sda1 (utilisateurs, groupes, verbeux).",
+      "accept": ["quotacheck -ugv /dev/sda1", "quotacheck -vug /dev/sda1", "quotacheck -uvg /dev/sda1", "quotacheck -guv /dev/sda1"],
+      "hint": "quotacheck -ugv device"
+    },
+    {
+      "section": "2.1 Quota pour l'utilisateur sri2",
+      "task": "Édite le quota de l'utilisateur sri2 sur /dev/sda1 (souple 450 Mo, stricte 500 Mo).",
+      "accept": ["edquota -u sri2 -f /dev/sda1"],
+      "hint": "edquota -u utilisateur -f device",
+      "output": "Quotas disque pour user sri2 (uid 500) :\nSystème de fichiers        blocs       souple     stricte   inodes\nsouple   stricte\n/dev/sda1                  500920      460800      512000         10\n0        0",
+      "note": "Valeurs en Ko : 450 x 1024 = 460800 ; 500 x 1024 = 512000."
+    },
+    {
+      "section": "2.1 Quota pour l'utilisateur sri2",
+      "task": "Active les quotas.",
+      "accept": ["quotaon -aug"],
+      "hint": "quotaon -aug"
+    },
+    {
+      "section": "2.2 Récapitulatif des quotas",
+      "task": "Affiche le récapitulatif des quotas sur /dev/sda1.",
+      "accept": ["repquota /dev/sda1"],
+      "hint": "rep + quota",
+      "output": "*** Rapport pour les quotas user sur le périphérique /dev/sda1\nPériode de sursis bloc : 7days ; période de sursis inode : 7days\nLimites bloc               Limites fichier\nUtilisateur     utilisé souple stricte sursis utilisé souple stricte\nsursis\nroot      --   35832       0       0                 4     0     0\nsri2      +-   502000   450800   502000  6days      10     0     0"
+    },
+    {
+      "section": "2.2 Test des quotas",
+      "task": "Crée un fichier de 490 Mo /home/sri2/quotatest avec dd (bs=1024, count=490000).",
+      "accept": ["dd if=/dev/zero of=/home/sri2/quotatest bs=1024 count=490000"],
+      "hint": "dd if=/dev/zero of=… bs=1024 count=…",
+      "output": "sda1: warning, user block quota exceeded.\n490000+0 enregistrements lus\n490000+0 enregistrements écrits\n501760000 octets (490 MB) copiés, 0,838606 seconde, 59,8 MB/s"
+    },
+    {
+      "section": "2.2 Test des quotas",
+      "task": "Crée maintenant un fichier de 510 Mo (count=510000).",
+      "accept": ["dd if=/dev/zero of=/home/sri2/quotatest bs=1024 count=510000"],
+      "hint": "Même commande, autre count.",
+      "output": "sda1: warning, user block quota exceeded.\nsda1: write failed, user block limit reached.\ndd: écriture de `/home/sri2/quotatest': Débordement du quota d'espace\ndisque\n501090+0 enregistrements lus\n501080+0 enregistrements écrits\n513105920 octets (500 MB) copiés, 0,297124 seconde, 173 MB/s"
+    },
+    {
+      "section": "2.2 Test des quotas",
+      "task": "Liste les fichiers avec les tailles lisibles pour voir la taille de quotatest.",
+      "accept": ["ls -lh", "ls -hl", "ls -l -h"],
+      "hint": "ls -lh",
+      "output": "total 500M\n-rw-r--r-- 1 sri2  sri2    500M fev 17 15:23 quotatest",
+      "note": "Le fichier ne dépasse pas le quota fixé : 500 Mo.",
+      "prompt": "[francois@localhost ~]$"
+    },
+    {
+      "section": "2.3 Quota pour le groupe Marketing",
+      "task": "Édite le quota du groupe Marketing sur /dev/sda1.",
+      "accept": ["edquota -g Marketing -f /dev/sda1"],
+      "hint": "edquota -g groupe -f device",
+      "prompt": "#"
+    },
+    {
+      "section": "2.3 Quota pour le groupe Marketing",
+      "task": "Active les quotas.",
+      "accept": ["quotaon -aug"],
+      "hint": "Comme pour un utilisateur."
+    },
+    {
+      "section": "Samba — 3. Installation",
+      "task": "Installe les paquets samba, smbclient, smbfs et winbind.",
+      "accept": ["apt-get install samba smbclient smbfs winbind"],
+      "hint": "apt-get install samba …"
+    },
+    {
+      "section": "Samba — Premier démarrage",
+      "task": "Démarre le serveur Samba.",
+      "accept": ["/etc/init.d/samba start", "service samba start"],
+      "hint": "/etc/init.d/samba …"
+    },
+    {
+      "section": "Samba — Premier démarrage",
+      "task": "Contrôle si les deux démons sont correctement lancés.",
+      "accept": ["/etc/init.d/samba status", "service samba status"],
+      "hint": "Argument status."
+    },
+    {
+      "section": "NFS — 3. Configuration du serveur",
+      "task": "Active les partages déclarés dans /etc/exportfs.",
+      "accept": ["exportfs -a"],
+      "hint": "exportfs + option.",
+      "prompt": "root@excalibur:~#"
+    },
+    {
+      "section": "NFS — 3. Configuration du serveur",
+      "task": "Affiche la liste des partages actifs.",
+      "accept": ["exportfs"],
+      "hint": "La même commande sans option.",
+      "output": "/home 192.168.5.0/24\n/home 192.168.3.1"
+    },
+    {
+      "section": "NFS — 4. Contrôle depuis le client",
+      "task": "Liste les volumes disponibles sur le serveur 192.168.0.10.",
+      "accept": ["showmount -e 192.168.0.10"],
+      "hint": "showmount -e adresse",
+      "prompt": "#"
+    },
+    {
+      "section": "NFS — 4-1. Dossier du montage",
+      "task": "Crée le dossier /mnt/nfs.",
+      "accept": ["mkdir /mnt/nfs"],
+      "hint": "mkdir …"
+    },
+    {
+      "section": "NFS — 4-2. Montage manuel",
+      "task": "Monte en lecture/écriture 192.168.0.10:/home/datas sur /mnt/nfs.",
+      "accept": ["sudo mount -t nfs -o rw 192.168.0.10:/home/datas /mnt/nfs", "mount -t nfs -o rw 192.168.0.10:/home/datas /mnt/nfs"],
+      "hint": "sudo mount -t nfs -o rw serveur:/chemin point_montage"
+    },
+    {
+      "section": "NFS — 4-4. Montage automatique",
+      "task": "La ligne NFS est ajoutée dans /etc/fstab : monte tout ce qui est déclaré.",
+      "accept": ["mount -a"],
+      "hint": "mount + option."
+    }
+  ],
+  "challenge": {
+    "section": "Défi",
+    "task": "Désactive le quota sur toutes les partitions du disque dur.",
+    "accept": ["quotaoff -au", "quotaoff -ua"]
+  }
+}

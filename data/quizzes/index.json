@@ -9,6 +9,38 @@
       "demo": false
     },
     {
+      "id": "linux-s3-noyau",
+      "file": "linux-s3-noyau.json",
+      "title": "Le noyau Linux",
+      "subject": "LINUX",
+      "chapterId": "linux-s3-chap1-noyau-1",
+      "demo": false
+    },
+    {
+      "id": "linux-s3-demarrage",
+      "file": "linux-s3-demarrage.json",
+      "title": "Démarrage du système",
+      "subject": "LINUX",
+      "chapterId": "linux-s3-chap-2-demarrage-du-systeme-controle",
+      "demo": false
+    },
+    {
+      "id": "linux-s3-fs",
+      "file": "linux-s3-fs.json",
+      "title": "Systèmes de fichiers Linux",
+      "subject": "LINUX",
+      "chapterId": "linux-s3-chap-4-systemes-de-fichier-linux-controle-1",
+      "demo": false
+    },
+    {
+      "id": "linux-s3-quotas",
+      "file": "linux-s3-quotas.json",
+      "title": "Quotas de disque, Samba et NFS",
+      "subject": "LINUX",
+      "chapterId": "linux-s3-chap-9-quotas",
+      "demo": false
+    },
+    {
       "id": "linux-s3-raid",
       "file": "linux-s3-raid.json",
       "title": "RAID — Partitionnement avancé",
@@ -302,6 +334,78 @@
       "title": "Gestion et analyse de l'accès réseau",
       "subject": "SEP",
       "chapterId": "sep-s3-s43-chap10",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap1",
+      "file": "sep-s4-chap1.json",
+      "title": "Introduction à l'infrastructure Active Directory",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap1",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap2",
+      "file": "sep-s4-chap2.json",
+      "title": "Implémentation d'une structure de forêt et de domaine Active Directory",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap2",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap4",
+      "file": "sep-s4-chap4.json",
+      "title": "Implémentation de comptes d'utilisateurs, de groupes et d'ordinateurs",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap4",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap5",
+      "file": "sep-s4-chap5.json",
+      "title": "Implémentation d'une stratégie de groupe",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap5",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap6",
+      "file": "sep-s4-chap6.json",
+      "title": "Déploiement et gestion des logiciels à l'aide d'une stratégie de groupe",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap6",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap7",
+      "file": "sep-s4-chap7.json",
+      "title": "Implémentation de sites pour gérer la réplication Active Directory",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap7",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap8",
+      "file": "sep-s4-chap8.json",
+      "title": "Implémentation du placement des contrôleurs de domaine",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap8",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap9",
+      "file": "sep-s4-chap9.json",
+      "title": "Gestion des maîtres d'opérations",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap9",
+      "demo": false
+    },
+    {
+      "id": "sep-s4-chap10",
+      "file": "sep-s4-chap10.json",
+      "title": "Maintenance d'Active Directory",
+      "subject": "SEP",
+      "chapterId": "sep-s4-s44-chap10",
       "demo": false
     },
     {
