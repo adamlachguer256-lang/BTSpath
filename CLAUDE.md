@@ -20,7 +20,7 @@ Read README.md only if you need details not covered here. **Do not re-explore th
   `python tools/build_manifest.py`. Chapter ids look like `linux-s3-chap-8-lvm`, `sep-s1-s41-chap3`.
 - `data/quizzes/index.json` + `data/quizzes/<id>.json` — quizzes (engine: `assets/js/quiz.js`).
 - `data/labs/index.json` + `data/labs/<id>.json` — guided terminals (engine: `assets/js/terminal.js`).
-- `assets/js/app.js` pages/router · `store.js` localStorage · `subnet.js` IPv4/VLSM tool · `style.css` design.
+- `assets/js/app.js` pages/router (incl. `#/plan` exam countdown + revision planner, home streak) · `store.js` localStorage (`days` = study days for the streak, `exam` = plan) · `subnet.js` IPv4/VLSM tool · `style.css` design.
 - `sw.js` offline cache: **bump `VERSION` (btspath-vN) whenever assets/ or data/ files change.**
 
 ## Workflow: "do chapter X" (one chapter at a time, or a small batch of the same subject)

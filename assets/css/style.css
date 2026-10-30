@@ -662,3 +662,42 @@ select { height: 42px; padding: 0 34px 0 14px; cursor: pointer; appearance: none
 }
 .tabs a.tab[aria-selected="true"] { background: var(--primary); color: var(--primary-ink); }
 .tabs a.tab .count { font-size: .75rem; opacity: .8; }
+
+/* ---------- study streak and exam plan ---------- */
+
+.streak {
+  margin: 0; padding: 6px 14px; border-radius: 999px; font-size: .9rem; text-align: center;
+  color: #fff; background: rgba(242, 169, 0, .16); border: 1px solid rgba(242, 169, 0, .4);
+}
+.streak.is-off { color: #C3CFE2; background: transparent; border-color: rgba(255, 255, 255, .15); font-size: .82rem; }
+
+.plan-band {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; margin-top: 32px;
+  padding: 16px 20px; text-decoration: none; background: var(--surface); border: 1px solid var(--border);
+  border-left: 4px solid var(--accent); border-radius: var(--radius); transition: box-shadow .2s;
+}
+.plan-band:hover { box-shadow: var(--shadow); }
+.plan-band .tile-icon { margin: 0; }
+.plan-band-title { display: block; font-weight: 800; }
+.plan-band-text { display: block; color: var(--muted); font-size: .92rem; }
+.plan-band-text strong { color: var(--text); }
+.plan-summary { display: grid; gap: 4px; border-left: 4px solid var(--accent); }
+.plan-note { margin: -8px 0 16px; font-size: .9rem; }
+
+.plan-days { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.plan-day { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
+.plan-day.is-today { border-color: var(--accent); }
+.plan-day h3 { font-size: 1rem; font-weight: 800; text-transform: capitalize; margin-bottom: 8px; }
+.plan-day ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.plan-day li { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center; }
+
+.form-label { font-weight: 700; font-size: .9rem; margin-bottom: 8px; }
+.form input[type="date"] { height: 42px; padding: 0 12px; border-radius: 10px; max-width: 240px; }
+.pick-list { display: grid; gap: 8px; }
+.pick-subject { border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; }
+.pick-subject summary { cursor: pointer; font-weight: 700; }
+.pick-subject fieldset { border: 0; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; }
+.pick-subject legend { font-weight: 700; font-size: .85rem; color: var(--muted); margin-bottom: 4px; }
+.form .pick { display: flex; gap: 10px; align-items: start; font-weight: 400; font-size: .92rem; cursor: pointer; }
+.pick input { margin-top: 3px; accent-color: var(--accent); width: auto; height: auto; }
+.link-btn { background: none; border: 0; padding: 0 0 0 8px; font: inherit; font-weight: 600; color: var(--text); text-decoration: underline; cursor: pointer; }

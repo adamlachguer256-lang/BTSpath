@@ -3,7 +3,7 @@
 
 const KEY = "btspath:v1";
 
-const defaults = () => ({ progress: {}, last: null, quizBest: {}, labs: {}, theme: null });
+const defaults = () => ({ progress: {}, last: null, quizBest: {}, labs: {}, theme: null, days: [], exam: null });
 
 let state = defaults();
 try {
@@ -32,7 +32,7 @@ export function getStatus(id) {
 
 export function setStatus(id, status) {
   if (status === "todo") delete state.progress[id];
-  else state.progress[id] = status;
+  else { state.progress[id] = status; markToday(); }
   save();
 }
 
@@ -42,6 +42,40 @@ export function getLast() {
 
 export function setLast(resourceId) {
   state.last = { id: resourceId, at: Date.now() };
+  markToday();
+  save();
+}
+
+// ---------- study streak: the days a chapter was marked or a resource opened ----------
+
+// local date as "YYYY-MM-DD"
+export function dayKey(d = new Date()) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function markToday() {
+  const today = dayKey();
+  if (state.days.at(-1) !== today) state.days = [...state.days.filter((d) => d !== today), today].slice(-60);
+}
+
+// Days in a row up to today. Still alive if the last study day was yesterday.
+export function getStreak() {
+  const days = new Set(state.days);
+  const d = new Date();
+  if (!days.has(dayKey(d))) d.setDate(d.getDate() - 1);
+  let n = 0;
+  while (days.has(dayKey(d))) { n++; d.setDate(d.getDate() - 1); }
+  return { days: n, today: days.has(dayKey()) };
+}
+
+// ---------- exam plan: { date: "YYYY-MM-DD", chapters: [resource ids] } ----------
+
+export function getExam() {
+  return state.exam;
+}
+
+export function setExam(exam) {
+  state.exam = exam;
   save();
 }
 
@@ -87,7 +121,10 @@ export function importBackup(text) {
       labs[id] = { index: v.index, helped: Array.isArray(v.helped) ? v.helped.filter(Number.isInteger) : [], done: !!v.done };
     }
   }
-  state = { ...state, progress, quizBest, labs, last: file.data.last?.id ? { id: String(file.data.last.id), at: Number(file.data.last.at) || 0 } : null };
+  const days = Array.isArray(file.data.days) ? file.data.days.filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort().slice(-60) : [];
+  const e = file.data.exam;
+  const exam = e && /^\d{4}-\d{2}-\d{2}$/.test(e.date) && Array.isArray(e.chapters) ? { date: e.date, chapters: e.chapters.map(String) } : null;
+  state = { ...state, progress, quizBest, labs, days, exam, last: file.data.last?.id ? { id: String(file.data.last.id), at: Number(file.data.last.at) || 0 } : null };
   save();
   return Object.keys(progress).length;
 }

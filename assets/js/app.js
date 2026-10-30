@@ -1,5 +1,5 @@
 // BTSPath — main application: loads the data, routes between pages, renders views.
-// Pages (hash routes): #/  #/subject/LINUX  #/quizzes  #/quiz/<id>  #/request  #/about
+// Pages (hash routes): #/  #/subject/LINUX  #/quizzes  #/quiz/<id>  #/plan  #/request  #/about
 
 import { icon, LOGO, SUBJECT_ICON } from "./icons.js";
 import * as store from "./store.js";
@@ -98,7 +98,7 @@ function renderChrome(path) {
   });
   const cur = (p) => (path === p ? ' aria-current="page"' : "");
   document.getElementById("nav").innerHTML = links.map((l) => l.desktop).join("") +
-    `<a href="#/tools"${cur("tools")}>Outils</a><a href="#/about"${cur("about")}>À propos</a>`;
+    `<a href="#/plan"${cur("plan")}>Planning</a><a href="#/tools"${cur("tools")}>Outils</a><a href="#/about"${cur("about")}>À propos</a>`;
   document.getElementById("tabbar").innerHTML = links.map((l) => l.mobile).join("");
 }
 
@@ -159,6 +159,7 @@ function viewHome() {
         </dl>
       </div>
       <div class="hero-card" aria-label="Ta progression">
+        ${streakBadge()}
         <div class="ring-wrap">${ring(all.pct)}<div class="ring-label"><strong>${all.pct}%</strong><span>révisé</span></div></div>
         <ul class="legend">
           <li><span class="sw sw-revised"></span>Révisés <strong>${all.revised}</strong></li>
@@ -172,6 +173,8 @@ function viewHome() {
       </div>
     </div>
   </section>
+
+  ${planBand()}
 
   <section class="container section" id="subjects">
     <div class="section-head">
@@ -548,6 +551,101 @@ function viewProgress() {
   </section>`;
 }
 
+// ---------- streak and exam plan ----------
+
+function streakBadge() {
+  const { days, today } = store.getStreak();
+  if (!days) return `<p class="streak is-off">🔥 Commence ta série : ouvre un cours ou marque un chapitre aujourd'hui.</p>`;
+  return `<p class="streak">🔥 <strong>${days} jour${days > 1 ? "s" : ""} de suite</strong>${today ? "" : " · révise aujourd'hui pour continuer"}</p>`;
+}
+
+const parseDay = (key) => { const [y, m, d] = key.split("-").map(Number); return new Date(y, m - 1, d); };
+const daysUntil = (key) => { const t = new Date(); t.setHours(0, 0, 0, 0); return Math.round((parseDay(key) - t) / 86400000); };
+const fmtDate = (d, long = false) => d.toLocaleDateString("fr-FR", long ? { weekday: "long", day: "numeric", month: "long" } : { day: "numeric", month: "long", year: "numeric" });
+
+// Chapters of the plan that are not revised yet, spread evenly from today to the day before the exam.
+function examPlan() {
+  const exam = store.getExam();
+  if (!exam) return null;
+  const left = daysUntil(exam.date);
+  const ids = new Set(exam.chapters);
+  const todo = manifest.resources.filter((r) => ids.has(r.id) && store.getStatus(r.id) !== "revised");
+  const days = [];
+  for (let i = 0; i < left; i++) {
+    const items = todo.slice(Math.floor((i * todo.length) / left), Math.floor(((i + 1) * todo.length) / left));
+    if (items.length) { const d = new Date(); d.setDate(d.getDate() + i); days.push({ i, date: d, items }); }
+  }
+  return { exam, left, todo, days, perDay: left > 0 ? Math.ceil(todo.length / left) : todo.length };
+}
+
+function countdownText(p) {
+  if (p.left < 0) return "La date de ton examen est passée. Choisis une nouvelle date.";
+  if (p.left === 0) return "C'est le jour de l'examen. Bon courage !";
+  const n = p.todo.length;
+  return [
+    `<strong>${p.left} jour${p.left > 1 ? "s" : ""} restant${p.left > 1 ? "s" : ""}</strong>`,
+    `${n} chapitre${n > 1 ? "s" : ""} pas révisé${n > 1 ? "s" : ""}`,
+    n ? `environ ${p.perDay} chapitre${p.perDay > 1 ? "s" : ""} par jour` : "tout est révisé 🎉",
+  ].join(" · ");
+}
+
+function planBand() {
+  const p = examPlan();
+  return `<section class="container"><a class="plan-band" href="#/plan">
+    <span class="tile-icon">${icon("clock", 22)}</span>
+    <span>${p
+      ? `<span class="plan-band-title">Examen le ${fmtDate(parseDay(p.exam.date))}</span><span class="plan-band-text">${countdownText(p)}</span>`
+      : `<span class="plan-band-title">Prépare ton examen</span><span class="plan-band-text">Entre la date de ton examen et tes chapitres : BTSPath te fait un planning jour par jour.</span>`}</span>
+    ${icon("arrow", 18)}
+  </a></section>`;
+}
+
+function viewPlan() {
+  const p = examPlan();
+  const picked = new Set(p?.exam.chapters || []);
+  const min = store.dayKey(new Date(Date.now() + 86400000));
+
+  const picker = manifest.subjects.map((s) => {
+    const list = resourcesOf(s.id);
+    if (!list.length) return "";
+    const n = list.filter((r) => picked.has(r.id)).length;
+    const sems = s.semesters.map((sem) => {
+      const rows = list.filter((r) => r.semester === sem).map((r) => `<label class="pick"><input type="checkbox" name="ch" value="${r.id}"${picked.has(r.id) ? " checked" : ""}>
+        <span>${esc(r.label)}${store.getStatus(r.id) === "revised" ? ` <span class="muted">· révisé</span>` : ""}</span></label>`).join("");
+      return rows ? `<fieldset data-group><legend>${semesterLabel(sem)} <button type="button" class="link-btn" data-check-all>tout cocher</button></legend>${rows}</fieldset>` : "";
+    }).join("");
+    return `<details class="pick-subject"${n ? " open" : ""}><summary>${esc(s.name)}${n ? ` <span class="muted">· ${n} choisi${n > 1 ? "s" : ""}</span>` : ""}</summary>${sems}</details>`;
+  }).join("");
+
+  const schedule = p && p.days.length ? `
+    <h2 class="block-title">Ton planning</h2>
+    <p class="muted plan-note">Le planning se recalcule chaque jour avec les chapitres pas encore révisés. Un chapitre marqué « Révisé » sort du planning.</p>
+    <ol class="plan-days">${p.days.map((d) => `<li class="plan-day${d.i === 0 ? " is-today" : ""}">
+      <h3>${d.i === 0 ? "Aujourd'hui" : d.i === 1 ? "Demain" : esc(fmtDate(d.date, true))}</h3>
+      <ul>${d.items.map((r) => `<li><span><strong>${esc(r.label)}</strong><span class="muted"> · ${esc(subjectById(r.subject).name)} · ${semesterLabel(r.semester)}</span></span>
+        <span class="row-actions">${resourceActions(r)}<button class="btn btn-ghost btn-sm" data-plan-done="${r.id}">${icon("check", 16)} Révisé</button></span></li>`).join("")}</ul>
+    </li>`).join("")}</ol>` : "";
+
+  return `<section class="container section page">
+    <div class="section-head">
+      <h1>Planning de révision</h1>
+      <p class="muted">Choisis la date de ton examen et les chapitres à réviser. Tout reste sur cet appareil.</p>
+    </div>
+    ${p ? `<div class="card plan-summary"><p class="plan-band-title">Examen le ${fmtDate(parseDay(p.exam.date))}</p><p>${countdownText(p)}</p></div>` : ""}
+    ${schedule}
+    <h2 class="block-title">${p ? "Modifier le planning" : "Créer mon planning"}</h2>
+    <form class="card form" id="plan-form">
+      <label>Date de l'examen <input type="date" name="date" required min="${min}" value="${p?.exam.date || ""}"></label>
+      <div class="pick-list"><p class="form-label">Chapitres à réviser</p>${picker}</div>
+      <div class="row-actions">
+        <button class="btn btn-primary" type="submit">${icon("check", 18)} Enregistrer le planning</button>
+        ${p ? `<button class="btn btn-ghost" type="button" data-plan-delete>Supprimer le planning</button>` : ""}
+      </div>
+      <p class="form-status is-error" id="plan-status" aria-live="polite"></p>
+    </form>
+  </section>`;
+}
+
 function viewNotFound() {
   return `<section class="container section">${emptyState("search", "Page introuvable", "Cette page n'existe pas ou a été déplacée.", `<a class="btn btn-primary" href="#/">Retour à l'accueil</a>`)}</section>`;
 }
@@ -569,12 +667,13 @@ async function route() {
     else if (page === "about") app.innerHTML = viewAbout();
     else if (page === "tools") { app.innerHTML = viewSubnet(); mountSubnet(); }
     else if (page === "progress") app.innerHTML = viewProgress();
+    else if (page === "plan") app.innerHTML = viewPlan();
     else app.innerHTML = viewNotFound();
   } catch (err) {
     console.error(err);
     app.innerHTML = `<section class="container section">${emptyState("info", "Impossible de charger cette page", esc(err.message))}</section>`;
   }
-  const titles = { "": "", subject: subjectById(arg)?.name, quizzes: "Quiz", quiz: "Quiz", lab: "Terminal", request: "Demander une ressource", about: "À propos", tools: "Calculateur IPv4", progress: "Ma progression" };
+  const titles = { "": "", subject: subjectById(arg)?.name, quizzes: "Quiz", quiz: "Quiz", lab: "Terminal", request: "Demander une ressource", about: "À propos", tools: "Calculateur IPv4", progress: "Ma progression", plan: "Planning de révision" };
   document.title = titles[page] ? `${titles[page]} · BTSPath` : "BTSPath";
   window.scrollTo(0, 0);
 }
@@ -598,6 +697,22 @@ app.addEventListener("click", async (e) => {
 
   if (t.closest("[data-reset-progress]")) {
     if (confirm("Effacer toute ta progression et tes scores sur cet appareil ?")) { store.resetProgress(); route(); }
+    return;
+  }
+
+  const done = t.closest("[data-plan-done]");
+  if (done) { store.setStatus(done.dataset.planDone, "revised"); route(); return; }
+
+  if (t.closest("[data-plan-delete]")) {
+    if (confirm("Supprimer ton planning d'examen ?")) { store.setExam(null); route(); }
+    return;
+  }
+
+  const checkAll = t.closest("[data-check-all]");
+  if (checkAll) {
+    const boxes = [...checkAll.closest("[data-group]").querySelectorAll("input[type=checkbox]")];
+    const on = !boxes.every((b) => b.checked);
+    boxes.forEach((b) => { b.checked = on; });
     return;
   }
 
@@ -674,6 +789,18 @@ app.addEventListener("change", async (e) => {
 });
 
 app.addEventListener("submit", (e) => {
+  if (e.target.id === "plan-form") {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const date = fd.get("date");
+    const chapters = fd.getAll("ch");
+    const status = document.getElementById("plan-status");
+    if (!date || daysUntil(date) < 1) { status.textContent = "Choisis une date d'examen à partir de demain."; return; }
+    if (!chapters.length) { status.textContent = "Coche au moins un chapitre."; return; }
+    store.setExam({ date, chapters });
+    route();
+    return;
+  }
   if (e.target.id !== "request-form") return;
   e.preventDefault();
   const { d, text } = requestText(e.target);
