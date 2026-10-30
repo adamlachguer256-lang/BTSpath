@@ -1,0 +1,20 @@
+{ "title": "Le démarrage Linux", "description": "Linux · Semestres 1 – 2 · Chapitre 16. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quel est l'ordre correct du démarrage Linux ?", "choices": ["BIOS/UEFI → GRUB → noyau → systemd", "GRUB → BIOS/UEFI → systemd → noyau", "Noyau → GRUB → BIOS/UEFI → systemd", "systemd → noyau → GRUB → BIOS/UEFI"], "answer": 0, "explanation": "« Le BIOS démarre GRUB, GRUB démarre le noyau, le noyau lance systemd, systemd démarre les services. »" },
+    { "question": "Quel est le rôle du BIOS/UEFI ?", "choices": ["Vérifier le matériel, chercher un périphérique de démarrage et lancer le bootloader", "Démarrer les services réseau", "Monter le système de fichiers racine", "Afficher la mire de connexion"], "answer": 0 },
+    { "question": "Quel programme est chargé par le BIOS/UEFI ?", "choices": ["Le bootloader GRUB", "systemd", "Bash", "Apache"], "answer": 0 },
+    { "question": "Que permet GRUB ?", "choices": ["Choisir le système ou le noyau à démarrer (Linux, Windows, ancien noyau) et charger le noyau en mémoire", "Créer des utilisateurs", "Configurer le réseau", "Gérer les quotas"], "answer": 0 },
+    { "question": "Lequel de ces rôles appartient au noyau pendant le démarrage ?", "choices": ["Monter le système de fichiers racine / et lancer le processus PID 1", "Afficher le menu de démarrage", "Vérifier le clavier avant tout", "Choisir Windows ou Linux"], "answer": 0 },
+    { "question": "Quel est le rôle de systemd ?", "choices": ["Démarrer les services, gérer les dépendances et remplacer l'ancien init", "Vérifier la RAM", "Afficher le menu GRUB", "Chiffrer le disque"], "answer": 0 },
+    { "question": "Avant systemd, quel système utilisait Linux avec des runlevels de 0 à 6 ?", "choices": ["SysVinit", "GRUB", "UEFI", "Upstart seulement"], "answer": 0 },
+    { "question": "La commande runlevel affiche « N 5 ». Que signifie N ?", "choices": ["Pas de runlevel précédent (au démarrage)", "Mode réseau", "Mode normal", "Nombre d'utilisateurs"], "answer": 0 },
+    { "question": "Avant systemd, dans quel répertoire se trouvaient les scripts des services ?", "choices": ["/etc/init.d/", "/etc/systemd/", "/boot/", "/var/log/"], "answer": 0 },
+    { "question": "Pourquoi /sbin/init pointe-t-il vers systemd ?", "choices": ["Pour assurer la compatibilité avec les anciens systèmes et scripts", "Pour accélérer GRUB", "Pour désactiver les targets", "Pour chiffrer le disque"], "answer": 0 },
+    { "question": "Quel target systemd correspond au runlevel 5 ?", "choices": ["graphical.target", "multi-user.target", "rescue.target", "reboot.target"], "answer": 0 },
+    { "question": "Quel target systemd correspond aux runlevels 2, 3 et 4 ?", "choices": ["multi-user.target", "graphical.target", "rescue.target", "poweroff.target"], "answer": 0 },
+    { "question": "Quel target correspond au runlevel 1 ?", "choices": ["rescue.target", "poweroff.target", "multi-user.target", "emergency.target"], "answer": 0 },
+    { "question": "Quelle commande permet d'aller en rescue.target depuis le système en fonctionnement ?", "choices": ["sudo systemctl isolate rescue.target", "sudo systemctl get-default", "sudo runlevel rescue", "sudo grub rescue"], "answer": 0 },
+    { "question": "Quelle est la différence entre rescue.target et emergency.target ?", "choices": ["emergency.target est encore plus minimal : racine parfois non montée et aucun service", "rescue.target démarre l'interface graphique", "emergency.target démarre le réseau et SSH", "Ils sont identiques"], "answer": 0 },
+    { "question": "Selon le cours, sur quoi repose la vraie sécurité face au mode rescue ?", "choices": ["Mot de passe GRUB, chiffrement du disque et sécurité physique", "Interdire le mode rescue", "Désactiver systemd", "Supprimer le compte root"], "answer": 0 },
+    { "question": "Sur Ubuntu, que valent les runlevels 2, 3 et 4 ?", "choices": ["Ils font exactement la même chose", "2 est graphique, 3 texte, 4 arrêt", "Ils n'existent pas du tout", "4 redémarre la machine"], "answer": 0 }
+  ] }

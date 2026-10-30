@@ -1,0 +1,9 @@
+{ "title": "Protocoles de routage à état de liens", "description": "Network · Semestre 2 · Chapitre 10. Questions tirées du support de cours (chapitre très court : presque tout est sur images).",
+  "questions": [
+    { "question": "Sous quel autre nom connaît-on les protocoles à état de liens ?", "choices": ["Protocoles du plus court chemin", "Protocoles à vecteur de distance", "Protocoles par classe", "Protocoles de couche 2"], "answer": 0 },
+    { "question": "Sur quel algorithme sont élaborés les protocoles à état de liens ?", "choices": ["L'algorithme SPF d'Edsger Dijkstra", "Bellman-Ford", "DUAL", "Spanning Tree (STA)"], "answer": 0 },
+    { "question": "Quels sont les deux protocoles à état de liens pour IP ?", "choices": ["OSPF et IS-IS", "RIP et EIGRP", "RIPv1 et RIPv2", "BGP et IGRP"], "answer": 0 },
+    { "question": "Que signifie SPF ?", "choices": ["Shortest Path First (chemin le plus court d'abord)", "Spanning Port Forwarding", "Static Protocol Filter", "Simple Packet Format"], "answer": 0 },
+    { "question": "Que fait l'algorithme SPF ?", "choices": ["Il cumule les coûts de chaque chemin, de la source à la destination", "Il compte uniquement les sauts", "Il bloque les ports redondants", "Il attribue des adresses IP"], "answer": 0 },
+    { "question": "Que signifie OSPF ?", "choices": ["Open Shortest Path First", "Optimal Static Path Forwarding", "Open Switch Port Filter", "Original Shortest Packet Format"], "answer": 0 }
+  ] }

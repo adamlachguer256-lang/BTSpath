@@ -62,7 +62,7 @@ Accept common IOS abbreviations only if the course uses them (e.g. `conf t` for 
 Many NETWORK config commands are on image slides: if the extracted text has no commands, say so (needs OCR).
 
 ## Status (update this section when you finish work)
-- Done (quiz): LINUX CHP6, S3 Noyau, Démarrage, Systèmes de fichiers, Quotas (+Samba/NFS in same PDF), RAID, LVM · NETWORK S3 Ch3 VLAN · SEP S1 complete (S41 Chap1, Chap3–12; no Chap2 file exists) · SEP S2 complete (S42 Chap1–13) · SEP S3 complete (S43 Chap1–10) · SEP S4 complete (S44 Chap1–2, Chap4–10; no Chap3 file exists).
+- Done (quiz): every chapter that has text (86). LINUX CHP1–5, CHP16, CHP17 · NETWORK all (S1 ch1–7, IPv4, transport, application, VLSM, EIGRP; S2 ch1–7, 10, 11; S3 ch1–7). Older: LINUX CHP6, S3 Noyau, Démarrage, Systèmes de fichiers, Quotas (+Samba/NFS in same PDF), RAID, LVM · NETWORK S3 Ch3 VLAN · SEP S1 complete (S41 Chap1, Chap3–12; no Chap2 file exists) · SEP S2 complete (S42 Chap1–13) · SEP S3 complete (S43 Chap1–10) · SEP S4 complete (S44 Chap1–2, Chap4–10; no Chap3 file exists).
 - SEP S4: skipped Chap1 exercise "nom complet Alain Post" (DN order reversed vs the course slide), Chap2 last
   exercise and Chap6 "mettre à jour une application publiée" (no answer in the course).
 - SEP S3: Chap1 is short (tool said "probably scanned" but text was enough for 11 questions); Chap10 short (10 q).
@@ -71,7 +71,8 @@ Many NETWORK config commands are on image slides: if the extracted text has no c
 - SEP S41 Chap7 (PDF) is a duplicate of Chap6: its index entry reuses `sep-s1-chap6.json`.
 - SEP thin parts (image slides): Chap3 "Suppression de périphériques"; Chap4 MBR/GPT comparison table,
   Diskpart task examples, Defrag.exe usage; Chap5 copy/move compression table (only the move cases from exercise 5 used).
-- Done (terminal): LINUX CHP6 (sections only: chapter is screenshots), S3 Noyau, Démarrage, Systèmes de fichiers, Quotas, RAID, LVM.
+- Quiz page: tabs per subject (#/quizzes/LINUX), grouped by semester. Network S2 Ch10 (6 q) and Ch6 (8 q) are thin; NETWORK labs not made yet.
+- Done (terminal): LINUX CHP17 (noyau + usb_storage), CHP6 (sections only: chapter is screenshots), S3 Noyau, Démarrage, Systèmes de fichiers, Quotas, RAID, LVM.
 - LINUX S3 labs skip syntax-only commands (mkfs, mke2fs, badblocks, mkswap, smbclient placeholders); fstab/inittab edits are not steps. Fs lab keeps course typo prompt `/dev/disk/buy-uuid$`.
 - SEP = Microsoft Windows (S41 = Windows 7 client). NETWORK = Cisco CCNA-style.
 - Text available: all NETWORK (29; `NETWORK/S2/Ch9` EIGRP is a duplicate of S1, skip it), SEP 42/43

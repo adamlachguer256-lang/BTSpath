@@ -1,0 +1,18 @@
+{ "title": "Protocoles de routage à vecteur de distance", "description": "Network · Semestre 2 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Lequel de ces protocoles est à vecteur de distance ?", "choices": ["RIPv2", "OSPF", "IS-IS", "STP"], "answer": 0 },
+    { "question": "Dans un protocole à vecteur de distance, que représente le « vecteur » ?", "choices": ["La direction : le routeur de tronçon suivant ou l'interface de sortie", "Le nombre de sauts", "La bande passante", "Le masque de sous-réseau"], "answer": 0 },
+    { "question": "Un routeur à vecteur de distance connaît-il la topologie du réseau ?", "choices": ["Non", "Oui, entièrement", "Seulement les VLAN", "Seulement avec CDP"], "answer": 0 },
+    { "question": "À quel intervalle RIP envoie-t-il ses mises à jour régulières ?", "choices": ["30 secondes", "90 secondes", "5 secondes", "180 secondes"], "answer": 0 },
+    { "question": "À quel intervalle IGRP envoie-t-il ses mises à jour régulières ?", "choices": ["90 secondes", "30 secondes", "60 secondes", "240 secondes"], "answer": 0 },
+    { "question": "Que fait le minuteur de temporisation RIP (180 s) s'il expire ?", "choices": ["La route est marquée non valide (métrique 16)", "La route est supprimée immédiatement", "La route devient la route par défaut", "Le routeur redémarre"], "answer": 0 },
+    { "question": "Quelle est la valeur par défaut du minuteur d'annulation (flush) RIP ?", "choices": ["240 secondes", "180 secondes", "30 secondes", "90 secondes"], "answer": 0 },
+    { "question": "Comment EIGRP met-il à jour ses routes ?", "choices": ["Par des mises à jour limitées, seulement en cas de modification", "En envoyant toute la table toutes les 30 s", "En diffusion toutes les 90 s", "Il ne fait jamais de mise à jour"], "answer": 0 },
+    { "question": "Quel événement déclenche une mise à jour déclenchée RIP ?", "choices": ["Une interface change d'état", "L'expiration du minuteur de 30 s", "La connexion d'un PC", "Un ping réussi"], "answer": 0 },
+    { "question": "À quoi sert la variable RIP_JITTER ?", "choices": ["Empêcher la synchronisation des mises à jour entre routeurs", "Augmenter la métrique", "Chiffrer les mises à jour", "Supprimer les routes"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une boucle de routage ?", "choices": ["Un paquet transmis en continu entre des routeurs sans atteindre sa destination", "Un câble mal branché", "Un VLAN sans routeur", "Une route statique par défaut"], "answer": 0 },
+    { "question": "Qu'est-ce que le découpage d'horizon (split horizon) ?", "choices": ["Les routes apprises par une interface ne sont pas annoncées sur cette même interface", "Les routes sont annoncées partout", "Le réseau est divisé en VLAN", "Le routeur coupe toutes ses interfaces"], "answer": 0 },
+    { "question": "Pour RIP, quelle métrique a une route empoisonnée ?", "choices": ["16 sauts", "15 sauts", "0", "255"], "answer": 0 },
+    { "question": "Lequel de ces points est une amélioration de RIPv2 ?", "choices": ["Inclusion du masque de sous-réseau dans les mises à jour (sans classe)", "Métrique basée sur la bande passante", "Algorithme DUAL", "Protocole propriétaire Cisco"], "answer": 0 },
+    { "question": "Quel algorithme EIGRP utilise-t-il pour une convergence rapide ?", "choices": ["DUAL", "Bellman-Ford", "Dijkstra (SPF)", "STA"], "answer": 0 }
+  ] }

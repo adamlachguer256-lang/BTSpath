@@ -1,0 +1,26 @@
+{ "chapterId": "linux-s1-s2-chp17-mise-a-jour-du-noyau-linux",
+  "title": "Noyau et modules — les exemples du cours",
+  "intro": "Rejoue les commandes du chapitre : mise à jour du noyau, puis l'exemple réel du module usb_storage.",
+  "prompt": "$",
+  "steps": [
+    { "section": "Étape 1 : Vérifier la version actuelle du noyau", "task": "Affiche la version du noyau actuellement utilisée.", "accept": ["uname -r"], "hint": "uname avec l'option -r." },
+    { "section": "Étape 2 : Mettre à jour la liste des paquets", "task": "Synchronise les dépôts avant toute mise à jour.", "accept": ["sudo apt update"], "hint": "sudo apt …" },
+    { "section": "Étape 3 : Mettre à jour le noyau (méthode standard)", "task": "Mets à jour le noyau avec la méthode officielle recommandée.", "accept": ["sudo apt full-upgrade"], "hint": "sudo apt full-…" },
+    { "section": "Étape 4 : Redémarrer le système", "task": "Redémarre pour activer le nouveau noyau.", "accept": ["sudo reboot"], "hint": "sudo reboot" },
+    { "section": "Étape 4 (compilation) : Extraire l'archive du noyau", "task": "Extrais l'archive linux-6.x.y.tar.xz.", "accept": ["tar -xvf linux-6.x.y.tar.xz", "tar xvf linux-6.x.y.tar.xz"], "hint": "tar -xvf …" },
+    { "section": "Étape 4 (compilation) : Extraire l'archive du noyau", "task": "Entre dans le répertoire des sources.", "accept": ["cd linux-6.x.y"], "hint": "cd …" },
+    { "section": "Étape 5 : Installer les dépendances nécessaires", "task": "Installe build-essential libncurses-dev bison flex libssl-dev libelf-dev.", "accept": ["sudo apt install build-essential libncurses-dev bison flex libssl-dev libelf-dev"], "hint": "sudo apt install suivi des 6 paquets, dans l'ordre du cours." },
+    { "section": "Étape 6 : Copier la configuration actuelle", "task": "Copie la configuration du noyau actuel dans .config.", "accept": ["cp /boot/config-$(uname -r) .config"], "hint": "cp /boot/config-$(uname -r) …" },
+    { "section": "Étape 6 : Copier la configuration actuelle", "task": "Mets à jour la configuration.", "accept": ["make oldconfig"], "hint": "make old…" },
+    { "section": "Étape 7 : Compiler le noyau", "task": "Compile le noyau avec tous les processeurs.", "accept": ["make -j$(nproc)"], "hint": "make -j$(nproc)" },
+    { "section": "Étape 8 : Installer les modules du noyau", "task": "Installe les modules.", "accept": ["sudo make modules_install"], "hint": "sudo make modules_…" },
+    { "section": "Étape 9 : Installer le noyau", "task": "Installe le noyau (dans /boot, GRUB mis à jour).", "accept": ["sudo make install"], "hint": "sudo make …" },
+    { "section": "Exemple réel : usb_storage — Étape 1", "task": "Vérifie si le module usb_storage est chargé.", "accept": ["lsmod | grep usb_storage", "lsmod |grep usb_storage", "lsmod| grep usb_storage"], "hint": "lsmod filtré avec grep.", "output": "usb_storage        73728  0" },
+    { "section": "Exemple réel : usb_storage — Étape 2", "task": "Décharge le module usb_storage.", "accept": ["sudo modprobe -r usb_storage", "sudo rmmod usb_storage"], "hint": "modprobe -r ou rmmod." },
+    { "section": "Exemple réel : usb_storage — Étape 2", "task": "Vérifie que le module est déchargé (aucune sortie attendue).", "accept": ["lsmod | grep usb_storage", "lsmod |grep usb_storage", "lsmod| grep usb_storage"], "hint": "Même commande qu'à l'étape 1." },
+    { "section": "Exemple réel : usb_storage — Étape 3", "task": "Recharge le module usb_storage.", "accept": ["sudo modprobe usb_storage"], "hint": "sudo modprobe …" },
+    { "section": "Exemple réel : usb_storage — Étape 3", "task": "Vérifie à nouveau.", "accept": ["lsmod | grep usb_storage", "lsmod |grep usb_storage", "lsmod| grep usb_storage"], "hint": "lsmod | grep …", "output": "usb_storage        73728  1" },
+    { "section": "Exemple réel : usb_storage — Étape 4", "task": "Vérifie les derniers messages du noyau.", "accept": ["dmesg | tail", "dmesg |tail", "dmesg| tail"], "hint": "dmesg avec tail.", "output": "usbcore: registered new interface driver usb_storage" }
+  ],
+  "challenge": { "section": "Module loop — Images disque / Snap", "task": "Un ISO ne se monte pas : charge le module qui monte des fichiers comme disques virtuels.", "accept": ["sudo modprobe loop"] }
+}

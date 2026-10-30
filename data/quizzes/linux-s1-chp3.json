@@ -1,0 +1,14 @@
+{ "title": "Choisissez votre bureau Linux", "description": "Linux · Semestres 1 – 2 · Chapitre 3. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce qu'un bureau sous Linux ?", "choices": ["Un environnement graphique qui file la métaphore du bureau (dossiers, fichiers, corbeille…)", "Le noyau du système", "Un fichier de configuration réseau", "Une commande du shell"], "answer": 0 },
+    { "question": "Quelle est la grande différence entre les bureaux Linux et ceux de Windows/macOS ?", "choices": ["Sous Linux, chaque élément du bureau est indépendant des autres", "Linux n'a pas d'interface graphique", "Windows permet de changer de bureau librement", "Il n'y a aucune différence"], "answer": 0, "explanation": "Sous Windows ou macOS tout est inclus par défaut ; sous Linux chaque élément est indépendant (adage UNIX)." },
+    { "question": "Quel bureau est sûrement le plus connu et demande beaucoup de ressources ?", "choices": ["Gnome", "XFCE", "Deepin", "Pantheon"], "answer": 0 },
+    { "question": "Quel bureau a fait le pari de se rapprocher de l'ambiance de Windows ?", "choices": ["KDE", "Gnome", "Pantheon", "Unity"], "answer": 0 },
+    { "question": "Quel bureau minimaliste consomme très peu de ressources, idéal pour une machine vieillissante ?", "choices": ["XFCE", "Gnome", "KDE", "Cinnamon"], "answer": 0 },
+    { "question": "Pour quelle distribution le bureau Cinnamon a-t-il été créé à l'origine ?", "choices": ["Linux Mint", "Ubuntu", "Fedora", "Deepin Linux"], "answer": 0 },
+    { "question": "Pantheon a été développé exclusivement pour quelle distribution ?", "choices": ["Elementary OS", "Linux Mint", "Ubuntu", "Debian"], "answer": 0 },
+    { "question": "Quel était l'environnement de bureau développé pour Ubuntu avant 2017 ?", "choices": ["Unity", "Pantheon", "Cinnamon", "XFCE"], "answer": 0 },
+    { "question": "Quel est aujourd'hui le bureau de la distribution Ubuntu ?", "choices": ["Gnome", "Unity", "KDE", "Deepin"], "answer": 0, "explanation": "Depuis 2017, Ubuntu a abandonné Unity au profit de Gnome." },
+    { "question": "Quels sont les 3 bureaux les plus connus de Linux ?", "choices": ["Gnome, KDE et XFCE", "Unity, Pantheon et Deepin", "Cinnamon, Unity et KDE", "Gnome, Pantheon et Deepin"], "answer": 0 },
+    { "question": "Dans un bureau Linux modulaire, de quoi chaque module est-il responsable ?", "choices": ["D'une fonction (authentification, gestion des fenêtres, fond d'écran…)", "De tout le système", "Uniquement du réseau", "Du démarrage du BIOS"], "answer": 0 }
+  ] }

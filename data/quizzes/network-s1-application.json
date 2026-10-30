@@ -1,0 +1,20 @@
+{ "title": "Fonctionnalités et protocoles des couches applicatives", "description": "Network · Semestre 1 · Couche application. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "À quelles couches OSI correspondent les protocoles de couche application TCP/IP ?", "choices": ["Application, présentation et session", "Transport et réseau", "Liaison de données et physique", "Uniquement la couche application"], "answer": 0 },
+    { "question": "Laquelle de ces fonctions appartient à la couche présentation ?", "choices": ["Compression et chiffrement des données", "Choix du meilleur chemin", "Adressage MAC", "Segmentation TCP"], "answer": 0 },
+    { "question": "Quel est le rôle de la couche session ?", "choices": ["Initier, maintenir et redémarrer le dialogue entre applications", "Coder les bits en signaux", "Router les paquets", "Attribuer les adresses IP"], "answer": 0 },
+    { "question": "Que fait le protocole DNS ?", "choices": ["Résout un nom de domaine en adresse IP", "Attribue des adresses IP", "Transfère des fichiers", "Envoie des courriels"], "answer": 0 },
+    { "question": "Quelle commande vide le cache DNS ?", "choices": ["ipconfig /flushdns", "ipconfig /displaydns", "nslookup", "ipconfig /release"], "answer": 0 },
+    { "question": "Quel type de message HTTP sert à demander une page Web ?", "choices": ["GET", "POST", "PUT", "ACK"], "answer": 0 },
+    { "question": "Quel protocole utiliser pour une communication Web sécurisée ?", "choices": ["HTTPS", "HTTP", "Telnet", "FTP"], "answer": 0 },
+    { "question": "Quel processus du serveur de messagerie place les messages dans la boîte aux lettres des utilisateurs ?", "choices": ["MDA (agent de remise des messages)", "MTA (agent de transfert des messages)", "MUA", "DNS"], "answer": 0 },
+    { "question": "Combien de connexions FTP établit-il entre le client et le serveur ?", "choices": ["Deux : une pour les commandes, une pour les fichiers", "Une seule", "Trois", "Aucune"], "answer": 0 },
+    { "question": "Quel message un client DHCP diffuse-t-il en premier pour trouver un serveur ?", "choices": ["DHCP DISCOVER", "DHCP OFFER", "DHCP REQUEST", "DHCP ACK"], "answer": 0 },
+    { "question": "Quel message le serveur DHCP envoie-t-il pour confirmer le bail ?", "choices": ["DHCP ACK", "DHCP NAK", "DHCP OFFER", "DHCP DISCOVER"], "answer": 0 },
+    { "question": "Que doit faire le client s'il reçoit un DHCP NAK ?", "choices": ["Recommencer avec un nouveau DHCP DISCOVER", "Garder l'adresse quand même", "Envoyer un DHCP ACK", "Redémarrer le serveur"], "answer": 0 },
+    { "question": "Comment s'appelle la version de SMB utilisée par Linux et UNIX pour partager avec les réseaux Microsoft ?", "choices": ["SAMBA", "NFS", "Gnutella", "Telnet"], "answer": 0 },
+    { "question": "Pourquoi préférer SSH à Telnet ?", "choices": ["Telnet ne chiffre pas les données transportées", "Telnet est plus rapide", "SSH ne demande pas d'authentification", "Telnet ne fonctionne pas sous Windows"], "answer": 0 },
+    { "question": "Quel port TCP utilise HTTP ?", "choices": ["80", "23", "25", "53"], "answer": 0 },
+    { "question": "Quels ports TCP utilise FTP ?", "choices": ["20 et 21", "22 et 23", "67 et 68", "80 et 443"], "answer": 0 },
+    { "question": "Quel port utilise Telnet ?", "choices": ["TCP 23", "TCP 25", "UDP 67", "TCP 80"], "answer": 0 }
+  ] }

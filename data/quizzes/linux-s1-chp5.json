@@ -1,0 +1,14 @@
+{ "title": "Découvrez le shell", "description": "Linux · Semestres 1 – 2 · Chapitre 5. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Qu'est-ce que le shell ?", "choices": ["Un interpréteur de commandes", "Un environnement de bureau", "Un hyperviseur", "Un système de fichiers"], "answer": 0 },
+    { "question": "Quand le shell est-il exécuté ?", "choices": ["Lors de la connexion de l'administrateur sur une console ou un terminal", "Uniquement à l'installation", "Seulement quand on éteint la machine", "Jamais automatiquement"], "answer": 0 },
+    { "question": "Quel est le rôle principal du shell ?", "choices": ["Exécuter les commandes saisies pour faire des appels système vers le noyau", "Afficher le fond d'écran", "Gérer le BIOS", "Compiler le noyau"], "answer": 0 },
+    { "question": "Quelle autre fonctionnalité le shell fournit-il ?", "choices": ["Rediriger les résultats des commandes dans des fichiers ou vers d'autres commandes", "Partitionner automatiquement le disque", "Installer des pilotes graphiques", "Mettre à jour le BIOS"], "answer": 0 },
+    { "question": "Qui a inventé le premier shell en 1971 ?", "choices": ["Ken Thompson (Thompson shell)", "Stephen Bourne", "Linus Torvalds", "Richard Stallman"], "answer": 0 },
+    { "question": "Qui a écrit le Bourne shell en 1977 ?", "choices": ["Stephen Bourne", "Ken Thompson", "Bill Joy", "David Korn"], "answer": 0 },
+    { "question": "Laquelle de ces fonctionnalités a été apportée par le Bourne shell ?", "choices": ["Les scripts sh et un langage avec conditions, boucles et variables", "L'interface graphique Gnome", "Le support des tableaux associatifs Perl", "La virtualisation"], "answer": 0 },
+    { "question": "Pourquoi le C Shell était-il populaire ?", "choices": ["Son langage est très proche du langage C, natif des systèmes Unix/Linux", "Il était le seul gratuit", "Il avait une interface graphique", "Il remplaçait le noyau"], "answer": 0 },
+    { "question": "Quel shell, du début des années 80, a amélioré le C Shell (intégration de Perl, TCL, tableaux associatifs) ?", "choices": ["Le KornShell", "Le Bourne shell", "Le Thompson shell", "Bash"], "answer": 0 },
+    { "question": "Quel est le shell standard sous Linux ?", "choices": ["Bash (Bourne Again Shell)", "C Shell", "KornShell", "Thompson shell"], "answer": 0 },
+    { "question": "Dans quel fichier est configuré le shell exécuté après l'authentification ?", "choices": ["/etc/passwd", "/etc/fstab", "/etc/shadow", "/boot/grub"], "answer": 0 }
+  ] }

@@ -3,7 +3,7 @@
 // - Course files (resources/): cached the first time a student opens or downloads them.
 // Change VERSION when you change app files, so old caches get cleaned up.
 
-const VERSION = "btspath-v10";
+const VERSION = "btspath-v11";
 const APP = `${VERSION}-app`;
 const FILES = `${VERSION}-files`;
 

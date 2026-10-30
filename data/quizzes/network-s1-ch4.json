@@ -1,0 +1,20 @@
+{ "title": "Couche physique", "description": "Network · Semestre 1 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Que transporte la couche physique sur le support réseau ?", "choices": ["Des bits", "Des segments", "Des paquets", "Des messages"], "answer": 0 },
+    { "question": "Quels sont les trois domaines fonctionnels couverts par les normes de couche physique ?", "choices": ["Composants physiques, codage et signalisation", "Adressage, routage et commutation", "Segmentation, séquençage et contrôle de flux", "Chiffrement, compression et session"], "answer": 0 },
+    { "question": "Lequel de ces éléments est une méthode d'encodage citée dans le cours ?", "choices": ["Manchester", "CSMA/CD", "OSPF", "ARP"], "answer": 0 },
+    { "question": "Comment appelle-t-on la mesure des données utilisables transférées sur une période donnée ?", "choices": ["Débit applicatif (goodput)", "Latence", "Bande passante", "Débit (throughput)"], "answer": 0, "explanation": "Débit applicatif = Débit - frais généraux de trafic." },
+    { "question": "Que signifie l'atténuation sur un câble en cuivre ?", "choices": ["Plus le signal circule longtemps, plus il est faible", "Le signal devient plus fort", "Le câble chauffe", "Le signal change de fréquence"], "answer": 0 },
+    { "question": "Comment certains câbles en cuivre réduisent-ils la diaphonie ?", "choices": ["En torsadant ensemble les fils des paires", "En utilisant de la lumière", "En augmentant la longueur", "En supprimant la gaine"], "answer": 0 },
+    { "question": "Par quels connecteurs sont terminés les câbles UTP ?", "choices": ["RJ-45", "ST", "SC", "BNC"], "answer": 0 },
+    { "question": "Quel est un avantage du STP par rapport à l'UTP ?", "choices": ["Une meilleure protection contre le bruit", "Il est moins cher", "Il est plus facile à installer", "Il transporte de la lumière"], "answer": 0 },
+    { "question": "Qui établit les normes TIA/EIA-568 pour l'UTP (types, longueurs, connecteurs, tests) ?", "choices": ["TIA/EIA", "IETF", "ICANN", "UIT"], "answer": 0 },
+    { "question": "Quel câble utiliser pour relier un hôte à un périphérique réseau ?", "choices": ["Ethernet droit", "Ethernet croisé", "Inversé (rollover)", "Coaxial"], "answer": 0 },
+    { "question": "Quel câble Cisco relie le port série d'un hôte au port console d'un routeur ?", "choices": ["Inversé (rollover)", "Ethernet droit", "Ethernet croisé", "Fibre multimode"], "answer": 0 },
+    { "question": "Quelle fibre utilise des lasers et un très petit noyau pour les longues distances ?", "choices": ["Fibre monomode", "Fibre multimode", "UTP catégorie 6", "Câble coaxial"], "answer": 0 },
+    { "question": "Quelle est la distance maximale d'une fibre multimode selon le cours ?", "choices": ["550 mètres", "100 mètres", "10 km", "100 km"], "answer": 0 },
+    { "question": "Quelle couleur de gaine est utilisée pour la fibre monomode ?", "choices": ["Jaune", "Orange", "Aqua", "Bleue"], "answer": 0 },
+    { "question": "Quelle distance maximale relative le cours donne-t-il pour l'UTP ?", "choices": ["1 à 100 mètres", "1 à 550 mètres", "1 à 100 000 mètres", "1 à 10 mètres"], "answer": 0 },
+    { "question": "Quelle norme sans fil est un WPAN ?", "choices": ["Bluetooth (IEEE 802.15)", "Wi-Fi (IEEE 802.11)", "WiMAX (IEEE 802.16)", "Ethernet (IEEE 802.3)"], "answer": 0 },
+    { "question": "Quelle norme vise l'Internet des objets avec faible débit et faible consommation ?", "choices": ["Zigbee (IEEE 802.15.4)", "WiMAX", "Wi-Fi", "Ethernet"], "answer": 0 }
+  ] }

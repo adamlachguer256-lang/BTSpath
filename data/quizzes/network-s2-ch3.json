@@ -1,0 +1,18 @@
+{ "title": "Présentation des protocoles de routage dynamique", "description": "Network · Semestre 2 · Chapitre 3. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Laquelle de ces opérations un protocole de routage dynamique permet-il ?", "choices": ["Découvrir les réseaux distants et trouver un nouveau meilleur chemin si besoin", "Attribuer des adresses MAC", "Créer des VLAN", "Chiffrer les trames"], "answer": 0 },
+    { "question": "Où sont conservées les structures de données (tables) d'un protocole de routage ?", "choices": ["En mémoire vive", "En ROM", "En Flash uniquement", "Sur le serveur DNS"], "answer": 0 },
+    { "question": "Quel algorithme utilisent généralement les protocoles à vecteur de distance ?", "choices": ["Bellman-Ford", "Dijkstra", "DUAL", "STA"], "answer": 0 },
+    { "question": "Quand un protocole à état de liens envoie-t-il une mise à jour après la convergence ?", "choices": ["Uniquement en cas de modification de la topologie", "Toutes les 30 secondes", "Toutes les 90 secondes", "Jamais"], "answer": 0 },
+    { "question": "À quoi servent les protocoles IGP ?", "choices": ["Au routage interne d'un système autonome", "Au routage entre systèmes autonomes", "À la commutation de couche 2", "À l'attribution d'adresses IP"], "answer": 0 },
+    { "question": "Que ne font PAS les protocoles de routage par classe ?", "choices": ["Envoyer le masque de sous-réseau dans les mises à jour", "Échanger des routes", "Utiliser une métrique", "Fonctionner sur des routeurs Cisco"], "answer": 0 },
+    { "question": "Lequel de ces protocoles est un protocole par classe ?", "choices": ["RIPv1", "RIPv2", "OSPF", "EIGRP"], "answer": 0 },
+    { "question": "Quand dit-on que le réseau a convergé ?", "choices": ["Quand tous les routeurs ont des informations complètes et précises sur le réseau", "Quand un routeur redémarre", "Quand la table de routage est vide", "Quand le CDP est activé"], "answer": 0 },
+    { "question": "Quels protocoles convergent plus rapidement selon le cours ?", "choices": ["EIGRP et OSPF", "RIP et IGRP", "RIPv1 et RIPv2", "IGRP et RIPv2"], "answer": 0 },
+    { "question": "Quelle métrique utilise RIP ?", "choices": ["Le nombre de sauts", "Le coût", "La bande passante et le délai", "La fiabilité"], "answer": 0 },
+    { "question": "Par défaut, quels éléments de la métrique composite EIGRP sont utilisés ?", "choices": ["La bande passante et le délai", "La charge et la fiabilité", "Le nombre de sauts", "Le coût"], "answer": 0 },
+    { "question": "Pour combien de routes à coût égal maximum l'équilibrage de charge est-il automatique par défaut ?", "choices": ["Quatre", "Deux", "Six", "Seize"], "answer": 0 },
+    { "question": "Que permet la distance administrative ?", "choices": ["Choisir la meilleure source quand le même réseau est appris par plusieurs sources de routage", "Calculer le nombre de sauts", "Fixer la vitesse d'une interface", "Désactiver une route"], "answer": 0 },
+    { "question": "Entre quelles valeurs est comprise la distance administrative ?", "choices": ["0 et 255", "1 et 15", "0 et 100", "1 et 65535"], "answer": 0 },
+    { "question": "Dans une entrée de table de routage [120/1], que représente 120 ?", "choices": ["La distance administrative (première valeur)", "La métrique", "Le numéro d'interface", "Le délai en secondes"], "answer": 0 }
+  ] }

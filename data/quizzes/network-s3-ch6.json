@@ -1,0 +1,15 @@
+{ "title": "Routage entre VLAN", "description": "Network · Semestre 3 · Chapitre 6. Questions tirées du support de cours (configurations sur images).",
+  "questions": [
+    { "question": "Deux hôtes de VLAN distincts peuvent-ils communiquer sans routage ?", "choices": ["Non", "Oui, toujours", "Oui, s'ils sont sur le même commutateur", "Oui, avec un câble croisé"], "answer": 0 },
+    { "question": "Qu'est-ce que le routage inter-VLAN ?", "choices": ["L'acheminement du trafic d'un VLAN à l'autre à l'aide d'un routeur", "La création de VLAN sur un commutateur", "La suppression du VLAN natif", "Le partage d'un VLAN entre deux réseaux"], "answer": 0 },
+    { "question": "Dans le routage inter-VLAN traditionnel, comment est connectée chaque interface du routeur ?", "choices": ["Chaque interface est connectée à un VLAN distinct, en mode accès sur le commutateur", "Une seule interface en trunk pour tous les VLAN", "Sans adresse IP", "Directement aux PC"], "answer": 0 },
+    { "question": "Dans le routage traditionnel, quel rôle joue l'interface du routeur pour son VLAN ?", "choices": ["Elle est la passerelle du VLAN", "Elle est le serveur DHCP", "Elle est le VLAN natif", "Elle bloque le trafic"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une sous-interface ?", "choices": ["Une interface virtuelle affectée à une interface physique", "Un port console", "Un câble agrégé", "Un VLAN de gestion"], "answer": 0 },
+    { "question": "En router-on-a-stick, à quoi doit être connectée l'interface physique du routeur ?", "choices": ["À une liaison agrégée (trunk) sur le commutateur", "À un port en mode accès", "À un port console", "À rien"], "answer": 0 },
+    { "question": "En router-on-a-stick, combien de sous-interfaces crée-t-on ?", "choices": ["Une pour chaque VLAN", "Une seule pour tous les VLAN", "Deux au maximum", "Aucune"], "answer": 0 },
+    { "question": "Que faut-il activer sur un commutateur multicouche pour faire du routage entre VLAN ?", "choices": ["Le routage IP, et des adresses IP sur les interfaces VLAN", "Le mode trunk sur tous les ports", "Le protocole STP uniquement", "Rien de particulier"], "answer": 0 },
+    { "question": "Quel est le VLAN natif par défaut si on ne le spécifie pas ?", "choices": ["VLAN 1", "VLAN 10", "VLAN 99", "VLAN 1005"], "answer": 0 },
+    { "question": "Quelle commande corrige un port de commutateur F0/4 affecté au mauvais VLAN (VLAN 10 attendu) ?", "choices": ["switchport access vlan 10", "switchport mode trunk", "encapsulation dot1q 10", "vlan 10"], "answer": 0 },
+    { "question": "Quelle commande configure la sous-interface F0/0.10 sur le bon VLAN ?", "choices": ["encapsulation dot1q 10", "switchport access vlan 10", "ip address 172.17.10.1 255.255.255.0", "interface vlan 10"], "answer": 0 },
+    { "question": "Dans l'exemple de dépannage, PC1 avait un masque /16 incorrect. Quel masque corrige le problème ?", "choices": ["255.255.255.0 (/24)", "255.255.0.0", "255.0.0.0", "255.255.255.252"], "answer": 0 }
+  ] }

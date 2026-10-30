@@ -1,0 +1,13 @@
+{ "title": "Présentation du routage et du transfert de paquets", "description": "Network · Semestre 2 · Chapitre 1. Questions tirées du support de cours (chapitre court : beaucoup de diapositives sont des images).",
+  "questions": [
+    { "question": "Pourquoi dit-on qu'un routeur est un ordinateur ?", "choices": ["Il possède un processeur, une RAM, une ROM et un système d'exploitation", "Il a un écran et un clavier", "Il exécute Windows", "Il ne contient aucun logiciel"], "answer": 0 },
+    { "question": "Quel composant est responsable de l'exécution du système d'exploitation du routeur ?", "choices": ["Le microprocesseur (CPU)", "La NVRAM", "La ROM", "Les modules I/O"], "answer": 0 },
+    { "question": "Sur beaucoup de routeurs, à quoi sert la mémoire Flash ?", "choices": ["Maintenir une image d'un ou plusieurs systèmes d'exploitation", "Stocker la table ARP", "Exécuter le POST", "Garder la configuration en cours"], "answer": 0 },
+    { "question": "Quelle mémoire contient le code du POST (Power-On Self Test) ?", "choices": ["La ROM", "La RAM", "La Flash", "La NVRAM"], "answer": 0 },
+    { "question": "Que se passe-t-il pour la RAM lors d'une coupure d'alimentation ?", "choices": ["Elle est effacée", "Elle est conservée", "Elle est copiée en Flash automatiquement", "Elle est envoyée au serveur TFTP"], "answer": 0 },
+    { "question": "Dans quelle mémoire est maintenue la configuration qui doit survivre à une coupure ?", "choices": ["La NVRAM", "La RAM", "Le CPU", "Les modules I/O"], "answer": 0 },
+    { "question": "Quelle commande permet de vérifier certains composants matériels et logiciels de base du routeur ?", "choices": ["show version", "show ip route", "show cdp neighbors", "show running-config"], "answer": 0 },
+    { "question": "Quel est le rôle principal d'un routeur ?", "choices": ["Relier plusieurs réseaux et transférer des paquets d'un réseau à l'autre", "Connecter les PC d'un même VLAN", "Attribuer les adresses MAC", "Alimenter les téléphones IP"], "answer": 0 },
+    { "question": "Chaque interface d'un routeur appartient à…", "choices": ["Un réseau IP différent", "Le même réseau IP", "Aucun réseau", "Un VLAN natif obligatoire"], "answer": 0 },
+    { "question": "À quelle couche OSI un routeur prend-il sa décision principale de transfert ?", "choices": ["La couche réseau", "La couche liaison de données", "La couche physique", "La couche transport"], "answer": 0 }
+  ] }

@@ -41,6 +41,12 @@
       "file": "linux-s3-quotas.json",
       "title": "Quotas, Samba et NFS — les exemples du cours",
       "chapterId": "linux-s3-chap-9-quotas"
+    },
+    {
+      "id": "linux-s1-chp17",
+      "file": "linux-s1-chp17.json",
+      "title": "Noyau et modules — les exemples du cours",
+      "chapterId": "linux-s1-s2-chp17-mise-a-jour-du-noyau-linux"
     }
   ]
 }

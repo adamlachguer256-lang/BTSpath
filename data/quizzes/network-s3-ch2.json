@@ -1,0 +1,19 @@
+{ "title": "Concepts et configuration de base de la commutation", "description": "Network · Semestre 3 · Chapitre 2. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Dans quel cas la technologie CSMA/CD est-elle employée ?", "choices": ["Dans une communication bidirectionnelle non simultanée (concentrateurs)", "Sur les commutateurs bidirectionnels simultanés", "Sur les liaisons fibre uniquement", "Dans les WLAN"], "answer": 0 },
+    { "question": "Lequel de ces formats est un format valide d'adresse MAC selon le cours ?", "choices": ["0005.9A3C.7800", "192.168.1.1", "00-05-9A-3C", "FE80::1"], "answer": 0 },
+    { "question": "Quand le commutateur reçoit une trame de diffusion, que fait-il ?", "choices": ["Il l'inonde sur tous les ports sauf celui de réception", "Il la supprime", "Il l'envoie au routeur uniquement", "Il la renvoie à la source"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un domaine de collision ?", "choices": ["La zone du réseau d'où proviennent les trames qui entrent en collision", "L'ensemble des VLAN", "La zone couverte par un point d'accès", "La table MAC"], "answer": 0 },
+    { "question": "Comment s'appelle la connexion dédiée qu'un commutateur crée entre deux hôtes ?", "choices": ["Un microsegment", "Un VLAN", "Un trunk", "Un domaine de diffusion"], "answer": 0 },
+    { "question": "Quel équipement segmente les domaines de diffusion ?", "choices": ["Un routeur (ou un VLAN)", "Un concentrateur", "Un répéteur", "Un câble croisé"], "answer": 0 },
+    { "question": "Qu'est-ce que la latence ?", "choices": ["Le temps nécessaire à une trame pour aller de la source à la destination", "Le nombre de collisions", "La taille de la table MAC", "La bande passante maximale"], "answer": 0 },
+    { "question": "Combien d'octets la commutation Fragment-Free stocke-t-elle avant de transmettre ?", "choices": ["Les 64 premiers octets", "Toute la trame", "Les 6 premiers octets", "Aucun"], "answer": 0 },
+    { "question": "Un commutateur de couche 3 (ex. Catalyst 3560) peut-il exécuter des fonctions de routage ?", "choices": ["Oui", "Non", "Seulement en IPv6", "Seulement avec un trunk"], "answer": 0 },
+    { "question": "Quelle commande affiche la table d'adresses MAC du commutateur ?", "choices": ["show mac-address-table", "show ip route", "show vlan", "show interfaces trunk"], "answer": 0 },
+    { "question": "Quelle commande sauvegarde la configuration de démarrage dans un fichier en flash ?", "choices": ["copy startup-config flash:config.bak1", "copy flash:config.bak1 startup-config", "copy tftp startup-config", "write erase"], "answer": 0 },
+    { "question": "Quelle commande réactive Telnet sur les lignes VTY ?", "choices": ["transport input telnet", "service password-encryption", "line console 0", "ip ssh version 2"], "answer": 0 },
+    { "question": "Quel est le mode de violation de sécurité des ports par défaut ?", "choices": ["shutdown", "protect", "restrict", "disable"], "answer": 0 },
+    { "question": "Quel mode de violation ignore les adresses inconnues sans aucune notification ?", "choices": ["protect", "restrict", "shutdown", "monitor"], "answer": 0 },
+    { "question": "Quelle commande active la sécurité des ports sur une interface ?", "choices": ["switchport port-security", "switchport mode trunk", "port-security enable", "spanning-tree portfast"], "answer": 0 },
+    { "question": "Comment sécuriser simplement les ports inutilisés ?", "choices": ["Les désactiver avec shutdown", "Les mettre en mode trunk", "Changer le VLAN natif", "Activer CDP"], "answer": 0 }
+  ] }

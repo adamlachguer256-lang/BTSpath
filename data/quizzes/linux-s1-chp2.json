@@ -1,0 +1,16 @@
+{ "title": "Téléchargez une distribution Linux", "description": "Linux · Semestres 1 – 2 · Chapitre 2. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Le noyau Linux est dit « monolithique ». Que signifie ce terme ?", "choices": ["Tout le code est exécuté dans un seul gros objet en mémoire", "Le code est réparti sur plusieurs ordinateurs", "Le noyau ne contient aucun module", "Le noyau ne gère pas la mémoire"], "answer": 0 },
+    { "question": "Le noyau Linux est dit « modulaire ». Quel avantage cela apporte-t-il ?", "choices": ["On peut ajouter ou retirer des modules sans arrêter ni redémarrer le noyau", "Il ne peut plus être mis à jour", "Il devient payant", "Il n'a plus besoin de processeur"], "answer": 0 },
+    { "question": "Sous quelle licence Linux est-il diffusé ?", "choices": ["GPL (General Public Licence)", "Licence propriétaire Microsoft", "Shareware", "Licence UNIX HP"], "answer": 0 },
+    { "question": "Combien de lignes de code contient environ le répertoire des sources du noyau décompressé ?", "choices": ["Plus de 25 millions", "Environ 1 000", "Environ 100 000", "Environ 500"], "answer": 0 },
+    { "question": "Le noyau est numéroté selon le modèle « X.Y.Z ». Que représente X ?", "choices": ["Le numéro majeur (une génération)", "La révision de sécurité", "Le numéro mineur", "Le nombre de modules"], "answer": 0 },
+    { "question": "Dans « X.Y.Z », que représente Y ?", "choices": ["Le numéro mineur : les mises à jour régulières dans une génération", "Le numéro majeur", "Une correction d'anomalie", "La date de sortie"], "answer": 0 },
+    { "question": "Dans « X.Y.Z », que représente Z ?", "choices": ["Une révision : correction d'anomalie ou mise à jour de sécurité", "Une nouvelle génération", "Le numéro mineur", "Le nom de la distribution"], "answer": 0 },
+    { "question": "Où sont disponibles les sources du noyau selon le résumé ?", "choices": ["Sur le site de Linux Kernel Archives", "Uniquement sur CD payant", "Dans Windows Update", "Sur l'App Store"], "answer": 0 },
+    { "question": "De quoi se compose une distribution Linux ?", "choices": ["D'un noyau, de packages et d'outils pour gérer leurs dépendances", "D'un noyau seulement", "D'un navigateur et d'un antivirus", "D'un BIOS et d'un pilote"], "answer": 0 },
+    { "question": "Quelles sont les 3 distributions Linux historiques ?", "choices": ["Debian, Red Hat et Slackware", "Ubuntu, Mint et Fedora", "Android, Ubuntu et Debian", "Fedora, Deepin et Elementary OS"], "answer": 0 },
+    { "question": "De quelle famille est la distribution Fedora ?", "choices": ["Red Hat", "Debian", "Slackware", "Ubuntu"], "answer": 0 },
+    { "question": "Quelle distribution vise à se rapprocher de l'expérience utilisateur de macOS ?", "choices": ["Elementary OS", "Fedora", "Slackware", "Red Hat"], "answer": 0 },
+    { "question": "Ubuntu est une distribution dérivée de…", "choices": ["Debian", "Red Hat", "Slackware", "Fedora"], "answer": 0 }
+  ] }

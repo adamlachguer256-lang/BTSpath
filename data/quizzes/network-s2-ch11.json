@@ -1,0 +1,18 @@
+{ "title": "Protocole OSPF", "description": "Network · Semestre 2 · Chapitre 11. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "OSPF est un protocole de routage…", "choices": ["À état de liens, sans classe", "À vecteur de distance, par classe", "Propriétaire Cisco", "De couche 2"], "answer": 0 },
+    { "question": "Quelle est la distance administrative par défaut d'OSPF ?", "choices": ["110", "120", "90", "1"], "answer": 0 },
+    { "question": "Par quel code OSPF est-il signalé dans la table de routage ?", "choices": ["O", "R", "D", "C"], "answer": 0 },
+    { "question": "Dans quel RFC OSPFv3 pour IPv6 a-t-il été publié en 1999 ?", "choices": ["RFC 2740", "RFC 2328", "RFC 1247", "RFC 1723"], "answer": 0 },
+    { "question": "Lequel de ces rôles appartient au paquet Hello OSPF ?", "choices": ["Découvrir les voisins et élire le DR et le BDR", "Transporter les données utilisateurs", "Attribuer les adresses IP", "Chiffrer la table de routage"], "answer": 0 },
+    { "question": "Par défaut, à quel intervalle sont envoyés les Hello OSPF sur les segments à accès multiple et point à point ?", "choices": ["10 secondes", "30 secondes", "5 secondes", "60 secondes"], "answer": 0 },
+    { "question": "Quelle est la valeur par défaut de l'intervalle Dead ?", "choices": ["4 fois l'intervalle Hello", "3 fois l'intervalle Hello", "2 fois l'intervalle Hello", "Égale à l'intervalle Hello"], "answer": 0 },
+    { "question": "Quel est le rôle du BDR ?", "choices": ["Surveiller le DR et prendre sa place s'il tombe en panne", "Mettre à jour tous les routeurs à la place du DR en permanence", "Bloquer les LSA", "Attribuer les ID de routeur"], "answer": 0 },
+    { "question": "Qu'est-ce que l'ID de routeur OSPF ?", "choices": ["Une adresse IP qui identifie chaque routeur de façon unique", "Le nom d'hôte du routeur", "L'adresse MAC du routeur", "Le numéro de processus"], "answer": 0 },
+    { "question": "Quelle commande permet de vérifier les voisins OSPF ?", "choices": ["show ip ospf neighbor", "show cdp neighbors", "show ip eigrp neighbors", "debug ip rip"], "answer": 0 },
+    { "question": "Comment s'appelle la métrique OSPF ?", "choices": ["Le coût", "Le nombre de sauts", "La distance administrative", "Le délai"], "answer": 0 },
+    { "question": "Quelles commandes d'interface permettent de modifier le coût d'une liaison ?", "choices": ["bandwidth ou ip ospf cost", "ip ospf priority", "no auto-summary", "clock rate"], "answer": 0 },
+    { "question": "Sans priorité configurée, quel routeur devient DR ?", "choices": ["Celui qui a l'ID de routeur le plus élevé", "Celui qui a l'ID le plus faible", "Le premier allumé", "Celui qui a le plus d'interfaces"], "answer": 0 },
+    { "question": "Quelle est la priorité OSPF par défaut sur les interfaces à accès multiple ?", "choices": ["1", "0", "128", "32768"], "answer": 0 },
+    { "question": "Quel effet a une priorité OSPF de 0 ?", "choices": ["Le routeur ne peut pas être élu DR ou BDR", "Le routeur devient toujours DR", "OSPF est désactivé sur le routeur", "Le coût devient 0"], "answer": 0 }
+  ] }

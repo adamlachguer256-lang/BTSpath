@@ -1,0 +1,19 @@
+{ "title": "Couche transport OSI", "description": "Network · Semestre 1 · Couche transport. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quels sont les deux protocoles de transport les plus employés de la pile TCP/IP ?", "choices": ["TCP et UDP", "IP et ICMP", "HTTP et FTP", "ARP et DHCP"], "answer": 0 },
+    { "question": "Comment s'appelle l'ensemble adresse IP + numéro de port (ex. 192.168.1.20:80) ?", "choices": ["Une interface de connexion (socket)", "Un segment", "Un bail", "Une trame"], "answer": 0 },
+    { "question": "Quel utilitaire affiche la liste des connexions TCP actives d'un hôte ?", "choices": ["Netstat", "Ping", "Tracert", "Ipconfig"], "answer": 0 },
+    { "question": "Comment les clients choisissent-ils leur numéro de port ?", "choices": ["Dynamiquement, pour chaque conversation", "Toujours le port 80", "Le même que le serveur", "Il est fixé par l'IANA pour chaque client"], "answer": 0 },
+    { "question": "Dans quel RFC est décrit le protocole UDP ?", "choices": ["RFC 768", "RFC 793", "RFC 1918", "RFC 2131"], "answer": 0 },
+    { "question": "Comment s'appellent les blocs de communication UDP ?", "choices": ["Des datagrammes", "Des segments", "Des trames", "Des bits"], "answer": 0 },
+    { "question": "Lequel de ces protocoles utilise UDP selon le cours ?", "choices": ["DNS", "Courriel (SMTP)", "Navigation Web", "Transfert de fichiers FTP"], "answer": 0 },
+    { "question": "Combien d'octets de surcharge utilise l'en-tête d'un segment TCP (contre 8 pour UDP) ?", "choices": ["20 octets", "8 octets", "4 octets", "64 octets"], "answer": 0 },
+    { "question": "Comment TCP établit-il une connexion ?", "choices": ["Par une connexion en trois étapes", "En une seule étape", "En quatre étapes", "Il n'établit pas de connexion"], "answer": 0 },
+    { "question": "Combien d'étapes comporte la fermeture d'une connexion TCP ?", "choices": ["Quatre", "Trois", "Deux", "Une"], "answer": 0 },
+    { "question": "Que représente l'ISN défini lors de la configuration d'une session TCP ?", "choices": ["Le numéro d'ordre initial des octets de la session", "Le numéro de port source", "La taille de la fenêtre", "L'adresse IP du serveur"], "answer": 0 },
+    { "question": "Fichier de 500 000 octets, MSS = 1000 octets, numérotation à 0 : quels octets contient le 5e segment ?", "choices": ["De 4000 à 4999", "De 5000 à 5999", "De 4001 à 5000", "De 500 à 599"], "answer": 0 },
+    { "question": "Numéro d'ordre de début 2000, 10 segments de 1000 octets reçus : quel numéro de reçu est renvoyé ?", "choices": ["12000", "11000", "10000", "2010"], "answer": 0 },
+    { "question": "Comment appelle-t-on la quantité de données qu'une source peut transmettre avant de recevoir un reçu ?", "choices": ["La taille de fenêtre", "Le MSS", "L'ISN", "Le bail"], "answer": 0 },
+    { "question": "Segments reçus de 1500 à 3000 et de 3400 à 3500 : quel est le numéro du reçu ?", "choices": ["3001", "3501", "3400", "1500"], "answer": 0, "explanation": "Les segments entre 3001 et 3399 n'ont pas été reçus." },
+    { "question": "Avec les reçus sélectifs, que retransmet l'hôte source ?", "choices": ["Uniquement les données manquantes", "Tout le fichier", "Rien du tout", "Seulement le premier segment"], "answer": 0 }
+  ] }

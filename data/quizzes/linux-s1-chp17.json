@@ -1,0 +1,21 @@
+{ "title": "Mise à jour du noyau Linux", "description": "Linux · Semestres 1 – 2 · Chapitre 17. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quelle commande affiche la version du noyau actuellement utilisée ?", "choices": ["uname -r", "lsmod", "apt update", "dmesg"], "answer": 0 },
+    { "question": "Que fait sudo apt update avant une mise à jour ?", "choices": ["Synchronise la liste des paquets avec les dépôts", "Installe le nouveau noyau", "Redémarre la machine", "Compile le noyau"], "answer": 0 },
+    { "question": "Quelle commande est la méthode standard recommandée pour mettre à jour le noyau sur Ubuntu ?", "choices": ["sudo apt full-upgrade", "sudo make install", "sudo modprobe kernel", "sudo uname -u"], "answer": 0, "explanation": "Elle installe les nouvelles versions du noyau et gère correctement les dépendances." },
+    { "question": "Quand le nouveau noyau devient-il actif ?", "choices": ["Après le redémarrage", "Immédiatement après apt update", "Après lsmod", "Jamais automatiquement"], "answer": 0 },
+    { "question": "Sur kernel.org, quelle version le cours recommande-t-il ?", "choices": ["Stable", "Mainline", "Longterm", "Next"], "answer": 0 },
+    { "question": "Quel paquet contient gcc, g++ et make ?", "choices": ["build-essential", "libncurses-dev", "libelf-dev", "flex"], "answer": 0 },
+    { "question": "À quoi sert libncurses-dev ?", "choices": ["À l'interface texte de configuration (make menuconfig)", "À la cryptographie", "À l'analyse lexicale", "Au format ELF"], "answer": 0 },
+    { "question": "Quel paquet gère la sécurité/cryptographie et la signature des modules ?", "choices": ["libssl-dev", "bison", "flex", "build-essential"], "answer": 0 },
+    { "question": "Pourquoi copier /boot/config-$(uname -r) vers .config avant de compiler ?", "choices": ["Pour reprendre la configuration actuelle et éviter beaucoup d'erreurs", "Pour supprimer l'ancien noyau", "Pour mettre à jour GRUB", "Pour charger les modules"], "answer": 0 },
+    { "question": "Quelle commande compile le noyau en utilisant tous les processeurs ?", "choices": ["make -j$(nproc)", "make oldconfig", "make modules_install", "make clean"], "answer": 0 },
+    { "question": "Que fait sudo make install ?", "choices": ["Installe le noyau dans /boot et met à jour GRUB automatiquement", "Télécharge le noyau", "Installe les dépendances", "Liste les modules"], "answer": 0 },
+    { "question": "En cas de problème au démarrage avec le nouveau noyau, que faire ?", "choices": ["Appuyer sur Shift ou Esc, Options avancées, choisir un ancien noyau", "Réinstaller Ubuntu", "Lancer lsmod", "Supprimer /boot"], "answer": 0 },
+    { "question": "Quelle est l'extension des modules du noyau ?", "choices": [".ko", ".so", ".deb", ".tar.xz"], "answer": 0 },
+    { "question": "Où sont stockés les modules ?", "choices": ["/lib/modules/$(uname -r)/", "/etc/modules.d/", "/boot/grub/", "/usr/bin/"], "answer": 0 },
+    { "question": "Quelle commande charge un module avec ses dépendances automatiquement ?", "choices": ["modprobe", "lsmod", "modinfo", "dmesg"], "answer": 0 },
+    { "question": "Quel fichier permet d'interdire le chargement d'un module ?", "choices": ["/etc/modprobe.d/blacklist.conf", "/etc/modules", "/etc/fstab", "/boot/config"], "answer": 0 },
+    { "question": "Dans make menuconfig, que signifie [M] ?", "choices": ["Compilé comme module", "Intégré directement au noyau", "Désactivé", "Module manquant"], "answer": 0 },
+    { "question": "Quel module faut-il charger si un ISO ne se monte pas ou si les applications Snap ne démarrent pas ?", "choices": ["loop", "vfat", "e1000", "usbhid"], "answer": 0 }
+  ] }

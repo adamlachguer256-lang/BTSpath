@@ -1,0 +1,19 @@
+{ "title": "Protocoles et modèles", "description": "Network · Semestre 1 · Chapitre 3. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quels sont les trois éléments de toute communication ?", "choices": ["Une source, une destination et un canal", "Un routeur, un switch et un câble", "Un client, un serveur et un pare-feu", "Une adresse IP, une adresse MAC et un port"], "answer": 0 },
+    { "question": "Qu'est-ce que le codage d'un message ?", "choices": ["La conversion des informations vers un autre format acceptable pour la transmission", "Le chiffrement avec un mot de passe", "La compression des fichiers", "Le choix du meilleur chemin"], "answer": 0 },
+    { "question": "Quel élément de synchronisation gère le taux de transmission des données ?", "choices": ["Le contrôle du flux", "Le délai de réponse", "La méthode d'accès", "Le séquençage"], "answer": 0 },
+    { "question": "Comment appelle-t-on une remise de message « un à plusieurs, généralement pas tous » ?", "choices": ["Multidiffusion", "Monodiffusion", "Diffusion", "Anycast"], "answer": 0 },
+    { "question": "Quelle option de remise n'existe pas en IPv6 ?", "choices": ["La diffusion (broadcast)", "La monodiffusion", "La multidiffusion", "Anycast"], "answer": 0 },
+    { "question": "Quel protocole gère les conversations individuelles et offre une garantie de livraison ?", "choices": ["TCP", "IP", "Ethernet", "HTTP"], "answer": 0 },
+    { "question": "Quel protocole fournit des messages d'une carte réseau à une autre sur le même LAN ?", "choices": ["Ethernet", "IP", "HTTP", "TCP"], "answer": 0 },
+    { "question": "Quel organisme maintient la suite TCP/IP ?", "choices": ["L'IETF (Internet Engineering Task Force)", "Apple Inc.", "Novell Inc.", "L'EIA"], "answer": 0 },
+    { "question": "Quel organisme coordonne l'attribution des adresses IP et la gestion des noms de domaine ?", "choices": ["ICANN", "IEEE", "TIA", "IRTF"], "answer": 0 },
+    { "question": "Quel organisme élabore des normes sur le câblage électrique, les connecteurs et les racks de 19 pouces ?", "choices": ["EIA", "IETF", "ISOC", "IANA"], "answer": 0 },
+    { "question": "Quelle couche OSI définit les services pour segmenter, transférer et réassembler les données ?", "choices": ["Couche 4 - Transport", "Couche 3 - Réseau", "Couche 2 - Liaison de données", "Couche 7 - Application"], "answer": 0 },
+    { "question": "Quelle couche du modèle TCP/IP détermine le meilleur chemin à travers le réseau ?", "choices": ["Internet", "Transport", "Application", "Accès réseau"], "answer": 0 },
+    { "question": "Quel est un avantage de la segmentation des messages ?", "choices": ["Seuls les segments perdus sont retransmis, pas tout le flux", "Elle supprime le besoin d'adresses IP", "Elle empêche toute collision", "Elle chiffre les données"], "answer": 0 },
+    { "question": "Quel protocole est responsable du séquençage des segments ?", "choices": ["TCP", "IP", "Ethernet", "UDP"], "answer": 0 },
+    { "question": "Quel est l'ordre des PDU lors de l'encapsulation ?", "choices": ["Données → Segment → Paquet → Trame → Bits", "Bits → Trame → Paquet → Segment → Données", "Segment → Données → Trame → Paquet → Bits", "Paquet → Segment → Trame → Données → Bits"], "answer": 0 },
+    { "question": "Quelles adresses permettent de transmettre une trame d'une NIC à une autre sur le même réseau ?", "choices": ["Les adresses de la couche liaison de données", "Les adresses de la couche réseau", "Les numéros de port", "Les noms de domaine"], "answer": 0 }
+  ] }

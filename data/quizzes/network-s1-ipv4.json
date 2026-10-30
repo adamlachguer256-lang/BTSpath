@@ -1,0 +1,20 @@
+{ "title": "Adressage IPv4", "description": "Network · Semestre 1 · Adressage IPv4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Sur combien de bits est codée une adresse IPv4 ?", "choices": ["32 bits", "64 bits", "128 bits", "48 bits"], "answer": 0 },
+    { "question": "Dans l'adresse réseau, comment sont les bits de la partie hôte ?", "choices": ["Tous à 0", "Tous à 1", "Alternés 0 et 1", "Le premier à 1, les autres à 0"], "answer": 0 },
+    { "question": "Quelle est l'adresse de diffusion du réseau 10.0.0.0 avec 24 bits réseau ?", "choices": ["10.0.0.255", "10.0.0.0", "10.255.255.255", "10.0.0.254"], "answer": 0 },
+    { "question": "Quelle est la plage d'hôtes du réseau 10.0.0.0 /24 ?", "choices": ["10.0.0.1 à 10.0.0.254", "10.0.0.0 à 10.0.0.255", "10.0.0.1 à 10.0.0.255", "10.0.0.0 à 10.0.0.254"], "answer": 0 },
+    { "question": "Que signifie /24 dans 172.16.4.0 /24 ?", "choices": ["Les 24 premiers bits correspondent à la partie réseau", "Il y a 24 hôtes", "Il y a 24 sous-réseaux", "Le dernier octet vaut 24"], "answer": 0 },
+    { "question": "Quelle adresse de destination utilise une diffusion limitée ?", "choices": ["255.255.255.255", "0.0.0.0", "127.0.0.1", "172.16.4.255"], "answer": 0 },
+    { "question": "Laquelle de ces plages est une plage d'adresses privées ?", "choices": ["172.16.0.0 à 172.31.255.255", "172.32.0.0 à 172.63.255.255", "11.0.0.0 à 11.255.255.255", "192.0.2.0 à 192.0.2.255"], "answer": 0 },
+    { "question": "À quoi sert l'adresse de bouclage 127.0.0.1 ?", "choices": ["Vérifier l'installation du protocole IP sur l'hôte local", "Joindre la passerelle", "Joindre le serveur DHCP", "Diffuser à tous les hôtes"], "answer": 0 },
+    { "question": "Quand un hôte reçoit-il une adresse de la plage 169.254.0.0 /16 (APIPA) ?", "choices": ["Lorsque le serveur DHCP est hors service", "Quand il se connecte à Internet", "Quand il est configuré en statique", "Quand il est un routeur"], "answer": 0 },
+    { "question": "Quelle plage est réservée à l'enseignement et à la documentation (TEST-NET) ?", "choices": ["192.0.2.0 /24", "10.0.0.0 /8", "169.254.0.0 /16", "127.0.0.0 /8"], "answer": 0 },
+    { "question": "Pour quels équipements doit-on utiliser des adresses statiques ?", "choices": ["Serveurs, imprimantes, périphériques réseau et passerelle", "Tous les smartphones invités", "Uniquement les PC portables", "Aucun équipement"], "answer": 0 },
+    { "question": "Comment appelle-t-on la durée pendant laquelle une adresse DHCP est « louée » ?", "choices": ["Le bail", "Le pool", "Le préfixe", "Le masque"], "answer": 0 },
+    { "question": "Quel est le masque de sous-réseau d'un préfixe /27 ?", "choices": ["255.255.255.224", "255.255.255.240", "255.255.255.192", "255.255.255.128"], "answer": 0 },
+    { "question": "Quelle opération logique un hôte utilise-t-il avec le masque pour savoir si la destination est locale ?", "choices": ["AND (ET)", "OR (OU)", "XOR", "NOT"], "answer": 0 },
+    { "question": "En découpant 192.168.1.0 /24 en deux sous-réseaux, combien d'adresses utilisables a chaque sous-réseau ?", "choices": ["126", "128", "254", "64"], "answer": 0, "explanation": "1 bit emprunté → /25, 7 bits hôte : 2^7 - 2 = 126." },
+    { "question": "Quel protocole utilise la commande ping ?", "choices": ["ICMP (Echo Request / Echo Reply)", "TCP", "DHCP", "ARP"], "answer": 0 },
+    { "question": "Quelle commande permet d'identifier le chemin entre des hôtes ?", "choices": ["traceroute (tracert)", "ping", "ipconfig", "nslookup"], "answer": 0 }
+  ] }

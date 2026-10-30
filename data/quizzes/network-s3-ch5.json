@@ -1,0 +1,19 @@
+{ "title": "Protocole STP", "description": "Network · Semestre 3 · Chapitre 5. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Pourquoi une trame Ethernet peut-elle tourner indéfiniment dans une boucle de couche 2 ?", "choices": ["Les trames Ethernet n'ont pas de TTL", "Le commutateur n'a pas de table MAC", "La trame est chiffrée", "Le routeur la renvoie"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une tempête de diffusion ?", "choices": ["Toute la bande passante est consommée par les trames de diffusion", "Une panne électrique", "Un excès de VLAN", "Une attaque par mot de passe"], "answer": 0 },
+    { "question": "Comment STP évite-t-il les boucles ?", "choices": ["En bloquant les chemins redondants", "En supprimant les câbles", "En chiffrant les trames", "En ajoutant un TTL aux trames"], "answer": 0 },
+    { "question": "Quel commutateur STP utilise-t-il comme point de référence pour le calcul des chemins ?", "choices": ["Le pont racine", "Le commutateur le plus récent", "Le commutateur avec le plus de ports", "Le routeur"], "answer": 0 },
+    { "question": "Quel est le coût STP défini par l'IEEE pour un lien à 100 Mb/s ?", "choices": ["19", "4", "2", "100"], "answer": 0 },
+    { "question": "Quels sont les 3 champs du BID ?", "choices": ["Priorité, ID du système étendu et adresse MAC", "Adresse IP, masque et passerelle", "Port, coût et état", "VLAN, nom et mot de passe"], "answer": 0 },
+    { "question": "Quelle est la valeur de priorité de pont par défaut ?", "choices": ["32768", "4096", "128", "1"], "answer": 0 },
+    { "question": "Par quel incrément varie la priorité de pont ?", "choices": ["4096", "16", "128", "1"], "answer": 0 },
+    { "question": "Si deux commutateurs ont la même priorité et le même ID système étendu, lequel a le BID le plus faible ?", "choices": ["Celui dont l'adresse MAC est la plus faible", "Celui dont l'adresse MAC est la plus élevée", "Celui qui a le plus de ports", "Celui allumé en dernier"], "answer": 0 },
+    { "question": "Quelle commande garantit que le commutateur a la priorité la plus basse pour un VLAN ?", "choices": ["spanning-tree vlan id-vlan root primary", "spanning-tree portfast", "spanning-tree vlan id-vlan root secondary", "show spanning-tree"], "answer": 0 },
+    { "question": "Combien de ports racines sont autorisés par commutateur ?", "choices": ["Un seul", "Deux", "Un par VLAN obligatoire", "Autant que de ports"], "answer": 0 },
+    { "question": "Sur le pont racine, quel est le rôle de tous les ports ?", "choices": ["Ports désignés", "Ports racines", "Ports non désignés", "Ports désactivés"], "answer": 0 },
+    { "question": "Dans quel état STP le port commence-t-il à enrichir la table d'adresses MAC ?", "choices": ["Apprentissage", "Écoute", "Blocage", "Acheminement"], "answer": 0 },
+    { "question": "Que fait PortFast sur un port d'accès ?", "choices": ["Il passe directement du blocage à l'acheminement", "Il bloque le port", "Il désactive STP partout", "Il change la priorité du pont"], "answer": 0 },
+    { "question": "Quelle est la valeur de priorité de port par défaut ?", "choices": ["128", "32768", "16", "240"], "answer": 0 },
+    { "question": "Quel protocole est l'implémentation Cisco de RSTP, avec un arbre par VLAN ?", "choices": ["Rapid PVST+", "PVST+", "STP 802.1D", "VTP"], "answer": 0 }
+  ] }

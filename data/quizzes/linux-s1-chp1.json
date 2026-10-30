@@ -1,0 +1,16 @@
+{ "title": "Plongez dans l'histoire de Linux", "description": "Linux · Semestres 1 – 2 · Chapitre 1. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quel est le rôle d'un système d'exploitation ?", "choices": ["Faire l'interface entre l'utilisateur et l'ordinateur en gérant ses ressources", "Uniquement afficher le fond d'écran", "Remplacer le processeur", "Servir de navigateur Internet"], "answer": 0, "explanation": "Il « exploite » les ressources physiques : processeur, carte graphique, stockage, mémoire vive…" },
+    { "question": "À quelle image le cours compare-t-il le système d'exploitation ?", "choices": ["Un chef d'orchestre", "Un gardien de but", "Un facteur", "Un architecte"], "answer": 0 },
+    { "question": "Comment se nommait la toute première version du système né chez AT&T et General Electric ?", "choices": ["UNICS", "MULTICS", "MINIX", "GNU"], "answer": 0 },
+    { "question": "Pourquoi UNICS est-il devenu UNIX ?", "choices": ["Pour économiser une lettre", "À cause d'un procès", "Pour l'adapter aux PC", "Pour le rendre libre"], "answer": 0 },
+    { "question": "Sous quelle forme UNIX est-il codé ?", "choices": ["Sous forme de modules qui communiquent entre eux", "En un seul programme sans découpage", "Sous forme de macros Excel", "Sous forme de pages web"], "answer": 0 },
+    { "question": "Dans UNIX, qui gère la lecture et l'écriture des données sur les périphériques de stockage ?", "choices": ["Un seul morceau de code dédié, que les autres parties doivent appeler", "Chaque programme directement", "L'utilisateur à la main", "La carte graphique"], "answer": 0 },
+    { "question": "Qui est le premier à s'être révolté contre le principe des licences UNIX ?", "choices": ["Richard Stallman", "Linus Torvalds", "Bill Gates", "Steve Jobs"], "answer": 0 },
+    { "question": "Que vise la licence libre créée en réaction aux licences UNIX ?", "choices": ["Préserver la liberté d'utiliser, modifier et diffuser le système et ses versions dérivées", "Interdire la copie du code", "Vendre le système plus cher", "Réserver le code aux entreprises"], "answer": 0 },
+    { "question": "Quelle idée Richard Stallman a-t-il lancée en 1999 ?", "choices": ["Les idées à l'origine de Wikipédia", "Le premier smartphone", "Le système Android", "Le langage C"], "answer": 0 },
+    { "question": "Qui a créé Linux au début des années 90 ?", "choices": ["Linus Torvalds", "Richard Stallman", "Ken Thompson", "Dennis Ritchie"], "answer": 0 },
+    { "question": "Pourquoi le nom Linux garde-t-il le X ?", "choices": ["En hommage à UNIX", "Pour signifier « eXpert »", "Parce que c'est la 10e version", "Par hasard"], "answer": 0 },
+    { "question": "Quelle est la philosophie de Linux héritée d'UNIX ?", "choices": ["Faire une chose et la faire parfaitement", "Tout faire dans un seul programme", "Payer pour chaque module", "Cacher le code source"], "answer": 0 },
+    { "question": "Selon le cours, quel système est un « cousin proche » de Linux ?", "choices": ["Android", "Windows", "macOS", "MS-DOS"], "answer": 0 }
+  ] }

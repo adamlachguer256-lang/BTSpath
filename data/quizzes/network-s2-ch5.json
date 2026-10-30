@@ -1,0 +1,15 @@
+{ "title": "Protocole RIP version 1", "description": "Network · Semestre 2 · Chapitre 5. Questions tirées du support de cours (configurations sur images).",
+  "questions": [
+    { "question": "Quelle métrique utilise le protocole RIP ?", "choices": ["Le nombre de sauts", "La bande passante", "Le coût", "Le délai"], "answer": 0 },
+    { "question": "Au-delà de combien de sauts une route RIP est-elle inaccessible ?", "choices": ["15", "16", "255", "30"], "answer": 0 },
+    { "question": "Quelle est la distance administrative par défaut de RIP ?", "choices": ["120", "90", "110", "1"], "answer": 0 },
+    { "question": "RIPv1 est un protocole de routage…", "choices": ["Par classe", "Sans classe", "À état de liens", "Propriétaire Cisco"], "answer": 0 },
+    { "question": "Les réseaux RIPv1 peuvent-ils être discontinus ou utiliser VLSM ?", "choices": ["Non", "Oui, les deux", "Seulement VLSM", "Seulement discontinus"], "answer": 0 },
+    { "question": "Que fait chaque interface RIP au démarrage ?", "choices": ["Elle envoie une requête demandant aux voisins leurs tables complètes", "Elle attend 180 secondes", "Elle supprime sa table", "Elle envoie un Hello toutes les 5 s"], "answer": 0 },
+    { "question": "Si une route reçue existe déjà dans la table, quand est-elle remplacée ?", "choices": ["Si elle présente un meilleur nombre de sauts", "Toujours", "Jamais", "Si elle vient d'un routeur plus récent"], "answer": 0 },
+    { "question": "Quelle commande fait passer en mode de configuration du routeur pour RIP ?", "choices": ["router rip", "ip route", "network rip", "enable rip"], "answer": 0 },
+    { "question": "Quelles commandes utiliser d'abord pour vérifier et dépanner le routage ?", "choices": ["show ip route et show ip protocols", "debug ip rip uniquement", "show version", "show cdp neighbors"], "answer": 0 },
+    { "question": "Quelle commande montre exactement ce qui se passe dans les mises à jour RIP ?", "choices": ["debug ip rip", "show ip interface brief", "show running-config", "show ip rip neighbors"], "answer": 0 },
+    { "question": "Avant de configurer un routage, quelle commande vérifie que les interfaces sont actives ?", "choices": ["show ip interface brief", "show ip protocols", "debug ip rip", "show version"], "answer": 0 },
+    { "question": "Si une mise à jour et l'interface de réception sont dans deux réseaux principaux différents, quel masque RIPv1 applique-t-il ?", "choices": ["Le masque par classe du réseau", "Le masque de l'interface", "Le masque /32", "Aucun masque"], "answer": 0 }
+  ] }

@@ -1,0 +1,16 @@
+{ "title": "Installez Linux Ubuntu", "description": "Linux · Semestres 1 – 2 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quel hyperviseur le cours utilise-t-il pour virtualiser Ubuntu ?", "choices": ["VirtualBox (hyperviseur de niveau 2)", "VMware ESXi (niveau 1)", "Hyper-V Server", "Docker"], "answer": 0 },
+    { "question": "Quel est l'avantage d'un hyperviseur de niveau 2 ?", "choices": ["Il s'installe simplement par-dessus le système déjà installé", "Il remplace le BIOS", "Il n'a pas besoin de CPU compatible", "Il ne fonctionne que sous Linux"], "answer": 0 },
+    { "question": "Où active-t-on la fonctionnalité de virtualisation du CPU ?", "choices": ["Dans le BIOS/UEFI de la carte mère", "Dans VirtualBox", "Dans le terminal Ubuntu", "Dans le panneau réseau"], "answer": 0 },
+    { "question": "Quelle quantité de mémoire vive l'éditeur recommande-t-il pour Ubuntu ?", "choices": ["4 Go", "512 Mo", "1 Go", "16 Go"], "answer": 0 },
+    { "question": "Quelle taille de disque dur minimum l'éditeur recommande-t-il ?", "choices": ["Au moins 20 Go", "2 Go", "5 Go", "200 Go"], "answer": 0 },
+    { "question": "Quel CPU l'éditeur suggère-t-il ?", "choices": ["Un CPU de plus de 2 GHz", "Un CPU de 500 MHz", "Un CPU 8 cœurs obligatoire", "Aucun CPU particulier"], "answer": 0 },
+    { "question": "Que fait l'option de disque « Dynamiquement alloué » ?", "choices": ["La VM « grignote » son disque au fur et à mesure du besoin", "Elle réserve tout l'espace dès la création", "Elle supprime le disque à l'arrêt", "Elle copie le disque sur Internet"], "answer": 0 },
+    { "question": "Quel est le risque du disque dynamiquement alloué ?", "choices": ["Si l'ordinateur hôte n'a plus de place, les VMs vont planter", "La VM ne peut plus démarrer sur SSD", "On ne peut pas installer Ubuntu", "La carte réseau est désactivée"], "answer": 0 },
+    { "question": "Quel contrôleur graphique le cours conseille-t-il dans l'onglet Affichage ?", "choices": ["VMSVGA", "VBoxVGA", "NVIDIA", "VGA standard"], "answer": 0, "explanation": "Cette configuration vient du manuel utilisateur de VirtualBox." },
+    { "question": "Dans l'onglet Stockage, qu'indique-t-on sur le contrôleur IDE ?", "choices": ["Le fichier image ISO de la distribution Ubuntu", "Le mot de passe root", "L'adresse IP de la VM", "La langue du clavier"], "answer": 0 },
+    { "question": "Quel mode d'accès réseau le cours propose-t-il pour commencer ?", "choices": ["Accès par pont", "NAT", "Réseau interne", "Non connecté"], "answer": 0 },
+    { "question": "À quoi sert l'option « Installer un logiciel… » (pilotes tiers) pendant l'installation ?", "choices": ["Intégrer des pilotes non diffusés sous licence GPL (ex. cartes NVIDIA)", "Installer Windows à côté", "Chiffrer le disque", "Créer un deuxième utilisateur"], "answer": 0, "explanation": "Pour une machine virtuelle, cette option n'est pas utile." },
+    { "question": "Sur quel écran arrive-t-on après le redémarrage, avec la mire de connexion ?", "choices": ["Le Display Manager", "Le BIOS", "Le Bash", "Le gestionnaire de paquets"], "answer": 0 }
+  ] }

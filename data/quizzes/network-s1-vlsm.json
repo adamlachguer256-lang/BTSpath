@@ -1,0 +1,16 @@
+{ "title": "VLSM — masques de sous-réseau à longueur variable", "description": "Network · Semestre 1 · VLSM. Questions tirées du support de cours (TD 192.168.100.0/24).",
+  "questions": [
+    { "question": "Que signifie VLSM ?", "choices": ["Variable Length Subnet Mask (masque de sous-réseau à longueur variable)", "Virtual LAN Subnet Manager", "Very Large Subnet Mask", "VLAN Static Mask"], "answer": 0 },
+    { "question": "Quelle est la différence entre CIDR et VLSM selon le cours ?", "choices": ["CIDR est plus utilisé au niveau Internet, VLSM plutôt dans un réseau local", "VLSM est utilisé sur Internet, CIDR en local", "Ils n'ont aucun rapport", "CIDR gaspille plus d'adresses"], "answer": 0 },
+    { "question": "Par quel sous-réseau faut-il commencer le calcul VLSM ?", "choices": ["Celui qui a le plus grand nombre d'hôtes", "Celui qui a le moins d'hôtes", "Les liaisons entre routeurs", "N'importe lequel"], "answer": 0 },
+    { "question": "Quelle formule donne le nombre d'hôtes utilisables avec n bits d'hôte ?", "choices": ["2^n - 2", "2^n", "2^n + 2", "n × 2"], "answer": 0 },
+    { "question": "Combien de bits d'hôte faut-il garder pour au moins 50 hôtes ?", "choices": ["6 bits (2^6 - 2 = 62)", "5 bits", "7 bits", "4 bits"], "answer": 0 },
+    { "question": "Quel préfixe obtient le sous-réseau A de 50 hôtes ?", "choices": ["/26 (255.255.255.192)", "/25", "/27", "/24"], "answer": 0, "explanation": "6 bits pour les hôtes : 32 - 6 = 26." },
+    { "question": "Quelle adresse le TD choisit-il pour le sous-réseau A ?", "choices": ["192.168.100.64/26", "192.168.100.0/26", "192.168.100.128/26", "192.168.100.192/26"], "answer": 0 },
+    { "question": "Pour le sous-réseau B de 27 hôtes, combien de bits d'hôte faut-il ?", "choices": ["5 bits (2^5 - 2 = 30)", "4 bits", "6 bits", "3 bits"], "answer": 0 },
+    { "question": "Quelle adresse est attribuée au sous-réseau B ?", "choices": ["192.168.100.128/27", "192.168.100.160/27", "192.168.100.64/27", "192.168.100.0/27"], "answer": 0 },
+    { "question": "Quel masque reçoivent les sous-réseaux C et D de 12 hôtes ?", "choices": ["255.255.255.240 (/28)", "255.255.255.224 (/27)", "255.255.255.248 (/29)", "255.255.255.192 (/26)"], "answer": 0, "explanation": "4 bits d'hôte : 2^4 - 2 = 14 ≥ 12." },
+    { "question": "Quelles adresses sont prises pour les sous-réseaux C et D ?", "choices": ["192.168.100.160/28 et 192.168.100.176/28", "192.168.100.128/28 et 192.168.100.144/28", "192.168.100.0/28 et 192.168.100.16/28", "192.168.100.192/28 et 192.168.100.208/28"], "answer": 0 },
+    { "question": "Combien de bits d'hôte faut-il pour une liaison entre deux interfaces de routeur ?", "choices": ["2 bits (2^2 - 2 = 2)", "1 bit", "3 bits", "4 bits"], "answer": 0 },
+    { "question": "Selon le cours, peut-on encore utiliser un sous-réseau déjà re-subnetté ?", "choices": ["Non", "Oui, toujours", "Oui, mais seulement pour les routeurs", "Oui, si on change de masque"], "answer": 0 }
+  ] }

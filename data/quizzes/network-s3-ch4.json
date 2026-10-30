@@ -1,0 +1,17 @@
+{ "title": "Protocole VTP", "description": "Network · Semestre 3 · Chapitre 4. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Que permet le protocole VTP ?", "choices": ["Propager les configurations VLAN d'un commutateur aux autres", "Router entre VLAN", "Bloquer les boucles de couche 2", "Attribuer des adresses IP"], "answer": 0 },
+    { "question": "Quels VLAN sont pris en charge par VTP selon le cours ?", "choices": ["Les VLAN de plage normale (ID 1 à 1005)", "Tous les VLAN jusqu'à 4094", "Seulement le VLAN 1", "Seulement les VLAN étendus"], "answer": 0 },
+    { "question": "De combien de domaines VTP un commutateur peut-il être membre à la fois ?", "choices": ["Un seul", "Deux", "Autant que de VLAN", "Aucun"], "answer": 0 },
+    { "question": "Quel équipement définit la limite d'un domaine VTP ?", "choices": ["Un routeur ou un commutateur de couche 3", "Un concentrateur", "Un point d'accès", "Un PC"], "answer": 0 },
+    { "question": "Que se passe-t-il tant que le nom de domaine VTP n'est pas spécifié ?", "choices": ["On ne peut ni créer ni modifier de VLAN sur un serveur VTP", "Tous les VLAN sont supprimés", "Le commutateur devient client", "Le trunk est désactivé"], "answer": 0 },
+    { "question": "Dans quel type de trame une trame VTP est-elle encapsulée ?", "choices": ["Une trame Ethernet 802.1Q", "Un paquet UDP", "Une trame 802.11", "Un segment TCP"], "answer": 0 },
+    { "question": "Quelle est la valeur par défaut du numéro de révision de configuration ?", "choices": ["Zéro", "Un", "1005", "32768"], "answer": 0 },
+    { "question": "Quand le numéro de révision est-il incrémenté ?", "choices": ["Chaque fois qu'un VLAN est ajouté ou supprimé", "À chaque redémarrage", "Quand on change le nom de domaine", "Toutes les 30 secondes"], "answer": 0 },
+    { "question": "Quel effet a le changement de nom de domaine VTP sur le numéro de révision ?", "choices": ["Il le remet à zéro", "Il l'incrémente", "Il le double", "Aucun effet"], "answer": 0 },
+    { "question": "À quoi sert l'élagage VTP (pruning) ?", "choices": ["Éviter l'inondation superflue sur les liaisons agrégées", "Supprimer les VLAN inutilisés", "Changer le mode VTP", "Chiffrer les annonces"], "answer": 0 },
+    { "question": "Quelle commande active l'élagage VTP ?", "choices": ["vtp pruning", "vtp mode server", "vtp domain", "vtp version 2"], "answer": 0 },
+    { "question": "Quel est le mode VTP par défaut d'un commutateur ?", "choices": ["Serveur", "Client", "Transparent", "Désactivé"], "answer": 0 },
+    { "question": "Quelle commande configure le nom de domaine VTP ?", "choices": ["vtp domain nom_domaine", "vtp password nom_domaine", "hostname nom_domaine", "vlan nom_domaine"], "answer": 0 },
+    { "question": "Quelle commande vérifie que les annonces VTP ont eu lieu ?", "choices": ["show vtp counters", "show vtp status", "show vlan brief", "show mac-address-table"], "answer": 0 }
+  ] }

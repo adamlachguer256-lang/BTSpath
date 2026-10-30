@@ -1,0 +1,14 @@
+{ "title": "Conception d'un réseau local", "description": "Network · Semestre 3 · Chapitre 1. Questions tirées du support de cours (chapitre court).",
+  "questions": [
+    { "question": "En combien de couches se divise le modèle de conception hiérarchique classique ?", "choices": ["Trois", "Deux", "Quatre", "Sept"], "answer": 0 },
+    { "question": "Quelles sont les couches du modèle hiérarchique ?", "choices": ["Accès, distribution et cœur de réseau", "Physique, liaison et réseau", "Application, transport et Internet", "Client, serveur et routeur"], "answer": 0 },
+    { "question": "Quelle couche sert d'interface pour connecter les périphériques finaux (PC, imprimantes, téléphones IP) ?", "choices": ["La couche d'accès", "La couche de distribution", "La couche cœur de réseau", "La couche physique"], "answer": 0 },
+    { "question": "Quelle couche regroupe les données des commutateurs d'accès et délimite les domaines de diffusion via le routage entre VLAN ?", "choices": ["La couche de distribution", "La couche d'accès", "La couche cœur de réseau", "La couche application"], "answer": 0 },
+    { "question": "Quelle couche constitue le réseau fédérateur à haut débit ?", "choices": ["La couche cœur de réseau", "La couche d'accès", "La couche de distribution", "La couche liaison"], "answer": 0 },
+    { "question": "Pourquoi la couche cœur de réseau doit-elle avoir une disponibilité et une redondance élevées ?", "choices": ["Elle est essentielle à l'interconnectivité entre les périphériques de distribution", "Elle connecte les imprimantes", "Elle n'a pas besoin de redondance", "Elle remplace les VLAN"], "answer": 0 },
+    { "question": "À quoi servent les réseaux locaux virtuels (VLAN) ?", "choices": ["Segmenter le trafic d'un commutateur en plusieurs sous-réseaux", "Augmenter la longueur des câbles", "Remplacer les routeurs Internet", "Alimenter les téléphones IP"], "answer": 0 },
+    { "question": "Qu'est-ce que la convergence selon le cours ?", "choices": ["L'association de communications vocale et vidéo sur un réseau de données", "La fusion de deux entreprises", "Le remplacement du cuivre par la fibre", "L'arrêt du routage"], "answer": 0 },
+    { "question": "Que permet d'identifier l'analyse du flux de trafic, des communautés d'utilisateurs et des diagrammes de topologie ?", "choices": ["Les goulots d'étranglement sur le réseau", "Les mots de passe des utilisateurs", "Le prix des commutateurs", "Les adresses MAC"], "answer": 0 },
+    { "question": "Sur quel protocole Cisco s'appuie Orion NetFlow Traffic Analyzer ?", "choices": ["NetFlow", "CDP", "VTP", "STP"], "answer": 0 },
+    { "question": "Lequel de ces éléments est une fonctionnalité de commutateur citée dans le cours ?", "choices": ["La technologie PoE (Power over Ethernet)", "Le protocole DNS", "Le câble coaxial", "La table de routage d'hôte"], "answer": 0 }
+  ] }

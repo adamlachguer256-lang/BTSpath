@@ -1,0 +1,20 @@
+{ "title": "Commutation Ethernet", "description": "Network · Semestre 1 · Chapitre 6. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Par quelles normes IEEE Ethernet est-il défini ?", "choices": ["802.2 et 802.3", "802.11 et 802.15", "802.1Q et 802.1D", "802.5 et 802.4"], "answer": 0 },
+    { "question": "Quelle est la taille minimale et maximale d'une trame Ethernet ?", "choices": ["64 et 1 518 octets", "32 et 1 500 octets", "64 et 9 000 octets", "128 et 1 518 octets"], "answer": 0 },
+    { "question": "Comment est interprétée une trame de moins de 64 octets ?", "choices": ["Comme un fragment de collision, rejeté automatiquement", "Comme une trame jumbo", "Comme une trame de diffusion", "Elle est complétée par le commutateur"], "answer": 0 },
+    { "question": "Quelle est la longueur d'une adresse MAC Ethernet ?", "choices": ["48 bits (12 chiffres hexadécimaux)", "32 bits", "64 bits", "128 bits"], "answer": 0 },
+    { "question": "Que représente l'OUI dans une adresse MAC ?", "choices": ["Le code unique de 24 bits du fournisseur, attribué par l'IEEE", "Le numéro de série de la carte", "L'adresse IP du périphérique", "Le numéro du port du commutateur"], "answer": 0 },
+    { "question": "Quel protocole un hôte utilise-t-il pour déterminer l'adresse MAC de destination associée à une adresse IPv4 ?", "choices": ["ARP", "ND", "DHCP", "DNS"], "answer": 0 },
+    { "question": "Quelle est l'adresse MAC de diffusion ?", "choices": ["FF-FF-FF-FF-FF-FF", "00-00-00-00-00-00", "01-00-5E-00-00-00", "33-33-00-00-00-00"], "answer": 0 },
+    { "question": "Par quoi commence une adresse MAC de multidiffusion IPv4 ?", "choices": ["01-00-5E", "33-33", "FF-FF", "00-00"], "answer": 0 },
+    { "question": "Que contient la table d'adresses MAC d'un commutateur à sa mise sous tension ?", "choices": ["Rien, elle est vide", "Toutes les adresses du réseau", "Les adresses des routeurs", "L'adresse de diffusion uniquement"], "answer": 0 },
+    { "question": "Quelle adresse le commutateur examine-t-il pour remplir sa table MAC ?", "choices": ["L'adresse MAC source", "L'adresse MAC de destination", "L'adresse IP source", "L'adresse IP de destination"], "answer": 0 },
+    { "question": "Combien de temps la plupart des commutateurs conservent-ils une entrée par défaut ?", "choices": ["5 minutes", "30 secondes", "1 heure", "24 heures"], "answer": 0 },
+    { "question": "Que fait le commutateur si l'adresse MAC de destination n'est pas dans la table ?", "choices": ["Il transfère la trame sur tous les ports sauf celui d'entrée", "Il supprime la trame", "Il la renvoie à la source", "Il l'envoie au routeur"], "answer": 0, "explanation": "C'est une monodiffusion inconnue." },
+    { "question": "Quelle méthode reçoit la trame entière et vérifie le CRC avant de la transmettre ?", "choices": ["Store-and-forward", "Fast-forward", "Fragment-free", "Auto-MDIX"], "answer": 0 },
+    { "question": "Combien d'octets la commutation fragment-free vérifie-t-elle avant de transmettre ?", "choices": ["Les 64 premiers octets", "Les 6 premiers octets", "Toute la trame", "Aucun"], "answer": 0 },
+    { "question": "Quelle méthode de mise en mémoire tampon dépose toutes les trames dans un tampon commun ?", "choices": ["Mémoire partagée", "Mémoire axée sur les ports", "Cut-through", "Store-and-forward"], "answer": 0 },
+    { "question": "Dans quel mode fonctionnent les ports Gigabit Ethernet ?", "choices": ["Uniquement en duplex intégral", "Uniquement en semi-duplex", "Les deux selon la négociation", "Simplex"], "answer": 0 },
+    { "question": "Quelle commande réactive Auto-MDIX sur une interface ?", "choices": ["mdix auto", "duplex auto", "speed auto", "no shutdown"], "answer": 0 }
+  ] }

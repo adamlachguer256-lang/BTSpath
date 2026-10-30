@@ -1,0 +1,11 @@
+{ "title": "VLSM et CIDR", "description": "Network · Semestre 2 · Chapitre 6. Questions tirées du support de cours (chapitre court, exercices sur images).",
+  "questions": [
+    { "question": "En quelle année l'IETF a-t-il introduit le CIDR ?", "choices": ["1993", "1983", "2003", "1999"], "answer": 0 },
+    { "question": "Dans quel RFC est introduit le CIDR selon le cours ?", "choices": ["RFC 1517", "RFC 768", "RFC 793", "RFC 1918"], "answer": 0 },
+    { "question": "Que permet le CIDR ?", "choices": ["Une utilisation plus efficace de l'espace d'adressage et des tables de routage plus petites", "Plus de classes d'adresses", "Le chiffrement des routes", "La suppression des masques"], "answer": 0 },
+    { "question": "Pour un routeur compatible CIDR, qu'est-ce qui détermine la partie réseau de l'adresse ?", "choices": ["Le masque (préfixe de réseau)", "La classe de l'adresse", "L'adresse MAC", "Le numéro de port"], "answer": 0 },
+    { "question": "Comment appelle-t-on une route qui résume plusieurs réseaux avec un masque plus petit que celui de la classe ?", "choices": ["Une route de super-réseau", "Une route statique flottante", "Une route d'hôte", "Une route empoisonnée"], "answer": 0 },
+    { "question": "Que fait le VLSM ?", "choices": ["Il découpe un sous-réseau en plusieurs sous-réseaux avec des masques différents", "Il regroupe des réseaux en un super-réseau", "Il supprime les sous-réseaux", "Il attribue des adresses MAC"], "answer": 0 },
+    { "question": "Qu'est-ce que le résumé de routage (agrégation de routes) ?", "choices": ["Annoncer un ensemble contigu d'adresses par une seule adresse avec un masque plus court", "Annoncer chaque hôte séparément", "Supprimer la route par défaut", "Utiliser un masque plus long"], "answer": 0 },
+    { "question": "Le masque d'une route résumée est-il plus court ou plus long que ceux des réseaux résumés ?", "choices": ["Plus court (moins spécifique)", "Plus long (plus spécifique)", "Identique", "Il n'a pas de masque"], "answer": 0 }
+  ] }

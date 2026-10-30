@@ -1,0 +1,16 @@
+{ "title": "Routage statique et CDP", "description": "Network · Semestre 2 · Chapitre 2. Questions tirées du support de cours (configurations sur images).",
+  "questions": [
+    { "question": "À quelle couche OSI fonctionne le protocole CDP ?", "choices": ["Couche 2", "Couche 3", "Couche 4", "Couche 7"], "answer": 0 },
+    { "question": "Entre quels périphériques fonctionne CDP ?", "choices": ["Entre périphériques Cisco (routeurs, commutateurs)", "Entre tous les PC Windows", "Uniquement entre serveurs", "Entre FAI"], "answer": 0 },
+    { "question": "Quels périphériques échangent des informations CDP ?", "choices": ["Uniquement ceux connectés directement (voisins CDP)", "Tous les périphériques d'Internet", "Seulement les routeurs distants", "Les PC du même VLAN"], "answer": 0 },
+    { "question": "Laquelle de ces informations est contenue dans une annonce CDP ?", "choices": ["La version de l'IOS", "Le mot de passe enable", "La table de routage complète", "La table MAC"], "answer": 0 },
+    { "question": "Quelle commande affiche aussi l'adresse IP d'un voisin CDP ?", "choices": ["show cdp neighbors detail", "show cdp neighbors", "show ip route", "show version"], "answer": 0 },
+    { "question": "CDP peut-il présenter un risque pour la sécurité ?", "choices": ["Oui, c'est possible", "Non, jamais", "Seulement sur les commutateurs", "Seulement en IPv6"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un réseau d'extrémité ?", "choices": ["Un réseau accessible par une seule route", "Un réseau sans hôtes", "Le réseau du FAI", "Un réseau avec plusieurs routes"], "answer": 0 },
+    { "question": "Quelle commande sert à configurer une route statique ?", "choices": ["ip route", "router rip", "network", "show ip route"], "answer": 0 },
+    { "question": "Quelle est une condition pour résumer plusieurs routes statiques en une seule ?", "choices": ["Elles utilisent toutes la même interface de sortie ou le même tronçon suivant", "Elles ont des interfaces de sortie différentes", "Elles sont sur des VLAN différents", "Elles utilisent RIP"], "answer": 0 },
+    { "question": "Quel est l'avantage d'une table de routage moins volumineuse ?", "choices": ["Le processus de recherche est optimisé", "Le routeur consomme plus de RAM", "Les paquets sont chiffrés", "Le CDP est désactivé"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une route statique par défaut ?", "choices": ["Une route qui correspond à tous les paquets", "Une route vers un seul hôte", "Une route apprise par RIP", "Une route directement connectée"], "answer": 0 },
+    { "question": "Quand utilise-t-on couramment une route statique par défaut ?", "choices": ["Pour connecter le routeur de périphérie d'une société au réseau du FAI", "Pour relier deux PC", "Pour configurer un VLAN", "Pour activer CDP"], "answer": 0 },
+    { "question": "Comment appelle-t-on un routeur connecté à un seul autre routeur ?", "choices": ["Routeur d'extrémité", "Routeur racine", "Routeur désigné", "Routeur de distribution"], "answer": 0 }
+  ] }

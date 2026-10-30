@@ -1,0 +1,15 @@
+{ "title": "Protocole RIP version 2", "description": "Network · Semestre 2 · Chapitre 7. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Dans quel RFC est défini RIPv2 ?", "choices": ["RFC 1723", "RFC 1517", "RFC 2328", "RFC 768"], "answer": 0 },
+    { "question": "RIPv2 est un protocole…", "choices": ["Sans classe, à vecteur de distance", "Par classe, à vecteur de distance", "À état de liens", "Propriétaire Cisco"], "answer": 0 },
+    { "question": "Qu'ajoute RIPv2 aux adresses réseau dans ses mises à jour ?", "choices": ["Le masque de sous-réseau", "L'adresse MAC", "Le numéro de VLAN", "Le mot de passe enable"], "answer": 0 },
+    { "question": "Comment RIPv2 envoie-t-il ses mises à jour ?", "choices": ["En multidiffusion", "En diffusion 255.255.255.255", "En monodiffusion uniquement", "Par CDP"], "answer": 0 },
+    { "question": "Pourquoi RIPv1 ne prend-il pas en charge les réseaux discontinus ?", "choices": ["Il fait un résumé automatique aux périphéries du réseau principal", "Il n'a pas de métrique", "Il utilise la multidiffusion", "Il est sans classe"], "answer": 0 },
+    { "question": "Qu'est-ce qu'une interface de bouclage (loopback) ?", "choices": ["Une interface purement logicielle qui émule une interface physique", "Un câble croisé", "Un port console", "Une interface série"], "answer": 0 },
+    { "question": "Dans l'exemple, quelle commande crée l'interface de bouclage 0 sur R3 ?", "choices": ["interface loopback 0", "interface null 0", "ip route loopback 0", "loopback enable"], "answer": 0 },
+    { "question": "Quelle commande configure la route de super-réseau statique sur R2 ?", "choices": ["ip route 192.168.0.0 255.255.0.0 Null0", "ip route 192.168.0.0 255.255.255.0 Lo0", "network 192.168.0.0", "redistribute static"], "answer": 0 },
+    { "question": "Quelle commande redistribue la route statique dans RIP ?", "choices": ["redistribute static", "version 2", "no auto-summary", "network static"], "answer": 0 },
+    { "question": "Quelle est la version de RIP par défaut ?", "choices": ["RIPv1", "RIPv2", "RIPng", "Aucune"], "answer": 0 },
+    { "question": "Quelle commande définit RIPv2 comme version ?", "choices": ["version 2", "router rip 2", "rip v2 enable", "ip rip 2"], "answer": 0 },
+    { "question": "Quelle commande désactive le résumé automatique pour prendre en charge les réseaux discontinus ?", "choices": ["no auto-summary", "auto-summary", "redistribute static", "passive-interface"], "answer": 0 }
+  ] }

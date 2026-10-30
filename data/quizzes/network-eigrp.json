@@ -1,0 +1,17 @@
+{ "title": "Protocole EIGRP", "description": "Network · Chapitre 9. Questions tirées du support de cours (beaucoup de diapositives sont des images).",
+  "questions": [
+    { "question": "Grâce à quoi EIGRP peut-il router plusieurs protocoles (IP, IPX, AppleTalk) ?", "choices": ["Les modules dépendant d'un protocole (PDM)", "Le protocole UDP", "Le protocole TCP", "Les VLAN"], "answer": 0 },
+    { "question": "Quel protocole de transport EIGRP utilise-t-il pour livrer ses paquets ?", "choices": ["RTP (Reliable Transport Protocol)", "TCP", "UDP", "ICMP"], "answer": 0 },
+    { "question": "Pourquoi EIGRP ne peut-il pas utiliser TCP ou UDP ?", "choices": ["Parce qu'IPX et AppleTalk n'utilisent pas la suite TCP/IP", "Parce que TCP est trop lent", "Parce qu'UDP est payant", "Parce qu'EIGRP fonctionne en couche 1"], "answer": 0 },
+    { "question": "Quelle adresse de multidiffusion utilisent les paquets EIGRP ?", "choices": ["224.0.0.10", "224.0.0.9", "224.0.0.5", "255.255.255.255"], "answer": 0 },
+    { "question": "Sur la plupart des réseaux EIGRP, à quel intervalle sont envoyés les paquets Hello ?", "choices": ["Toutes les 5 secondes", "Toutes les 30 secondes", "Toutes les 60 secondes", "Toutes les 90 secondes"], "answer": 0 },
+    { "question": "Quel est le délai d'attente sur la plupart des réseaux EIGRP ?", "choices": ["15 secondes (3 fois l'intervalle Hello)", "5 secondes", "60 secondes", "180 secondes"], "answer": 0 },
+    { "question": "Sur les réseaux NBMA lents, à quel intervalle sont envoyés les Hello ?", "choices": ["60 secondes", "5 secondes", "15 secondes", "180 secondes"], "answer": 0 },
+    { "question": "L'authentification EIGRP chiffre-t-elle la table de routage ?", "choices": ["Non", "Oui", "Seulement avec OSPF", "Seulement sur les liaisons série"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un système autonome (AS) ?", "choices": ["Une série de réseaux sous le contrôle administratif d'une entité unique", "Un routeur sans configuration", "Un VLAN isolé", "Un câble de secours"], "answer": 0 },
+    { "question": "Quelle commande affiche la table de voisinage EIGRP ?", "choices": ["show ip eigrp neighbors", "show ip protocols", "show ip route", "debug eigrp fsm"], "answer": 0 },
+    { "question": "Qu'est-ce que le successeur dans DUAL ?", "choices": ["Le voisin utilisé pour transmettre le paquet par la route à moindre coût", "Un voisin de secours", "Le routeur le plus éloigné", "Le serveur DHCP"], "answer": 0 },
+    { "question": "Quand la condition de faisabilité (FC) est-elle respectée ?", "choices": ["Quand la distance annoncée d'un voisin est inférieure à la distance de faisabilité locale", "Quand la distance annoncée est supérieure à la FD", "Quand le voisin est le successeur", "Quand l'interface est désactivée"], "answer": 0 },
+    { "question": "Quelle commande permet d'examiner la sortie de la machine FSM d'EIGRP ?", "choices": ["debug eigrp fsm", "show ip eigrp topology", "show ip protocols", "debug ip rip"], "answer": 0 },
+    { "question": "Quelle commande désactive le récapitulatif automatique ?", "choices": ["no auto-summary", "auto-summary", "no network", "passive-interface"], "answer": 0 }
+  ] }

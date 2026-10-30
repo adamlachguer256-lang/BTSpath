@@ -415,6 +415,278 @@
       "subject": null,
       "chapterId": null,
       "demo": true
+    },
+    {
+      "id": "linux-s1-chp1",
+      "file": "linux-s1-chp1.json",
+      "title": "Plongez dans l'histoire de Linux",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp1-histoire-linux",
+      "demo": false
+    },
+    {
+      "id": "linux-s1-chp2",
+      "file": "linux-s1-chp2.json",
+      "title": "Téléchargez une distribution Linux",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp2-telechargez-une-distribution-linux-noyau-linux",
+      "demo": false
+    },
+    {
+      "id": "linux-s1-chp3",
+      "file": "linux-s1-chp3.json",
+      "title": "Choisissez votre bureau Linux",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp3-choisissez-votre-bureau-linux",
+      "demo": false
+    },
+    {
+      "id": "linux-s1-chp4",
+      "file": "linux-s1-chp4.json",
+      "title": "Installez Linux Ubuntu",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp4-installez-linux-ubuntu",
+      "demo": false
+    },
+    {
+      "id": "linux-s1-chp5",
+      "file": "linux-s1-chp5.json",
+      "title": "Découvrez le shell",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp5-decouvrez-shell",
+      "demo": false
+    },
+    {
+      "id": "linux-s1-chp16",
+      "file": "linux-s1-chp16.json",
+      "title": "Le démarrage Linux",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp16-demarrage-linux",
+      "demo": false
+    },
+    {
+      "id": "linux-s1-chp17",
+      "file": "linux-s1-chp17.json",
+      "title": "Mise à jour du noyau Linux",
+      "subject": "LINUX",
+      "chapterId": "linux-s1-s2-chp17-mise-a-jour-du-noyau-linux",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ch1",
+      "file": "network-s1-ch1.json",
+      "title": "Mise en réseau aujourd'hui",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-chapitre-1",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ch2",
+      "file": "network-s1-ch2.json",
+      "title": "Configuration de base du commutateur et du périphérique final",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-chapitre-2",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ch3",
+      "file": "network-s1-ch3.json",
+      "title": "Protocoles et modèles",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-chapitre-3",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ipv4",
+      "file": "network-s1-ipv4.json",
+      "title": "Adressage IPv4",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-adressage-ipv4",
+      "demo": false
+    },
+    {
+      "id": "network-s1-transport",
+      "file": "network-s1-transport.json",
+      "title": "Couche transport OSI",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-couche-transport",
+      "demo": false
+    },
+    {
+      "id": "network-s1-application",
+      "file": "network-s1-application.json",
+      "title": "Fonctionnalités et protocoles des couches applicatives",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-couche-application",
+      "demo": false
+    },
+    {
+      "id": "network-s1-vlsm",
+      "file": "network-s1-vlsm.json",
+      "title": "VLSM — masques de sous-réseau à longueur variable",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-vlsm",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ch5",
+      "file": "network-s1-ch5.json",
+      "title": "Couche liaison de données",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-chapitre-5",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ch4",
+      "file": "network-s1-ch4.json",
+      "title": "Couche physique",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-chapitre-4",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ch6",
+      "file": "network-s1-ch6.json",
+      "title": "Commutation Ethernet",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-chapitre-6",
+      "demo": false
+    },
+    {
+      "id": "network-s1-ch7",
+      "file": "network-s1-ch7.json",
+      "title": "Couche réseau",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-chapitre-7",
+      "demo": false
+    },
+    {
+      "id": "network-s3-ch1",
+      "file": "network-s3-ch1.json",
+      "title": "Conception d'un réseau local",
+      "subject": "NETWORK",
+      "chapterId": "network-s3-s33-ch1-conception-d-un-reseau-local",
+      "demo": false
+    },
+    {
+      "id": "network-eigrp",
+      "file": "network-eigrp.json",
+      "title": "Protocole EIGRP",
+      "subject": "NETWORK",
+      "chapterId": "network-s1-ch9-le-protocole-eigrp",
+      "demo": false
+    },
+    {
+      "id": "network-s3-ch6",
+      "file": "network-s3-ch6.json",
+      "title": "Routage entre VLAN",
+      "subject": "NETWORK",
+      "chapterId": "network-s3-s33-ch6-routage-inter-vlan",
+      "demo": false
+    },
+    {
+      "id": "network-s3-ch5",
+      "file": "network-s3-ch5.json",
+      "title": "Protocole STP",
+      "subject": "NETWORK",
+      "chapterId": "network-s3-s33-ch5-protocole-stp",
+      "demo": false
+    },
+    {
+      "id": "network-s3-ch7",
+      "file": "network-s3-ch7.json",
+      "title": "Concepts et configuration de base d'un réseau sans fil",
+      "subject": "NETWORK",
+      "chapterId": "network-s3-s33-ch7-concepts-et-configuration-de-base-d-un-reseau-sans-fil",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch1",
+      "file": "network-s2-ch1.json",
+      "title": "Présentation du routage et du transfert de paquets",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch1-presentation-du-routage-et-du-transport-des-paquets-1",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch2",
+      "file": "network-s2-ch2.json",
+      "title": "Routage statique et CDP",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch2-routage-staique-cdp",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch3",
+      "file": "network-s2-ch3.json",
+      "title": "Présentation des protocoles de routage dynamique",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch3-presentation-des-protocoles-de-routage-dynamique",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch4",
+      "file": "network-s2-ch4.json",
+      "title": "Protocoles de routage à vecteur de distance",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch4-protocoles-de-routage-a-vecteur-de-distance",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch5",
+      "file": "network-s2-ch5.json",
+      "title": "Protocole RIP version 1",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch5-protocole-rip-version-1",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch6",
+      "file": "network-s2-ch6.json",
+      "title": "VLSM et CIDR",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch6-vlsm-et-cidr",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch7",
+      "file": "network-s2-ch7.json",
+      "title": "Protocole RIP version 2",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch7-protocole-rip-version2",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch10",
+      "file": "network-s2-ch10.json",
+      "title": "Protocoles de routage à état de liens",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch10-protocoles-de-routage-a-etat-de-liens",
+      "demo": false
+    },
+    {
+      "id": "network-s2-ch11",
+      "file": "network-s2-ch11.json",
+      "title": "Protocole OSPF",
+      "subject": "NETWORK",
+      "chapterId": "network-s2-ch11-protocole-ospf",
+      "demo": false
+    },
+    {
+      "id": "network-s3-ch2",
+      "file": "network-s3-ch2.json",
+      "title": "Concepts et configuration de base de la commutation",
+      "subject": "NETWORK",
+      "chapterId": "network-s3-s33-ch2-concepts-et-configuration-de-base-de-la-commutation",
+      "demo": false
+    },
+    {
+      "id": "network-s3-ch4",
+      "file": "network-s3-ch4.json",
+      "title": "Protocole VTP",
+      "subject": "NETWORK",
+      "chapterId": "network-s3-s33-ch4-protocole-vtp",
+      "demo": false
     }
   ]
 }

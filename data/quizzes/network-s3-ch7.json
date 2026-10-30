@@ -1,0 +1,19 @@
+{ "title": "Concepts et configuration de base d'un réseau sans fil", "description": "Network · Semestre 3 · Chapitre 7. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Quelle norme IEEE définit les réseaux locaux sans fil (WLAN) ?", "choices": ["802.11", "802.3", "802.1x", "802.1Q"], "answer": 0 },
+    { "question": "Quel protocole d'accès est utilisé dans les WLAN ?", "choices": ["CSMA/CA", "CSMA/CD", "Token Ring", "STP"], "answer": 0 },
+    { "question": "Quelle technique de modulation offre les débits les plus élevés ?", "choices": ["OFDM", "DSSS", "Manchester", "4B/5B"], "answer": 0, "explanation": "DSSS est plus simple et donc moins coûteuse." },
+    { "question": "Quel organisme délivre la certification Wi-Fi ?", "choices": ["La Wi-Fi Alliance", "L'ITU-R", "L'IETF", "L'ICANN"], "answer": 0 },
+    { "question": "Quel organisme régit l'attribution des bandes RF ?", "choices": ["L'ITU-R", "L'IEEE", "La Wi-Fi Alliance", "L'EIA"], "answer": 0 },
+    { "question": "À quelle couche fonctionne un point d'accès sans fil ?", "choices": ["Couche 2", "Couche 1", "Couche 3", "Couche 4"], "answer": 0 },
+    { "question": "Qu'est-ce que le SSID ?", "choices": ["L'identifiant qui distingue plusieurs réseaux sans fil dans un même voisinage", "L'adresse MAC du point d'accès", "Le mot de passe WPA", "Le numéro de canal"], "answer": 0 },
+    { "question": "En combien de canaux est découpée la bande 2,4 GHz en Europe ?", "choices": ["13", "11", "3", "24"], "answer": 0 },
+    { "question": "Quels canaux sans chevauchement le cours recommande-t-il quand plusieurs points d'accès sont proches ?", "choices": ["1, 6, 11", "1, 2, 3", "5, 10, 13", "2, 4, 6"], "answer": 0 },
+    { "question": "À quoi correspond le BSSID ?", "choices": ["À l'adresse MAC du point d'accès desservant le BSS", "Au nom du réseau", "À l'adresse IP du client", "Au canal utilisé"], "answer": 0 },
+    { "question": "Quel chevauchement doit exister entre deux cellules ?", "choices": ["10 % à 15 %", "0 %", "50 %", "100 %"], "answer": 0 },
+    { "question": "Sur quel chiffrement est basé WPA2 ?", "choices": ["AES", "TKIP", "WEP", "DES"], "answer": 0 },
+    { "question": "Quel algorithme renforce le WEP dans WPA ?", "choices": ["TKIP", "AES", "RADIUS", "EAP"], "answer": 0 },
+    { "question": "En entreprise, quel serveur authentifie les clients sans fil ?", "choices": ["Un serveur RADIUS (protocole EAP)", "Un serveur DNS", "Un serveur DHCP", "Un serveur FTP"], "answer": 0 },
+    { "question": "Selon le cours, quelle est l'adresse IP par défaut du point d'accès ?", "choices": ["192.168.1.1", "192.168.0.254", "10.0.0.1", "172.16.0.1"], "answer": 0 },
+    { "question": "Sur un point d'accès, « PSK2 avec AES » équivaut à…", "choices": ["WPA2", "WPA", "WEP", "Authentification ouverte"], "answer": 0 }
+  ] }

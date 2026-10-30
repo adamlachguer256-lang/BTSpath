@@ -1,0 +1,15 @@
+{ "title": "Couche réseau", "description": "Network · Semestre 1 · Chapitre 7. Questions tirées du support de cours (beaucoup de diapositives sont des images).",
+  "questions": [
+    { "question": "Quelles sont les opérations de base de la couche réseau pour le transport de bout en bout ?", "choices": ["Adressage, encapsulation, routage, désencapsulation", "Codage, signalisation, câblage, test", "Segmentation, séquençage, fenêtrage, reçu", "Compression, chiffrement, session, dialogue"], "answer": 0 },
+    { "question": "Dans l'en-tête IPv4, à quoi sert le champ TTL ?", "choices": ["Limiter la durée de vie du paquet", "Indiquer la priorité du paquet", "Indiquer le protocole de couche 4", "Donner la taille du paquet"], "answer": 0 },
+    { "question": "Dans l'en-tête IPv4, que contient le champ Protocol ?", "choices": ["Le protocole de la couche supérieure, tel que TCP", "La version d'IP", "L'adresse IP source", "La priorité du paquet"], "answer": 0 },
+    { "question": "Quelle est la valeur binaire du champ Version pour IPv4 ?", "choices": ["0100", "0110", "0001", "1000"], "answer": 0 },
+    { "question": "Lequel de ces problèmes d'IPv4 a motivé IPv6 ?", "choices": ["Le manque d'adresses IP", "Un en-tête trop simple", "Trop d'adresses disponibles", "L'absence de routeurs"], "answer": 0 },
+    { "question": "Combien d'adresses environ offre IPv4 ?", "choices": ["4 milliards", "340 undécillions", "65 536", "16 millions"], "answer": 0 },
+    { "question": "Quel champ IPv6 remplace le champ TTL ?", "choices": ["Hop Limit", "Flow Label", "Traffic Class", "Next Header"], "answer": 0 },
+    { "question": "À quoi sert le champ Flow Label en IPv6 ?", "choices": ["Un même flux recevra le même traitement", "Il donne l'adresse source", "Il remplace le TTL", "Il indique la longueur du paquet"], "answer": 0 },
+    { "question": "Dans une table de routage de routeur, que représente l'interface de sortie ?", "choices": ["L'interface à utiliser pour transférer un paquet vers la destination", "Comment le réseau a été découvert", "Le réseau de destination", "L'adresse du serveur DNS"], "answer": 0 },
+    { "question": "Que stocke la mémoire vive (RAM) d'un routeur ?", "choices": ["IOS et configuration en cours, table de routage, cache ARP, tampons de paquets", "Uniquement le POST", "La configuration de démarrage seulement", "Les fichiers des utilisateurs"], "answer": 0 },
+    { "question": "Que stocke la mémoire morte (ROM) d'un routeur ?", "choices": ["Instructions de démarrage, POST et un IOS limité de secours", "La table de routage", "Le cache ARP", "La configuration en cours"], "answer": 0 },
+    { "question": "Quelle commande affiche le contenu de la table de routage IPv4 ?", "choices": ["show ip route", "show interfaces", "show ip interfaces", "show running-config"], "answer": 0 }
+  ] }

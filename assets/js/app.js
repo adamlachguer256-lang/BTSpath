@@ -323,43 +323,72 @@ function resourceRow(r) {
   </li>`;
 }
 
-function viewQuizzes() {
-  const items = quizIndex.quizzes.map((q) => {
-    const chapter = q.chapterId && manifest.resources.find((r) => r.id === q.chapterId);
-    const best = store.getQuizBest(q.id);
-    return `<a class="quiz-card" href="#/quiz/${q.id}">
+function quizCard(q) {
+  const chapter = q.chapterId && manifest.resources.find((r) => r.id === q.chapterId);
+  const best = store.getQuizBest(q.id);
+  return `<a class="quiz-card" href="#/quiz/${q.id}">
       <span class="tile-icon">${icon("quiz", 22)}</span>
       <div>
         ${q.demo ? `<span class="badge-demo">Démonstration</span>` : ""}
         <h3>${esc(q.title)}</h3>
-        <p class="muted">${chapter ? `${esc(subjectById(chapter.subject).name)} · ${esc(chapter.label)}` : "Fonctionnement de la plateforme"}</p>
+        <p class="muted">${chapter ? esc(chapter.label) : "Fonctionnement de la plateforme"}</p>
       </div>
       <span class="quiz-best">${best !== null ? `Meilleur : ${best}%` : "Pas encore fait"}</span>
     </a>`;
-  }).join("");
+}
+
+function labCard(l) {
+  const chapter = manifest.resources.find((r) => r.id === l.chapterId);
+  const p = store.getLab(l.id);
+  return `<a class="quiz-card" href="#/lab/${l.id}">
+        <span class="tile-icon term-icon">${icon("terminal", 22)}</span>
+        <div><h3>${esc(l.title)}</h3>
+        <p class="muted">${chapter ? esc(chapter.label) : ""}</p></div>
+        <span class="quiz-best">${p?.done ? `Terminé · ${p.helped.length ? `${p.helped.length} avec aide` : "sans aide"}` : p?.index ? `En cours · étape ${p.index + 1}` : "Pas encore fait"}</span>
+      </a>`;
+}
+
+// Group quiz/lab entries by the semester of their chapter, in manifest order.
+function bySemester(entries, cardFn) {
+  const order = (e) => manifest.resources.findIndex((r) => r.id === e.chapterId);
+  const groups = {};
+  [...entries].sort((a, b) => order(a) - order(b)).forEach((e) => {
+    const sem = manifest.resources.find((r) => r.id === e.chapterId)?.semester || "";
+    (groups[sem] ||= []).push(e);
+  });
+  return Object.entries(groups).map(([sem, list]) => `
+    <div class="sem-group">
+      <h2 class="sem-title">${sem ? semesterLabel(sem) : "Autres"} <span class="count">${list.length}</span></h2>
+      <div class="quiz-list">${list.map(cardFn).join("")}</div>
+    </div>`).join("");
+}
+
+function viewQuizzes(subjectId) {
+  const subjectOf = (e) => manifest.resources.find((r) => r.id === e.chapterId)?.subject;
+  const s = subjectById(subjectId) || manifest.subjects.find((x) => quizIndex.quizzes.some((q) => subjectOf(q) === x.id)) || manifest.subjects[0];
+  const quizzes = quizIndex.quizzes.filter((q) => subjectOf(q) === s.id);
+  const labs = labIndex.labs.filter((l) => subjectOf(l) === s.id);
+  const demo = quizIndex.quizzes.filter((q) => q.demo || !subjectOf(q));
 
   return `<section class="container section page">
     <div class="section-head">
       <h1>Quiz</h1>
-      <p class="muted">Les quiz sont ajoutés progressivement, chapitre par chapitre. Ce ne sont pas des sujets officiels d'examen BTS.</p>
+      <p class="muted">Choisis une matière, puis un chapitre. Ce ne sont pas des sujets officiels d'examen BTS.</p>
     </div>
-    <div class="quiz-list">${items}</div>
-    ${quizIndex.quizzes.some((q) => !q.demo) ? "" : `<div class="note">${icon("info", 18)}<p>Aucun quiz de chapitre n'est encore publié. Le quiz de démonstration permet de découvrir le format.</p></div>`}
-
+    <div class="toolbar">
+      <div class="tabs" role="tablist" aria-label="Matière">
+        ${manifest.subjects.map((x) => `<a role="tab" class="tab" aria-selected="${x.id === s.id}" href="#/quizzes/${x.id}">${esc(x.name)}
+          <span class="count">${quizIndex.quizzes.filter((q) => subjectOf(q) === x.id).length}</span></a>`).join("")}
+      </div>
+    </div>
+    ${quizzes.length ? bySemester(quizzes, quizCard) : `<div class="note">${icon("info", 18)}<p>Aucun quiz publié pour ${esc(s.name)} pour l'instant.</p></div>`}
+    ${labs.length ? `
     <div class="section-head" style="margin-top:40px">
-      <h2>Terminal guidé</h2>
+      <h2>Terminal guidé — ${esc(s.name)}</h2>
       <p class="muted">Tape les vraies commandes du chapitre, étape par étape, dans un terminal simulé.</p>
     </div>
-    <div class="quiz-list">${labIndex.labs.map((l) => {
-      const chapter = manifest.resources.find((r) => r.id === l.chapterId);
-      const p = store.getLab(l.id);
-      return `<a class="quiz-card" href="#/lab/${l.id}">
-        <span class="tile-icon term-icon">${icon("terminal", 22)}</span>
-        <div><h3>${esc(l.title)}</h3>
-        <p class="muted">${chapter ? `${esc(subjectById(chapter.subject).name)} · ${esc(chapter.label)}` : ""}</p></div>
-        <span class="quiz-best">${p?.done ? `Terminé · ${p.helped.length ? `${p.helped.length} avec aide` : "sans aide"}` : p?.index ? `En cours · étape ${p.index + 1}` : "Pas encore fait"}</span>
-      </a>`;
-    }).join("")}</div>
+    ${bySemester(labs, labCard)}` : ""}
+    ${demo.length ? `<div class="sem-group" style="margin-top:40px"><h2 class="sem-title">Démonstration</h2><div class="quiz-list">${demo.map(quizCard).join("")}</div></div>` : ""}
   </section>`;
 }
 
@@ -533,7 +562,7 @@ async function route() {
   try {
     if (page === "") app.innerHTML = viewHome();
     else if (page === "subject") { app.innerHTML = viewSubject(arg); renderLibrary(); }
-    else if (page === "quizzes") app.innerHTML = viewQuizzes();
+    else if (page === "quizzes") app.innerHTML = viewQuizzes(arg);
     else if (page === "quiz") await viewQuiz(arg);
     else if (page === "lab") await viewLab(arg);
     else if (page === "request") { app.innerHTML = viewRequest(); fillChapterSelect(); }

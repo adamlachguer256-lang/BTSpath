@@ -1,0 +1,19 @@
+{ "title": "Mise en réseau aujourd'hui", "description": "Network · Semestre 1 · Chapitre 1. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "Comment appelle-t-on chaque ordinateur d'un réseau ?", "choices": ["Un hôte ou périphérique final", "Un routeur", "Un commutateur", "Un support"], "answer": 0 },
+    { "question": "Quel est un inconvénient d'un réseau Peer-to-Peer ?", "choices": ["Pas d'administration centralisée", "Difficile à configurer", "Très coûteux", "Trop complexe"], "answer": 0, "explanation": "Inconvénients : pas d'administration centralisée, peu sécurisé, non évolutif, performances plus lentes." },
+    { "question": "Lequel de ces appareils est un périphérique intermédiaire ?", "choices": ["Un commutateur", "Un ordinateur portable", "Une imprimante réseau", "Un smartphone"], "answer": 0 },
+    { "question": "Quel type de signal circule dans un câble à fibre optique ?", "choices": ["Des impulsions lumineuses", "Des impulsions électriques", "Des ondes radio modulées", "Des ultrasons"], "answer": 0 },
+    { "question": "Que montrent les diagrammes de topologie logique ?", "choices": ["Les dispositifs, les ports et le système d'adressage du réseau", "L'emplacement physique des câbles uniquement", "Le prix des équipements", "La marque des ordinateurs"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un LAN ?", "choices": ["Une infrastructure qui couvre une zone géographique restreinte", "Une infrastructure qui couvre une vaste zone géographique", "Un ensemble mondial de réseaux", "Un cloud public"], "answer": 0 },
+    { "question": "Par qui un WAN est-il généralement administré ?", "choices": ["Par un ou plusieurs fournisseurs de services", "Par une seule personne", "Par l'utilisateur final", "Par l'ICANN uniquement"], "answer": 0 },
+    { "question": "Qu'est-ce qu'un extranet ?", "choices": ["Un accès sécurisé au réseau d'une entreprise pour des personnes d'une autre entreprise", "Un réseau privé réservé aux seuls membres de l'entreprise", "Le réseau Internet public", "Un réseau domestique"], "answer": 0 },
+    { "question": "Que transporte un réseau convergent sur un seul lien ?", "choices": ["Données, voix et vidéo", "Uniquement des données", "Uniquement la voix", "Uniquement l'électricité"], "answer": 0 },
+    { "question": "Quelles sont les quatre caractéristiques de base d'une architecture réseau fiable ?", "choices": ["Tolérance aux pannes, évolutivité, QoS et sécurité", "Vitesse, prix, couleur et taille", "LAN, WAN, MAN et PAN", "BYOD, cloud, vidéo et collaboration"], "answer": 0 },
+    { "question": "Qu'est-ce qui est nécessaire pour la tolérance aux pannes ?", "choices": ["Plusieurs chemins d'accès", "Un seul câble très rapide", "Un réseau à commutation de circuits", "Supprimer la QoS"], "answer": 0 },
+    { "question": "Quel objectif de sécurité garantit que les données n'ont pas été altérées pendant leur transmission ?", "choices": ["Intégrité", "Confidentialité", "Disponibilité", "Évolutivité"], "answer": 0 },
+    { "question": "Que signifie BYOD ?", "choices": ["Apportez votre propre appareil", "Réseau à large bande", "Sauvegarde dans le cloud", "Pare-feu dédié"], "answer": 0 },
+    { "question": "Quel type de cloud est composé de deux ou plusieurs types de cloud ?", "choices": ["Cloud hybride", "Cloud public", "Cloud privé", "Cloud personnalisé"], "answer": 0 },
+    { "question": "Laquelle de ces menaces est une menace interne ?", "choices": ["Appareils perdus ou volés", "Attaques zero-day", "Virus, vers et chevaux de Troie", "Attaques par déni de service"], "answer": 0 },
+    { "question": "Quelle exigence de sécurité est propre aux réseaux de grande taille ?", "choices": ["Listes de contrôle d'accès (ACL) et VPN", "Seulement un antivirus", "Aucune sécurité", "Un câble plus long"], "answer": 0 }
+  ] }

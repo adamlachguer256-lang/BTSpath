@@ -1,0 +1,18 @@
+{ "title": "Couche liaison de données", "description": "Network · Semestre 1 · Chapitre 5. Questions tirées du support de cours.",
+  "questions": [
+    { "question": "De quoi la couche liaison de données est-elle responsable ?", "choices": ["Des communications entre les cartes d'interface réseau (NIC)", "Du choix du meilleur chemin entre réseaux", "De la résolution de noms", "Du chiffrement des sessions"], "answer": 0 },
+    { "question": "Dans quoi la couche 2 encapsule-t-elle les paquets IPv4/IPv6 ?", "choices": ["Des trames", "Des segments", "Des datagrammes", "Des bits"], "answer": 0 },
+    { "question": "Quelles sont les deux sous-couches de la couche liaison de données IEEE 802 ?", "choices": ["LLC et MAC", "TCP et UDP", "IP et ICMP", "PPP et HDLC"], "answer": 0 },
+    { "question": "Quelle sous-couche est responsable de l'encapsulation des données et du contrôle d'accès au support ?", "choices": ["MAC", "LLC", "IP", "Physique"], "answer": 0 },
+    { "question": "À chaque saut, que fait un routeur avec la trame reçue ?", "choices": ["Il la désencapsule puis réencapsule le paquet dans une nouvelle trame", "Il la transmet sans modification", "Il la supprime", "Il change l'adresse IP de destination"], "answer": 0 },
+    { "question": "Quelle est la topologie WAN la plus simple et la plus courante ?", "choices": ["Point à point", "Hub and Spoke", "Maillée", "Anneau"], "answer": 0 },
+    { "question": "Quelle topologie WAN offre une haute disponibilité mais exige que tous les systèmes soient connectés entre eux ?", "choices": ["Maillée", "Point à point", "Hub and Spoke", "Bus"], "answer": 0 },
+    { "question": "Quelles topologies sont généralement utilisées dans les LAN ?", "choices": ["Étoile ou étoile étendue", "Bus uniquement", "Anneau uniquement", "Point à point"], "answer": 0 },
+    { "question": "Dans quel mode fonctionnent les commutateurs Ethernet ?", "choices": ["Duplex intégral", "Semi-duplex", "Simplex", "Mode bus"], "answer": 0 },
+    { "question": "Quelle méthode d'accès est utilisée par les WLAN IEEE 802.11 ?", "choices": ["CSMA/CA", "CSMA/CD", "Token Ring", "ARCNET"], "answer": 0 },
+    { "question": "Quelle méthode était utilisée par les anciens réseaux Ethernet en topologie bus ?", "choices": ["CSMA/CD", "CSMA/CA", "Accès contrôlé", "PPP"], "answer": 0 },
+    { "question": "Quels réseaux utilisaient l'accès contrôlé (déterministe) ?", "choices": ["Token Ring et ARCNET", "Ethernet et WLAN", "PPP et HDLC", "Frame-Relay et Ethernet"], "answer": 0 },
+    { "question": "Quels sont les trois éléments de base d'une trame ?", "choices": ["En-tête, données et queue de bande", "Port, adresse IP et données", "Préambule, segment et CRC", "Source, destination et TTL"], "answer": 0 },
+    { "question": "Quel champ de la trame identifie le protocole encapsulé de couche 3 ?", "choices": ["Type", "Contrôle", "Adressage", "Détection des erreurs"], "answer": 0 },
+    { "question": "Comment appelle-t-on aussi les adresses de couche 2 ?", "choices": ["Adresses physiques", "Adresses logiques", "Numéros de port", "Adresses de diffusion"], "answer": 0 }
+  ] }
