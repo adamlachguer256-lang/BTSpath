@@ -1,0 +1,114 @@
+{
+  "chapterId": "network-s3-s33-ch4-protocole-vtp",
+  "title": "Protocole VTP — les étapes de configuration du cours",
+  "intro": "Refais les 3 étapes de configuration de VTP du chapitre 4 : configurer le serveur VTP, configurer le client VTP, puis confirmer le fonctionnement. Le cours donne la syntaxe : là où il écrit nom_domaine ou mot_de_passe, choisis ta propre valeur.",
+  "ios": true,
+  "prompt": "Switch>",
+  "steps": [
+    {
+      "section": "Modes d'exécution",
+      "task": "Passe en mode d'exécution privilégié.",
+      "accept": ["enable"],
+      "hint": "L'invite passera de > à #."
+    },
+    {
+      "section": "III.1 Configuration par défaut",
+      "task": "Affiche l'état VTP du commutateur.",
+      "accept": ["show vtp status"],
+      "hint": "show vtp …",
+      "prompt": "Switch#"
+    },
+    {
+      "section": "III.2 Étape 1 : configurez le serveur VTP",
+      "task": "Entre en mode de configuration globale.",
+      "accept": ["configure terminal"],
+      "hint": "configure + terminal"
+    },
+    {
+      "section": "III.2 Étape 1 : configurez le serveur VTP",
+      "task": "Configure le commutateur en mode serveur VTP.",
+      "accept": ["vtp mode server"],
+      "hint": "vtp mode …",
+      "note": "Le commutateur est par défaut un serveur VTP.",
+      "prompt": "Switch(config)#"
+    },
+    {
+      "section": "III.2 Étape 1 : configurez le serveur VTP",
+      "task": "Configure le nom de domaine VTP (choisis un nom).",
+      "accept": ["vtp domain nom_domaine"],
+      "accept_regex": "vtp domain \\S+",
+      "hint": "Syntaxe : vtp domain nom_domaine"
+    },
+    {
+      "section": "III.2 Étape 1 : configurez le serveur VTP",
+      "task": "Pour des raisons de sécurité, configure un mot de passe VTP (choisis-le).",
+      "accept": ["vtp password mot_de_passe"],
+      "accept_regex": "vtp password \\S+",
+      "hint": "Syntaxe : vtp password mot_de_passe"
+    },
+    {
+      "section": "III.2 Étape 1 : configurez le serveur VTP",
+      "task": "Configure la version VTP (1 ou 2).",
+      "accept": ["vtp version 2", "vtp version 1"],
+      "hint": "Syntaxe : vtp version {1| 2}",
+      "note": "Une seule version VTP est autorisée dans un domaine VTP."
+    },
+    {
+      "section": "III.2 Étape 2 : configurez le client VTP",
+      "task": "Tu es maintenant sur le commutateur client. Configure-le en mode client VTP.",
+      "accept": ["vtp mode client"],
+      "hint": "vtp mode …"
+    },
+    {
+      "section": "III.2 Étape 2 : configurez le client VTP",
+      "task": "Configure le nom de domaine VTP sur le client.",
+      "accept": ["vtp domain nom_domaine"],
+      "accept_regex": "vtp domain \\S+",
+      "hint": "Syntaxe : vtp domain nom_domaine",
+      "note": "Seuls les commutateurs d'un même domaine VTP échangent des messages VTP."
+    },
+    {
+      "section": "III.2 Étape 2 : configurez le client VTP",
+      "task": "Configure le mot de passe VTP sur le client.",
+      "accept": ["vtp password mot_de_passe"],
+      "accept_regex": "vtp password \\S+",
+      "hint": "Syntaxe : vtp password mot_de_passe"
+    },
+    {
+      "section": "III.2 Étape 2 : configurez le client VTP",
+      "task": "Configure la version VTP sur le client (1 ou 2).",
+      "accept": ["vtp version 2", "vtp version 1"],
+      "hint": "Syntaxe : vtp version {1| 2}"
+    },
+    {
+      "section": "III.2 Étape 3 : confirmer le fonctionnement de VTP",
+      "task": "Reviens au mode d'exécution privilégié.",
+      "accept": ["end", "exit"],
+      "hint": "end ou exit."
+    },
+    {
+      "section": "III.2 Étape 3 : confirmer le fonctionnement de VTP",
+      "task": "Vérifie l'état VTP.",
+      "accept": ["show vtp status"],
+      "hint": "show vtp …",
+      "prompt": "Switch#"
+    },
+    {
+      "section": "III.2 Étape 3 : confirmer le fonctionnement de VTP",
+      "task": "Vérifie que les annonces VTP ont eu lieu.",
+      "accept": ["show vtp counters"],
+      "hint": "show vtp + les compteurs."
+    },
+    {
+      "section": "III.2 Étape 3 : confirmer le fonctionnement de VTP",
+      "task": "Affiche les liaisons agrégées du commutateur.",
+      "accept": ["show interfaces trunk"],
+      "hint": "show interfaces …"
+    }
+  ],
+  "challenge": {
+    "section": "Défi — II.4 Élagage VTP",
+    "task": "L'élagage est désactivé par défaut. Depuis le mode privilégié, active-le avec la commande de configuration globale (2 commandes).",
+    "accept_sequence": [["configure terminal"], ["vtp pruning"]]
+  }
+}

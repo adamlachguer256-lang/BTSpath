@@ -68,10 +68,16 @@ Many NETWORK config commands are on image slides: if the extracted text has no c
 - SEP S3: Chap1 is short (tool said "probably scanned" but text was enough for 11 questions); Chap10 short (10 q).
 - SEP S2 skipped: Chap2 exercise answers for global/domaine local groups (swapped in the course), Chap13 copy/move
   table for compressed/encrypted files (diagram text unreadable), Chap6 "Application" slides (images only).
+- Done (terminal, NETWORK S3): Ch2, Ch3 (6 steps only), Ch4 VTP, Ch5 STP, Ch6 (troubleshooting fixes only) as
+  `data/labs/network-s3-chN.json`. Ch1 and Ch7 have no commands. On image slides (need OCR): Ch2 IP/duplex/web/
+  port-security dynamic+sticky, Ch3 VLAN creation + trunk, Ch6 full inter-VLAN config. No `show` output in the text.
+- Engine additions for Cisco labs: lab-level `"ios": true` (not case-sensitive, no bash simulation) and per-step
+  `"accept_regex"` (student picks the value when the course only gives syntax like `vtp domain nom_domaine`;
+  `accept[0]` stays the course syntax and is shown as the solution). Skipped: commands needing a MAC address.
 - SEP S41 Chap7 (PDF) is a duplicate of Chap6: its index entry reuses `sep-s1-chap6.json`.
 - SEP thin parts (image slides): Chap3 "Suppression de périphériques"; Chap4 MBR/GPT comparison table,
   Diskpart task examples, Defrag.exe usage; Chap5 copy/move compression table (only the move cases from exercise 5 used).
-- Quiz page: tabs per subject (#/quizzes/LINUX), grouped by semester. Network S2 Ch10 (6 q) and Ch6 (8 q) are thin; NETWORK labs not made yet.
+- Quiz page: tabs per subject (#/quizzes/LINUX), grouped by semester. Network S2 Ch10 (6 q) and Ch6 (8 q) are thin; NETWORK S1/S2 labs not made yet.
 - Done (terminal): LINUX CHP17 (noyau + usb_storage), CHP6 (sections only: chapter is screenshots), S3 Noyau, Démarrage, Systèmes de fichiers, Quotas, RAID, LVM.
 - LINUX S3 labs skip syntax-only commands (mkfs, mke2fs, badblocks, mkswap, smbclient placeholders); fstab/inittab edits are not steps. Fs lab keeps course typo prompt `/dev/disk/buy-uuid$`.
 - SEP = Microsoft Windows (S41 = Windows 7 client). NETWORK = Cisco CCNA-style.

@@ -163,8 +163,12 @@ export function renderLab(root, lab, labId) {
       return;
     }
 
-    if (expected(step).some((a) => normalize(a) === cmd)) {
-      const result = step.accept_sequence ? "" : step.output ?? simulate(cmd, ctx) ?? "";
+    // Cisco IOS labs ("ios": true): not case-sensitive, no bash simulation.
+    // "accept_regex": the student picks a value where the course only gives the syntax (e.g. a VLAN id).
+    const same = (a) => (lab.ios ? normalize(a).toLowerCase() === cmd.toLowerCase() : normalize(a) === cmd);
+    const free = step.accept_regex && !step.accept_sequence && new RegExp(`^(?:${step.accept_regex})$`, "i").test(cmd);
+    if (free || expected(step).some(same)) {
+      const result = step.accept_sequence ? "" : step.output ?? (lab.ios ? "" : simulate(cmd, ctx)) ?? "";
       if (result) print(esc(result));
       if (step.accept_sequence && state.seq + 1 < step.accept_sequence.length) {
         state.seq += 1;

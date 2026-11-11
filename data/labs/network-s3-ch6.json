@@ -1,0 +1,116 @@
+{
+  "chapterId": "network-s3-s33-ch6-routage-inter-vlan",
+  "title": "Routage inter-VLAN — les corrections du cours",
+  "intro": "Refais les corrections de la partie « Dépannage du routage entre VLAN » du chapitre 6 : d'abord sur le commutateur Comm1, puis sur le routeur R1. Les commandes de configuration complètes (routage traditionnel et router-on-a-stick) sont sur des diapositives en image : elles ne sont pas encore ici.",
+  "ios": true,
+  "prompt": "Comm1>",
+  "steps": [
+    {
+      "section": "Modes d'exécution",
+      "task": "Tu es sur le commutateur Comm1. Passe en mode d'exécution privilégié.",
+      "accept": ["enable"],
+      "hint": "L'invite passera de > à #."
+    },
+    {
+      "section": "Problème de configuration de commutateur",
+      "task": "Entre en mode de configuration globale.",
+      "accept": ["configure terminal"],
+      "hint": "configure + terminal",
+      "prompt": "Comm1#"
+    },
+    {
+      "section": "Problème de configuration de commutateur",
+      "task": "Entre dans la configuration du port F0/4.",
+      "accept": ["interface f0/4", "interface fa0/4", "interface fastethernet0/4", "interface fastethernet 0/4"],
+      "hint": "interface + identifiant du port",
+      "prompt": "Comm1(config)#"
+    },
+    {
+      "section": "Problème de configuration de commutateur",
+      "task": "Corrige le problème : affecte ce port au VLAN 10.",
+      "accept": ["switchport access vlan 10"],
+      "hint": "switchport access vlan id",
+      "prompt": "Comm1(config-if)#"
+    },
+    {
+      "section": "Problème de configuration de commutateur",
+      "task": "Reviens au mode de configuration globale.",
+      "accept": ["exit"],
+      "hint": "Une seule commande pour remonter d'un niveau."
+    },
+    {
+      "section": "Problème de configuration de commutateur",
+      "task": "Entre dans la configuration du port F0/5.",
+      "accept": ["interface f0/5", "interface fa0/5", "interface fastethernet0/5", "interface fastethernet 0/5"],
+      "hint": "interface + identifiant du port",
+      "prompt": "Comm1(config)#"
+    },
+    {
+      "section": "Problème de configuration de commutateur",
+      "task": "Corrige le problème : ce port doit être une liaison agrégée.",
+      "accept": ["switchport mode trunk"],
+      "hint": "switchport mode …",
+      "prompt": "Comm1(config-if)#"
+    },
+    {
+      "section": "Problème de configuration de commutateur",
+      "task": "Quitte le mode de configuration et reviens directement au mode privilégié.",
+      "accept": ["end"],
+      "hint": "Une commande de trois lettres."
+    },
+    {
+      "section": "Problème de configuration de routeur",
+      "task": "Tu es maintenant sur le routeur R1. Passe en mode d'exécution privilégié.",
+      "accept": ["enable"],
+      "hint": "L'invite passera de > à #.",
+      "prompt": "R1>"
+    },
+    {
+      "section": "Problème de configuration de routeur",
+      "task": "Entre en mode de configuration globale.",
+      "accept": ["configure terminal"],
+      "hint": "configure + terminal",
+      "prompt": "R1#"
+    },
+    {
+      "section": "Problème de configuration de routeur",
+      "task": "Entre dans la configuration de la sous-interface F0/0.10.",
+      "accept": ["interface f0/0.10", "interface fa0/0.10", "interface fastethernet0/0.10", "interface fastethernet 0/0.10"],
+      "hint": "interface + identifiant de la sous-interface",
+      "prompt": "R1(config)#"
+    },
+    {
+      "section": "Problème de configuration de routeur",
+      "task": "Corrige le problème : configure la sous-interface sur le VLAN correct (VLAN 10).",
+      "accept": ["encapsulation dot1q 10"],
+      "hint": "encapsulation dot1q id_vlan",
+      "prompt": "R1(config-subif)#"
+    },
+    {
+      "section": "Problème de configuration de routeur",
+      "task": "Reviens au mode de configuration globale.",
+      "accept": ["exit"],
+      "hint": "Une seule commande pour remonter d'un niveau."
+    },
+    {
+      "section": "Problèmes d'adressage IP",
+      "task": "Entre dans la configuration de l'interface F0/0 du routeur R1.",
+      "accept": ["interface f0/0", "interface fa0/0", "interface fastethernet0/0", "interface fastethernet 0/0"],
+      "hint": "interface + identifiant de l'interface",
+      "prompt": "R1(config)#"
+    },
+    {
+      "section": "Problèmes d'adressage IP",
+      "task": "Corrige le problème : affecte l'adresse IP correcte 172.17.10.1 avec le masque 255.255.255.0.",
+      "accept": ["ip address 172.17.10.1 255.255.255.0"],
+      "hint": "ip address adresse masque",
+      "prompt": "R1(config-if)#"
+    },
+    {
+      "section": "Problèmes d'adressage IP",
+      "task": "Quitte le mode de configuration et reviens directement au mode privilégié.",
+      "accept": ["end"],
+      "hint": "Une commande de trois lettres."
+    }
+  ]
+}

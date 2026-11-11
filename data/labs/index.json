@@ -47,6 +47,36 @@
       "file": "linux-s1-chp17.json",
       "title": "Noyau et modules — les exemples du cours",
       "chapterId": "linux-s1-s2-chp17-mise-a-jour-du-noyau-linux"
+    },
+    {
+      "id": "network-s3-ch2",
+      "file": "network-s3-ch2.json",
+      "title": "Configuration de base d'un commutateur — les exemples du cours",
+      "chapterId": "network-s3-s33-ch2-concepts-et-configuration-de-base-de-la-commutation"
+    },
+    {
+      "id": "network-s3-ch3",
+      "file": "network-s3-ch3.json",
+      "title": "Gestion des VLAN — les commandes du cours",
+      "chapterId": "network-s3-s33-ch3-reseaux-locaux-virtuels-vlan"
+    },
+    {
+      "id": "network-s3-ch4",
+      "file": "network-s3-ch4.json",
+      "title": "Protocole VTP — les étapes de configuration du cours",
+      "chapterId": "network-s3-s33-ch4-protocole-vtp"
+    },
+    {
+      "id": "network-s3-ch5",
+      "file": "network-s3-ch5.json",
+      "title": "Protocole STP — les commandes du cours",
+      "chapterId": "network-s3-s33-ch5-protocole-stp"
+    },
+    {
+      "id": "network-s3-ch6",
+      "file": "network-s3-ch6.json",
+      "title": "Routage inter-VLAN — les corrections du cours",
+      "chapterId": "network-s3-s33-ch6-routage-inter-vlan"
     }
   ]
 }

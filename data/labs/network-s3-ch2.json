@@ -1,0 +1,125 @@
+{
+  "chapterId": "network-s3-s33-ch2-concepts-et-configuration-de-base-de-la-commutation",
+  "title": "Configuration de base d'un commutateur — les exemples du cours",
+  "intro": "Refais les commandes du chapitre 2, dans l'ordre du cours : table d'adresses MAC, sauvegarde de la configuration (commutateur Comm1), puis sécurité : mots de passe, Telnet et sécurité des ports (commutateur S1).",
+  "ios": true,
+  "prompt": "Comm1>",
+  "steps": [
+    {
+      "section": "Modes d'exécution",
+      "task": "Tu es en mode d'exécution utilisateur (invite >). Passe en mode d'exécution privilégié.",
+      "accept": ["enable"],
+      "hint": "Le mode privilégié est identifié par l'invite #.",
+      "note": "L'invite devient #."
+    },
+    {
+      "section": "III.2 Gestion de la table d'adresses MAC",
+      "task": "Affiche la table d'adresses MAC du commutateur.",
+      "accept": ["show mac-address-table"],
+      "hint": "show + le nom de la table.",
+      "prompt": "Comm1#"
+    },
+    {
+      "section": "III.4 Gestion de base des commutateurs",
+      "task": "Sauvegarde la configuration de démarrage dans le fichier config.bak1 stocké dans la mémoire flash.",
+      "accept": ["copy startup-config flash:config.bak1"],
+      "hint": "copy source destination — la destination est flash:nom_du_fichier"
+    },
+    {
+      "section": "III.4 Gestion de base des commutateurs",
+      "task": "Restaure la configuration stockée dans le fichier config.bak1.",
+      "accept": ["copy flash:config.bak1 startup-config"],
+      "hint": "Même commande, source et destination inversées."
+    },
+    {
+      "section": "III.4 Gestion de base des commutateurs",
+      "task": "Sauvegarde le fichier de configuration de démarrage sur un serveur TFTP.",
+      "accept": ["copy startup-config tftp"],
+      "hint": "copy source destination — la destination est tftp"
+    },
+    {
+      "section": "III.4 Gestion de base des commutateurs",
+      "task": "Restaure le fichier de configuration depuis un serveur TFTP.",
+      "accept": ["copy tftp startup-config"],
+      "hint": "Source et destination inversées."
+    },
+    {
+      "section": "IV. Configuration de la sécurité des commutateurs",
+      "task": "Tu es maintenant sur le commutateur S1, en mode privilégié. Entre en mode de configuration globale.",
+      "accept": ["configure terminal"],
+      "hint": "configure + terminal",
+      "prompt": "S1#"
+    },
+    {
+      "section": "IV.1 Configuration des options de mots de passe",
+      "task": "Autorise le chiffrement des mots de passe de service.",
+      "accept": ["service password-encryption"],
+      "hint": "service + password-encryption",
+      "prompt": "S1(config)#"
+    },
+    {
+      "section": "IV.3 Configuration de Telnet",
+      "task": "Pour réactiver Telnet, entre d'abord dans la configuration des lignes vty 0 à 15.",
+      "accept": ["line vty 0 15"],
+      "hint": "line vty premier dernier"
+    },
+    {
+      "section": "IV.3 Configuration de Telnet",
+      "task": "Réactive le protocole Telnet sur ces lignes.",
+      "accept": ["transport input telnet"],
+      "hint": "transport input + le protocole",
+      "prompt": "S1(config-line)#"
+    },
+    {
+      "section": "IV.3 Configuration de Telnet",
+      "task": "Reviens au mode de configuration globale.",
+      "accept": ["exit"],
+      "hint": "Une seule commande pour remonter d'un niveau."
+    },
+    {
+      "section": "IV.4 Sécurité des ports — adresses MAC sécurisées statiques",
+      "task": "Entre dans la configuration de l'interface fa0/15.",
+      "accept": ["interface fa0/15"],
+      "hint": "interface + identifiant du port",
+      "prompt": "S1(config)#"
+    },
+    {
+      "section": "IV.4 Sécurité des ports — adresses MAC sécurisées statiques",
+      "task": "Mets le port en mode accès.",
+      "accept": ["switchport mode access"],
+      "hint": "switchport mode …",
+      "prompt": "S1(config-if)#"
+    },
+    {
+      "section": "IV.4 Sécurité des ports — adresses MAC sécurisées statiques",
+      "task": "Active la sécurité des ports sur cette interface.",
+      "accept": ["switchport port-security"],
+      "hint": "switchport + port-security",
+      "note": "Dans le cours, la commande suivante est : switchport port-security mac-address <adresse MAC>."
+    },
+    {
+      "section": "IV.4 Modes de violation — shutdown",
+      "task": "Un port sécurisé est en mode de désactivation des erreurs. Pour annuler cet état, il faut deux commandes : tape la première.",
+      "accept": ["shutdown"],
+      "hint": "La commande qui désactive un port."
+    },
+    {
+      "section": "IV.4 Modes de violation — shutdown",
+      "task": "Tape la deuxième commande pour réactiver le port.",
+      "accept": ["no shutdown"],
+      "hint": "Le contraire de shutdown."
+    },
+    {
+      "section": "IV.4 Sécurité des ports — adresses MAC sécurisées statiques",
+      "task": "Quitte le mode de configuration et reviens directement au mode privilégié.",
+      "accept": ["end"],
+      "hint": "Une commande de trois lettres."
+    }
+  ],
+  "challenge": {
+    "section": "Défi — Telnet",
+    "task": "Depuis le mode privilégié de S1, réactive Telnet sur les lignes vty 0 à 15 (3 commandes).",
+    "accept_sequence": [["configure terminal"], ["line vty 0 15"], ["transport input telnet"]],
+    "prompt": "S1#"
+  }
+}

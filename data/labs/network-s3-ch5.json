@@ -1,0 +1,105 @@
+{
+  "chapterId": "network-s3-s33-ch5-protocole-stp",
+  "title": "Protocole STP — les commandes du cours",
+  "intro": "Refais les commandes du chapitre 5, dans l'ordre du cours : vérification du Spanning Tree, configuration du BID, PortFast et priorité de port. L'invite Switch(conf)# est écrite comme dans le cours. Là où le cours écrit id-vlan ou valeur, choisis ta propre valeur.",
+  "ios": true,
+  "prompt": "Switch>",
+  "steps": [
+    {
+      "section": "Modes d'exécution",
+      "task": "Passe en mode d'exécution privilégié.",
+      "accept": ["enable"],
+      "hint": "L'invite passera de > à #."
+    },
+    {
+      "section": "Meilleur chemin",
+      "task": "Vérifie les coûts des chemins et des ports vers le pont racine.",
+      "accept": ["show spanning-tree"],
+      "hint": "show + le nom du protocole en anglais (avec un tiret).",
+      "prompt": "Switch#"
+    },
+    {
+      "section": "Configuration du BID",
+      "task": "Entre en mode de configuration globale.",
+      "accept": ["configure terminal"],
+      "hint": "configure + terminal"
+    },
+    {
+      "section": "Configuration du BID",
+      "task": "Configure la priorité de pont pour un VLAN (choisis l'ID du VLAN et la valeur).",
+      "accept": ["spanning-tree vlan id-vlan priority valeur"],
+      "accept_regex": "spanning-tree vlan \\d+ priority \\d+",
+      "hint": "Syntaxe : spanning-tree vlan id-vlan priority valeur",
+      "note": "La valeur de priorité par défaut est 32768 ; elle varie par incrément de 4096.",
+      "prompt": "Switch(conf)#"
+    },
+    {
+      "section": "Configuration du BID",
+      "task": "Pour être sûr que le commutateur a bien la valeur de priorité la plus basse pour un VLAN (choisis l'ID du VLAN).",
+      "accept": ["spanning-tree vlan id-vlan root primary"],
+      "accept_regex": "spanning-tree vlan \\d+ root primary",
+      "hint": "Syntaxe : spanning-tree vlan id-vlan root primary"
+    },
+    {
+      "section": "Configuration du BID",
+      "task": "Puis, si nécessaire, la commande pour le pont racine secondaire (choisis l'ID du VLAN).",
+      "accept": ["spanning-tree vlan id-vlan root secondary"],
+      "accept_regex": "spanning-tree vlan \\d+ root secondary",
+      "hint": "Syntaxe : spanning-tree vlan id-vlan root secondary"
+    },
+    {
+      "section": "Configuration du BID",
+      "task": "Reviens au mode d'exécution privilégié.",
+      "accept": ["end", "exit"],
+      "hint": "end ou exit."
+    },
+    {
+      "section": "Configuration du BID",
+      "task": "Vérifie la priorité de pont du commutateur.",
+      "accept": ["show spanning-tree"],
+      "hint": "La même commande que pour vérifier les coûts.",
+      "prompt": "Switch#"
+    },
+    {
+      "section": "Technologie PortFast de Cisco",
+      "task": "Entre de nouveau en mode de configuration globale.",
+      "accept": ["configure terminal"],
+      "hint": "configure + terminal"
+    },
+    {
+      "section": "Technologie PortFast de Cisco",
+      "task": "Entre dans la configuration du port Fa0/1.",
+      "accept": ["interface fa0/1"],
+      "hint": "interface + identifiant du port",
+      "prompt": "Switch(conf)#"
+    },
+    {
+      "section": "Technologie PortFast de Cisco",
+      "task": "Configure ce port en PortFast.",
+      "accept": ["spanning-tree portfast"],
+      "hint": "spanning-tree + le nom de la technologie.",
+      "note": "Le port passe directement de l'état de blocage à l'état d'acheminement.",
+      "prompt": "Switch(config-if)#"
+    },
+    {
+      "section": "Désignation des ports racines",
+      "task": "Configure la priorité du port fa0/1 (choisis la valeur).",
+      "accept": ["spanning-tree port-priority valeur"],
+      "accept_regex": "spanning-tree port-priority \\d+",
+      "hint": "Syntaxe : spanning-tree port-priority valeur",
+      "note": "Les valeurs varient de 0 à 240, par incrément de 16. Valeur par défaut : 128."
+    },
+    {
+      "section": "Désignation des ports racines",
+      "task": "Quitte le mode de configuration et reviens directement au mode privilégié.",
+      "accept": ["end"],
+      "hint": "Une commande de trois lettres."
+    }
+  ],
+  "challenge": {
+    "section": "Défi — PortFast",
+    "task": "Depuis le mode privilégié, configure le port Fa0/1 en PortFast (3 commandes).",
+    "accept_sequence": [["configure terminal"], ["interface fa0/1"], ["spanning-tree portfast"]],
+    "prompt": "Switch#"
+  }
+}

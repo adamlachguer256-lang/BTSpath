@@ -1,0 +1,49 @@
+{
+  "chapterId": "network-s3-s33-ch3-reseaux-locaux-virtuels-vlan",
+  "title": "Gestion des VLAN — les commandes du cours",
+  "intro": "Ce terminal reprend seulement les commandes écrites dans le texte du chapitre 3 (gestion des VLAN). Les commandes de création de VLAN et d'agrégation sont sur des diapositives en image : elles ne sont pas encore ici. Tu commences en mode de configuration d'interface, sur un port d'accès statique.",
+  "ios": true,
+  "prompt": "Switch(config-if)#",
+  "steps": [
+    {
+      "section": "2. Gestion de VLAN",
+      "task": "Réaffecte ce port au VLAN 1.",
+      "accept": ["no switchport access vlan"],
+      "hint": "On annule l'affectation avec « no » devant la commande d'affectation."
+    },
+    {
+      "section": "2. Gestion de VLAN",
+      "task": "Reviens au mode de configuration globale.",
+      "accept": ["exit"],
+      "hint": "Une seule commande pour remonter d'un niveau."
+    },
+    {
+      "section": "2. Gestion de VLAN",
+      "task": "Supprime un VLAN du système (choisis l'ID du VLAN).",
+      "accept": ["no vlan id_vlan"],
+      "accept_regex": "no vlan \\d+",
+      "hint": "Syntaxe : no vlan id_vlan",
+      "prompt": "Switch(config)#"
+    },
+    {
+      "section": "2. Gestion de VLAN",
+      "task": "Reviens au mode d'exécution privilégié.",
+      "accept": ["end", "exit"],
+      "hint": "end ou exit."
+    },
+    {
+      "section": "2. Gestion de VLAN",
+      "task": "Supprime entièrement le fichier vlan.dat.",
+      "accept": ["delete flash:vlan.dat"],
+      "hint": "delete flash:nom_du_fichier",
+      "prompt": "Switch#"
+    },
+    {
+      "section": "3. Vérification de la configuration d'une agrégation",
+      "task": "Vérifie la configuration d'agrégation d'une interface (choisis l'interface).",
+      "accept": ["show interfaces id_interface switchport"],
+      "accept_regex": "show interfaces \\S+( \\S+)? switchport",
+      "hint": "Syntaxe : show interfaces id_interface switchport"
+    }
+  ]
+}
